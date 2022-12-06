@@ -1,0 +1,1453 @@
+<?xml version="1.0"?>
+<!-- Komodo Preferences File - DO NOT EDIT -->
+
+<preference-set id="global">
+  <string id="AutohotkeyHelpCommand">%25(browser) https://autohotkey.com/docs/commands/%25W.htm</string>
+  <string id="DefaultHelpCommand">%25(browser) http://www.google.com/search?q=%25W</string>
+  <string id="JavaScriptHelpCommand">%25(browser) https://www.google.cz/search?q=site%253Aw3schools.com%252Fjs%253A+%25W&amp;oq=site%253Aw3schools.com%252Fjs%253A+%25W&amp;gs_l=psy-ab.3...5285.6022.0.6788.3.3.0.0.0.0.91.230.3.3.0....0...1.1.64.psy-ab..0.0.0.JSgk_OnlA_o</string>
+  <string id="MaxscriptHelpCommand">%25(browser) https://help.autodesk.com/view/MAXDEV/2022/ENU/?query=%25W&amp;cg=Developer%2527s%2520Documentation&amp;devTool=MAXScript</string>
+  <string id="OtherHelpCommand">%25(browser) http://www.google.com/search?q=%25W</string>
+  <string id="analyticsLastVersion">pre-9.0a1</string>
+  <boolean id="analytics_enabled">0</boolean>
+  <string id="analytics_ga_uid">e1c547b6-3b9e-48a5-bc3e-72c229ab19ab</string>
+  <boolean id="assignEmptyFilesSpecifiedEOL">1</boolean>
+  <string id="autoAbbreviationTriggerCharacters">\t </string>
+  <boolean id="autoDetectJSvsNode">1</boolean>
+  <long id="autoSaveSeconds">30</long>
+  <string id="browser">C:\Program Files\Google\Chrome\Application\chrome.exe</string>
+  <string id="browser_preview_method">in-tab-other-group</string>
+  <boolean id="cached.colorscheme-editor.apply.editor">1</boolean>
+  <boolean id="cached.colorscheme-editor.apply.editorwidgets">1</boolean>
+  <boolean id="cached.colorscheme-editor.apply.interface">1</boolean>
+  <long id="caretStyle">1</long>
+  <long id="caretWidth">1</long>
+  <boolean id="checkDiskFile">1</boolean>
+  <boolean id="checkNetworkDiskFile">1</boolean>
+  <boolean id="cleanLineEnds">1</boolean>
+  <boolean id="cleanLineEnds_ChangedLinesOnly">0</boolean>
+  <boolean id="cleanLineEnds_CleanCurrentLine">0</boolean>
+  <boolean id="codeintelAutoInsertEndTag">1</boolean>
+  <long id="codeintel_autocomplete_max_rows">5</long>
+  <long id="codeintel_calltip_max_line_width">60</long>
+  <long id="codeintel_calltip_max_lines">20</long>
+  <boolean id="codeintel_calltip_triggering_enabled">1</boolean>
+  <boolean id="codeintel_codebrowser_auto_locate_scope">1</boolean>
+  <boolean id="codeintel_codebrowser_show_only_active_buffer">1</boolean>
+  <boolean id="codeintel_completion_auto_fillups_enabled">0</boolean>
+  <boolean id="codeintel_completion_triggering_enabled">1</boolean>
+  <long id="codeintel_highlight_variables_auto_delay">250</long>
+  <boolean id="codeintel_highlight_variables_auto_keyboard">0</boolean>
+  <boolean id="codeintel_highlight_variables_auto_mouse">1</boolean>
+  <boolean id="codeintel_highlight_variables_match_prefix">0</boolean>
+  <long id="codeintel_highlight_variables_min_auto_length">2</long>
+  <boolean id="codeintel_highlight_variables_use_scope">1</boolean>
+  <long id="codeintel_max_recursive_dir_depth">10</long>
+  <string id="codeintel_open_codebrowser_nodes">{(u'macro2://28977/Logger_v2.js', u'JavaScript Code', u'(anonymous 1)', u'Logger_v2'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'testObject', u'objKey2'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'(anonymous 2)'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'info', u'this'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selectSelection'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'testArray'): False, (u'macro2://29182/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3'): True, (u'macro2://28993/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'macro2://17631/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\console.js', u'JavaScript Code', u'app'): True, (u'macro2://28601/VilTabBox.js', u'JavaScript Code', u'VilTabBox'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'(anonymous 2)'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'(anonymous 5)'): False, (u'macro2://27254/OpenedFiles.js', u'JavaScript Code', u'ko'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selectLine'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'line', u'start'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getSelection', u'this'): False, (u'macro2://28979/Logger_v2_old.js', u'JavaScript Code', u'testClassObj'): True, (u'macro2://28996/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'line', u'number'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear', u'consoleEL'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Parent'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'header'): False, (u'macro2://28996/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3'): True, (u'macro2://28987/CodeFinder.js', u'JavaScript Code', u'CodeFinder'): True, (u'macro2://28969/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock'): True, (u'macro2://28989/ParseCode.js', u'JavaScript Code', u'ParseCode', u'ParseCode'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'keyword', u'start'): False, (u'macro2://28605/ParseCode.js', u'JavaScript Code', u'getParsedCode'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'ko', u'extensions', u'Logger_v3'): False, (u'macro2://28981/Logger.js', u'JavaScript Code', u'Logger'): True, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\console.js', u'JavaScript Code', u'document'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'fn', u'code'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'showLog', u'showLog'): False, (u'macro2://28968/ParseCode.js', u'JavaScript Code', u'ParseCode', u'ParseCode'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'Snippet', u'this'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getLineContent', u'line_end'): False, (u'macro2://28987/CodeFinder.js', u'JavaScript Code', u'CodeFinder', u'CodeFinder'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameter'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setKeyword'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'warn', u'value'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear', u'message'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'on', u'this'): False, (u'macro2://20562/Fold.js', u'JavaScript Code', u'Fold'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selection'): False, (u'macro2://28968/ParseCode.js', u'JavaScript Code', u'ParseCode'): True, (u'macro2://29017/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setNewLineAbove', u'this'): False, (u'macro2://29061/CodeFinder.js', u'JavaScript Code', u'CodeFinder'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'obj'): False, (u'macro2://28990/ParseDocBlock.js', u'JavaScript Code', u'(anonymous 3)'): True, (u'macro2://28978/Logger_v2.js', u'JavaScript Code', u'Logger_v2'): True, (u'macro2://1517/Snippet.js', u'JavaScript Code', u'Snippet', u'Snippet'): False, (u'macro2://28967/CodeFinder.js', u'JavaScript Code', u'CodeFinder', u'CodeFinder'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'logger_on'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'line'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Child'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'splitter_empty'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'(anonymous 6)', u'param'): False, (u'macro2://28993/Logger_v3.js', u'JavaScript Code', u'TestLoggerChild'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'testObject'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child', u'_this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Logger_v3A'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selectLine', u'line_start'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'clear', u'message'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'clear', u'this'): False, (u'macro2://17772/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child', u'childMethod'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Parent', u'clear'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'type_of_param'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'last_used'): False, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo.js', u'JavaScript Code', u'ko'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'info'): False, (u'macro2://28977/Logger_v2.js', u'JavaScript Code', u'(anonymous 1)'): True, (u'macro2://28979/Logger_v2_old.js', u'JavaScript Code', u'testObject'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'parameters_values'): False, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\vilbur\\vilext\\content\\vilext.js', u'JavaScript Code', u'ko'): True, (u'macro2://15270/Snippet.js', u'JavaScript Code', u'Snippet', u'_findEndOfSelection'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'setup', u'force_on'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyArray', u'arr_length'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'fn', u'parameters'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Parent', u'this'): False, (u'macro2://28987/CodeFinder.js', u'JavaScript Code', u'ko'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://15155/Fold.js', u'JavaScript Code', u'Fold'): True, (u'macro2://28990/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'warn', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'parentMethod'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'(anonymous 2)', u'key'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'clear'): False, (u'macro2://28979/Logger_v2_old.js', u'JavaScript Code', u'(anonymous 1)', u'Logger_v2_old'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3'): True, (u'macro2://28989/ParseCode.js', u'JavaScript Code', u'ParseCode'): True, (u'c:\\googledrive\\googlescripts\\_library\\rangefinder\\rangefinder.gs.js', u'JavaScript Code', u'RangeFinder'): True, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo-ko7.js', u'JavaScript Code', u'ko', u'extensions', u'todo'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selectLine', u'line_content'): False, (u'macro2://28978/Logger_v2.js', u'JavaScript Code', u'ko', u'extensions'): True, (u'macro2://29204/TestObejctProperties.js', u'JavaScript Code', u'TestObejctProperties', u'test'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getLineContent'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'(anonymous 6)'): False, (u'macro2://23444/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'ko', u'extensions', u'Parent'): False, (u'macro2://29017/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\auto-complete.js', u'JavaScript Code', u'autoComplete'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'keyword', u'end'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'force_on'): False, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo-ko7.js', u'JavaScript Code', u'ko', u'extensions'): True, (u'macro2://28977/Logger_v2.js', u'JavaScript Code', u'Logger_v2'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Parent', u'test'): False, (u'macro2://28990/ParseDocBlock.js', u'JavaScript Code', u'ko'): True, (u'macro2://2051/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28337/Logger.js', u'JavaScript Code', u'Logger'): True, (u'macro2://2599/Snippet.js', u'JavaScript Code', u'Snippet', u'Snippet'): True, (u'c:\\googledrive\\programs\\code\\komodo\\appdata\\activestate\\komodoide\\10.1\\userchrome\\treeview.less', u'Less Code', u'Global Variables'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getLineContent', u'line_start'): False, (u'macro2://17630/Fold.js', u'JavaScript Code', u'Fold'): True, (u'macro2://29204/TestObejctProperties.js', u'JavaScript Code', u'TestObejctProperties'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'_this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'force', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getHeader'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setLineStart', u'this'): False, (u'macro2://29024/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3'): True, (u'macro2://28915/DocBlock.js', u'JavaScript Code', u'DocBlock'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'header', u'header_on'): False, (u'macro2://2599/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameter', u'param'): False, (u'macro2://28990/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock', u'ParseDocBlock'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'showLog', u'showLog', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'on'): False, (u'macro2://24423/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28979/Logger_v2_old.js', u'JavaScript Code', u'(anonymous 1)'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'fn'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'Snippet'): False, (u'macro2://29245/TestObejctProperties.js', u'JavaScript Code', u'TestObejctProperties'): True, (u'macro2://29245/TestObejctProperties.js', u'JavaScript Code', u'TestObejctProperties', u'TestObejctProperties'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'header'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'fn', u'this'): False, (u'macro2://28920/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock'): False, (u'macro2://28791/CodeFinder.js', u'JavaScript Code', u'getClosestKey'): True, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\auto-complete.js', u'JavaScript Code', u'autoComplete', u'destroy'): True, (u'macro2://29024/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'setup'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'off'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'parentMethod', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'(anonymous 4)', u'txt'): False, (u'macro2://29181/Komodotool.js', u'JavaScript Code', u'Komodotool', u'Komodotool'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear', u'clear', u'message'): False, (u'macro2://28791/CodeFinder.js', u'JavaScript Code', u'findMatches'): False, (u'macro2://28956/Logger_v2.js', u'JavaScript Code', u'_this'): True, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\vilbur\\vilext\\content\\vilext.js', u'JavaScript Code', u'ko', u'extensions'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'(anonymous 5)', u'key'): False, (u'macro2://28970/ParseTag.js', u'JavaScript Code', u'ParseTag'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'ko'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'testObject', u'subobj', u'subobj_key'): False, (u'macro2://28618/CodeFinder.js', u'JavaScript Code', u'CodeFinder'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'warn'): False, (u'macro2://28605/ParseCode.js', u'JavaScript Code', u'ParseCode'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'splitter_short'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'object_name'): False, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo.js', u'JavaScript Code', u'ko', u'extensions', u'todo'): True, (u'macro2://27254/OpenedFiles.js', u'JavaScript Code', u'tabs'): True, (u'macro2://2168/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'macro2://28967/CodeFinder.js', u'JavaScript Code', u'CodeFinder'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'force'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear', u'clear', u'toggle'): False, (u'macro2://28791/CodeFinder.js', u'JavaScript Code', u'setMatchesAll'): False, (u'macro2://15270/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28987/CodeFinder.js', u'JavaScript Code', u'CodeFinder', u'CodeFinder', u'_setMatchFound'): False, (u'macro2://28791/CodeFinder.js', u'JavaScript Code', u'getMatch'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'showLog', u'showLog', u'mode'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'off', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameter', u'param_string'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameter', u'indent'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'fn', u'delimeter'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'line', u'index'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'setup', u'mode'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'(anonymous 3)', u'param'): False, (u'macro2://29247/Komodotool.js', u'JavaScript Code', u'Komodotool'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setLine', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child', u'Child'): False, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\less\\console.less',): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setNumericFactor'): False, (u'macro2://28987/CodeFinder.js', u'JavaScript Code', u'CodeFinder', u'options'): True, (u'macro2://28978/Logger_v2.js', u'JavaScript Code', u'ko', u'extensions', u'Logger_v2_old'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'off', u'logger_on'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'mode'): False, (u'macro2://28956/Logger_v2.js', u'JavaScript Code', u'Logger_v2', u'Logger_v2'): False, (u'macro2://27254/OpenedFiles.js', u'JavaScript Code', u'OpenedFiles'): True, (u'macro2://28914/Logger.js', u'JavaScript Code', u'Logger'): True, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo.js',): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'param_name'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'Parent', u'clear', u'consoleEL'): False, (u'macro2://2609/SnippetV2.js', u'JavaScript Code', u'SnippetV2', u'SnippetV2', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'header_on'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'line', u'end'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setLine'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'splitter'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'param_name_capital'): False, (u'macro2://13124/Snippet.js',): True, (u'macro2://24463/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\vilbur\\vilext\\content\\vilext.js', u'JavaScript Code', u'_getTabManagerList()[id]'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selectSelection', u'this'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selection', u'end'): False, (u'macro2://1516/SnippetV2.js', u'JavaScript Code', u'(anonymous 1)', u'(anonymous 1)'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setNumericFactor', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyArray', u'arr'): False, (u'macro2://28919/ParseCode.js', u'JavaScript Code', u'ParseCode'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setKeyword', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'info', u'value'): False, (u'macro2://29204/TestObejctProperties.js', u'JavaScript Code', u'TestObejctProperties', u'TestObejctProperties'): True, (u'macro2://28979/Logger_v2_old.js', u'JavaScript Code', u'ko', u'extensions'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'error', u'this'): False, (u'macro2://28990/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock', u'ParseDocBlock', u'(anonymous 2)'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'(anonymous 3)', u'param_length'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getSelection', u'selection'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setSelection'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear', u'clear', u'this'): False, (u'macro2://28956/Logger_v2.js', u'JavaScript Code', u'this'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setLineStart'): False, (u'macro2://17769/Fold.js', u'JavaScript Code', u'Fold'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'publicFunction', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child', u'childMethod', u'this'): False, (u'macro2://27270/Komodotool.js', u'JavaScript Code', u'Komodotool'): True, (u'macro2://28979/Logger_v2_old.js', u'JavaScript Code', u'ko'): True, (u'macro2://28216/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'_this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'publicFunction'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child', u'Child', u'this'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selection', u'start'): False, (u'macro2://28955/Logger.js', u'JavaScript Code', u'Logger'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getLineContent', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'header_text'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'console'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'fn', u'fnName'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'error'): False, (u'macro2://28977/Logger_v2.js', u'JavaScript Code', u'ko'): True, (u'macro2://28993/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setSelection', u'this'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'(anonymous 6)', u'index'): False, (u'macro2://28913/TestScript.js', u'JavaScript Code', u'parent'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child', u'Logger_v3X'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'force', u'force_on'): False, (u'macro2://28978/Logger_v2.js', u'JavaScript Code', u'ko'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'this'): False, (u'macro2://28956/Logger_v2.js', u'JavaScript Code', u'Logger_v2'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyArray'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setNumericFactor', u'delimeter'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'parameters'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code'): True, (u'macro2://20577/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'header', u'this'): False, (u'macro2://17733/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'showLog', u'showLog', u'log_text'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'clear', u'clear'): True, (u'macro2://28981/Logger.js', u'JavaScript Code', u'Logger', u'Logger'): True, (u'macro2://29058/PraseCodeTag.js', u'JavaScript Code', u'PraseCodeTag'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'showLog'): False, (u'macro2://27270/Komodotool.js', u'JavaScript Code', u'ko'): True, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo.js', u'JavaScript Code', u'ko', u'extensions'): True, (u'macro2://28969/ParseDocBlock.js', u'JavaScript Code', u'ParseDocBlock', u'ParseDocBlock'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'ko', u'extensions', u'Child'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyArray', u'isArray'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'testObject', u'objKey1'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'error', u'value'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'showLog', u'mode'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters', u'arr_val'): False, (u'macro2://20624/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'parameters'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setNumericFactor', u'NumericFactor'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setNewLineAbove'): False, (u'macro2://2609/SnippetV2.js', u'JavaScript Code', u'SnippetV2', u'SnippetV2'): True, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\auto-complete.js', u'JavaScript Code', u'module'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Parent', u'testObject', u'subobj'): False, (u'macro2://29061/CodeFinder.js', u'JavaScript Code', u'CodeFinder', u'CodeFinder'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'ko', u'extensions'): False, (u'macro2://28962/DocBlock.js', u'JavaScript Code', u'DocBlock', u'DocBlock'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'keyword', u'prefix'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setSelection', u'currentPos'): False, (u'macro2://28962/DocBlock.js', u'JavaScript Code', u'DocBlock'): True, (u'macro2://28601/VilTabBox.js', u'JavaScript Code', u'VilTabBox', u'VilTabBox'): True, (u'macro2://28977/Logger_v2.js', u'JavaScript Code', u'testClassObj'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyArray', u'indent'): False, (u'macro2://28978/Logger_v2.js', u'JavaScript Code', u'testClassObj'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'params_val'): False, (u'macro2://29181/Komodotool.js', u'JavaScript Code', u'Komodotool'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'getSelection'): False, (u'macro2://1517/Snippet.js', u'JavaScript Code', u'Snippet'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParameters'): False, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\console.js', u'JavaScript Code', u'document', u'createElement'): True, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'setSelection', u'anchor'): False, (u'macro2://28982/Logger_v3.js',): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'(anonymous 3)'): False, (u'macro2://29182/Logger_v3.js', u'JavaScript Code', u'Logger_v3'): True, (u'c:\\googledrive\\programs\\code\\komodo\\extensions\\others\\todo-helper\\content\\todo-ko7.js', u'JavaScript Code', u'ko'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'stringifyParametersFlat', u'parameters_values'): False, (u'c:\\program files (x86)\\activestate komodo ide 10\\lib\\mozilla\\extensions\\console@activestate.com\\content\\js\\console.js', u'JavaScript Code', u'app', u'logger_options'): True, (u'macro2://28955/Logger.js', u'JavaScript Code', u'Logger', u'Logger'): True, (u'macro2://1516/SnippetV2.js', u'JavaScript Code', u'(anonymous 1)'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'on', u'logger_on'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'keyword', u'word'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'clear', u'toggle'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'selectLine', u'this'): False, (u'macro2://28927/Snippet.js', u'Node.js Code', u'Snippet'): True, (u'macro2://2609/SnippetV2.js', u'JavaScript Code', u'SnippetV2'): True, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Child'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'NumericFactor'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'Snippet', u'keyword'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getObjectName', u'(anonymous 4)'): False, (u'macro2://13124/Snippet.js', u'JavaScript Code', u'scimoz'): False, (u'macro2://28982/Logger_v3.js', u'JavaScript Code', u'Logger_v3', u'Logger_v3', u'getHeader', u'message'): False}</string>
+  <boolean id="codeintel_scan_files_in_project">1</boolean>
+  <long id="codeintel_sectionlist_sort_order">0</long>
+  <string id="codeintel_selected_catalogs">[u'jQuery']</string>
+  <string id="codeintel_sort_codebrowser_by">file-order</string>
+  <boolean id="collaboration_always_show_user_flags">0</boolean>
+  <long id="commando_files_max_depth">8</long>
+  <boolean id="commando_navigate_by_number">1</boolean>
+  <long id="commando_result_render_delay">50</long>
+  <long id="commando_search_delay">50</long>
+  <long id="commando_search_max_results">50</long>
+  <string id="commando_shell_output">hud</string>
+<ordered-preference id="commit_message_history">
+  <string>Komodo commit</string>
+  <string>Komodo test commit</string>
+  <string>Added *.komodoproject subfolders</string>
+  <string>TEST COMMIT 2</string>
+  <string></string>
+  <string>Test commit from Komodo IDE</string>
+</ordered-preference>
+<ordered-preference id="compare_files_first">
+  <string>C:\GoogleDrive\Programs\Code\wamp\config_files\php.ini</string>
+  <string>D:\Work\CG_TEMP\stylish-after.html</string>
+  <string>C:\GoogleDrive\Programs\Core\Chrome\Extensions TODO_Connect to Drive\CJS\atlassian.net\tmp_empty.html</string>
+  <string>D:\Work\CG_TEMP\temp\import_selected.html</string>
+  <string>D:\Work\CG_TEMP\temp\import.html</string>
+  <string>C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\prefs.xml</string>
+</ordered-preference>
+<ordered-preference id="compare_files_second">
+  <string>C:\wamp\bin\php\php7.1.9\php.ini</string>
+  <string>D:\Work\CG_TEMP\stylish-before.html</string>
+  <string>C:\GoogleDrive\Programs\Core\Chrome\Extensions TODO_Connect to Drive\CJS\atlassian.net\tmp_selected.html</string>
+  <string>D:\Work\CG_TEMP\temp\import.html</string>
+  <string>D:\Work\CG_TEMP\temp\import_selected.html</string>
+  <string>C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\prefs.xml.bak</string>
+</ordered-preference>
+  <string id="console_history">["alert( \"TestScript.TestScript.TestScript\" );\n","","alert('test')","require('ko/console').info('message');","clear()","require('ko/console').clear()","clear()","require('ko/console').info('message');","Console.log('test')","alert('test')","","closeWindow()","closeWindow","","clearInterval","clear()","alert('test')"]</string>
+  <string id="cordovaInterpreter"></string>
+  <boolean id="cvs_uses_externaldiff">0</boolean>
+  <boolean id="debugSkipDialog">0</boolean>
+  <boolean id="debug_break_on_remote_connect">1</boolean>
+  <boolean id="debuggerFindLocalFile">1</boolean>
+  <boolean id="debuggerHoverValue">1</boolean>
+  <boolean id="debuggerRestoreStartPosAtEndOfSession">1</boolean>
+  <string id="defaultDateFormat">%25a %25b %25d %25H:%25M:%25S %25Y</string>
+  <string id="defaultEncoding">utf-8</string>
+  <string id="defaultSelectedPref">helpItem</string>
+  <string id="defaultSelectedSubPref">indentationProperties</string>
+<ordered-preference id="dialog-interpolationquery-%uppercaseMru">
+  <string>test</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-ClassNameMru">
+  <string>EventGenerator</string>
+  <string>CommandBus</string>
+  <string>ExampleTest</string>
+  <string>Foo</string>
+  <string>Vilbur\Template\Models</string>
+  <string>Tests\Database</string>
+  <string>SnippetTest</string>
+  <string>TestSnippet</string>
+  <string>PostJobListingCommand</string>
+  <string>tes</string>
+  <string>TERS</string>
+  <string>Test</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-DelimeterMru">
+  <string>|</string>
+  <string>, </string>
+  <string>\n</string>
+  <string>,</string>
+  <string> </string>
+  <string>='', </string>
+  <string>,\n</string>
+  <string>||</string>
+  <string>X</string>
+  <string>x</string>
+  <string>\\n</string>
+  <string>\\\n</string>
+  <string>xxxxxxxxxxxxxxx</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-Enter name of GuiMru">
+  <string>TEST</string>
+  <string>FooBar</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-ExtendsMru">
+  <string>Illuminate\Foundation\Testing\TestCase as BaseTestCase</string>
+  <string>Illuminate\Foundation\Testing\TestCase as BaseTestCase App\Http\FooUse</string>
+  <string>Illuminate\Foundation\Testing\TestCase</string>
+  <string>Illuminate\Database\Eloquent\Model</string>
+  <string>Model</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-File NameMru">
+  <string>CommandBus</string>
+  <string>ClassName</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-FilenameMru">
+  <string>CommandBus</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-GUI NameMru">
+  <string>XXX</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-ImplementsMru">
+  <string>Cviebrock\EloquentSluggable\Sluggable App\Http\FooUse</string>
+  <string>Cviebrock\EloquentSluggable\Sluggable as SLUG App\Http\FooUse</string>
+  <string> Cviebrock\EloquentSluggable\Sluggable</string>
+  <string>Illuminate\Foundation\Testing\TestCase Cviebrock\EloquentSluggable\Sluggable</string>
+  <string>Illuminate\Foundation\Testing\TestCase</string>
+  <string>IlluminateFoundationTestingTestCase</string>
+  <string>TestCase</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-NameMru">
+  <string>TEST</string>
+  <string>Trent</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-NamespaceMru">
+  <string>Commands\Events</string>
+  <string>App\Commands</string>
+  <string>Tests\Unit</string>
+  <string>Vilbur\Template\Models</string>
+  <string>TestModel</string>
+  <string>TestSnippet</string>
+  <string>App\App\Http\Controllers</string>
+  <string>Tests\Database</string>
+  <string>\App\Commands</string>
+  <string>\App\App\Http</string>
+  <string>\App\App\Http\Controllers</string>
+  <string>\App\Commads</string>
+  <string>\App\Commads\Subdir</string>
+  <string>\App\Namespace</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-ParameterMru">
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-PropertyMru">
+  <string>pendingEvents</string>
+  <string>event</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-TypeMru">
+  <string>class</string>
+  <string>abstract</string>
+  <string>interface</string>
+  <string>trait</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-VisibilityMru">
+  <string>protected</string>
+  <string>public</string>
+  <string>private</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-WrapperMru">
+  <string>'</string>
+  <string>|\t:= ""</string>
+  <string>"</string>
+  <string>[|]</string>
+  <string>|()</string>
+  <string>\|</string>
+  <string>['|'],</string>
+  <string>\\t*|</string>
+  <string>'|':\t</string>
+  <string> *\t|</string>
+  <string>|:\t</string>
+  <string>{{|}}</string>
+  <string>"|"+</string>
+  <string>'|&lt;br&gt;'</string>
+  <string>'|'+</string>
+  <string>+'|'</string>
+  <string>|+</string>
+  <string>|,</string>
+  <string>'|',</string>
+  <string>'':\t|,</string>
+  <string>|</string>
+  <string>'|' +</string>
+  <string>'"'</string>
+  <string>'\n|'+</string>
+  <string>'\\n|'+</string>
+  <string> property==='|'</string>
+  <string>'|\n'+</string>
+  <string>'|'\n+</string>
+  <string>'|\\n'+</string>
+  <string>|;</string>
+  <string>A|</string>
+  <string>A|B</string>
+  <string>x</string>
+  <string>X</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-Your NameMru">
+  <string>Test</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-extendMru">
+  <string>TestCase</string>
+  <string>Controller</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-extendsMru">
+  <string>Ext</string>
+  <string>ExtClass</string>
+  <string>ClassExt</string>
+  <string>AAAAAA</string>
+  <string>AA</string>
+  <string>AAA</string>
+  <string>XXX</string>
+  <string>CommandBus</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-implementMru">
+  <string>test</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-implementsMru">
+  <string>Impl</string>
+  <string>InterfaceClass</string>
+  <string>ClassInterface</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-interfaceMru">
+  <string>Interface</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-namespaceMru">
+  <string>\App\Commads\Subdir</string>
+  <string>App\Commands</string>
+  <string>App\Vilbur</string>
+  <string>App\</string>
+</ordered-preference>
+<ordered-preference id="dialog-interpolationquery-var1Mru">
+  <string>result</string>
+</ordered-preference>
+  <boolean id="diskBackgroundCheck">1</boolean>
+  <long id="diskBackgroundMinutes">15</long>
+  <string id="dockerBinary"></string>
+  <string id="docs_db_version">win32-x8689474</string>
+  <string id="donotask_action_allow_remote_debug"></string>
+  <string id="donotask_action_allow_remote_profiling"></string>
+  <string id="donotask_action_close_all_files_on_project_close">No</string>
+  <string id="donotask_action_close_deleted_files"></string>
+  <string id="donotask_action_debugger_confirm_close"></string>
+  <string id="donotask_action_dragdrop_uri"></string>
+  <string id="donotask_action_ensure_filename_has_ext">Yes</string>
+  <string id="donotask_action_ensure_new_filename_has_ext"></string>
+  <string id="donotask_action_open_recent_files_on_project_open">No</string>
+  <string id="donotask_action_placesAllowDragDropItemsToFolders"></string>
+  <string id="donotask_action_reload_changed_files">All</string>
+  <string id="donotask_action_restore_workspace">Yes</string>
+  <string id="donotask_action_save_buffer_before_preview"></string>
+  <string id="donotask_action_save_on_debug"></string>
+  <string id="donotask_action_scc_no_commit_message">Yes</string>
+  <string id="donotask_action_show_scc_tab">Yes</string>
+  <boolean id="donotask_allow_remote_debug">0</boolean>
+  <boolean id="donotask_allow_remote_profiling">0</boolean>
+  <boolean id="donotask_buffer_conflicts_with_file_on_disk">1</boolean>
+  <boolean id="donotask_close_all_files_on_project_close">1</boolean>
+  <boolean id="donotask_close_deleted_files">0</boolean>
+  <boolean id="donotask_consoleMessages">1</boolean>
+  <boolean id="donotask_debugger_confirm_close">0</boolean>
+  <boolean id="donotask_dragdrop_uri">0</boolean>
+  <boolean id="donotask_ensure_filename_has_ext">1</boolean>
+  <boolean id="donotask_ensure_new_filename_has_ext">0</boolean>
+  <boolean id="donotask_open_recent_files_on_project_open">1</boolean>
+  <boolean id="donotask_placesAllowDragDropItemsToFolders">0</boolean>
+  <boolean id="donotask_reload_changed_files">1</boolean>
+  <boolean id="donotask_restore_workspace">1</boolean>
+  <boolean id="donotask_revert_buffer">0</boolean>
+  <boolean id="donotask_save_buffer_before_preview">0</boolean>
+  <boolean id="donotask_save_on_debug">0</boolean>
+  <boolean id="donotask_scc_no_commit_message">1</boolean>
+  <boolean id="donotask_show_scc_tab">1</boolean>
+  <boolean id="donotask_startup_reopen_file_error_dialog">1</boolean>
+  <boolean id="donotask_treat_large_documents_as_text">1</boolean>
+  <long id="editAutoWrapColumn">80</long>
+  <boolean id="editEnableMouseZoom">0</boolean>
+  <boolean id="editFoldLines">1</boolean>
+  <string id="editFoldStyle">squaretree</string>
+  <boolean id="editRestoreFoldPoints">1</boolean>
+  <boolean id="editShowMinimap">0</boolean>
+  <boolean id="editSmartCutCopyWithoutSelection">0</boolean>
+  <boolean id="editSmartSoftCharacters">1</boolean>
+  <boolean id="editSmartWrapSelection">1</boolean>
+  <boolean id="editSmartWrapSelectionKeep">1</boolean>
+  <boolean id="editTabCompletes">0</boolean>
+  <boolean id="editUseEdge">0</boolean>
+  <boolean id="editUseLinting">1</boolean>
+  <boolean id="editUseSpellChecking">1</boolean>
+  <long id="editWordWrapIndentation">1</long>
+  <long id="editWordWrapMarker">0</long>
+  <long id="editWrapType">0</long>
+  <string id="editor-font"> Monospace</string>
+  <boolean id="editor-font-defer">1</boolean>
+  <long id="editor-font-size">11</long>
+  <long id="editor-line-spacing">2</long>
+  <string id="editor-scheme">vilbur</string>
+  <boolean id="emacsLocalModeVariableDetection">1</boolean>
+  <boolean id="enableAutoAbbreviations">1</boolean>
+  <boolean id="enableElasticTabstops">1</boolean>
+  <boolean id="enableMultipleSelectionMouse">1</boolean>
+  <boolean id="enableSmartSoftCharactersInsideLine">0</boolean>
+  <boolean id="enableSmartTabSkipsSoftCharacters">1</boolean>
+  <boolean id="encodingAutoDetect">1</boolean>
+  <string id="encodingDefault">utf-8</string>
+  <boolean id="encodingHTML">0</boolean>
+  <boolean id="encodingModeline">1</boolean>
+  <boolean id="encodingXMLDec">1</boolean>
+  <string id="endOfLine">CRLF</string>
+  <boolean id="ensureFinalEOL">0</boolean>
+  <boolean id="extensions.NST.HTMLfilter">0</boolean>
+  <boolean id="extensions.NST.expand">1</boolean>
+  <boolean id="extensions.NST.left">0</boolean>
+  <boolean id="extensions.NST.locate">0</boolean>
+  <boolean id="extensions.NST.sort">1</boolean>
+  <string id="fileAssociationDiffs">[('+', u'*.asm', u'Autohotkey'), ('+', u'*.vini', u'Ini'), ('+', u'*.vue', u'HTML5'), ('+', u'*.mcr', u'Maxscript'), ('-', '*.asm', 'Assembler')]</string>
+  <string id="fileDefaultNew">Text</string>
+<preference-set id="filepickers.defaultDirs">
+  <string id="iconPicker.PickCustom">C:\GoogleDrive\Programs\Core\Komodo\Icons\Autohotkey</string>
+  <string id="listbox.pathEditor.add">C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\tools</string>
+</preference-set>
+  <string id="filtered-prefs-open-nodes-by-id">{"editorItem":true,"editorProperties":true}</string>
+  <long id="find-caseSensitivity">1</long>
+  <boolean id="find-confirmReplacementsInFiles">0</boolean>
+  <string id="find-cwd">D:\GoogleDrive\TotalComander</string>
+  <boolean id="find-displayInFindResults2">0</boolean>
+<ordered-preference id="find-excludeFiletypes">
+  <string>*.svn</string>
+  <string>*.CVS</string>
+  <string>*.git</string>
+  <string>*.hg</string>
+  <string>*.bzr</string>
+  <string>*~</string>
+</ordered-preference>
+<ordered-preference id="find-excludeFiletypesMru">
+  <string>*.svn;*.CVS;*.git;*.hg;*.bzr;*~</string>
+  <string>.svn;CVS;.git;.hg;.bzr;*~</string>
+</ordered-preference>
+<ordered-preference id="find-folders">
+  <string>C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidVariator</string>
+</ordered-preference>
+<ordered-preference id="find-foldersMru">
+  <string>d:\GoogleDrive\TotalComander</string>
+  <string>C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\tools</string>
+</ordered-preference>
+  <boolean id="find-highlightEnabled">1</boolean>
+  <long id="find-highlightTimeout">1000</long>
+<ordered-preference id="find-includeFiletypes">
+  <string>*.ini</string>
+  <string>*.bar</string>
+  <string>*.mnu</string>
+</ordered-preference>
+<ordered-preference id="find-includeFiletypesMru">
+  <string>*.ini;*.bar;*.mnu</string>
+  <string>.ini;.BAR;.mnu</string>
+  <string>.ini;.bar;.mnu</string>
+  <string>.komodotool</string>
+</ordered-preference>
+  <string id="find-lastInFilesContext">files</string>
+  <boolean id="find-matchWord">0</boolean>
+  <boolean id="find-multiline">0</boolean>
+<ordered-preference id="find-patternMru">
+  <string>swi</string>
+  <string>swift</string>
+  <string>test</string>
+  <string>setProjectViewsByOpenedFiles</string>
+  <string>~</string>
+  <string>^(.*)$</string>
+  <string>removeFile</string>
+  <string>checkProjectFilesExistence</string>
+  <string>insertSnippet</string>
+  <string>insertToFileContent</string>
+  <string>addToFileContent</string>
+  <string>useFile</string>
+  <string>.id</string>
+  <string>_Project.name</string>
+  <string>id</string>
+  <string>^\s*;(?![/;]).*$</string>
+  <string>^\s*//(?!/).*$</string>
+  <string>envVarsSave</string>
+  <string>saveProject</string>
+  <string>setProject</string>
+  <string>String</string>
+  <string>collapseLines</string>
+  <string>TestObject</string>
+  <string>string_multiline</string>
+  <string>closeAllBuffers</string>
+  <string>onProjectOpen</string>
+  <string>getTabsAll</string>
+  <string>_getTabsFromEditor</string>
+  <string>checkProjectFilesPanes</string>
+  <string>timeout</string>
+  <string>eventsOn</string>
+  <string>switchViewsIfFirstIsEmpty</string>
+  <string>splitViews</string>
+  <string>removeProject</string>
+  <string>Project</string>
+  <string>Logger</string>
+  <string>prop_setter</string>
+  <string></string>
+  <string>[',",\),\],}]</string>
+  <string>module</string>
+  <string>_prefs</string>
+  <string>handlerList</string>
+  <string>class_types</string>
+  <string>class_type</string>
+  <string>setClassType</string>
+  <string>getNamespaceMatch</string>
+  <string>getClassNameMatch</string>
+  <string>getClassName</string>
+  <string>delete</string>
+  <string>_deleteItem</string>
+</ordered-preference>
+  <long id="find-patternType">0</long>
+  <long id="find-preferredContextType">0</long>
+<ordered-preference id="find-replacementMru">
+  <string>https://chrome.google.com/webstore/detail/</string>
+  <string>\1</string>
+  <string>section_data</string>
+  <string>TypingAid</string>
+  <string>InstallFiles\VariationsSource\</string>
+  <string>InstallFiles\TypingAid\\</string>
+  <string>path_variation</string>
+  <string>File</string>
+  <string>showLinkDialog_LinkRemove</string>
+  <string>showLinkDialog_LinkSave</string>
+  <string>showLinkDialog_OpenLink</string>
+  <string>setSheet</string>
+  <string>getSnippetor().Snippetor(data )</string>
+  <string>NewScript</string>
+  <string>importScript</string>
+  <string>ChildClassMerged</string>
+  <string>ChildClass_imported</string>
+  <string> </string>
+  <string>prefixes</string>
+  <string>findPrefixesByRange</string>
+  <string>findNamedRangesByPrefix_fnTest</string>
+  <string>findSharedNames</string>
+  <string>findNamedRanges</string>
+  <string>nranges</string>
+  <string>getSharedNames</string>
+  <string>getNamedRangesByPrefix</string>
+  <string>getSharedNamedRanges</string>
+  <string>getNamedRanges</string>
+  <string>findRangeTest</string>
+  <string>RULE_HELP</string>
+  <string>LIST</string>
+  <string>LIST_RANGE</string>
+  <string>LIST_ITEMS</string>
+  <string>ValueFinder</string>
+  <string>removeFromActiveRange</string>
+  <string>setToRange</string>
+  <string>insertToActiveRange</string>
+  <string>RemoveFromActiveRange</string>
+  <string>getRangesByPrefix</string>
+  <string>findRange</string>
+  <string>NamedRanges</string>
+  <string>FORMULA</string>
+  <string>RULE</string>
+  <string>setRangesFound</string>
+  <string>ranges_found</string>
+  <string>range_data</string>
+  <string>setSearchFor</string>
+  <string>search_for</string>
+  <string>range_validations</string>
+  <string>setRangeData</string>
+</ordered-preference>
+  <boolean id="find-searchBackward">0</boolean>
+  <boolean id="find-searchInSubfolders">1</boolean>
+  <boolean id="find-showReplaceAllResults">0</boolean>
+  <long id="find-skipFileSizesLargerThan">104857600</long>
+  <boolean id="find-skipLargeFilesEnabled">1</boolean>
+  <boolean id="find_in_view">0</boolean>
+  <boolean id="foldSeparateBlockParts">1</boolean>
+  <boolean id="hyperlinksEnableColorPicker">1</boolean>
+  <boolean id="hyperlinksEnableGotoDefinition">1</boolean>
+  <boolean id="hyperlinksEnabled">1</boolean>
+  <string id="iconCacheVersion">win32-x8618441</string>
+  <long id="indentWidth">4</long>
+  <string id="interface-font"> sans-serif</string>
+  <boolean id="interface-font-defer">1</boolean>
+  <string id="interface-font-size">1rem</string>
+  <string id="interface-scheme">vilbur</string>
+  <string id="isearchCaseSensitivity">0</string>
+  <long id="isearchHighlightTimeout">35</long>
+  <boolean id="isearchKeysToEditor">0</boolean>
+  <string id="isearchType">0</string>
+  <string id="jshintOptions">moz=true unused=true esnext=true</string>
+  <string id="jshint_linter_chooser">default</string>
+  <string id="jshint_linter_specific"></string>
+  <string id="keybinding-scheme">vilbur</string>
+  <boolean id="keybindingDisableAccesskeys">0</boolean>
+  <string id="keybindings">Atom
+Default
+Eclipse
+Emacs
+IntelliJ
+Legacy
+Sublime
+VSCode
+Vi
+_vi
+vilbur
+</string>
+<preference-set id="ko-dbexplorer">
+  <string id="addConnection-last-dbtype">SQLite3</string>
+  <string id="dbexplorer-open-nodes">{}</string>
+</preference-set>
+  <boolean id="koSkin_use_custom_scrollbars">1</boolean>
+  <boolean id="komodo_normal_shutdown">1</boolean>
+  <string id="kpf_open_nodes_002ddf42-d52f-429c-a3e7-396161f3db25">{'002ddf42-d52f-429c-a3e7-396161f3db25': True}</string>
+  <string id="kpf_open_nodes_036004b4-6432-49eb-870f-4d79e7b3e44e">{}</string>
+  <string id="kpf_open_nodes_053fbca3-c3ec-42fa-b145-59e31e496081">{}</string>
+  <string id="kpf_open_nodes_06d33219-7ba1-41ec-ba88-6455d68dc88b">{u'06d33219-7ba1-41ec-ba88-6455d68dc88b': True}</string>
+  <string id="kpf_open_nodes_08d4a1df-3f1e-434d-88ed-6c1182a5c7e8">{}</string>
+  <string id="kpf_open_nodes_0a8ffa17-a7f1-468e-95ee-4d33b0250ee9">{}</string>
+  <string id="kpf_open_nodes_0ed01014-5ad8-4629-9216-0c172ee40569">{}</string>
+  <string id="kpf_open_nodes_0f2a2813-a5fb-4b09-99a5-133cdd8858b0">{}</string>
+  <string id="kpf_open_nodes_128ea6f6-efdb-4478-99c7-303431a3d64d">{'128ea6f6-efdb-4478-99c7-303431a3d64d': False}</string>
+  <string id="kpf_open_nodes_12a9c65d-50e7-4edf-8877-261ff135644c">{'12a9c65d-50e7-4edf-8877-261ff135644c': True}</string>
+  <string id="kpf_open_nodes_1493aa37-1963-4532-9b5a-72061b63d533">{}</string>
+  <string id="kpf_open_nodes_14a79e02-10ab-415d-a1b9-85de0df9780d">{}</string>
+  <string id="kpf_open_nodes_1a8dbb34-d1fd-4abc-b689-326f4ab6664c">{}</string>
+  <string id="kpf_open_nodes_1d4e1e76-1fcf-4061-b0c1-98c9bad2d27b">{}</string>
+  <string id="kpf_open_nodes_1d9b089e-d852-4c70-9046-b3cbe1bc7110">{}</string>
+  <string id="kpf_open_nodes_1e4bb539-7a14-4399-961c-5170d83ae7c9">{}</string>
+  <string id="kpf_open_nodes_1e5086fe-a7a9-410e-9b98-f6b7ab0dda6b">{u'1e5086fe-a7a9-410e-9b98-f6b7ab0dda6b': False}</string>
+  <string id="kpf_open_nodes_23357d1f-5415-4736-a997-116dde5b1598">{u'23357d1f-5415-4736-a997-116dde5b1598': True}</string>
+  <string id="kpf_open_nodes_252585d2-7e53-4e19-a578-017baccb30d7">{'252585d2-7e53-4e19-a578-017baccb30d7': False}</string>
+  <string id="kpf_open_nodes_2859ec1a-2c3f-4439-843a-5e43e8de54e8">{}</string>
+  <string id="kpf_open_nodes_29b9e046-3f31-4671-9607-1d8445d3b273">{}</string>
+  <string id="kpf_open_nodes_311a9f8f-ba4e-412d-bf52-f0abadee2242">{}</string>
+  <string id="kpf_open_nodes_3205ed81-4b71-4439-89bd-3a7c8166a35d">{}</string>
+  <string id="kpf_open_nodes_33d7d039-4ba9-4fa6-a0c2-6f2651bb0921">{}</string>
+  <string id="kpf_open_nodes_34167a97-40ca-4b78-8c12-4031507d0f43">{'34167a97-40ca-4b78-8c12-4031507d0f43': False}</string>
+  <string id="kpf_open_nodes_35020e99-1ccf-42ce-9bf7-87ace664f329">{'35020e99-1ccf-42ce-9bf7-87ace664f329': False}</string>
+  <string id="kpf_open_nodes_377176b2-fe0e-4146-a12f-b0f7345377cb">{u'377176b2-fe0e-4146-a12f-b0f7345377cb': True}</string>
+  <string id="kpf_open_nodes_3e602990-b890-4e83-b859-d83c18dcc0b3">{}</string>
+  <string id="kpf_open_nodes_3ec7bca1-fe7f-499f-9dd5-5d2ff7439ec0">{u'3ec7bca1-fe7f-499f-9dd5-5d2ff7439ec0': False}</string>
+  <string id="kpf_open_nodes_3faca89a-9d0e-4020-b09c-7f80ea08f019">{}</string>
+  <string id="kpf_open_nodes_40526e5f-519d-40d1-97a7-6f2b37fc48fe">{}</string>
+  <string id="kpf_open_nodes_45e6e5c3-864a-4723-ba50-4f410aebdbfb">{'45e6e5c3-864a-4723-ba50-4f410aebdbfb': False}</string>
+  <string id="kpf_open_nodes_466c368c-b0c1-44dc-b64f-6834842443c7">{u'466c368c-b0c1-44dc-b64f-6834842443c7': False}</string>
+  <string id="kpf_open_nodes_48e167f9-0009-4d4c-a8d6-8634086ce130">{}</string>
+  <string id="kpf_open_nodes_4c45d5f7-8dce-4599-920c-752af3ff3e82">{}</string>
+  <string id="kpf_open_nodes_59d99653-5529-430b-adb1-a2ed28459a41">{'59d99653-5529-430b-adb1-a2ed28459a41': False}</string>
+  <string id="kpf_open_nodes_5a216ee7-9be8-4dff-a698-a34732b449fe">{u'5a216ee7-9be8-4dff-a698-a34732b449fe': False}</string>
+  <string id="kpf_open_nodes_5ad33b79-9e3a-4f2f-9b91-13ca5fc6df96">{'5ad33b79-9e3a-4f2f-9b91-13ca5fc6df96': True}</string>
+  <string id="kpf_open_nodes_5c3f6665-728b-46ad-9537-46f150b87e14">{'5c3f6665-728b-46ad-9537-46f150b87e14': False}</string>
+  <string id="kpf_open_nodes_5f166b78-038d-4193-80f8-c78c09d38f96">{}</string>
+  <string id="kpf_open_nodes_605b40fa-b6d6-44fd-a74b-eabe94a8130e">{u'605b40fa-b6d6-44fd-a74b-eabe94a8130e': True}</string>
+  <string id="kpf_open_nodes_63825749-1d62-4a6f-b429-214bfb8a1e4c">{}</string>
+  <string id="kpf_open_nodes_640e1e37-f762-488e-ae28-11c19c36e314">{u'640e1e37-f762-488e-ae28-11c19c36e314': True}</string>
+  <string id="kpf_open_nodes_64b65151-e178-403b-ba7c-620e8871991b">{}</string>
+  <string id="kpf_open_nodes_655f1716-a5ad-4125-95dd-269c3496217c">{}</string>
+  <string id="kpf_open_nodes_65e953e1-8639-40bf-b59c-224cf9995605">{}</string>
+  <string id="kpf_open_nodes_6cf26819-28ec-4222-abbb-ff8525fb46fe">{}</string>
+  <string id="kpf_open_nodes_7265f3a5-e494-4005-a0b3-70462433a71a">{'7265f3a5-e494-4005-a0b3-70462433a71a': False}</string>
+  <string id="kpf_open_nodes_740a04c3-d7ba-4b45-8673-41d929238b6c">{'740a04c3-d7ba-4b45-8673-41d929238b6c': True}</string>
+  <string id="kpf_open_nodes_74a5f482-5bb5-4650-8154-06995bfad29a">{'74a5f482-5bb5-4650-8154-06995bfad29a': True}</string>
+  <string id="kpf_open_nodes_762bc767-32ae-4edd-8b02-f98ac228d2b6">{}</string>
+  <string id="kpf_open_nodes_762c0b52-86b2-4049-960d-0eddd76828f5">{}</string>
+  <string id="kpf_open_nodes_778f4d69-056a-47d3-adca-096126fee971">{}</string>
+  <string id="kpf_open_nodes_7cded85f-47cd-4926-b3b0-6ccc6bbbe3bf">{}</string>
+  <string id="kpf_open_nodes_7e3fffd0-d187-d04b-8269-0e177ad5566d">{u'7e3fffd0-d187-d04b-8269-0e177ad5566d': True}</string>
+  <string id="kpf_open_nodes_80376e54-af6b-4db8-978b-710aa9a67618">{u'80376e54-af6b-4db8-978b-710aa9a67618': True}</string>
+  <string id="kpf_open_nodes_836edb64-485a-4b69-98ed-8d284ebdd58f">{}</string>
+  <string id="kpf_open_nodes_9248ccf9-889e-4818-bf6e-bc22acce763c">{}</string>
+  <string id="kpf_open_nodes_93e30723-ae95-4da4-ac20-a8b0bee132df">{}</string>
+  <string id="kpf_open_nodes_972d487c-bbea-4a3f-ac8b-6e0ca1584ef0">{}</string>
+  <string id="kpf_open_nodes_9a7b2358-bf76-4684-8989-27892b178714">{}</string>
+  <string id="kpf_open_nodes_9b3a47a9-a70a-4f22-8f78-c34c3760adf5">{}</string>
+  <string id="kpf_open_nodes_9ba84b6c-248f-4cc2-9e9e-321a5f8d3f6b">{}</string>
+  <string id="kpf_open_nodes_a06131c0-7e7d-47ca-bcb8-8fdd3e5e72db">{'a06131c0-7e7d-47ca-bcb8-8fdd3e5e72db': False}</string>
+  <string id="kpf_open_nodes_a2dd75a3-a584-40e5-a4cb-d58f9d534e2b">{'a2dd75a3-a584-40e5-a4cb-d58f9d534e2b': True}</string>
+  <string id="kpf_open_nodes_a488e82f-510a-499c-819d-ab3dc47b7424">{u'a488e82f-510a-499c-819d-ab3dc47b7424': True}</string>
+  <string id="kpf_open_nodes_a7d2e87c-8149-4a0a-b9fa-6cbe1cdaad00">{}</string>
+  <string id="kpf_open_nodes_aa2cfb20-df12-4737-95d0-2065c8d1cba2">{u'aa2cfb20-df12-4737-95d0-2065c8d1cba2': False}</string>
+  <string id="kpf_open_nodes_ab11f90c-9c7c-4dfd-ab3a-d004815c61e7">{'ab11f90c-9c7c-4dfd-ab3a-d004815c61e7': True}</string>
+  <string id="kpf_open_nodes_ab7b698c-1fad-4983-b572-c59f7d88a2d5">{}</string>
+  <string id="kpf_open_nodes_b184b6ae-31ff-4356-bbd7-14fc32d3af18">{}</string>
+  <string id="kpf_open_nodes_b3b96bfb-7076-4b97-81ac-48bf047594b0">{}</string>
+  <string id="kpf_open_nodes_b5a2a20b-4b46-4447-8cb2-9c4c5f349d89">{}</string>
+  <string id="kpf_open_nodes_ba9ca9e6-5c08-416a-b795-6d0b82f5811a">{}</string>
+  <string id="kpf_open_nodes_bd57dbf6-1625-476e-a369-ee27ee2115df">{u'bd57dbf6-1625-476e-a369-ee27ee2115df': True}</string>
+  <string id="kpf_open_nodes_bf31e542-9a53-410b-a6ca-a5bc1be3cd47">{u'bf31e542-9a53-410b-a6ca-a5bc1be3cd47': False}</string>
+  <string id="kpf_open_nodes_c4321cbc-5c0a-41f5-9339-3c63225bc989">{}</string>
+  <string id="kpf_open_nodes_cbc73d3e-9476-40d3-8140-006909dc39d1">{'cbc73d3e-9476-40d3-8140-006909dc39d1': False}</string>
+  <string id="kpf_open_nodes_cc7c8090-59e6-4bff-9ac2-eeb4ae058aba">{u'cc7c8090-59e6-4bff-9ac2-eeb4ae058aba': True}</string>
+  <string id="kpf_open_nodes_d139d796-ec02-4758-8274-1a7a66b92c4e">{'d139d796-ec02-4758-8274-1a7a66b92c4e': False}</string>
+  <string id="kpf_open_nodes_d36240d6-5991-4027-b2a9-13e2d1eb0a4d">{}</string>
+  <string id="kpf_open_nodes_d4db3122-baed-44fb-a020-f44f539570cc">{}</string>
+  <string id="kpf_open_nodes_d912b906-fb58-4c59-b545-27708ba25342">{}</string>
+  <string id="kpf_open_nodes_dced37b1-bfab-41b2-8eaa-6df96cfe44c6">{}</string>
+  <string id="kpf_open_nodes_dd6cb291-2229-4e6d-94b3-bea57f4641eb">{}</string>
+  <string id="kpf_open_nodes_dfbdcd49-3445-4915-b7fc-d7a6fce44684">{}</string>
+  <string id="kpf_open_nodes_e5430bf8-5c63-4332-8494-166a82224718">{'e5430bf8-5c63-4332-8494-166a82224718': True}</string>
+  <string id="kpf_open_nodes_e66cd102-370a-45c7-9070-50ac283262cb">{'e66cd102-370a-45c7-9070-50ac283262cb': True}</string>
+  <string id="kpf_open_nodes_e9e8e5ce-6eee-4052-ad9a-215b7af10d49">{}</string>
+  <string id="kpf_open_nodes_eb87eeff-c7be-4ea8-84d3-04534f3bf0f3">{}</string>
+  <string id="kpf_open_nodes_ed5141c7-8a1f-450d-9053-cb623bb81c2a">{}</string>
+  <string id="kpf_open_nodes_ee544708-4d4f-4ad3-88f8-4daf6b44082e">{}</string>
+  <string id="kpf_open_nodes_f0065f71-26de-4a54-aa27-303a72131bd8">{u'f0065f71-26de-4a54-aa27-303a72131bd8': True}</string>
+  <string id="kpf_open_nodes_f137e84c-1053-4d95-aedd-e0b8fab210ca">{u'f137e84c-1053-4d95-aedd-e0b8fab210ca': False}</string>
+  <string id="kpf_open_nodes_f1ae4157-7148-4a7d-b852-bf65f49ac984">{'f1ae4157-7148-4a7d-b852-bf65f49ac984': True}</string>
+  <string id="kpf_open_nodes_f1c241fd-226e-4f03-8757-b053e43f6bfc">{}</string>
+  <string id="kpf_open_nodes_f1d99358-c0f4-4488-b191-ca7fd195bab2">{'f1d99358-c0f4-4488-b191-ca7fd195bab2': True}</string>
+  <string id="kpf_open_nodes_f522084c-cbcd-4500-9efe-49092311705a">{}</string>
+  <string id="kpf_open_nodes_f9c49882-0fce-47ba-93f8-6d4a6570a865">{'f9c49882-0fce-47ba-93f8-6d4a6570a865': False}</string>
+  <string id="kpf_open_nodes_f9e943c4-f135-41b5-86b0-474cf312ba16">{'f9e943c4-f135-41b5-86b0-474cf312ba16': True}</string>
+  <string id="kpf_open_nodes_fa68327d-10c6-45a6-a6d2-28d8d48cb9ce">{u'fa68327d-10c6-45a6-a6d2-28d8d48cb9ce': True}</string>
+  <string id="kpf_open_nodes_fa981f21-c029-4cb2-a7d0-f26b31cc676e">{}</string>
+  <string id="kpf_open_nodes_fb03dc75-a6c9-4ccd-a488-6126639dbe4f">{}</string>
+  <string id="kpf_open_nodes_fc9e31b6-8e99-4786-868b-00c2102ab837">{u'fc9e31b6-8e99-4786-868b-00c2102ab837': True}</string>
+  <string id="kpf_open_nodes_feab9695-8a19-4ad7-a307-7698fde9d137">{'feab9695-8a19-4ad7-a307-7698fde9d137': True}</string>
+  <string id="kpf_open_nodes_ff2ea998-a736-4bc2-a785-cadf64bdbf2e">{}</string>
+  <boolean id="languages/AngularJS/primary">0</boolean>
+  <boolean id="languages/Autohotkey/primary">1</boolean>
+  <boolean id="languages/C++/primary">0</boolean>
+  <boolean id="languages/CoffeeScript/primary">0</boolean>
+  <boolean id="languages/Django/primary">0</boolean>
+  <boolean id="languages/EJS/primary">1</boolean>
+  <boolean id="languages/Go/primary">0</boolean>
+  <boolean id="languages/Less/useTabs">0</boolean>
+  <boolean id="languages/Markdown/primary">0</boolean>
+  <boolean id="languages/Node.js/primary">0</boolean>
+  <boolean id="languages/Perl/primary">0</boolean>
+  <boolean id="languages/Python/primary">0</boolean>
+  <boolean id="languages/Python3/primary">0</boolean>
+  <boolean id="languages/Ruby/primary">0</boolean>
+  <boolean id="languages/Sass/primary">1</boolean>
+  <boolean id="languages/Tcl/primary">0</boolean>
+  <boolean id="languages/Twig/primary">0</boolean>
+  <boolean id="languages/XML/primary">0</boolean>
+<preference-set id="lastTestPlanName">
+</preference-set>
+  <string id="lastTestPlanName_pref">New test plan #1</string>
+  <string id="lastTestPlanProjectURL">file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/pack-VoyagerSeeder.komodoproject</string>
+  <string id="lessCacheCleanup">["1509439620675"]</string>
+  <string id="lessCachePlatVersion">win32-x8618441</string>
+  <string id="lessCacheVersion">1669691726915</string>
+  <string id="lessDefaultInterpreter">None</string>
+  <string id="lessLinterType">path</string>
+  <boolean id="link-schemes">1</boolean>
+  <boolean id="lintClearOnTextChange">0</boolean>
+  <long id="lintDelay">2000</long>
+  <boolean id="lintEOLs">1</boolean>
+  <boolean id="lintHTML5Lib">0</boolean>
+  <boolean id="lintHTMLTidy">1</boolean>
+  <boolean id="lintHTML_CheckWith_Perl_HTML_Lint">0</boolean>
+  <boolean id="lintHTML_CheckWith_Perl_HTML_Tidy">0</boolean>
+  <boolean id="lintJavaScriptEnableStrict">1</boolean>
+  <boolean id="lintJavaScriptEnableWarnings">1</boolean>
+  <boolean id="lintJavaScript_SpiderMonkey">0</boolean>
+  <boolean id="lintWithJSHint">1</boolean>
+  <boolean id="lint_coffee_script">1</boolean>
+  <boolean id="lint_jsx">1</boolean>
+  <boolean id="lint_python3_with_pep83">0</boolean>
+  <boolean id="lint_python3_with_pychecker3">0</boolean>
+  <boolean id="lint_python3_with_pyflakes3">0</boolean>
+  <boolean id="lint_python3_with_pylint3">0</boolean>
+  <boolean id="lint_python3_with_standard_python">1</boolean>
+  <boolean id="lint_python_with_pep8">0</boolean>
+  <boolean id="lint_python_with_pychecker">0</boolean>
+  <boolean id="lint_python_with_pyflakes">0</boolean>
+  <boolean id="lint_python_with_pylint">0</boolean>
+  <boolean id="lint_python_with_standard_python">1</boolean>
+  <boolean id="lint_typescript">1</boolean>
+<ordered-preference id="mruFileList">
+  <string>file:///B:/GoogleDrive/GoogleDrive-old-comp/Programs/Core/Komodo/AppData/10.1/tools/Scripts/LANGUAGE/Ejs/Variable.komodotool</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SUBOBJECT/Subobject/Subobject.ms</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/DisplayFusion/Profiles/load-profile-3DsMax-Unreal</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Ahk-start.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/Komodo-Run.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidInstancer/Lib/Instancer.exe</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/Dump.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/Windows/Registry/Keyboard/Win-Key-Shortcuts/Enable.reg</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/Windows/Registry/_For_revision/Remove_Watermark.reg</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/MediaMonkey/openProperties.ahk</string>
+  <string>file:///B:/GoogleDrive/GoogleDrive-old-comp/Programs/Core/AutoHotkey/Lib/MediaMonkey/openProperties.ahk</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2022%2520-%252064bit/ENU/scripts/vilTools3/vilTools3.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2022%2520-%252064bit/ENU/scripts/vilTools3/vilTools3.mcr</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/AppData/10.1/tools/README.md</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/_3rdParty/Todo/.komodotools/Build_and_Install.komodotool</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor/Lib/IniKeyControl.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor/IniEditor.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor/Lib/KeyControls.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor/Test/IniEditor_test.ahk</string>
+</ordered-preference>
+<ordered-preference id="mruMenuItemList">
+  <string>menu_preferences</string>
+  <string>ko_custom_macro_3842</string>
+  <string>menu_save</string>
+  <string>menu_helpHelp</string>
+  <string>menu_toggleMenubar</string>
+  <string>ref%0e1 vilTools3.mcr%0e</string>
+  <string>ko_custom_macro_21950</string>
+  <string>menu_moveTab</string>
+  <string>ref%0eRx Toolkit%0eko.commands.doCommandAsync('cmd_toolsRx', event)</string>
+  <string>ref%0e5 emmet.js &#8212; C:\GoogleDrive\Programs\Core\Komodo\Extensions\_3rdParty\Xemmet\Xemmet-master\content\sdk%0eko.history.open_rctab(5)</string>
+</ordered-preference>
+<ordered-preference id="mruProjectList">
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject</string>
+</ordered-preference>
+<ordered-preference id="mruTemplateList">
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Class.php</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Tests/DatabaseTest.php</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Tests/UnitTest.php</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Migration.php</string>
+  <string>file:///c:/GoogleDrive/Programs/Core/Komodo/AppData/10.1/templates/My%2520Templates/Ahk/GUI.ahk</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Ahk/GUI.ahk</string>
+  <string>file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/support/default-templates/Common/JavaScript.js</string>
+  <string>file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/support/default-templates/Samples/JavaScript.js</string>
+  <string>file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/support/default-templates/Mozilla%2520Development/JavaScript.js</string>
+  <string>file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/mozilla/distribution/bundles/komodo_snippet_language%2540ActiveState.com/templates/Common/Komodo_Snippet.snippet</string>
+</ordered-preference>
+  <long id="mruTemplateSize">10</long>
+<ordered-preference id="mruWorkspaceList">
+  <string>Default</string>
+  <string>Extension_SnippetV2</string>
+  <string>Default_bak</string>
+</ordered-preference>
+  <long id="mruWorkspaceSize">10</long>
+  <string id="mru_project_path_display">full_path</string>
+<ordered-preference id="new-dirnameMru">
+  <string>C:\wamp64\www\laravel-fresh\commads</string>
+  <string>C:\wamp64\www\laravel-fresh\vilbur</string>
+  <string>C:\wamp64\www\laravel-fresh\packages\vilbur\laravel-template-package\tests</string>
+  <string>C:\wamp64\www\laravel-fresh\packages\vilbur\VoyagerSeeder\tests\Models</string>
+  <string>C:\wamp64\www\laravel-fresh\database\seeds</string>
+  <string>C:\wamp64\www\laravel-fresh\config</string>
+  <string>C:\wamp64\www\laravel-fresh\app\Providers</string>
+  <string>C:\GoogleDrive\Programs\Core\Autohotkey\Utilities\VilHotkey</string>
+  <string>C:\GoogleDrive\Programs\Core\Autohotkey\Utilities\VilHotkey\Lib\GUI</string>
+  <string>C:\Users\vilbur\AppData\Local\ActiveState\KomodoIDE\10.1\project-templates\TestTemplate</string>
+  <string>C:\GoogleDrive\Programs\Core\Komodo\Extensions\vilbur\Template</string>
+  <string>C:\GoogleDrive\Programs\Core\Komodo\Extensions\vilbur\Test\content</string>
+  <string>C:\Users\vilbur\AppData\Local\ActiveState\KomodoIDE\10.1\project-templates</string>
+  <string>C:\Users\vilbur</string>
+</ordered-preference>
+  <boolean id="openfiles_show_tab_bar">1</boolean>
+  <boolean id="pdk_installed">0</boolean>
+  <string id="pep83_checking_rcfile"></string>
+  <string id="pep8_checking_rcfile"></string>
+  <string id="perl_lintOption">cw</string>
+  <boolean id="perl_lintOption_disableBeginBlocks">1</boolean>
+  <boolean id="perl_lintOption_includeCurrentDirForLinter">1</boolean>
+  <string id="perl_lintOption_perlCriticLevel">off</string>
+  <string id="perlcritic_checking_rcfile"></string>
+  <string id="phonegapInterpreter"></string>
+  <boolean id="pin_find_frame">0</boolean>
+<preference-set id="places">
+  <string id="1">file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3</string>
+  <string id="2">file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib</string>
+<preference-set id="current_filter_by_uri">
+<preference-set id="file:///C:/">
+  <string id="timestamp">1515930212995</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3">
+  <string id="timestamp">1670334012678</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI">
+  <string id="timestamp">1512224338158</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3">
+  <string id="timestamp">1517827081177</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor">
+  <string id="timestamp">1517827058673</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey">
+  <string id="timestamp">1517827096854</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/Autohotkey/Class/VilGUI">
+  <string id="timestamp">1512345195481</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur">
+  <string id="timestamp">1670291083411</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate">
+  <string id="timestamp">1517827091388</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/samples">
+  <string id="timestamp">1515258468037</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%20Templates/Php">
+  <string id="timestamp">1516071303834</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh">
+  <string id="timestamp">1517826923797</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/app/Http/Controllers">
+  <string id="timestamp">1516283052515</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/commads">
+  <string id="timestamp">1516073326971</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/commands/subdir">
+  <string id="timestamp">1516120522158</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage">
+  <string id="timestamp">1515531626343</string>
+  <string id="viewName"></string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src">
+  <string id="timestamp">1515531568016</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/tests">
+  <string id="timestamp">1515531572546</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder">
+  <string id="timestamp">1515767621164</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/tests">
+  <string id="timestamp">1515640360506</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/tests/Models">
+  <string id="timestamp">1515533055313</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio">
+  <string id="timestamp">1515931233174</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/src">
+  <string id="timestamp">1515931607207</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/tests">
+  <string id="timestamp">1515931235464</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package">
+  <string id="timestamp">1516054483572</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/src">
+  <string id="timestamp">1515933848431</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template">
+  <string id="timestamp">1516069117940</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/resources">
+  <string id="timestamp">1515930387406</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/routes">
+  <string id="timestamp">1515930386741</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/vilbur">
+  <string id="timestamp">1516074159854</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-packages/packages/vilbur">
+  <string id="timestamp">1515265904750</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage">
+  <string id="timestamp">1515425864938</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage/src">
+  <string id="timestamp">1515265138670</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-start">
+  <string id="timestamp">1515929981891</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio">
+  <string id="timestamp">1518094724182</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/app">
+  <string id="timestamp">1518080876569</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/app/Http/Controllers">
+  <string id="timestamp">1518094667493</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages">
+  <string id="timestamp">1518094748287</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/biography">
+  <string id="timestamp">1518076941153</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template">
+  <string id="timestamp">1518086186808</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/src">
+  <string id="timestamp">1518012388732</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/tests">
+  <string id="timestamp">1518015793361</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio">
+  <string id="timestamp">1518094017875</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish">
+  <string id="timestamp">1518082960082</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js">
+  <string id="timestamp">1518094056315</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass">
+  <string id="timestamp">1518089669840</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src">
+  <string id="timestamp">1518089262064</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests">
+  <string id="timestamp">1518089203802</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills">
+  <string id="timestamp">1518095138214</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish">
+  <string id="timestamp">1518094071675</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js">
+  <string id="timestamp">1518094149560</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src">
+  <string id="timestamp">1518094069835</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources">
+  <string id="timestamp">1518080866357</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets">
+  <string id="timestamp">1518094662784</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/js">
+  <string id="timestamp">1518094643413</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template">
+  <string id="timestamp">1518021135791</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio">
+  <string id="timestamp">1518082619032</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/sass">
+  <string id="timestamp">1518094789806</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/sass/dev-template">
+  <string id="timestamp">1518016388131</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/sass/portfolio">
+  <string id="timestamp">1518082619751</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+</preference-set>
+<preference-set id="current_project_filter_by_uri">
+<preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject">
+  <string id="timestamp">1670316891022</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Ahk_VilGUIv3.komodoproject">
+  <string id="timestamp">1517827081178</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor/Ahk_IniEditor.komodoproject">
+  <string id="timestamp">1517827058673</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey/Ahk_VilHotkey.komodoproject">
+  <string id="timestamp">1517827096854</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Project-laravel-fresh.komodoproject">
+  <string id="timestamp">1515930212995</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate/ExtensionTemplate.komodoproject">
+  <string id="timestamp">1517827091388</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/Project-Laravel-Start.komodoproject">
+  <string id="timestamp">1516541265339</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/Project-laravel-fresh.komodoproject">
+  <string id="timestamp">1515930387406</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/package-Portfolio.komodoproject">
+  <string id="timestamp">1515931607208</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/Package-TemplatePackage.komodoproject">
+  <string id="timestamp">1515902352227</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/Package-template-package.komodoproject">
+  <string id="timestamp">1516054483572</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/pack-TemplatePackage.komodoproject">
+  <string id="timestamp">1515902332098</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template/Package-template-package.komodoproject">
+  <string id="timestamp">1516067907477</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template/Package-template.komodoproject">
+  <string id="timestamp">1516069117941</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-start/Project-Laravel-Start.komodoproject">
+  <string id="timestamp">1515929981891</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/Project-portfolio.komodoproject">
+  <string id="timestamp">1518094789807</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/biography/package-biography.komodoproject">
+  <string id="timestamp">1518076941153</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/package-dev-template.komodoproject">
+  <string id="timestamp">1518086186808</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/package-portfolio.komodoproject">
+  <string id="timestamp">1518094017876</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills/package-skills.komodoproject">
+  <string id="timestamp">1518095138214</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+</preference-set>
+  <boolean id="dblClickRebases">0</boolean>
+<preference-set id="filters">
+<preference-set id="Current Project">
+  <boolean id="builtin">1</boolean>
+  <string id="exclude_matches"></string>
+  <string id="include_matches"></string>
+  <boolean id="readonly">0</boolean>
+  <long id="version">3</long>
+</preference-set>
+<preference-set id="Default">
+  <boolean id="builtin">1</boolean>
+  <string id="exclude_matches">*~;#*;CVS;*.bak;*.pyo;*.pyc;.svn;.git;.hg;.bzr;.DS_Store;.komodotools;.tools;__pycache__;hg-checklink-*;hg-checkexec-*</string>
+  <string id="include_matches"></string>
+  <boolean id="readonly">0</boolean>
+  <long id="version">3</long>
+</preference-set>
+<preference-set id="View All">
+  <boolean id="builtin">1</boolean>
+  <string id="exclude_matches"></string>
+  <string id="include_matches"></string>
+  <boolean id="readonly">1</boolean>
+  <long id="version">3</long>
+</preference-set>
+</preference-set>
+<ordered-preference id="history_forwardPlaces">
+</ordered-preference>
+<ordered-preference id="history_prevPlaces">
+  <string>file:///C:/wamp64/www/portfolio/app</string>
+  <string>file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio</string>
+  <string>file:///C:/wamp64/www/portfolio/resources/assets/sass/portfolio</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish</string>
+  <string>file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js</string>
+  <string>file:///C:/wamp64/www/portfolio/resources/assets/js</string>
+  <string>file:///C:/wamp64/www/portfolio/resources/assets</string>
+  <string>file:///C:/wamp64/www/portfolio/app/Http/Controllers</string>
+  <string>file:///C:/wamp64/www/portfolio</string>
+  <string>file:///C:/wamp64/www/portfolio/packages</string>
+  <string>file:///C:/wamp64/www/portfolio/resources/assets/sass</string>
+  <string>file:///C:/Users/vilbur</string>
+</ordered-preference>
+  <string id="lastHomePlace">file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3</string>
+  <string id="lastLocalDirectoryChoice">file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3</string>
+  <string id="places-open-nodes-v2">{"file:///C:/GoogleDrive/Programs/Core/Autohotkey/Utilities/VilHotkey": 1509739490.337, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate/content": 1492786599.741, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib": 1509515028.51, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage": 1515453585.277, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3": 1517827081.138, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/components": 1518094080.258, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio": 1515931233.171, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage": 1515425864.932, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor": 1517827058.63, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey": 1517827096.834, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/tests": 1515931235.461, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib/_Documentation": 1509482548.993, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities": 1509129351.715, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/tests": 1515640360.497, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib/Komodo": 1509375020.27, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src": 1518089262.061, "file:///D:/Work/CG_TEMP/temp": 1507368168.009, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/samples": 1515258467.966, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js": 1518094056.31, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv2": 1511272646.576, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests": 1518089203.8, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/views": 1518083036.282, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package": 1516054483.316, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder": 1515767621.051, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur": 1492794325.292, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test/project": 1492752905.967, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/GUI": 1508499482.635, "file:///C:/wamp64/www/laravel-fresh/app/Http/Controllers": 1516283052.51, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib/Controls": 1509875192.616, "file:///C:/wamp64/www/portfolio/app/Http/Controllers": 1518094667.489, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/src": 1518012388.729, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib": 1508487432.613, "file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3": 1670334012.663, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src": 1515447510.805, "file:///C:/wamp64/www/laravel-fresh/commands": 1516127445.53, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts": 1509168829.891, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template": 1516069117.702, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Routes": 1515447512.771, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage/src": 1515259829.585, "file:///C:/wamp64/www/portfolio": 1518094724.165, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate": 1517827091.362, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib/Install/Vini": 1508499500.706, "file:///C:/wamp64/www/laravel-fresh/tests": 1516275991.482, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib": 1509219617.527, "file:///C:/wamp64/www/laravel-fresh/app/Models": 1516419617.853, "file:///C:/wamp64/www/laravel-fresh": 1517826923.583, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources": 1518082853.735, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template": 1492760777.726, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio": 1518082619.028, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib": 1511128018.565, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish": 1518094071.668, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets": 1518082855.178, "file:///C:/GoogleDrive/Programs/Webdesign/Laravel/_VilSystem/Lib/Project": 1508745236.572, "file:///C:/wamp64/www/portfolio/packages": 1518094748.28, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/tests": 1518015793.076, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib/Gui": 1512981815.665, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test": 1492793927.414, "file:///C:/wamp64/www/laravel-fresh/resources": 1515930387.404, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Hotstrings": 1498022741.163, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Providers": 1515448187.341, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills": 1518094806.357, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/views": 1518015774.55, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib/Install": 1508499511.673, "file:///C:/wamp64/www/laravel-fresh/commands/events": 1516479646.302, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/src": 1515931607.2, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/Template": 1492760139.56, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/components": 1518005525.558, "file:///C:/GoogleDrive/Programs/Core/Komodo": 1509176741.175, "file:///C:/wamp64/www/laravel-fresh/app": 1515930352.929, "file:///C:/wamp64/www/laravel-fresh/vilbur": 1516074159.851, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI": 1512060516.056, "file:///C:/wamp64/www/portfolio/resources/assets/sass": 1518094789.803, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib": 1512981815.167, "file:///C:/wamp64/www/portfolio/packages/vilbur": 1518094760.174, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test_CLEAR": 1492794343.923, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template_CLEAR": 1492794339.574, "file:///C:/Users/vilbur": 1670291083.252, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/components": 1518083035.149, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass": 1518089669.838, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/views": 1518005523.608, "file:///C:/wamp64/www/portfolio/resources/assets/js": 1518094643.407, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template_CLEAR/content": 1492794062.204, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib": 1508737252.677, "file:///C:/wamp64/www/portfolio/resources/assets": 1518094662.772, "file:///C:/wamp64/www/portfolio/resources/assets/js/skills_DELETE": 1518094646.073, "file:///C:/": 1515930212.992, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src/providers": 1518080808.552, "file:///C:/wamp64/www/laravel-start": 1515929981.888, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator": 1508834718.926, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src": 1518094069.829, "file:///C:/wamp64/www/laravel-fresh/tests/Unit": 1516275996.169, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator/Lib": 1508834714.916, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/components": 1518005549.658, "file:///c:/wamp64/www/laravel_fresh": 1508834149.96, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/views": 1518094078.663, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js": 1518094149.555, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish": 1518082960.077, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php": 1516071303.824, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI/Lib/Controls/Control": 1511523199.677, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/TestTemplate": 1498014405.927}</string>
+  <long id="project_sort_direction">0</long>
+  <boolean id="showProjectPath">0</boolean>
+  <boolean id="showProjectPathExtension">0</boolean>
+  <boolean id="show_fullPath_tooltip">1</boolean>
+  <string id="sortDirection">natural</string>
+  <boolean id="trackCurrentTab">0</boolean>
+</preference-set>
+  <long id="places-open-nodes-size">100</long>
+  <boolean id="placesAllowDragDropItemsToFolders">0</boolean>
+  <boolean id="preferJavaScriptOverNode">1</boolean>
+  <boolean id="publishingBackgroundCheck">1</boolean>
+  <long id="publishingBackgroundMinutes">1</long>
+  <boolean id="publishingStatusEnabled">1</boolean>
+  <string id="pychecker3_checking_rcfile"></string>
+  <string id="pychecker3_wrapper_location"></string>
+  <string id="pychecker_checking_rcfile"></string>
+  <string id="pychecker_wrapper_location"></string>
+  <string id="pylint3_checking_rcfile"></string>
+  <string id="pylint_checking_rcfile"></string>
+  <boolean id="refactoring.renameVariable_in_comments">1</boolean>
+  <boolean id="refactoring.renameVariable_in_strings">0</boolean>
+  <boolean id="repositionCaretAfterTab">0</boolean>
+  <string id="ruby_lintOption">cwT</string>
+  <boolean id="runShowMoreOptions">0</boolean>
+  <string id="rxx_delimiters">{"perl":["{","}"],"php":["/","/"]}</string>
+  <string id="rxx_language">python</string>
+  <long id="rxx_match_results_area_height">213</long>
+  <string id="rxx_mode">replace-all</string>
+  <boolean id="rxx_modifier_i">0</boolean>
+  <boolean id="rxx_modifier_l">0</boolean>
+  <boolean id="rxx_modifier_m">1</boolean>
+  <boolean id="rxx_modifier_s">0</boolean>
+  <boolean id="rxx_modifier_u">0</boolean>
+  <boolean id="rxx_modifier_x">0</boolean>
+  <long id="rxx_pattern_row_height">254</long>
+  <string id="rxx_regex">https*:\/\/(.*(?=\.\S+\/))</string>
+  <long id="rxx_replace_column_width">715</long>
+  <string id="rxx_replacement">\1</string>
+  <long id="rxx_search_column_width">957</long>
+  <string id="rxx_search_text">addPhpToEmptyFile.js* (macro2://12623/addPhpToEmptyFile.js, Project Project-Laravel-Start) - ActiveState Komodo IDE 10.1
+
+test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\InstancesSource\Komodo-JS-Komodo\Wordlist, Project Project-Laravel-Start) - ActiveState Komodo IDE 10.1
+</string>
+  <long id="rxx_text_row_height">851</long>
+  <string id="sassDefaultInterpreter">None</string>
+  <string id="sassLinterType">path</string>
+<ordered-preference id="scc_checkout_to_location_mru">
+  <string>C:\wamp64\www\laravel-packages\packages\vilbur\TemplatePackage</string>
+</ordered-preference>
+<ordered-preference id="scc_checkout_url_textbox_mru">
+  <string>https://github.com/vilbur/laravel-template-package.git</string>
+</ordered-preference>
+  <boolean id="scrollEndAtLastLine">0</boolean>
+  <long id="scrollWidth">2000</long>
+  <boolean id="scrollWidthTracking">0</boolean>
+  <string id="scssDefaultInterpreter">None</string>
+  <string id="scssLinterType">path</string>
+  <boolean id="select_most_recent_buffer_on_buffer_close">0</boolean>
+  <string id="selectedbrowser">System defined default browser</string>
+  <boolean id="shebangDetection">1</boolean>
+  <boolean id="showEOL">0</boolean>
+  <boolean id="showLineNumbers">1</boolean>
+  <boolean id="showWhitespace">0</boolean>
+  <long id="spellCheckDelay">1000</long>
+  <string id="spellCheckDictionary">en-US</string>
+  <string id="spellCheckIgnoredWords"></string>
+  <boolean id="spellCheckWithinStrings">1</boolean>
+  <boolean id="startupFullScreen">0</boolean>
+  <boolean id="startupMaximized">0</boolean>
+  <boolean id="svn_uses_externaldiff">0</boolean>
+  <long id="tabWidth">4</long>
+  <boolean id="tdk_installed">0</boolean>
+  <string id="templates_open_categories">{u'My Templates/Php': False, u'Samples': False, u'My Templates': True}</string>
+  <string id="templates_selected_category">Php</string>
+  <string id="templates_selected_template_by_category">{u'Web': u'CoffeeScript', u'My Templates/Php/Tests': u'DatabaseTest', u'My Templates/Ahk': u'GUI', u'Samples/Tcl': u'Tcl', 'Common': u'HTML (XHTML)', u'Samples': u'JavaScript', u'Samples/Python': u'Python', u'All Languages': u'ActionScript', u'Mozilla Development': u'JavaScript', u'Ahk': u'GUI', u'My Templates/Php': u'Class', u'My Templates': u'Sample Custom Template', u'Samples/HTML5': u'Article', u'Samples/Perl': u'Perl'}</string>
+<preference-set id="testPlans">
+<preference-set id="New test plan #1">
+  <string id="command_line"></string>
+  <string id="directory">file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/</string>
+  <string id="language">Perl - TAP (*.t)</string>
+</preference-set>
+</preference-set>
+  <string id="tidy_accessibility">0</string>
+  <string id="tidy_configpath">C:\GoogleDrive\Programs\Core\Komodo\AppData\10.1\tidy.conf</string>
+  <string id="tidy_errorlevel">errors</string>
+  <long id="toolbox-open-nodes-size">100</long>
+<preference-set id="toolbox2">
+  <long id="currentIndex">2</long>
+  <long id="firstVisibleRow">0</long>
+  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\OnEvent\\onFileOpen-1": 1516193961.639, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Current\\Path": 1516082489.706, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu\\Menu-Edit\\Line": 1518073867.597, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\variable": 1518094104.483, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\position-1\\currentPos": 1516163853.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Database\\Factory": 1515415047.399, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Batch\\Dir": 1509644350.212, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\_EJS": 1516419564.035, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Routes": 1516057051.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1670334012.372, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\General": 1670330107.445, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\REGEX": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Utilities\\VilGUI": 1515932045.278, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL": 1518095127.194, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File\\Current": 1516086331.373, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools": 1518095127.155, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Language\\_EJS": 1510925306.334, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Language-All\\Class": 1516120027.441, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\_projects": 1509639665.413, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom-1": 1509644350.192, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General\\_Language-All\\Keywords": 1518071979.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\Params": 1516541267.601, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\Path": 1518071088.049, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor\\File": 1518076477.674, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General": 1518084025.449, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Toolbars\\Menu-Edit\\Line": 1518073423.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\OnEvent\\OnFileOpen-1": 1516120103.215, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\Json": 1514558390.977, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\_General\\_Documentation\\Statements": 1516082673.344, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\.currentView": 1516082711.023, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Batch\\String\\substring": 1509644350.214, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Faker\\Person": 1515337385.25, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\ko_file": 1509639681.223, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start\\ProjectFilesOpener": 1518095127.211, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko_extensions\\JavaScript\\File": 1509644350.373, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\language": 1518039661.812, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\Path\\Methods": 1510939580.669, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom": 1516083153.519, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\if": 1518094637.919, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype\\String": 1518041319.916, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\Logger": 1518070866.236, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\statusbar\\Message": 1518039661.815, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Programs\\Chrome\\Links": 1509644350.373, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom-1\\Loop": 1509644350.196, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS": 1518071369.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\Autohotkey\\_Custom": 1518088384.657, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Vendor\\Phpunit": 1515453664.355, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Dir": 1516082555.911, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\_COMMON": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Classes\\Logger": 1516082584.691, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events": 1518095127.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype": 1518071086.991, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\_General\\_Documentation\\String": 1516082672.818, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\LANGUAGE\\JavaScript\\_Prototype": 1518076027.491, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript-common": 1516083387.114, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom-1\\Dump-1": 1509644386.296, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\Autohotkey\\_Custom\\GUI\\Controls": 1510761115.901, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_Test\\Abbreviations": 1518074164.699, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1670330107.434, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\case": 1518094104.481, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\File\\Methods": 1510942133.272, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Vendor\\Phpunit\\Assert-Appendix": 1515453664.371, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\Ini": 1512999947.981, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\EJS\\TestSnippets": 1509644350.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom-1\\Lib\\GuiWrapper": 1509644350.194, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\Custom\\position-1": 1516193961.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File": 1516086331.372, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\XUL": 1516541267.601, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\_": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File\\Deprecated": 1516086331.374, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Documentation": 1515010345.752, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\statusbar": 1518039661.814, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Deprecated": 1516082555.053, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1518076477.672, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\Custom\\position-1\\currentPos": 1516193961.616, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Templates\\PHP": 1516119385.636, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start": 1518095127.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Language": 1510925306.33, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype\\Array": 1518041255.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\CRUD": 1516082538.712, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS": 1518076477.664, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL": 1518094104.474, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\Ini\\Methods": 1512999947.986, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\.currentView\\_scimoz": 1516082714.248, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670328696.693, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\String": 1518094104.482, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Current": 1516082543.525, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969}</string>
+  <string id="sortDirection">natural</string>
+</preference-set>
+  <boolean id="triggering_macros_enabled">1</boolean>
+  <string id="tslintConfigFile"></string>
+  <boolean id="ui.classic.mode">0</boolean>
+  <boolean id="ui.classic.statusbar">1</boolean>
+  <boolean id="ui.classic.toolbar">1</boolean>
+  <boolean id="ui.hide.chrome">0</boolean>
+  <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
+  <string id="ui.tabs.sidepanes.left.layout">vertical</string>
+  <string id="ui.tabs.sidepanes.right.layout">vertical</string>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"console-widget"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <boolean id="upgradeKomodo.dontask">1</boolean>
+  <boolean id="useSmartTabs">0</boolean>
+  <boolean id="useTabs">1</boolean>
+  <string id="userEnvironmentStartupOverride">Snippet_Keyword=testsippet
+projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/package-portfolio.komodoproject","views":{"view1":["C:\\wamp64\\www\\portfolio\\packages\\vilbur\\portfolio\\publish\\resources\\assets\\sass\\portfolio.scss","C:\\wamp64\\www\\portfolio\\webpack.mix.js","C:\\wamp64\\www\\portfolio\\resources\\assets\\js\\app.js","C:\\wamp64\\www\\portfolio\\packages\\vilbur\\dev-template\\src\\DevTemplate.php","C:\\wamp64\\www\\portfolio\\packages\\vilbur\\portfolio\\publish\\resources\\assets\\js\\components\\portfolio-detail.vue"],"view2":["C:\\wamp64\\www\\portfolio\\packages\\vilbur\\dev-template\\src\\pane-B1-template.php","C:\\wamp64\\www\\portfolio\\packages\\vilbur\\dev-template\\src\\pane-B2-template.php","C:\\wamp64\\www\\portfolio\\packages\\vilbur\\dev-template\\src\\pane-A2-template.php","/wrap_to_tag_.js","/Fn.snippet","/relativePath.snippet","/split.snippet","/imp.snippet","/titlecase.snippet"]}},"package-skills":{"file":"file:///C:/wamp64/www/portfolio/packages/vilbur/skills/package-skills.komodoproject","views":{"view1":["C:\\wamp64\\www\\portfolio\\packages\\vilbur\\portfolio\\publish\\resources\\assets\\js\\views\\portfolio.vue"],"view2":["C:\\wamp64\\www\\portfolio\\packages\\vilbur\\skills\\src\\Skills.php","C:\\wamp64\\www\\portfolio\\packages\\vilbur\\skills\\publish\\resources\\assets\\js\\views\\skills.vue","/ProjectFilesOpener.js"]}}}</string>
+  <string id="vagrantBinary"></string>
+  <long id="version">70</long>
+  <string id="widget-scheme">vilbur</string>
+  <string id="windowDimensions-floating-pane">950,323,2899,493</string>
+  <string id="windowDimensions-font-window">1079,531,852,239</string>
+  <string id="windowDimensions-komodo_diff_window">1920,1050,2560,0</string>
+  <string id="windowDimensions-komodo_rxx">1502,1050,2874,0</string>
+  <string id="windowDimensions-openremote-window">560,400,1000,505</string>
+  <string id="windowDimensions-prefProjectsWindow">1012,797,535,273</string>
+<preference-set id="windowWorkspace">
+<preference-set id="1">
+  <boolean id="hasFocus">1</boolean>
+<preference-set id="history_rctabs">
+  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/Core/DisplayFusion/Profiles/load-profile-3DsMax-Unreal","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/Core/DisplayFusion/Profiles/load-profile-3DsMax-Unreal.bat","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SCENE/Scene.mcr","tabIndex":3},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SCENE/Scene.mcr","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SUBOBJECT/Subobject/Subobject.ms","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///B:/GoogleDrive/GoogleDrive-old-comp/Programs/Core/Komodo/AppData/10.1/tools/Scripts/LANGUAGE/Ejs/Variable.komodotool","tabIndex":8},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://377/test.snippet","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://3872/test.snippet","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://377/test.snippet","tabIndex":2},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://3872/testsippet.snippet","tabIndex":2}]</string>
+</preference-set>
+<preference-set id="opened_projects_v7">
+  <string id="mpv_projects">[]</string>
+  <string id="spv_projects">[]</string>
+</preference-set>
+  <boolean id="restoreOnRestart">1</boolean>
+  <long id="timestamp">1670334018</long>
+<preference-set id="topview">
+<ordered-preference id="childState">
+<preference-set>
+  <long id="current_view_index">0</long>
+<ordered-preference id="view_prefs">
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/Test.ahk</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+</ordered-preference>
+</preference-set>
+</ordered-preference>
+  <string id="orientation">horizontal</string>
+<ordered-preference id="viewHistoryState">
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/Test.ahk?parentId=view-1</string>
+</ordered-preference>
+</preference-set>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"console-widget"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <long id="windowNum">1</long>
+</preference-set>
+</preference-set>
+  <boolean id="wizard.finished">1</boolean>
+<preference-set id="workspace2">
+<preference-set id="Default">
+  <boolean id="restoreOnRestart">0</boolean>
+  <long id="timestamp">1491891561</long>
+<preference-set id="workspaceWindows">
+<preference-set id="1">
+<preference-set id="coordinates">
+  <long id="outerHeight">1269</long>
+  <long id="outerWidth">2560</long>
+  <long id="screenX">0</long>
+  <long id="screenY">0</long>
+  <long id="windowState">1</long>
+</preference-set>
+<preference-set id="history_rctabs">
+  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"macro2://2051/Snippet.js","tabIndex":4,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://754//file_content","tabIndex":3,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://754/ConvertFunction.js","tabIndex":1,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://481/nClass.snippet","tabIndex":4,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://480/Class.snippet","tabIndex":3,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://558/Class.snippet","tabIndex":3,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/userChrome/treeview.less","tabIndex":1,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/mozilla/extensions/console%2540activestate.com/content/less/console.less","tabIndex":1,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/mozilla/extensions/console%2540activestate.com/content/js/console.js","tabIndex":0,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://2051/Snippet.js","tabIndex":0,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false}]</string>
+</preference-set>
+<preference-set id="opened_projects_v7">
+  <string id="mpv_projects">[]</string>
+  <string id="spv_projects">[]</string>
+</preference-set>
+<ordered-preference id="openfiles">
+  <string>file:///D:/Work/CG_TEMP/HTML-1.html</string>
+</ordered-preference>
+  <boolean id="restored">0</boolean>
+<preference-set id="topview">
+<ordered-preference id="childState">
+<preference-set>
+  <long id="current_view_index">0</long>
+<ordered-preference id="view_prefs">
+<preference-set>
+  <string id="URI">file:///D:/Work/CG_TEMP/HTML-1.html</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+</ordered-preference>
+</preference-set>
+</ordered-preference>
+  <string id="orientation">horizontal</string>
+<ordered-preference id="viewHistoryState">
+  <string>file:///D:/Work/CG_TEMP/HTML-1.html?parentId=view-1</string>
+</ordered-preference>
+</preference-set>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"breakpoints-tabpanel","width":495},{"id":"projectUnitTestsResults_tabpanel","width":665},{"id":"klint_tabpanel","width":783}]],"selectedTab":"breakpoints-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"codebrowserviewbox","height":702},{"id":"console-widget","width":592,"height":487}],[{"id":"DOMviewbox","height":618}]],"selectedTab":"codebrowserviewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","height":1032},{"id":"openfilesViewbox","height":342}],[{"id":"dbexplorer_viewbox"}],[{"id":"collab-panel"}]],"selectedTab":"placesViewbox"},"__komodo_floating_pane__101":{"collapsed":false,"children":[[{"id":"toolbox2viewbox"}]],"left":2574,"top":110,"innerWidth":317,"innerHeight":967,"type":"vertical","orient":"vertical","selectedTab":"toolbox2viewbox"},"__komodo_floating_pane__103":{"collapsed":false,"children":[[{"id":"notifications-widget","width":96,"height":276}]],"left":2900,"top":897,"innerWidth":471,"innerHeight":179,"type":"horizontal","orient":"horizontal","selectedTab":"notifications-widget"},"__komodo_floating_pane__105":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","width":36}]],"left":3380,"top":897,"innerWidth":471,"innerHeight":179,"type":"horizontal","orient":"horizontal","selectedTab":"runoutput-desc-tabpanel"},"__komodo_floating_pane__107":{"collapsed":false,"children":[[{"id":"scc-widget","width":549}]],"left":2900,"top":635,"innerWidth":951,"innerHeight":232,"type":"horizontal","orient":"horizontal","selectedTab":"scc-widget"}}}</string>
+  <long id="windowNum">1</long>
+</preference-set>
+</preference-set>
+</preference-set>
+<preference-set id="Default_bak">
+  <boolean id="restoreOnRestart">0</boolean>
+  <long id="timestamp">1491648971</long>
+<preference-set id="workspaceWindows">
+<preference-set id="1">
+<preference-set id="coordinates">
+  <long id="outerHeight">1440</long>
+  <long id="outerWidth">2560</long>
+  <long id="screenX">0</long>
+  <long id="screenY">0</long>
+  <long id="windowState">4</long>
+</preference-set>
+<preference-set id="history_rctabs">
+  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"macro2://2051/Snippet.js","tabIndex":4,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://754//file_content","tabIndex":3,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://754/ConvertFunction.js","tabIndex":1,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://481/nClass.snippet","tabIndex":4,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://480/Class.snippet","tabIndex":3,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://558/Class.snippet","tabIndex":3,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/userChrome/treeview.less","tabIndex":1,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/mozilla/extensions/console%2540activestate.com/content/less/console.less","tabIndex":1,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Program%2520Files%2520%2528x86%2529/ActiveState%2520Komodo%2520IDE%252010/lib/mozilla/extensions/console%2540activestate.com/content/js/console.js","tabIndex":0,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://2051/Snippet.js","tabIndex":0,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false}]</string>
+</preference-set>
+<preference-set id="opened_projects_v7">
+  <string id="mpv_projects">[]</string>
+  <string id="spv_projects">[]</string>
+</preference-set>
+<ordered-preference id="openfiles">
+  <string>file:///D:/Work/CG_TEMP/HTML-1.html</string>
+</ordered-preference>
+  <boolean id="restored">0</boolean>
+<preference-set id="topview">
+<ordered-preference id="childState">
+<preference-set>
+  <long id="current_view_index">0</long>
+<ordered-preference id="view_prefs">
+<preference-set>
+  <string id="URI">file:///D:/Work/CG_TEMP/HTML-1.html</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+</ordered-preference>
+</preference-set>
+</ordered-preference>
+  <string id="orientation">horizontal</string>
+<ordered-preference id="viewHistoryState">
+  <string>file:///D:/Work/CG_TEMP/HTML-1.html?parentId=view-1</string>
+  <string>chrome://komodo/content/quickstart.xml#view-quickstart?parentId=view-2</string>
+</ordered-preference>
+</preference-set>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"breakpoints-tabpanel","width":495},{"id":"projectUnitTestsResults_tabpanel","width":665},{"id":"klint_tabpanel","width":783}]],"selectedTab":"breakpoints-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"codebrowserviewbox","height":702},{"id":"console-widget","width":592,"height":487}],[{"id":"DOMviewbox","height":618}]],"selectedTab":"codebrowserviewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","height":1032},{"id":"openfilesViewbox","height":342}],[{"id":"collab-panel"}],[{"id":"dbexplorer_viewbox"}]],"selectedTab":"placesViewbox"},"__komodo_floating_pane__109":{"collapsed":false,"children":[[{"id":"toolbox2viewbox"}]],"left":2564,"top":55,"innerWidth":321,"innerHeight":993,"type":"vertical","orient":"vertical","selectedTab":"toolbox2viewbox"},"__komodo_floating_pane__111":{"collapsed":false,"children":[[{"id":"notifications-widget","width":96,"height":276}]],"left":2890,"top":842,"innerWidth":475,"innerHeight":205,"type":"horizontal","orient":"horizontal","selectedTab":"notifications-widget"},"__komodo_floating_pane__113":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","width":36}]],"left":3370,"top":842,"innerWidth":475,"innerHeight":205,"type":"horizontal","orient":"horizontal","selectedTab":"runoutput-desc-tabpanel"},"__komodo_floating_pane__115":{"collapsed":false,"children":[[{"id":"scc-widget","width":549}]],"left":2890,"top":580,"innerWidth":955,"innerHeight":258,"type":"horizontal","orient":"horizontal","selectedTab":"scc-widget"}}}</string>
+  <long id="windowNum">1</long>
+</preference-set>
+</preference-set>
+</preference-set>
+<preference-set id="Extension_SnippetV2">
+  <boolean id="restoreOnRestart">0</boolean>
+  <long id="timestamp">1491656966</long>
+<preference-set id="workspaceWindows">
+<preference-set id="1">
+<preference-set id="coordinates">
+  <long id="outerHeight">1410</long>
+  <long id="outerWidth">1722</long>
+  <long id="screenX">427</long>
+  <long id="screenY">0</long>
+  <long id="windowState">4</long>
+</preference-set>
+  <string id="current_project">file:///C:/GoogleDrive/Programs/Core/Komodo/_ProgramData/AppData/KomodoIDE/10.1/tools/Classes/Snippet/Extension_SnippetV2.komodoproject</string>
+<preference-set id="history_rctabs">
+  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///D:/Work/CG_TEMP/HTML-1.html","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://746/Insert_Snippet.js","tabIndex":2},{"tabGroup":"view-1","viewType":"editor","uri":"macro2://2603/ConvertFunctionType.js","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/interfaceChrome.less","tabIndex":5},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/userChrome.less","tabIndex":5},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/userChrome/ui.less","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"macro2://2609/SnippetV2.js","tabIndex":1},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/userChrome/ui.less","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///D:/OLD_4.4.2017/GoogleDrive/Programs/code/Komodo/AppData/ActiveState/KomodoIDE/10.1/tools/Toolbar_96-Edit/.folderdata","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://2608/SnippetTest.js","tabIndex":1}]</string>
+</preference-set>
+<preference-set id="opened_projects_v7">
+  <string id="mpv_projects">[]</string>
+  <string id="spv_projects">["file:///C:/GoogleDrive/Programs/Core/Komodo/_ProgramData/AppData/KomodoIDE/10.1/tools/Classes/Snippet/Extension_SnippetV2.komodoproject"]</string>
+</preference-set>
+  <boolean id="restored">0</boolean>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"breakpoints-tabpanel","width":495},{"id":"projectUnitTestsResults_tabpanel","width":665},{"id":"klint_tabpanel","width":783}]],"selectedTab":"breakpoints-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"codebrowserviewbox","height":702},{"id":"console-widget","width":592,"height":487}],[{"id":"DOMviewbox","height":618}]],"selectedTab":"codebrowserviewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","height":1032},{"id":"openfilesViewbox","height":342}],[{"id":"collab-panel"}],[{"id":"dbexplorer_viewbox"}]],"selectedTab":"placesViewbox"},"__komodo_floating_pane__32":{"collapsed":false,"children":[[{"id":"toolbox2viewbox"}]],"left":2564,"top":55,"innerWidth":321,"innerHeight":993,"type":"vertical","orient":"vertical","selectedTab":"toolbox2viewbox"},"__komodo_floating_pane__34":{"collapsed":false,"children":[[{"id":"notifications-widget","width":96,"height":276}]],"left":2890,"top":842,"innerWidth":475,"innerHeight":205,"type":"horizontal","orient":"horizontal","selectedTab":"notifications-widget"},"__komodo_floating_pane__36":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","width":36}]],"left":3370,"top":842,"innerWidth":475,"innerHeight":205,"type":"horizontal","orient":"horizontal","selectedTab":"runoutput-desc-tabpanel"},"__komodo_floating_pane__38":{"collapsed":false,"children":[[{"id":"scc-widget","width":549}]],"left":2890,"top":580,"innerWidth":955,"innerHeight":258,"type":"horizontal","orient":"horizontal","selectedTab":"scc-widget"}}}</string>
+  <long id="windowNum">1</long>
+</preference-set>
+</preference-set>
+</preference-set>
+</preference-set>
+<ordered-preference id="workspace2_mru">
+  <string>Default</string>
+  <string>Extension_SnippetV2</string>
+  <string>Default_bak</string>
+  <string>Console_bak</string>
+  <string>Console</string>
+  <string>All Windows</string>
+  <string>test</string>
+  <string>vilbur_default</string>
+  <string>workspace_default_vilbur</string>
+  <string>vilbur</string>
+  <string>vilbur_2</string>
+</ordered-preference>
+  <boolean id="workspace_restory_history">1</boolean>
+  <string id="wrapSelectionDelimiters">([{&lt;"'`*/%25+._</string>
+  <boolean id="wrapSelectionOnlyPlainText">0</boolean>
+  <string id="xemmet_css_languages">css scss less</string>
+  <boolean id="xemmet_enable_line_wrap_selection">0</boolean>
+  <boolean id="xemmet_enabled">0</boolean>
+  <string id="xemmet_html_languages">html html5 rhtml erb markdown php komodo_snippet</string>
+  <boolean id="xemmet_strict_mode">0</boolean>
+  <boolean id="xemmet_wrap_strict_mode">0</boolean>
+  <boolean id="xmlDeclDetection">1</boolean>
+  <long id="ySlop">5</long>
+</preference-set>

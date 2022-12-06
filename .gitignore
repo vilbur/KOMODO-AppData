@@ -1,0 +1,29 @@
+# ignore everything (dirs, files, sub-dirs, sub-files)
+/*
+
+
+# DO NOT IGNORE THESE FILES
+!.gitignore
+!prefs.xml
+!prefs.xmlc
+!colors.less
+!userChrome.less
+
+
+# DO NOT IGNORE THESE FOLDERS
+!/userChrome-source
+!/schemes
+
+
+
+# DO NOT IGNORE THESE SUBFOLDERS
+!/tools/
+/tools/*
+!/tools/Abbreviations/
+
+
+
+# DO NOT IGNORE THESE SUBFOLDERS
+!/XRE/
+/XRE/*
+!/XRE/chrome/

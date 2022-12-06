@@ -1,0 +1,313 @@
+/* ==================================================================================================== */
+/*
+    variables for userChrome\*.less files
+    "!" prefix because of sort of file as first item for "Import-all-files-to-userChrome-less.ahk"
+
+*/
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/*  View\Tabs & Sidebars\*    */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/*  ui.less    */
+/* ==================================================================================================== */
+/* ==================================================================================================== */
+/*  treeview.less   */
+/* ==================================================================================================== */
+#tabbed-view tabs > tab {
+	border-left: 1px solid #232323!important;
+}
+
+#tabbed-view tabs > tab[label*=".php"] .tab-text,
+#tabbed-view tabs > tab[label*=".ini"] .tab-text {
+	color: #63c4fe !important;
+}
+
+#tabbed-view tabs > tab[label*=".ahk"] .tab-text {
+	color: #86db62 !important;
+}
+
+#tabbed-view tabs > tab[label*=".css"] .tab-text {
+	color: #ffb76f !important;
+}
+
+#tabbed-view tabs > tab[label*=".less"] .tab-text {
+	color: #805DC1 !important;
+}
+
+#tabbed-view tabs > tab[label*=".scss"] .tab-text {
+	color: #CF649A !important;
+}
+
+#tabbed-view tabs > tab[label*=".js"] .tab-text {
+	color: #8ac6f2 !important;
+}
+
+#tabbed-view tabs > tab[label*=".snippet"] .tab-text {
+	color: #EAC175 !important;
+}
+
+#tabbed-view tabs > tab[label*=".xul"] .tab-text {
+	color: #C761C7 !important;
+}
+
+#tabbed-view tabs > tab[label*=".ms"] .tab-text {
+	color: #4791E2 !important;
+}
+
+#tabbed-view tabs > tab[label*=".mcr"] .tab-text {
+	color: #50AF5B !important;
+}
+
+#tabbed-view tabs > tab .tab-text {
+	text-shadow: none !important;
+}
+/* ICONS CHEATSHEET: http://www.famfamfam.com/lab/icons/silk/preview.php */
+/* turn off default icon*/
+#tabbed-view tabs > tab[label^="views"] .tab-icon,
+#tabbed-view tabs > tab[label^="Routes"] .tab-icon,
+#tabbed-view tabs > tab[label$=".snippet"] .tab-icon,
+#tabbed-view tabs > tab[label*="Controller"] .tab-icon,
+#tabbed-view tabs > tab[label*="config"] .tab-icon {
+	display: none!important;
+}
+
+#tabbed-view tabs > tab[label^="views"] .tab-image-left,
+#tabbed-view tabs > tab[label^="Routes"] .tab-image-left,
+#tabbed-view tabs > tab[label$=".snippet"] .tab-image-left,
+#tabbed-view tabs > tab[label*="Controller"] .tab-image-left,
+#tabbed-view tabs > tab[label*="config"] .tab-image-left {
+	height: 16px !important;
+	width: 16px !important;
+}
+/*
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+*/
+#tabbed-view tabs > tab[label^="views"] .tab-image-left {
+	background-image: url(chrome://famfamfamsilk/skin/icons/application_view_tile.png) !important;
+}
+
+#tabbed-view tabs > tab[label^="Routes"] .tab-image-left {
+	background-image: url(chrome://famfamfamsilk/skin/icons/arrow_divide.png) !important;
+}
+
+#tabbed-view tabs > tab[label$=".snippet"] .tab-image-left {
+	background-image: url(chrome://famfamfamsilk/skin/icons/cut.png) !important;
+}
+
+#tabbed-view tabs > tab[label*="Controller"] .tab-image-left {
+	background-image: url(chrome://famfamfamsilk/skin/icons/chart_organisation.png) !important;
+}
+
+#tabbed-view tabs > tab[label*="config"] .tab-image-left {
+	background-image: url(chrome://famfamfamsilk/skin/icons/cog.png) !important;
+}
+/*#tabbed-view tabs> tab[selected="true"] {
+    border-bottom: 1px solid orange !important;
+}*/
+/* COLORIZE EDITOR TABS */
+tabs > [label="Code"] .tab-text {
+	color: #D64A00 !important;
+}
+
+tabs > [label="Places"] .tab-text {
+	color: #15FF00 !important;
+}
+
+tabs > [label="Toolbox"] .tab-text {
+	color: #4A60DB !important;
+}
+
+tabs > [label="Syntax Checking"] .tab-text {
+	color: #62D1D1 !important;
+}
+
+tabs > [label="Version Control"] .tab-text {
+	color: #D89D36 !important;
+}
+
+tabs > [label="Console"] .tab-text {
+	color: #E2D86A !important;
+}
+
+#toolbox2viewbox {
+	border-top: 1px solid #ed2a2a !important;
+}
+
+#codebrowserviewbox {
+	border-top: 1px solid #17C411 !important;
+}
+
+#DOMviewbox {
+	border-top: 1px solid #CBFF23 !important;
+}
+/* STYLE ONLY TOOLBOX TREE 
+*/
+#toolbox2-hierarchy-tree {
+  /* item height */
+  /*
+     * ADD colored border to selected item int Floating panes and Komodo buffer tabs
+        border color is used for detection of selected item with Autohotkey  
+    */
+  /* ENABLE hierarchy tree guide lines 
+    */
+  /* Indentation of toolbox items in treeviews */
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*	Items	*/
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*  container open */
+  /*  container closed selected */
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*	folder	*/
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*  container closed */
+  /*  container closed selected */
+  /*  container open */
+  /*  container open selected */
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*	folder text	*/
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*  folder text */
+  /*  container text  open */
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /*	items	*/
+  /*	-------------------------------------------------------------------------------------------------------------	*/
+  /* Items in treeview */;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-row {
+	height: 0.3em !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell(selected) {
+	border-right: 1px solid #0090FF !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-line {
+	visibility: visible !important;
+	border-color: #333333 !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-indentation {
+	width: 16px !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell {
+	border-right: 1px solid #9FB3EA !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell(selected) {
+	border-right: 1px solid #0090FF !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell(container) {
+	border-right: 1px solid #00DDFF !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell(container,selected) {
+	border-right: 1px solid #FC6F1E !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell(container,open) {
+	border-right: 1px solid #E500F9 !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell(container,open,selected) {
+	border-right: 1px solid #00FF1D !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell-text(container) {
+	border-bottom: 1px solid #333333 !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell-text(container,open) {
+	border-bottom: 1px solid #40A598 !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell-text {
+	color: #8CB0D1 !important;
+	font-size: 0.9em !important;
+}
+
+#toolbox2-hierarchy-tree treechildren::-moz-tree-cell-text(container) {
+	color: darkgrey !important;
+}
+/*
+    -----------------------------------------------------------------------------------------------------------------------------
+    */
+/* Arrow icon in treeview */
+/* Items in treeview */
+/* height of buffer tabs */
+#tabbed-view tabs > tab {
+	height: 26px !important;
+	min-height: 26px !important;
+	max-height: 26px !important;
+}
+/*  border color to selected minimap */
+/* Move vertical tabs to top */
+.tabs-left {
+	visibility: collapse;
+}
+
+minimap {
+	width: 64px !important;
+	min-width: 64px !important;
+	max-width: 64px !important;
+}
+/*  border to the mini-map */
+#tabbed-view tabpanel minimap {
+	border-left: 1px solid #283B44 !important;
+}
+/* breadcums in status bar on bottom */
+[anonid="breadcrumbBar"],
+.breadcrumb {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+/* breadcums in status bar on bottom */
+[anonid="breadcrumbBar"] .breadcrumb .breadcrumb-arrow {
+	font-size: 8px !important;
+}
+/* TOOLBAR */
+#toolbox_main toolboxrow {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#toolbox_main toolboxrow toolbar {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-left: 4px !important;
+}
+
+#toolbox_main toolboxrow toolbar toolbaritem {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin-top: 3px !important;
+}
+/* CONTEXT MENU */
+menupopup {
+	border: 1px solid #283B44 !important;
+}
+
+menupopup menuitem,
+menupopup menu {
+	padding: 5px !important;
+}
+/* colorize view and pane splitters edge, make it heigher for easier manipulation */
+splitter {
+	border-left: 1px solid #283B44 !important;
+	width: 3px !important;
+}
+
+splitter[orient="vertical"] {
+	border: none;
+	border-bottom: 1px solid #283B44 !important;
+}
+
+splitter[orient="horizontal"] {
+	border: none;
+	border-left: 1px solid #283B44 !important;
+}

@@ -1,0 +1,114 @@
+//@tabs-height: 26px;
+//@minimap-width: 64px;
+//@splitter-color: #283B44;
+
+/* height of buffer tabs */
+#tabbed-view tabs> tab{
+	height: @tabs-height !important;
+	min-height: @tabs-height !important;
+	max-height: @tabs-height !important;
+    
+}
+
+/*  border color to selected minimap */
+#tabbed-view tabs> tab[selected="true"]{
+    //////border-bottom: 1px solid @selected_color !important;
+}
+
+
+/* Move vertical tabs to top */
+.tabs-left {
+    visibility: collapse;
+}
+
+minimap
+{
+    width: @minimap-width !important;
+    min-width: @minimap-width !important;
+    max-width: @minimap-width !important;
+    //border-left: 1px solid grey;
+}
+/*  border to the mini-map */
+#tabbed-view tabpanel minimap {
+    border-left: 1px solid @splitter-color !important;
+}
+
+/* breadcums in status bar on bottom */
+[anonid="breadcrumbBar"], .breadcrumb  {
+    //border: 1px solid red !important;
+    margin: 0 !important;
+    padding: 0 !important;        
+}
+
+
+
+/* breadcums in status bar on bottom */
+[anonid="breadcrumbBar"] .breadcrumb .breadcrumb-arrow {
+    font-size: 8px !important;
+}
+
+/* TOOLBAR */
+
+#toolbox_main{
+    
+    hbox{
+        //background-color:#1E1E1E !important;
+    }
+    toolboxrow{
+        padding: 0 !important;
+        margin: 0 !important;
+    
+        toolbar{
+            padding: 0 !important;
+            margin: 0 !important;
+            margin-left: 4px !important;        
+       
+            toolbaritem{
+                padding: 0 !important;
+                margin: 0 !important;
+                margin-top: 3px !important;                
+                toolbarbutton{
+
+                }
+                
+            }
+        }
+    }
+
+}
+
+
+
+/* CONTEXT MENU */
+
+
+menupopup {
+	border: 1px solid @splitter-color !important;    
+
+	//box-shadow: 7px 5px 8px rgba(0, 0, 0, 1)	!important;
+	//-moz-box-shadow: 7px 5px 8px rgba(0, 0, 0, 1) !important;
+	//-webkit-box-shadow: 7px 5px 8px rgba(0, 0, 0, 1)	!important;
+	
+	menuitem,
+	menu {
+		padding: 5px !important;
+	}	
+}
+
+
+
+/* colorize view and pane splitters edge, make it heigher for easier manipulation */
+splitter {    
+    //border: 1px solid @splitter-color !important;
+    border-left: 1px solid @splitter-color !important;
+	width: 3px !important;
+}
+
+splitter[orient="vertical"] {
+	border: none;
+    border-bottom: 1px solid @splitter-color !important;
+}
+splitter[orient="horizontal"] {
+	border: none;
+    border-left: 1px solid @splitter-color !important;
+}

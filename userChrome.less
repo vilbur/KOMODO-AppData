@@ -1,0 +1,461 @@
+
+/* ==================================================================================================== */
+/*
+    variables for userChrome\*.less files
+    "!" prefix because of sort of file as first item for "Import-all-files-to-userChrome-less.ahk"
+
+*/
+/* ==================================================================================================== */
+
+/* ==================================================================================================== */
+/*  View\Tabs & Sidebars\*    */
+/* ==================================================================================================== */
+@sidebar-toolbox:	#ed2a2a;
+@sidebar-code:	#17C411;
+@sidebar-dom:	#CBFF23;
+
+
+/* ==================================================================================================== */
+/*  ui.less    */
+/* ==================================================================================================== */
+
+@tabs-height: 26px;
+@minimap-width: 64px;
+@splitter-color: #283B44;
+
+
+
+
+/* ==================================================================================================== */
+/*  treeview.less   */
+/* ==================================================================================================== */
+
+@toolbox-item_color:    #8CB0D1;
+@toolbox-tree_lines:    #333333;
+
+@toolbox-folder_closed_underline:  #333333;
+@toolbox-folder_opened_underline:  #40A598;
+
+@toolbox-folder_closed:     #00DDFF;
+@toolbox-folder_closed_sel: #FC6F1E;
+
+@toolbox-folder_opened:      #E500F9;
+@toolbox-folder_opened_sel:  #00FF1D;
+
+@toolbox-item:      #9FB3EA;
+@toolbox-item_sel:  #0090FF;
+
+
+#tabbed-view tabs> tab{
+	border-left: 1px solid #232323!important;
+}
+
+#tabbed-view tabs> tab[label*=".php"] .tab-text,
+#tabbed-view tabs> tab[label*=".ini"] .tab-text{
+	color: #63c4fe !important;
+}
+
+#tabbed-view tabs> tab[label*=".ahk"] .tab-text{
+	color: #86db62 !important;
+}
+
+#tabbed-view tabs> tab[label*=".css"] .tab-text{
+	color: #ffb76f !important;
+}
+
+#tabbed-view tabs> tab[label*=".less"] .tab-text{
+	color: #805DC1 !important;
+}
+
+#tabbed-view tabs> tab[label*=".scss"] .tab-text{
+	color: #CF649A !important;
+}
+
+#tabbed-view tabs> tab[label*=".js"] .tab-text{
+	color: #8ac6f2 !important;
+}
+
+#tabbed-view tabs> tab[label*=".snippet"] .tab-text{
+	color: #EAC175 !important;
+}
+
+#tabbed-view tabs> tab[label*=".xul"] .tab-text{
+	color: #C761C7 !important;
+}
+
+#tabbed-view tabs> tab[label*=".ms"] .tab-text{
+	color: #4791E2 !important;
+}
+
+#tabbed-view tabs> tab[label*=".mcr"] .tab-text{
+	color: #50AF5B !important;
+}
+
+#tabbed-view tabs> tab .tab-text{
+	text-shadow:none !important; 
+}
+
+
+//#tabbed-view tabs> tab[label*="icons"] .tab-text{
+//	color: !important;
+//	//font-weight:600 !important;
+//	//text-shadow:none !important;
+//}
+/* ICONS CHEATSHEET: http://www.famfamfam.com/lab/icons/silk/preview.php */
+
+/* turn off default icon*/
+#tabbed-view tabs > tab[label^="views"] .tab-icon,
+#tabbed-view tabs > tab[label^="Routes"] .tab-icon,
+#tabbed-view tabs > tab[label$=".snippet"] .tab-icon,
+#tabbed-view tabs > tab[label*="Controller"] .tab-icon,
+#tabbed-view tabs > tab[label*="config"] .tab-icon
+{ display: none!important;}
+
+
+#tabbed-view tabs > tab[label^="views"] .tab-image-left,
+#tabbed-view tabs > tab[label^="Routes"] .tab-image-left,
+#tabbed-view tabs > tab[label$=".snippet"] .tab-image-left,
+#tabbed-view tabs > tab[label*="Controller"] .tab-image-left,
+#tabbed-view tabs > tab[label*="config"] .tab-image-left
+{
+    height: 16px !important;
+    width:	16px !important;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+*/
+
+#tabbed-view tabs > tab[label^="views"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/application_view_tile.png) !important;
+}
+
+#tabbed-view tabs > tab[label^="Routes"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/arrow_divide.png) !important;
+}
+
+#tabbed-view tabs > tab[label$=".snippet"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/cut.png) !important;
+}
+
+#tabbed-view tabs > tab[label*="Controller"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/chart_organisation.png) !important;
+}
+
+#tabbed-view tabs > tab[label*="config"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/cog.png) !important;
+}
+
+/*#tabbed-view tabs> tab[selected="true"] {
+    border-bottom: 1px solid orange !important;
+}*/
+
+/* COLORIZE EDITOR TABS */
+
+tabs > [label="Code"] .tab-text {
+    color: #D64A00 !important;
+}
+tabs > [label="Places"] .tab-text {
+    color: #15FF00 !important;
+}
+tabs > [label="Toolbox"] .tab-text {
+    color: #4A60DB !important;
+}
+
+///* TEMP FOR DEBUG OF FIND RESULTS PANE */
+tabs > [label="Syntax Checking"]  .tab-text {
+    color: #62D1D1 !important;
+}
+//tabs > [label="Notifications"]  .tab-text {
+//    color: #FF00FF !important;
+//}
+tabs > [label="Version Control"]  .tab-text {
+    color: #D89D36 !important;
+}
+tabs > [label="Console"]  .tab-text {
+    color: #E2D86A !important;
+}
+
+
+//@toolbox-item_color:    #8CB0D1;
+//@toolbox-tree_lines:    #333333;
+//
+//@toolbox-folder_closed_underline:  #333333;
+//@toolbox-folder_opened_underline:  #00EDD1;
+//
+//@toolbox-folder_closed:     #F7CEB4;
+//@toolbox-folder_closed_sel: #FC6F1E;
+//
+//@toolbox-folder_opened:      #BAFCC2;
+//@toolbox-folder_opened_sel:  #00FF1D;
+//
+//@toolbox-item:      #9FB3EA;
+//@toolbox-item_sel:  #0090FF;
+//
+
+#toolbox2viewbox{
+    border-top: 1px solid @sidebar-toolbox !important;
+}
+#codebrowserviewbox{
+    border-top: 1px solid @sidebar-code !important;
+}
+#DOMviewbox{
+    border-top: 1px solid @sidebar-dom !important;
+}
+
+
+/* STYLE ONLY TOOLBOX TREE 
+*/
+#toolbox2-hierarchy-tree{ // xul id:toolbox2viewbox
+
+	
+    /* item height */
+    treechildren::-moz-tree-row {
+        height: 0.3em !important;
+        //border: 1px solid lightblue !important;
+    }
+
+    /*
+     * ADD colored border to selected item int Floating panes and Komodo buffer tabs
+        border color is used for detection of selected item with Autohotkey  
+    */
+    treechildren::-moz-tree-cell(selected) {
+        border-right: 1px solid @toolbox-item_sel !important;
+    }
+    /* ENABLE hierarchy tree guide lines 
+    */
+    treechildren::-moz-tree-line {
+        visibility: visible !important;
+        border-color:@toolbox-tree_lines !important;
+    }
+    
+    /* Indentation of toolbox items in treeviews */
+    treechildren::-moz-tree-indentation {
+        width: 16px !important;
+    }
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    /*	Items	*/
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    
+    /*  container open */
+    treechildren::-moz-tree-cell{
+        border-right: 1px solid @toolbox-item !important;
+    }
+    
+    /*  container closed selected */
+    treechildren::-moz-tree-cell(selected){
+        border-right: 1px solid @toolbox-item_sel !important;
+    }
+    
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    /*	folder	*/
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    
+    /*  container closed */
+    treechildren::-moz-tree-cell(container){
+        border-right: 1px solid @toolbox-folder_closed !important;
+    }
+    
+    /*  container closed selected */
+    treechildren::-moz-tree-cell(container,selected){
+        border-right: 1px solid @toolbox-folder_closed_sel !important;
+    }
+    
+    /*  container open */
+    treechildren::-moz-tree-cell(container,open){
+        border-right: 1px solid @toolbox-folder_opened !important;
+    }
+    
+    /*  container open selected */
+    treechildren::-moz-tree-cell(container,open,selected){
+        //color: green !important;
+        border-right: 1px solid @toolbox-folder_opened_sel !important;
+    }
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    /*	folder text	*/
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    
+    /*  folder text */
+    treechildren::-moz-tree-cell-text(container){
+        //font-size:1.1em !important;
+        border-bottom: 1px solid @toolbox-folder_closed_underline !important;
+        //color: #FFFFFF !important;
+
+        //color: #000000 !important;
+    }
+    
+    /*  container text  open */
+    treechildren::-moz-tree-cell-text(container,open){
+        border-bottom: 1px solid @toolbox-folder_opened_underline !important;
+        //padding-left: 12px !important;
+        //padding-right: 24px !important;         
+    }
+    
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    /*	items	*/
+    /*	-------------------------------------------------------------------------------------------------------------	*/
+    
+        
+    /* Items in treeview */
+    treechildren::-moz-tree-cell-text{
+        color: @toolbox-item_color !important;
+        //font-family: consolas !important;
+        //font-family: "Lucida console" !important;
+        font-size: 0.9em !important;
+        ////border: 1px solid lightgreen !important;
+        ////border-bottom: 1px solid green !important;
+        ////padding-left: 8px !important;
+        ////padding-right: 28px !important;    
+        ////padding-top: 8px !important;
+        ////padding-bottom: 0px !important;
+    }
+     treechildren::-moz-tree-cell-text(container){
+        //color: #FFFFFF !important;
+        color: darkgrey !important;        
+
+    }   
+    
+    
+    //treechildren::-moz-tree-cell-text(Autohotkey){
+    //    color: red !important;
+    //    background-color: blue !important;    
+    //}
+    
+}  
+    
+    /*
+    -----------------------------------------------------------------------------------------------------------------------------
+    */
+    
+    
+    /* Arrow icon in treeview */
+    ////treechildren::-moz-tree-twisty(closed){
+    ////    width: 16px !important;
+    ////    list-style-image: url("chrome://global/skin/tree/twisty-clsd.png") !important;
+    ////}
+    
+    
+    /* Items in treeview */
+    ////treechildren::-moz-tree-cell-text{
+    ////    color: green !important;
+    ////    //border-bottom: 1px solid green !important;
+    ////    //padding-left: 8px !important;
+    ////    //padding-top: 8px !important;
+    ////    //padding-bottom: 0px !important;
+    ////}
+//@tabs-height: 26px;
+//@minimap-width: 64px;
+//@splitter-color: #283B44;
+
+/* height of buffer tabs */
+#tabbed-view tabs> tab{
+	height: @tabs-height !important;
+	min-height: @tabs-height !important;
+	max-height: @tabs-height !important;
+    
+}
+
+/*  border color to selected minimap */
+#tabbed-view tabs> tab[selected="true"]{
+    //////border-bottom: 1px solid @selected_color !important;
+}
+
+
+/* Move vertical tabs to top */
+.tabs-left {
+    visibility: collapse;
+}
+
+minimap
+{
+    width: @minimap-width !important;
+    min-width: @minimap-width !important;
+    max-width: @minimap-width !important;
+    //border-left: 1px solid grey;
+}
+/*  border to the mini-map */
+#tabbed-view tabpanel minimap {
+    border-left: 1px solid @splitter-color !important;
+}
+
+/* breadcums in status bar on bottom */
+[anonid="breadcrumbBar"], .breadcrumb  {
+    //border: 1px solid red !important;
+    margin: 0 !important;
+    padding: 0 !important;        
+}
+
+
+
+/* breadcums in status bar on bottom */
+[anonid="breadcrumbBar"] .breadcrumb .breadcrumb-arrow {
+    font-size: 8px !important;
+}
+
+/* TOOLBAR */
+
+#toolbox_main{
+    
+    hbox{
+        //background-color:#1E1E1E !important;
+    }
+    toolboxrow{
+        padding: 0 !important;
+        margin: 0 !important;
+    
+        toolbar{
+            padding: 0 !important;
+            margin: 0 !important;
+            margin-left: 4px !important;        
+       
+            toolbaritem{
+                padding: 0 !important;
+                margin: 0 !important;
+                margin-top: 3px !important;                
+                toolbarbutton{
+
+                }
+                
+            }
+        }
+    }
+
+}
+
+
+
+/* CONTEXT MENU */
+
+
+menupopup {
+	border: 1px solid @splitter-color !important;    
+
+	//box-shadow: 7px 5px 8px rgba(0, 0, 0, 1)	!important;
+	//-moz-box-shadow: 7px 5px 8px rgba(0, 0, 0, 1) !important;
+	//-webkit-box-shadow: 7px 5px 8px rgba(0, 0, 0, 1)	!important;
+	
+	menuitem,
+	menu {
+		padding: 5px !important;
+	}	
+}
+
+
+
+/* colorize view and pane splitters edge, make it heigher for easier manipulation */
+splitter {    
+    //border: 1px solid @splitter-color !important;
+    border-left: 1px solid @splitter-color !important;
+	width: 3px !important;
+}
+
+splitter[orient="vertical"] {
+	border: none;
+    border-bottom: 1px solid @splitter-color !important;
+}
+splitter[orient="horizontal"] {
+	border: none;
+    border-left: 1px solid @splitter-color !important;
+}

@@ -1,0 +1,50 @@
+/* ICONS CHEATSHEET: http://www.famfamfam.com/lab/icons/silk/preview.php */
+
+/* turn off default icon*/
+#tabbed-view tabs > tab[label^="views"] .tab-icon,
+#tabbed-view tabs > tab[label^="Routes"] .tab-icon,
+#tabbed-view tabs > tab[label$=".snippet"] .tab-icon,
+#tabbed-view tabs > tab[label*="Controller"] .tab-icon,
+#tabbed-view tabs > tab[label*="config"] .tab-icon
+{ display: none!important;}
+
+
+#tabbed-view tabs > tab[label^="views"] .tab-image-left,
+#tabbed-view tabs > tab[label^="Routes"] .tab-image-left,
+#tabbed-view tabs > tab[label$=".snippet"] .tab-image-left,
+#tabbed-view tabs > tab[label*="Controller"] .tab-image-left,
+#tabbed-view tabs > tab[label*="config"] .tab-image-left
+{
+    height: 16px !important;
+    width:	16px !important;
+}
+
+/*
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
+*/
+
+#tabbed-view tabs > tab[label^="views"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/application_view_tile.png) !important;
+}
+
+#tabbed-view tabs > tab[label^="Routes"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/arrow_divide.png) !important;
+}
+
+#tabbed-view tabs > tab[label$=".snippet"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/cut.png) !important;
+}
+
+#tabbed-view tabs > tab[label*="Controller"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/chart_organisation.png) !important;
+}
+
+#tabbed-view tabs > tab[label*="config"] .tab-image-left  {
+    background-image: url(chrome://famfamfamsilk/skin/icons/cog.png) !important;
+}
+
+/*#tabbed-view tabs> tab[selected="true"] {
+    border-bottom: 1px solid orange !important;
+}*/
