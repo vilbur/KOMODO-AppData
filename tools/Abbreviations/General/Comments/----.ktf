@@ -1,0 +1,19 @@
+// komodo tool: ----
+// =================
+// auto_abbreviation: false
+// indent_relative: false
+// is_clean: true
+// language: General
+// set_selection: false
+// treat_as_ejs: true
+// type: snippet
+// version: 1.1.5
+// =================
+<%
+	var new_line_if_ahk	= require("ko/editor").getLanguage()==='Autohotkey' ? '\n': '';
+%>
+/*------------------------------------------------------------------------------
+
+	[[%tabstop:COMMENT]]
+
+--------------------------------------------------------------------------------<%=new_line_if_ahk%>*/[[%tabstop:]]!@#_currentPos!@#_anchor
