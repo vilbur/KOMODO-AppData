@@ -1,0 +1,28 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "RunMaxscriptFile", 
+  "language": "JavaScript", 
+  "trigger_enabled": 0, 
+  "value": [
+    "komodo.assertMacroVersion(3);", 
+    "//ko.views.manager.currentView.scimoz.beginUndoAction();", 
+    "", 
+    "", 
+    "ko.extensions.RunMaxscriptFile = (function(filepath)", 
+    "{", 
+    "\t//var filepath_current\t= ko.views.manager.currentView.koDoc.file.displayPath;", 
+    "\tvar run_maxscript_ahk\t= komodo.macro.path + '\\\\..\\\\run-maxscript.ahk';", 
+    "", 
+    "\tko.extensions.runCmd(run_maxscript_ahk, filepath );", 
+    "\t", 
+    "});", 
+    "", 
+    "", 
+    "ko.extensions.RunMaxscriptFile('C:\\\\GoogleDrive\\\\Programs\\\\CG\\\\3DsMax\\\\scripts\\\\Library\\\\MAXSCRIPT-UI-framework\\\\Lib\\\\Rolloutor\\\\Controls\\\\ControlsBox\\\\Control\\\\_Test/ControlTest.ms')"
+  ], 
+  "version": "1.1.5", 
+  "rank": 100, 
+  "async": 1, 
+  "type": "macro", 
+  "trigger": ""
+}}

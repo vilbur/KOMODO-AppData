@@ -1,0 +1,23 @@
+/*
+komodo tool: ConsoleGetContent
+==============================
+async: False
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+==============================*/
+/** Clear Komodo Console pane
+ *  IF CONSOLE IS NOT DETACHED
+ */
+ko.extensions.ConsoleGetContent = (function() {
+
+	var console_el = document.getElementById('console-widget').contentWindow;
+	////var content = console_el.document.getElementById('output').innerHTML;
+	var output_el	= console_el.document.getElementById('output');
+	var output	= output_el.innerHTML;
+	alert( output );
+});

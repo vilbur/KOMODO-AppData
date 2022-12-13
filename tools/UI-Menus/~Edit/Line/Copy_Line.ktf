@@ -1,0 +1,40 @@
+/*
+komodo tool: Copy Line
+======================
+async: 0
+is_clean: true
+keyboard_shortcut: Ctrl+Shift+Down
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+======================*/
+/* Copy curren line down
+ *
+ */
+var scimoz	= ko.views.manager.currentView.scimoz;
+var koEditor	= require("ko/editor");
+/** CONTETNT
+ */
+var sel_text	= koEditor.getSelection();
+var line_content	= koEditor.getLine(koEditor.getLineNumber());
+
+/** POSITION
+ */
+var current_pos	= scimoz.currentPos;
+var current_anchor	= scimoz.anchor;
+
+var line_from_pos	= scimoz.lineFromPosition(current_anchor>current_pos ? current_anchor : current_pos);
+var line_end_pos	= scimoz.getLineEndPosition(line_from_pos);
+
+
+/** Write content on new line
+ */
+var writeContentOnNewLine = (function()
+{
+	koEditor.setCursor(line_end_pos);
+	scimoz.newLine();
+	komodo.view.selection = sel_text ? sel_text : line_content;
+})(); 

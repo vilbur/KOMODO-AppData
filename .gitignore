@@ -13,14 +13,13 @@
 # DO NOT IGNORE THESE FOLDERS
 !/userChrome-source
 !/schemes
+!/tools
 
 
-
-# DO NOT IGNORE THESE SUBFOLDERS
-!/tools/
-/tools/*
-!/tools/Abbreviations/
-
+# IGNORE THESE SUBFOLDERS
+/tools/Examples
+/tools/File Templates
+/tools/Sample_Macros
 
 
 # DO NOT IGNORE THESE SUBFOLDERS

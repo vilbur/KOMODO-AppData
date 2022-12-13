@@ -1,0 +1,31 @@
+/*
+komodo tool: Collapse Fold
+==========================
+async: False
+icon: chrome://fugue/skin/icons/minus-button.png
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+==========================*/
+if (komodo.view) { komodo.view.setFocus(); }
+
+var scimoz	= ko.views.manager.currentView.scimoz;
+var koEditor	= require("ko/editor");
+var sel_text	= scimoz.selText;
+var lang	= koEditor.getLanguage();
+
+
+if( sel_text )
+	ko.commands.doCommand('cmd_foldCollapseRecursive');
+	//ko.commands.doCommand('cmd_foldCollapse')
+
+else
+	ko.commands.doCommand('cmd_foldCollapseAll');
+
+
+//if( lang=='Maxscript' )
+	ko.commands.doCommand('cmd_foldExpand');

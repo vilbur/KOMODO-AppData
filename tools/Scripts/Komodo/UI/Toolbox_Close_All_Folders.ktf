@@ -1,0 +1,18 @@
+/*
+komodo tool: Toolbox Close All Folders
+======================================
+async: False
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+======================================*/
+komodo.assertMacroVersion(3);
+///* TRY SET WINDOWS IMMEDIATELY  */
+try {
+	ko.extensions.runCmd( komodo.macro.path + '\\..\\Toolbox-close-opened-items.ahk 1')
+} catch(e) {
+}

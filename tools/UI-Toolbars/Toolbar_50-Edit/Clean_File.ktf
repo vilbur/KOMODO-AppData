@@ -1,0 +1,85 @@
+/*
+komodo tool: Clean File
+=======================
+async: 0
+icon: chrome://fugue/skin/icons/bandaid--plus.png
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+=======================*/
+/** CleanFile or selected content
+ *
+ *  Remove whitespace lines
+ */
+ko.extensions.CleanFile = (function()
+{
+	function CleanFile()
+	{
+		var koEditor	= require("ko/editor");
+		var lang	= koEditor.getLanguage();
+		var file_content	= koEditor.getValue();
+		var sel_text	= koEditor.getSelection();
+		var content	= sel_text ? sel_text : file_content;
+		//.replace(/\r/gm, '') // remove even empty line for file write;
+
+		/** Remove empty lines
+		 *
+		 * @return self
+		 */
+		this.removeEmptyLines = function()
+		{
+			content = content.replace(/\s*[\r\n]\s*[\r\n]\s*[\r\n]/gi, '\n\n');
+			return this;
+		};
+		/** Remove empty line after keyword
+		 *	After some words should not be empty line E.G.: 'else'
+		 * @return self
+		 */
+		this.removeEmptyLineAfterKeyword = function()
+		{
+			var keywords	= ['else'];
+
+			for(let i=0; i<keywords.length;i++)
+				content = content.replace( (new RegExp('('+keywords[i]+')\\s*[\\r\\n]', 'gi')), '$1\n');
+
+			return this;
+		};
+		/** Remove empty line after bracket
+		 *	After some words should not be empty line E.G.: ')'
+		 * @return self
+		 */
+		this.removeEmptyLineAfterBracket = function()
+		{
+			content = content
+						//.replace( /[\r\n]\s*[\r\n](\s*[\(\)])/gi, '\n$1')	// line before brackets
+						//.replace( /([\(\)])[\r\n]\s*[\r\n]/gi, '$1\n')	// line after brackets
+						.replace( /[\r\n]\s*[\r\n](\s*[\(\)\[\]{}])/gi, '\n$1')	// line before brackets
+						.replace( /([\(\)\[\]{}])[\r\n]\s*[\r\n]/gi, '$1\n')	// line after brackets
+
+			return this;
+		};
+		/** Replace content
+		 *
+		 * @return self
+		 */
+		this.replace = function()
+		{
+			ko.views.manager.currentView.scimoz.beginUndoAction();
+			try
+			{
+				koEditor[sel_text ? 'replaceSelection' : 'setValue'](content);
+			} finally {
+				ko.views.manager.currentView.scimoz.endUndoAction();
+			}
+
+			return this;
+		};
+
+	}
+
+	return CleanFile;
+})();
