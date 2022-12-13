@@ -26,11 +26,11 @@
 }
 
 
-/* STYLE ONLY TOOLBOX TREE 
+/* STYLE ONLY TOOLBOX TREE
 */
 #toolbox2-hierarchy-tree{ // xul id:toolbox2viewbox
 
-	
+
     /* item height */
     treechildren::-moz-tree-row {
         height: 0.3em !important;
@@ -39,64 +39,67 @@
 
     /*
      * ADD colored border to selected item int Floating panes and Komodo buffer tabs
-        border color is used for detection of selected item with Autohotkey  
+        border color is used for detection of selected item with Autohotkey
     */
     treechildren::-moz-tree-cell(selected) {
-        border-right: 1px solid @toolbox-item_sel !important;
+        //border-right: 1px solid @toolbox-item_sel !important;
+        background: @toolbox-item_sel !important;
+
     }
-    /* ENABLE hierarchy tree guide lines 
+    /* ENABLE hierarchy tree guide lines
     */
     treechildren::-moz-tree-line {
         visibility: visible !important;
         border-color:@toolbox-tree_lines !important;
     }
-    
+
     /* Indentation of toolbox items in treeviews */
     treechildren::-moz-tree-indentation {
         width: 16px !important;
     }
+
     /*	-------------------------------------------------------------------------------------------------------------	*/
     /*	Items	*/
     /*	-------------------------------------------------------------------------------------------------------------	*/
-    
+
     /*  container open */
     treechildren::-moz-tree-cell{
-        border-right: 1px solid @toolbox-item !important;
+        //border-right: 1px solid @toolbox-item !important;
     }
-    
+
     /*  container closed selected */
     treechildren::-moz-tree-cell(selected){
-        border-right: 1px solid @toolbox-item_sel !important;
+        //border-right: 1px solid @toolbox-item_sel !important;
     }
-    
+
     /*	-------------------------------------------------------------------------------------------------------------	*/
     /*	folder	*/
     /*	-------------------------------------------------------------------------------------------------------------	*/
-    
+
     /*  container closed */
     treechildren::-moz-tree-cell(container){
-        border-right: 1px solid @toolbox-folder_closed !important;
+        //border-right: 1px solid @toolbox-folder_closed !important;
     }
-    
+
     /*  container closed selected */
     treechildren::-moz-tree-cell(container,selected){
-        border-right: 1px solid @toolbox-folder_closed_sel !important;
+        //border-right: 1px solid @toolbox-folder_closed_sel !important;
     }
-    
+
     /*  container open */
     treechildren::-moz-tree-cell(container,open){
-        border-right: 1px solid @toolbox-folder_opened !important;
+        //border-right: 1px solid @toolbox-folder_opened !important;
     }
-    
+
     /*  container open selected */
     treechildren::-moz-tree-cell(container,open,selected){
         //color: green !important;
-        border-right: 1px solid @toolbox-folder_opened_sel !important;
+        //border-right: 1px solid @toolbox-folder_opened_sel !important;
     }
     /*	-------------------------------------------------------------------------------------------------------------	*/
     /*	folder text	*/
     /*	-------------------------------------------------------------------------------------------------------------	*/
-    
+
     /*  folder text */
     treechildren::-moz-tree-cell-text(container){
         //font-size:1.1em !important;
@@ -105,19 +108,19 @@
 
         //color: #000000 !important;
     }
-    
+
     /*  container text  open */
     treechildren::-moz-tree-cell-text(container,open){
         border-bottom: 1px solid @toolbox-folder_opened_underline !important;
         //padding-left: 12px !important;
-        //padding-right: 24px !important;         
+        //padding-right: 24px !important;
     }
-    
+
     /*	-------------------------------------------------------------------------------------------------------------	*/
     /*	items	*/
     /*	-------------------------------------------------------------------------------------------------------------	*/
-    
-        
+
+
     /* Items in treeview */
     treechildren::-moz-tree-cell-text{
         color: @toolbox-item_color !important;
@@ -127,36 +130,36 @@
         ////border: 1px solid lightgreen !important;
         ////border-bottom: 1px solid green !important;
         ////padding-left: 8px !important;
-        ////padding-right: 28px !important;    
+        ////padding-right: 28px !important;
         ////padding-top: 8px !important;
         ////padding-bottom: 0px !important;
     }
      treechildren::-moz-tree-cell-text(container){
         //color: #FFFFFF !important;
-        color: darkgrey !important;        
+        color: darkgrey !important;
 
-    }   
-    
-    
+    }
+
+
     //treechildren::-moz-tree-cell-text(Autohotkey){
     //    color: red !important;
-    //    background-color: blue !important;    
+    //    background-color: blue !important;
     //}
-    
-}  
-    
+
+}
+
     /*
     -----------------------------------------------------------------------------------------------------------------------------
     */
-    
-    
+
+
     /* Arrow icon in treeview */
     ////treechildren::-moz-tree-twisty(closed){
     ////    width: 16px !important;
     ////    list-style-image: url("chrome://global/skin/tree/twisty-clsd.png") !important;
     ////}
-    
-    
+
+
     /* Items in treeview */
     ////treechildren::-moz-tree-cell-text{
     ////    color: green !important;

@@ -143,15 +143,15 @@ tabs > [label="Console"] .tab-text {
 #DOMviewbox {
 	border-top: 1px solid #CBFF23 !important;
 }
-/* STYLE ONLY TOOLBOX TREE 
+/* STYLE ONLY TOOLBOX TREE
 */
 #toolbox2-hierarchy-tree {
   /* item height */
   /*
      * ADD colored border to selected item int Floating panes and Komodo buffer tabs
-        border color is used for detection of selected item with Autohotkey  
+        border color is used for detection of selected item with Autohotkey
     */
-  /* ENABLE hierarchy tree guide lines 
+  /* ENABLE hierarchy tree guide lines
     */
   /* Indentation of toolbox items in treeviews */
   /*	-------------------------------------------------------------------------------------------------------------	*/
@@ -200,6 +200,7 @@ tabs > [label="Console"] .tab-text {
 
 #toolbox2-hierarchy-tree treechildren::-moz-tree-cell(selected) {
 	border-right: 1px solid #0090FF !important;
+	background: #5B441B !important;
 }
 
 #toolbox2-hierarchy-tree treechildren::-moz-tree-cell(container) {
