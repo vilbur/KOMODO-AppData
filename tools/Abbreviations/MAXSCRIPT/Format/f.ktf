@@ -1,0 +1,77 @@
+/*
+komodo tool: f
+==============
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+==============*/
+<%
+	//var questions = ["function"];
+	
+	var _variables	=	Array(4).join('|').split('|').map(function(val, index){
+
+				return 'var' + (index+1);
+			});
+	//var array_merged	= [].concat.apply( questions, _variables );
+	
+	var ask = ko.interpolate.interpolateString([
+		_variables.map(function(value, index){
+			return '%(ask'+index+':'+(typeof value === 'object'?value[0]:value)+':'+')';
+	})]).split(',');
+	
+	/**  
+	 *	
+	 */
+	tabstops_filtered	= ask.map(function(value)
+	{
+		return value !== '' ?  value.trim() : null;
+	}).filter(function(value){
+		return value ? value : null;
+	});
+	
+	/**  Put indexed '[[%tabstopN:]]' arround array item
+	 *	
+	 */
+	tabstops	= tabstops_filtered.map(function(value, index)
+	{
+		var tabstop = '%tabstop' + (index +1) + ':';
+		
+		return value !== '' ? '[['+ tabstop + value.replace(/(")/gi, '\\$1') + ']]' : null;
+		
+	});
+	///** tabstops_escaped
+	// */
+	//tabstops_escaped	= tabstops.map(function(value, index)
+	//{
+	//	return value.replace(/(")/gi, '\\$1');
+	//});
+	/**  Put secondary '[[%tabstop:]]' arround array item
+	 *	
+	 */
+	tabstops_double	= tabstops.map(function(value, index)
+	{
+		if (value.match(/\s|\(\)/gi)) 
+			value = "("+value+")";
+		
+		return '[[%tabstop:'+ value + ']]';
+	});
+	
+	var new_line_ending	= tabstops.length > 1 ? '\\n\\n' : '\\n';
+	
+	
+	//console.log( tabstops );
+	//console.log( 'SNIPPET\nMaxscript\\format\\f\n\n IS NOT COMPLETE' ); 
+
+
+	
+	
+
+%>
+<%if( tabstops_filtered.length > 0 ) { %>
+format "<%=tabstops.join('	= % \\n') + '	= % '%><%=new_line_ending%>" <%=tabstops_double.join(' ')%><% } else { %>
+format "[[%tabstop:\n]]"<%}%>[[%tabstop:]]!@#_currentPos!@#_anchor

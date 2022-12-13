@@ -1,0 +1,11 @@
+// komodo tool: <em> Emphasis
+// ==========================
+// auto_abbreviation: false
+// indent_relative: true
+// is_clean: true
+// set_selection: true
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==========================
+<em>[[%(w:else:)]]!@#_currentPos!@#_anchor</em>

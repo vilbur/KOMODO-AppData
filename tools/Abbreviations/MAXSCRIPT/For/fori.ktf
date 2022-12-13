@@ -1,0 +1,13 @@
+/*
+komodo tool: fori
+=================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+for [[%tabstop:i]] = 1 to [[%tabstop:[[%tabstop:array]].count]] do [[%tabstop:]]!@#_currentPos!@#_anchor

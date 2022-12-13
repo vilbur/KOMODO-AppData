@@ -1,0 +1,16 @@
+/*
+komodo tool: conf
+=================
+auto_abbreviation: false
+indent_relative: false
+language: Autohotkey
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+MsgBox, 4[[%tabstop:|260:NO]], , [[%tabstop:message]]
+IfMsgBox, No
+    return [[%tabstop:]]
+[[%tabstop:IfMsgBox, Timeout
+    return [[%tabstop:]]]]!@#_currentPos!@#_anchor
