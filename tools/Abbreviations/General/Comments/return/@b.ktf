@@ -1,0 +1,19 @@
+/*
+komodo tool: @b
+// ===============
+// auto_abbreviation: false
+// indent_relative: true
+// is_clean: true
+// language: General
+// set_selection: false
+// treat_as_ejs: true
+// type: snippet
+// version: 1.1.5
+// ===============
+<% /* Tags Help:https://www.phpdoc.org/docs/latest/internals/tags.html */
+
+	var lang	= ko.views.manager.currentView.languageObj.name;
+	var prefix	= lang.match(/php|autohotkey/gi)? "$" : "";
+
+%>
+@param	[[%tabstop:string]]	<%=prefix%>[[%tabstop:name]][[%tabstop:, [[%tabstop:@par]]]]!@#_currentPos!@#_anchor

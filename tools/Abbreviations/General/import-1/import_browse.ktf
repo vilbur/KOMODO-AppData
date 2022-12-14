@@ -1,0 +1,265 @@
+// komodo tool: import_browse
+// ==========================
+// auto_abbreviation: false
+// indent_relative: false
+// is_clean: true
+// language: General
+// set_selection: false
+// treat_as_ejs: true
+// type: snippet
+// version: 1.1.5
+// ==========================
+<%
+/* insert snippet like 'import /relative/path' by language
+ *
+ */
+function getSnippetValue()
+{
+	var koFile	= require("ko/file");
+	var lang	= ko.views.manager.currentView.languageObj.name;
+
+	var current_path	= ko.views.manager.currentView.koDoc.file.path;
+	var current_basename	= koFile.basename(current_path);
+	var current_filename	= current_basename.split('.').shift();
+	var current_extension	= current_basename.split('.').pop();
+
+	var browsed_path;
+	var browsed_basename;
+	var browsed_filename;
+	var browsed_extension;
+
+	var path_relative;
+
+	/** Search file or dir in path backwards
+	 *
+	 * @example fileSearch( 'C:\dir\subdir', 'file.txt' )	Search 'file.txt' in 'C:\dir\subdir', C:\dir' and 'C:\'
+	 * @example fileSearch( 'C:\dir\subdir', /.txt/g )	Search '.txt' files
+	 *
+	 * @param	string	path	Path where to search
+	 * @param	string|RegEx	search	File or dir to search
+	 *
+	 * @return	string|null	Path where of found OR null if not found
+	 */
+	var fileSearch = function( path, search )
+	{
+		var koFile	= require("ko/file");
+		var path_split	= path.split('\\');
+		var found_path	= null;
+
+		if( search.constructor.name !== 'RegExp' )
+			search = new RegExp(search, 'gi');
+
+		/** fileExists
+		*/
+		function fileExists()
+		{
+			var dir_path	= path_split.join('\\') + '\\';
+			var list	= koFile.list(dir_path);
+
+			for(var i=0; i<list.length;i++)
+				if( list[i].match(  search ) && ! found_path  )
+					found_path = dir_path + list[i];
+
+			return  found_path !== null;
+		}
+
+		while ( ! fileExists() && path_split.length > 1 )
+			path_split.pop();
+
+		return found_path ? found_path : null;
+
+	};
+	var getSnippetValue = function()
+	{
+		/*---------------------------------------
+			BY LANGUAGE
+		-----------------------------------------
+		*/
+		this.JavaScript = function()
+		{
+			return "import [[%tabstop:[[%tabstop:"+kebabCase(browsed_basename)+"]]\tfrom ]]'"+path_relative.substring(1)+"';[[%tabstop:]]";
+		};
+		this.Autohotkey = function()
+		{
+			return "#Include %A_LineFile%\\"+path_relative.replace(/\//gi,'\\')+"[[%tabstop:]]";
+		};
+		this.Markdown = function()
+		{
+			return "[include:"+path_relative.replace(/\//gi,'\\').substring(2)+"][[%tabstop:]]";
+		};
+		this.SCSS = function()
+		{
+			return "@import '"+path_relative.substring(3)+"';[[%tabstop:]]";
+		};
+		this.Maxscript = function()
+		{
+			//var match_userscript	= /.*\\ENU\\scripts/gi.exec(browsed_path);
+			//var path_to_script	= browsed_path.replace(/.*\\scripts/gi, '$userScripts');
+			//var escape_character	= match_userscript ? '@' : '';
+
+
+			//return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
+			return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
+		};
+		/* Import snippets to *.xul files
+		 *
+		 * <!ENTITY % fooDTD SYSTEM "chrome://Extension/locale/en-US/foo.dtd">%fooDTD;
+		 * '<script src="chrome://Extension/content/foo.js" type="application/x-javascript"/>'
+		 * '<?xml-stylesheet href="chrome://Extension/skin/foo.css" type="text/css" ?>'
+		 * '<?xml-stylesheet href="chrome://Extension/skin/foo.css" type="stylesheet/less" media="less" ?>'
+		 */
+		this.XUL = function(  )
+		{
+			chrome_extension_path	= getChromeExtensionPath();
+			if( ! chrome_extension_path )
+				return path_relative
+
+			switch( browsed_extension.toLowerCase() )
+			{
+				case 'dtd':	return '<!ENTITY % [[%tabstop1:'+browsed_filename+']]DTD SYSTEM "'+chrome_extension_path+'">%[[%tabstop1:'+browsed_filename+']]DTD;[[%tabstop:]]';
+				case 'js':	return '<script type="application/x-javascript" src="'+chrome_extension_path+'"/>';
+				case 'css':	return '<?xml-stylesheet type="text/css" href="'+chrome_extension_path+'"?>';
+				case 'less':	return '<?xml-stylesheet type="stylesheet/less" media="less" href="'+chrome_extension_path+'"?>';
+
+				default:	return path_relative
+			}
+		};
+
+		this.Text = function()
+		{
+			var method_by_file_name	= current_basename.toLowerCase().replace(/[^A-Z]/gi, '');
+
+			return typeof this[method_by_file_name] !== 'undefined' ? this[method_by_file_name]() : getDefault()
+		};
+		/*----------------------------------------------------------------------
+			BY FILENAME - lower case filename + extension
+		------------------------------------------------------------------------
+		*/
+		/* Import snippets to chrome.manifest files
+		 *
+		 * overlay chrome://komodo/content/komodo.xul chrome://Extension/content/overlay.xul
+		 *
+		 * content	Extension jar:Extension.jar!	/content/
+		 * skin	Extension classic/1.0 jar:Extension.jar!	/skin/
+		 * locale	Extension en-US jar:Extension.jar!	/locale/en-US/
+		 */
+		this.chromemanifest = function()
+		{
+			var path_match	= /[\\\/]+(content|skin|locale)[\\\/]+/gi.exec(browsed_path)
+
+			if( browsed_extension.match(/xul/gi)  )
+			{
+				chrome_extension_path	= getChromeExtensionPath();
+				if( chrome_extension_path )
+					return 'overlay chrome:;//komodo/content/[[%tabstop:komodo]].xul	'+chrome_extension_path
+			}
+			else if( path_match )
+			{
+				var include_folder	= path_match.pop().toLowerCase();
+				var manifest_path	= fileSearch( koFile.dirname(browsed_path), 'chrome.manifest');
+				var extension_dirname	= koFile.basename(koFile.dirname(manifest_path));
+
+				var path_folder	= koFile.dirname(browsed_path).replace(include_folder, '~'+include_folder).split('~').pop()
+
+				if( include_folder=='locale' )
+					var local	= /[\\\/]+locale[\\\/]+([^\\\/]+)/gi.exec(browsed_path).pop(); // get e.g.: 'en-US'
+
+
+				switch (include_folder)
+				{
+					case 'content':	return 'content	'+extension_dirname+' jar:'+extension_dirname+'.jar! /content/';
+					case 'skin':	return 'skin	'+extension_dirname+' classic/1.0 jar:'+extension_dirname+'.jar!	/skin/';
+					case 'locale':	return 'locale	'+extension_dirname+' '+local+' jar:'+extension_dirname+'.jar!	/locale/'+local+'/';
+				}
+			}
+
+			return getDefault()
+		};
+
+		/** getDefault
+		 */
+		var getDefault = function()
+		{
+			return '[[%tabstop:]]' + path_relative + '[[%tabstop:]]';
+		};
+
+		console.log(  'lang: ' + lang );
+
+		return typeof this[lang] !== 'undefined' ? this[lang]() : getDefault()
+	};
+	/**
+	 */
+	var browseImportFile = function()
+	{
+		browsed_path	= ko.filepicker.browseForFile();
+		browsed_basename	= koFile.basename(browsed_path);
+		browsed_filename	= browsed_basename.split('.').shift();
+		browsed_extension	= browsed_basename.split('.').pop();
+
+	};
+	/**
+	 */
+	var getRelativePath = function(fromPath, toPath)
+	{
+		var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
+							  .createInstance(Components.interfaces.nsILocalFile);
+		nsFileFrom.initWithPath(fromPath);
+		var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
+							  .createInstance(Components.interfaces.nsILocalFile);
+		nsFileTo.initWithPath(toPath);
+		return nsFileTo.getRelativeDescriptor(nsFileFrom);
+	}
+	/**
+	 */
+	var setPathRelative = function()
+	{
+		path_relative = getRelativePath(current_path, browsed_path)
+	};
+	/**
+	 */
+	var kebabCase = function(string)
+	{
+		return string.replace(/[^A-Z]+/gi, ' ').replace(/\w\S*/g, function(str){return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();}).replace(/\s+/gi, '');
+	};
+
+	/** get path to extension
+	 * @example 'chrome://extension/content/file.xul'
+	 */
+	var getChromeExtensionPath = function()
+	{
+		var manifest_path	= fileSearch( koFile.dirname(current_path), 'chrome.manifest');
+		//console.log(  'manifest_path: ' + manifest_path );
+		if( ! manifest_path )
+			return false
+
+		var extension_dir	= koFile.dirname(koFile.dirname(manifest_path));
+
+		return  'chrome://'+ getRelativePath(extension_dir, browsed_path)
+	};
+
+	browseImportFile();
+	setPathRelative();
+
+	return getSnippetValue();
+};
+
+/* FAKE SNIPPET
+ *
+ */
+var fake_snippet = {
+	hasAttribute: function(name) {
+		return name in this;
+	},
+	getStringAttribute: function(name) {
+		return this[name];
+	},
+	name:	"fake snippet",
+	indent_relative: "true",
+	value: getSnippetValue()
+};
+/* INSERT SNIPPET */
+setTimeout( function(){
+	ko.projects.snippetInsert(fake_snippet);
+}, 100);
+%>
+!@#_currentPos!@#_anchor

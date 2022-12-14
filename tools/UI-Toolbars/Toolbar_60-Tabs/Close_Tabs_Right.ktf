@@ -1,16 +1,16 @@
 /*
-komodo tool: Close non project files
-====================================
-async: 0
-icon: chrome://famfamfamsilk/skin/icons/page_delete.png
+komodo tool: Close Tabs Right
+=============================
+async: False
+icon: chrome://fugue/skin/icons/document-hf-delete-footer.png
 is_clean: true
 language: JavaScript
 rank: 100
 trigger: trigger_postopen
-trigger_enabled: 0
+trigger_enabled: False
 type: macro
 version: 1.1.5
-====================================*/
+=============================*/
 /**
 * !!!!!!!! DOS NOT WORK ON aLL KOMODO MaCRO
 **/

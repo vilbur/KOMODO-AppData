@@ -1,14 +1,15 @@
-// komodo tool: macroEpoly
-// =======================
-// auto_abbreviation: false
-// indent_relative: false
-// is_clean: true
-// language: Text
-// set_selection: false
-// treat_as_ejs: false
-// type: snippet
-// version: 1.1.5
-// =======================
+/*
+komodo tool: macroEpoly
+=======================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=======================*/
 	on isEnabled return Filters.Is_EPolySpecifyLevel #{[[%tabstop:2..3]]}
 	on isVisible return Filters.Is_EPolySpecifyLevel #{[[%tabstop:2..3]]}
 

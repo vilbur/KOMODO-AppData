@@ -1,0 +1,79 @@
+/*
+komodo tool: fn
+===============
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+===============*/
+<%
+	var koEditor	= require("ko/editor");
+	var file_content	= koEditor.getValue()
+	var ending_comma	= file_content.match(/struct/gi) ? ',' : '' ;
+	var struct_name  = '';
+
+
+
+	var regex_file_content = new RegExp("(.*)", "gi");
+	var regex_file_content = /struct\s+([^\W]+)/gi;
+	var prefixmatch =  regex_file_content.exec(file_content);
+
+	if (prefixmatch)
+		struct_name = prefixmatch[1]
+	//{
+	//	alert( 'prefixmatch=\n'+JSON.stringify( prefixmatch, null, 2) )
+	//}
+
+
+	var ending_comma	= file_content.match(/struct/gi) ? ',' : '' ;
+
+	/* Ask for function name and return value
+	*/
+	var struct_name_input = ko.interpolate.interpolateString([
+		'%(ask1:Set method name:)',
+		//'%(ask2:Return:this)',	// clear input for not return 'this'
+	]).split(',');
+
+	var fn_name_sanitized	= struct_name_input[0]
+		.replace(/([A-Z])/g, ' $1')	// Split "CamelCaseString" to capital "Camel Case String"
+		.replace(/([A-Z])\s([A-Z])/g, '')	// Remove whitespace between two capital letters E.G.: 'This I S typo' >>> 'This IS typo'
+		.replace(/[\s+|-]+/g, ' ')
+		.replace(/\s+/g, ' ')
+		.toLowerCase()
+		.trim();
+
+	function setToClipboard( clip_content )
+	{
+		ko.run.output.endSession();
+		ko.run.runEncodedCommand( window, 'set /p="'+clip_content+'"<nul| clip' );
+	}
+
+
+	var fn_summary = fn_name_sanitized.replace(/^_/g, ''); // remove underscore "_" on the start of start of function name
+
+	fn_summary	= fn_summary.charAt(0).toUpperCase() + fn_summary.slice(1).toLowerCase();
+
+	var fn_name = (function()
+	{
+		var fn_name_pascal_case 	= fn_name_sanitized.toLowerCase().replace(/(?:(^.)|(\s+.))/g, function(match) {
+			return match.charAt(match.length-1).toUpperCase();
+		});
+
+		return fn_name_pascal_case.charAt(0).toLowerCase() + fn_name_pascal_case.slice(1);
+	})();
+
+	//var _return_this	= struct_name_input[1]!='' && struct_name_input[1].match(/this/gi)!==null;
+
+	setToClipboard(fn_name)
+
+%>
+/** [[%tabstop:<%=fn_summary%>]][[%tabstop:]]
+ */
+function [[%tabstop:<%=fn_name%>]] [[%tabstop:]]=
+(
+	[[%tabstop:--format "\n"; print "<%=struct_name%>.[[%tabstop:<%=fn_name%>]]()"]]
+)<%=ending_comma%>[[%tabstop:]]!@#_currentPos!@#_anchor
