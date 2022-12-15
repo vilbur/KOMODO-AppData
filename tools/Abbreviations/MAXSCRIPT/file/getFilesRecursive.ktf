@@ -1,0 +1,27 @@
+/*
+komodo tool: getFilesRecursive
+==============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+==============================*/
+/**
+ */
+function getFilesRecursive root pattern =
+(
+	dirs	= getDirectories (root + "/*")
+	files	= getFiles (root + pattern)
+
+	for d in dirs do
+	  join dirs (getDirectories (d + "/*"))
+
+	for f in dirs do
+	  join files (getFiles ( f + pattern ))
+
+	files
+)[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,35 @@
+/*
+komodo tool: getFileContent
+===========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+===========================*/
+/** Get file content
+ */
+function getFileContent _path =
+(
+	file	= openFile _path mode:"r+"
+	line_cnt	= 0
+	lines	= #()
+	
+	while not eof file do 
+	(
+		r =  readLine file
+		append lines r
+		line_cnt += 1
+	)
+	
+	seek file 0    -- reset position to beginning
+	
+	close file -- closes the file
+	
+	lines --return
+)
+
+[[%tabstop:content]] = getFileContent [[%tabstop:"[[%tabstop:path]]"]][[%tabstop:]]!@#_currentPos!@#_anchor
