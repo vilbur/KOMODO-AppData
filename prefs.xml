@@ -89,7 +89,7 @@
   <boolean id="debuggerRestoreStartPosAtEndOfSession">1</boolean>
   <string id="defaultDateFormat">%25a %25b %25d %25H:%25M:%25S %25Y</string>
   <string id="defaultEncoding">utf-8</string>
-  <string id="defaultSelectedPref">associationsItem</string>
+  <string id="defaultSelectedPref">projectsItem</string>
   <string id="defaultSelectedSubPref">indentationProperties</string>
 <ordered-preference id="dialog-interpolationquery-%uppercaseMru">
   <string>test</string>
@@ -179,10 +179,6 @@
   <string>pendingEvents</string>
   <string>event</string>
 </ordered-preference>
-<ordered-preference id="dialog-interpolationquery-Set method nameMru">
-  <string>getQuad</string>
-  <string>getSubmenuMannualy</string>
-</ordered-preference>
 <ordered-preference id="dialog-interpolationquery-TypeMru">
   <string>class</string>
   <string>abstract</string>
@@ -265,37 +261,8 @@
   <string>App\</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-var1Mru">
-  <string>Menu.Menu</string>
-  <string>_MainQuad</string>
-  <string>sub_menu_item</string>
-  <string>MainQuad</string>
-  <string>SplineToolsMenu1</string>
-  <string>menu_item.getTitle()</string>
-  <string>submenu</string>
-  <string>menu_item</string>
-  <string>Submenu</string>
-  <string>menuItem</string>
-  <string>QuadMenu</string>
-  <string>TEST_ITEM</string>
-  <string>EditSplineSubMenu</string>
-  <string>TEST</string>
-  <string>is_flat</string>
-  <string>title</string>
-  <string>index_or_title</string>
-  <string>this.name</string>
-  <string>his.menu </string>
-  <string>index</string>
-  <string>h</string>
-  <string>item_exists</string>
-  <string>this.getItem(title) </string>
-  <string>item</string>
-  <string>quad_name</string>
-  <string>VILTOOLS_DIR + file_path</string>
   <string>unrealRollout</string>
   <string>result</string>
-</ordered-preference>
-<ordered-preference id="dialog-interpolationquery-var2Mru">
-  <string>menu_name</string>
 </ordered-preference>
   <boolean id="diskBackgroundCheck">1</boolean>
   <long id="diskBackgroundMinutes">15</long>
@@ -425,10 +392,6 @@
   <boolean id="find-matchWord">0</boolean>
   <boolean id="find-multiline">0</boolean>
 <ordered-preference id="find-patternMru">
-  <string>menuItem</string>
-  <string>SplineToolsMenu1</string>
-  <string>setRightClick</string>
-  <string>QuadMenu</string>
   <string>Edit</string>
   <string>convertToEditablePoly</string>
   <string>addSeparator</string>
@@ -475,6 +438,10 @@
   <string>module</string>
   <string>_prefs</string>
   <string>handlerList</string>
+  <string>class_types</string>
+  <string>class_type</string>
+  <string>setClassType</string>
+  <string>getNamespaceMatch</string>
 </ordered-preference>
   <long id="find-patternType">0</long>
   <long id="find-preferredContextType">0</long>
@@ -536,8 +503,6 @@
   <long id="find-skipFileSizesLargerThan">104857600</long>
   <boolean id="find-skipLargeFilesEnabled">1</boolean>
   <boolean id="find_in_view">0</boolean>
-  <boolean id="focusmode_on">0</boolean>
-  <string id="focusmode_state">{"toolbars":true,"menu":false,"leftPane":true,"rightPane":true,"bottomPane":true}</string>
   <boolean id="foldSeparateBlockParts">1</boolean>
   <boolean id="hyperlinksEnableColorPicker">1</boolean>
   <boolean id="hyperlinksEnableGotoDefinition">1</boolean>
@@ -670,7 +635,6 @@ vilbur
   <string id="kpf_open_nodes_e66cd102-370a-45c7-9070-50ac283262cb">{'e66cd102-370a-45c7-9070-50ac283262cb': True}</string>
   <string id="kpf_open_nodes_e9e8e5ce-6eee-4052-ad9a-215b7af10d49">{}</string>
   <string id="kpf_open_nodes_eb87eeff-c7be-4ea8-84d3-04534f3bf0f3">{}</string>
-  <string id="kpf_open_nodes_ed2735ff-7b71-47ee-b7c8-207f58977a4b">{}</string>
   <string id="kpf_open_nodes_ed5141c7-8a1f-450d-9053-cb623bb81c2a">{}</string>
   <string id="kpf_open_nodes_ee544708-4d4f-4ad3-88f8-4daf6b44082e">{}</string>
   <string id="kpf_open_nodes_f0065f71-26de-4a54-aa27-303a72131bd8">{u'f0065f71-26de-4a54-aa27-303a72131bd8': True}</string>
@@ -747,51 +711,51 @@ vilbur
   <boolean id="lint_typescript">1</boolean>
   <string id="mappedPaths"></string>
 <ordered-preference id="mruFileList">
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Abbreviations/GENERAL/main.ktf</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/UI-Toolbars/Toolbar_60-Tabs/Organize%2520Tabs%2520by%2520path.ktf</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Organize_Tabs_by_path.komodotool</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/UI-Toolbars/Toolbar_60-Tabs/Close_Tabs_Right.ktf</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/_Close_Tabs_Right.komodotool</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Abbreviations/GENERAL/main.komodotool</string>
-  <string>file:///C:/Users/vilbur/My%2520Drive/TotalComander/_TC-commands/file/go_to_path.ahk</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/AppData/10.1/tools/Abbreviations/MAXSCRIPT/listener/listener.komodotool</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/Menu/_Test/MenuTest.ms</string>
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Hard-Edges.mcr</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/UI-Toolbars/Toolbar_60-View/Expand_Fold.ktf</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/UI-Toolbars/Toolbar_60-View/Collapse%2520Fold.ktf</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/AppData/10.1/tools/Scripts/PROGRAMS/Komodo-Editor/Snipper/Variable.komodotool</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/AppData/10.1/tools/Scripts/PROGRAMS/Komodo-Editor/Navigation/goToLine/goToLine.komodotool</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/AppData/10.1/tools/Scripts/PROGRAMS/Komodo-Editor/Language-Help/language-help.komodotool</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Abbreviations/GENERAL/Comments/&#9733;&#9733;.ktf</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/XRE/chrome/userChrome.css</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/userChrome-source/!variables.less</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/userChrome-source/treeview.less</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentLoader.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/vilTools3.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/ScriptFile.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Dialog.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Rollout.ms</string>
+  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edit.mcr</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/QuadMenu/VilToolsQuadMenu.ms</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/vilTools3.ms</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-MODIFIERS/Modifiers.mcr</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-TRANSFORMATION/Transform.mcr</string>
+  <string>file:///B:/GoogleDrive/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Exporter/ObjectCleaner/ObjectCleaner.ms</string>
+  <string>file:///B:/GoogleDrive/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Modifiers/Modifiers.ms</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edit.mcr</string>
+  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/QuadMenu/QuadMenu-deafalt.mnux</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edges.mcr</string>
+  <string>file:///C:/GoogleDrive/TotalComander/_TC-tools/TC-TabsManager/Source/_tabsets/3DsMax/vilTools3/vilTools3.tab</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Test/Rollout/2.0_SubrolloutSlotTest.ms</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/slot_properties.ini</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/rolloutsLoadTest/Nested-Rollouts/slot_properties.ini</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/Test.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/MediaMonkey/openProperties.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/PROGRAMS/Micortsoft-Keyboard-center/open-mediamonkey.ahk</string>
   <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/RolloutBody.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/ControlParamsParser/ControlParamsParser.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-OPTIONS/Menu.mcr</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/RcMenu/RcMenu.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/MacroScriptFileParser.ms</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Dialog.ms</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Hard-Edges.mcr</string>
+  <string>file:///C:/GoogleDrive/TotalComander/_TC-commands/file/go_to_path.ahk</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-MODIFIERS/PolySelect.mcr</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SYMMETRY/Mirror.mcr</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SYMMETRY/Symmetry.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Toolbar_0-Tabs/.folderdata</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/X.ktf</string>
+  <string>file:///B:/GoogleDrive/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools/Lib/old/vilTools_Object.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Tabs_In_Multiple_Rows.ktf</string>
 </ordered-preference>
 <ordered-preference id="mruMenuItemList">
   <string>menu_preferences</string>
-  <string>menu_toggleMenubar</string>
-  <string>sdk_menuitem_popup_viewmenu_toggleFocusMode</string>
-  <string>ref%0e1 QuadMenu.ms%0e</string>
-  <string>ref%0e1 Menu.ms%0e</string>
   <string>menu_save</string>
   <string>menu_openFile</string>
+  <string>menu_toggleMenubar</string>
   <string>ko_custom_macro_3842</string>
   <string>menu_helpHelp</string>
   <string>ref%0e1 vilTools3.mcr%0e</string>
+  <string>ko_custom_macro_21950</string>
+  <string>menu_moveTab</string>
+  <string>ref%0eRx Toolkit%0eko.commands.doCommandAsync('cmd_toolsRx', event)</string>
 </ordered-preference>
 <ordered-preference id="mruProjectList">
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject</string>
   <string>file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject</string>
+  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject</string>
 </ordered-preference>
 <ordered-preference id="mruTemplateList">
   <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Class.php</string>
@@ -847,7 +811,7 @@ vilbur
   <string id="phonegapInterpreter"></string>
   <boolean id="pin_find_frame">0</boolean>
 <preference-set id="places">
-  <string id="1">file:///C:/scripts/MAXSCRIPT-vilTools3</string>
+  <string id="1">file:///C:/scripts/MAXSCRIPT-UI-framework</string>
   <string id="2">file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib</string>
 <preference-set id="current_filter_by_uri">
 <preference-set id="file:///C:/">
@@ -855,7 +819,7 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3">
-  <string id="timestamp">1670912240410</string>
+  <string id="timestamp">1670907787229</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3">
@@ -878,20 +842,20 @@ vilbur
   <string id="timestamp">1517827091388</string>
   <string id="viewName">Default</string>
 </preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/samples">
+  <string id="timestamp">1515258468037</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%20Templates/Php">
   <string id="timestamp">1516071303834</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework">
-  <string id="timestamp">1670908289711</string>
-  <string id="viewName">Current Project</string>
+  <string id="timestamp">1671252407460</string>
+  <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator">
   <string id="timestamp">1670736633445</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/scripts/MAXSCRIPT-vilTools3">
-  <string id="timestamp">1670949910834</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/laravel-fresh">
@@ -1093,7 +1057,7 @@ vilbur
 </preference-set>
 <preference-set id="current_project_filter_by_uri">
 <preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject">
-  <string id="timestamp">1670912240410</string>
+  <string id="timestamp">1670907787229</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Ahk_VilGUIv3.komodoproject">
@@ -1117,11 +1081,7 @@ vilbur
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject">
-  <string id="timestamp">1670908289711</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject">
-  <string id="timestamp">1670949910834</string>
+  <string id="timestamp">1670907796491</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/laravel-fresh/Project-Laravel-Start.komodoproject">
@@ -1134,6 +1094,10 @@ vilbur
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/package-Portfolio.komodoproject">
   <string id="timestamp">1515931607208</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/Package-TemplatePackage.komodoproject">
+  <string id="timestamp">1515902352227</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/Package-template-package.komodoproject">
@@ -1218,12 +1182,12 @@ vilbur
   <string>file:///C:/wamp64/www/portfolio/packages</string>
   <string>file:///C:/wamp64/www/portfolio/resources/assets/sass</string>
   <string>file:///C:/Users/vilbur</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator</string>
   <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator</string>
 </ordered-preference>
-  <string id="lastHomePlace">file:///C:/scripts/MAXSCRIPT-vilTools3</string>
-  <string id="lastLocalDirectoryChoice">file:///C:/scripts/MAXSCRIPT-vilTools3</string>
-  <string id="places-open-nodes-v2">{"file:///C:/GoogleDrive/Programs/Core/Autohotkey/Utilities/VilHotkey": 1509739490.337, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib": 1509515028.51, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage": 1515453585.277, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3": 1517827081.138, "file:///C:/scripts/MAXSCRIPT-vilTools3": 1670930028.173, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/components": 1518094080.258, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio": 1515931233.171, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage": 1515425864.932, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor": 1517827058.63, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey": 1517827096.834, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/tests": 1515931235.461, "file:///C:/wamp64/www/laravel-fresh/commands": 1516127445.53, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities": 1509129351.715, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts": 1509168829.891, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib/Komodo": 1509375020.27, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src": 1518089262.061, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator": 1670736632.757, "file:///D:/Work/CG_TEMP/temp": 1507368168.009, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/samples": 1515258467.966, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js": 1518094056.31, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv2": 1511272646.576, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests": 1518089203.8, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/views": 1518083036.282, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package": 1516054483.316, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder": 1515767621.051, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur": 1492794325.292, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/GUI": 1508499482.635, "file:///C:/wamp64/www/laravel-fresh/app/Http/Controllers": 1516283052.51, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib/Controls": 1509875192.616, "file:///C:/wamp64/www/portfolio/app/Http/Controllers": 1518094667.489, "file:///C:/scripts/MAXSCRIPT-UI-framework": 1670907796.462, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/src": 1518012388.729, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib": 1508487432.613, "file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3": 1670912240.388, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src": 1515447510.805, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib/_Documentation": 1509482548.993, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/tests": 1515640360.497, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template": 1516069117.702, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/tests": 1518015793.076, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage/src": 1515259829.585, "file:///C:/wamp64/www/portfolio": 1518094724.165, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate": 1517827091.362, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib/Install/Vini": 1508499500.706, "file:///C:/wamp64/www/laravel-fresh/tests": 1516275991.482, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib/Gui": 1512981815.665, "file:///C:/wamp64/www/laravel-fresh/app/Models": 1516419617.853, "file:///C:/wamp64/www/laravel-fresh": 1517826923.583, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources": 1518082853.735, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio": 1518082619.028, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib": 1511128018.565, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish": 1518094071.668, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets": 1518082855.178, "file:///C:/GoogleDrive/Programs/Webdesign/Laravel/_VilSystem/Lib/Project": 1508745236.572, "file:///C:/wamp64/www/portfolio/packages": 1518094748.28, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Routes": 1515447512.771, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib": 1509219617.527, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test": 1492793927.414, "file:///C:/wamp64/www/laravel-fresh/resources": 1515930387.404, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Hotstrings": 1498022741.163, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Providers": 1515448187.341, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills": 1518094806.357, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/components": 1518005525.558, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib/Install": 1508499511.673, "file:///C:/wamp64/www/laravel-fresh/commands/events": 1516479646.302, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/src": 1515931607.2, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/views": 1518015774.55, "file:///C:/GoogleDrive/Programs/Core/Komodo": 1509176741.175, "file:///C:/wamp64/www/laravel-fresh/app": 1515930352.929, "file:///C:/wamp64/www/laravel-fresh/vilbur": 1516074159.851, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI": 1512060516.056, "file:///C:/wamp64/www/portfolio/resources/assets/sass": 1518094789.803, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib": 1512981815.167, "file:///C:/wamp64/www/portfolio/packages/vilbur": 1518094760.174, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test_CLEAR": 1492794343.923, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template_CLEAR": 1492794339.574, "file:///C:/Users/vilbur": 1670291083.252, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/components": 1518083035.149, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass": 1518089669.838, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/views": 1518005523.608, "file:///C:/wamp64/www/portfolio/resources/assets/js": 1518094643.407, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template_CLEAR/content": 1492794062.204, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib": 1508737252.677, "file:///C:/wamp64/www/portfolio/resources/assets": 1518094662.772, "file:///C:/wamp64/www/portfolio/resources/assets/js/skills_DELETE": 1518094646.073, "file:///C:/": 1515930212.992, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src/providers": 1518080808.552, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI/Lib/Controls/Control": 1511523199.677, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator": 1508834718.926, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src": 1518094069.829, "file:///C:/wamp64/www/laravel-fresh/tests/Unit": 1516275996.169, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator/Lib": 1508834714.916, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/components": 1518005549.658, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib": 1670736338.898, "file:///c:/wamp64/www/laravel_fresh": 1508834149.96, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/views": 1518094078.663, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js": 1518094149.555, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish": 1518082960.077, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php": 1516071303.824, "file:///C:/wamp64/www/laravel-start": 1515929981.888, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/TestTemplate": 1498014405.927}</string>
+  <string id="lastHomePlace">file:///C:/scripts/MAXSCRIPT-UI-framework</string>
+  <string id="lastLocalDirectoryChoice">file:///C:/scripts/MAXSCRIPT-UI-framework</string>
+  <string id="places-open-nodes-v2">{"file:///C:/GoogleDrive/Programs/Core/Autohotkey/Utilities/VilHotkey": 1509739490.337, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate/content": 1492786599.741, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib": 1509515028.51, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage": 1515453585.277, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3": 1517827081.138, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/components": 1518094080.258, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio": 1515931233.171, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage": 1515425864.932, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor": 1517827058.63, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey": 1517827096.834, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/tests": 1515931235.461, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib/_Documentation": 1509482548.993, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities": 1509129351.715, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/tests": 1515640360.497, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib/Komodo": 1509375020.27, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src": 1518089262.061, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator": 1670736632.757, "file:///D:/Work/CG_TEMP/temp": 1507368168.009, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/samples": 1515258467.966, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js": 1518094056.31, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv2": 1511272646.576, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests": 1518089203.8, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/views": 1518083036.282, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package": 1516054483.316, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder": 1515767621.051, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur": 1492794325.292, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/GUI": 1508499482.635, "file:///C:/wamp64/www/laravel-fresh/app/Http/Controllers": 1516283052.51, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib/Controls": 1509875192.616, "file:///C:/wamp64/www/portfolio/app/Http/Controllers": 1518094667.489, "file:///C:/scripts/MAXSCRIPT-UI-framework": 1671252407.363, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/src": 1518012388.729, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib": 1508487432.613, "file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3": 1670713546.56, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src": 1515447510.805, "file:///C:/wamp64/www/laravel-fresh/commands": 1516127445.53, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts": 1509168829.891, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template": 1516069117.702, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Routes": 1515447512.771, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage/src": 1515259829.585, "file:///C:/wamp64/www/portfolio": 1518094724.165, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate": 1517827091.362, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib/Install/Vini": 1508499500.706, "file:///C:/wamp64/www/laravel-fresh/tests": 1516275991.482, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib": 1509219617.527, "file:///C:/wamp64/www/laravel-fresh/app/Models": 1516419617.853, "file:///C:/wamp64/www/laravel-fresh": 1517826923.583, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources": 1518082853.735, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio": 1518082619.028, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib": 1511128018.565, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish": 1518094071.668, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets": 1518082855.178, "file:///C:/GoogleDrive/Programs/Webdesign/Laravel/_VilSystem/Lib/Project": 1508745236.572, "file:///C:/wamp64/www/portfolio/packages": 1518094748.28, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/tests": 1518015793.076, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib/Gui": 1512981815.665, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test": 1492793927.414, "file:///C:/wamp64/www/laravel-fresh/resources": 1515930387.404, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Hotstrings": 1498022741.163, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Providers": 1515448187.341, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills": 1518094806.357, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/views": 1518015774.55, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib/Install": 1508499511.673, "file:///C:/wamp64/www/laravel-fresh/commands/events": 1516479646.302, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/src": 1515931607.2, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/components": 1518005525.558, "file:///C:/GoogleDrive/Programs/Core/Komodo": 1509176741.175, "file:///C:/wamp64/www/laravel-fresh/app": 1515930352.929, "file:///C:/wamp64/www/laravel-fresh/vilbur": 1516074159.851, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI": 1512060516.056, "file:///C:/wamp64/www/portfolio/resources/assets/sass": 1518094789.803, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib": 1512981815.167, "file:///C:/wamp64/www/portfolio/packages/vilbur": 1518094760.174, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Test_CLEAR": 1492794343.923, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template_CLEAR": 1492794339.574, "file:///C:/Users/vilbur": 1670291083.252, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/components": 1518083035.149, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass": 1518089669.838, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/views": 1518005523.608, "file:///C:/wamp64/www/portfolio/resources/assets/js": 1518094643.407, "file:///C:/GoogleDrive/Programs/Core/Komodo/Extensions/vilbur/Template_CLEAR/content": 1492794062.204, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilSystem/Lib": 1508737252.677, "file:///C:/wamp64/www/portfolio/resources/assets": 1518094662.772, "file:///C:/wamp64/www/portfolio/resources/assets/js/skills_DELETE": 1518094646.073, "file:///C:/": 1515930212.992, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src/providers": 1518080808.552, "file:///C:/wamp64/www/laravel-start": 1515929981.888, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator": 1508834718.926, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src": 1518094069.829, "file:///C:/wamp64/www/laravel-fresh/tests/Unit": 1516275996.169, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator/Lib": 1508834714.916, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/components": 1518005549.658, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib": 1670736338.898, "file:///c:/wamp64/www/laravel_fresh": 1508834149.96, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/views": 1518094078.663, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js": 1518094149.555, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish": 1518082960.077, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php": 1516071303.824, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI/Lib/Controls/Control": 1511523199.677, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/TestTemplate": 1498014405.927}</string>
   <long id="project_sort_direction">0</long>
   <boolean id="showProjectPath">0</boolean>
   <boolean id="showProjectPathExtension">0</boolean>
@@ -1313,9 +1277,9 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="tidy_errorlevel">errors</string>
   <long id="toolbox-open-nodes-size">100</long>
 <preference-set id="toolbox2">
-  <long id="currentIndex">-1</long>
+  <long id="currentIndex">34</long>
   <long id="firstVisibleRow">0</long>
-  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Current\\Path": 1516082489.706, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\~Tabs": 1670737408.31, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\variable": 1518094104.483, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\position-1\\currentPos": 1516163853.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Database\\Factory": 1515415047.399, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY": 1670946635.015, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50-Edit": 1670946635.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\_EJS": 1516419564.035, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Routes": 1516057051.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu\\Menu-Edit\\Line": 1518073867.597, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1670946635.003, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\General": 1670337493.475, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\REGEX": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs": 1670946635.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts": 1670946635.022, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars": 1670946635.033, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Utilities\\VilGUI": 1515932045.278, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL": 1518095127.194, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File\\Current": 1516086331.373, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools": 1518095127.155, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Language-All\\Class": 1516120027.441, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General\\_Language-All\\Keywords": 1518071979.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\Params": 1516541267.601, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\Path": 1518071088.049, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS": 1518071369.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions\\UI": 1670736995.089, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General": 1518084025.449, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Toolbars\\Menu-Edit\\Line": 1518073423.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype": 1518071086.991, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\_General\\_Documentation\\Statements": 1516082673.344, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\.currentView": 1516082711.023, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Faker\\Person": 1515337385.25, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start\\ProjectFilesOpener": 1518095127.211, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\language": 1518039661.812, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\OnEvent\\onFileOpen-1": 1516193961.639, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom": 1516083153.519, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\if": 1518094637.919, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype\\String": 1518041319.916, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\Logger": 1518070866.236, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\statusbar\\Message": 1518039661.815, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_70-Project": 1670946635.036, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor\\File": 1518076477.674, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\Autohotkey\\_Custom": 1518088384.657, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Vendor\\Phpunit": 1515453664.355, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Dir": 1516082555.911, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-View": 1670946635.035, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\_COMMON": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\Comments": 1670945781.345, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Classes\\Logger": 1516082584.691, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events": 1518095127.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\OnEvent\\OnFileOpen-1": 1516120103.215, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\_General\\_Documentation\\String": 1516082672.818, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\LANGUAGE\\JavaScript\\_Prototype": 1518076027.491, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript-common": 1516083387.114, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL-1": 1670337598.759, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_Test\\Abbreviations": 1518074164.699, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max": 1670946635.023, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1670946635.014, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit": 1670946635.027, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\case": 1518094104.481, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Vendor\\Phpunit\\Assert-Appendix": 1515453664.371, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\Custom\\position-1": 1516193961.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File": 1516086331.372, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menus": 1670737057.641, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\~Edit\\Line": 1670736989.941, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions": 1670906620.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\XUL": 1516541267.601, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\_": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File\\Deprecated": 1516086331.374, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Documentation": 1515010345.752, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\statusbar": 1518039661.814, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Deprecated": 1516082555.053, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1518076477.672, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus": 1670946635.026, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\Custom\\position-1\\currentPos": 1516193961.616, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Templates\\PHP": 1516119385.636, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start": 1518095127.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype\\Array": 1518041255.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\CRUD": 1516082538.712, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS": 1518076477.664, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL": 1518094104.474, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\.currentView\\_scimoz": 1516082714.248, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670736984.596, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\String": 1518094104.482, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Current": 1516082543.525, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT": 1670946635.02, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969}</string>
+  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Current\\Path": 1516082489.706, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\~Tabs": 1670737408.31, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\variable": 1518094104.483, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\position-1\\currentPos": 1516163853.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Database\\Factory": 1515415047.399, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY": 1671252200.616, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\_EJS": 1516419564.035, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Routes": 1516057051.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu\\Menu-Edit\\Line": 1518073867.597, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1671252461.37, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\General": 1670337493.475, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\REGEX": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs": 1670864042.822, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars": 1670864042.822, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Utilities\\VilGUI": 1515932045.278, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL": 1518095127.194, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File\\Current": 1516086331.373, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools": 1518095127.155, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Language\\_EJS": 1510925306.334, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Language-All\\Class": 1516120027.441, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General\\_Language-All\\Keywords": 1518071979.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\Params": 1516541267.601, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\Path": 1518071088.049, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS": 1518071369.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions\\UI": 1670736995.089, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General": 1518084025.449, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Toolbars\\Menu-Edit\\Line": 1518073423.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype": 1518071086.991, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\Json": 1514558390.977, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\_General\\_Documentation\\Statements": 1516082673.344, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\.currentView": 1516082711.023, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Faker\\Person": 1515337385.25, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start\\ProjectFilesOpener": 1518095127.211, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\language": 1518039661.812, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\Path\\Methods": 1510939580.669, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\OnEvent\\onFileOpen-1": 1516193961.639, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom": 1516083153.519, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\if": 1518094637.919, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype\\String": 1518041319.916, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\Logger": 1518070866.236, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\statusbar\\Message": 1518039661.815, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_70-Project": 1670864042.824, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor\\File": 1518076477.674, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\Autohotkey\\_Custom": 1518088384.657, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Vendor\\Phpunit": 1515453664.355, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Dir": 1516082555.911, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\_COMMON": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Classes\\Logger": 1516082584.691, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events": 1518095127.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\OnEvent\\OnFileOpen-1": 1516120103.215, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\_General\\_Documentation\\String": 1516082672.818, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\LANGUAGE\\JavaScript\\_Prototype": 1518076027.491, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript-common": 1516083387.114, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KomodotoolToKftConvertor": 1671252440.925, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_Test\\Abbreviations": 1518074164.699, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1670864042.815, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\_Tabs": 1670864042.824, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\case": 1518094104.481, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\File\\Methods": 1510942133.272, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\PHP\\_Laravel\\Vendor\\Phpunit\\Assert-Appendix": 1515453664.371, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\Ini": 1512999947.981, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\Custom\\position-1": 1516193961.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File": 1516086331.372, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menus": 1670737057.641, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\~Edit\\Line": 1670736989.941, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\XUL": 1516541267.601, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\_": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL-1": 1670337598.759, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo-1\\Custom\\File\\Deprecated": 1516086331.374, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Documentation": 1515010345.752, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\KOMODO\\statusbar": 1518039661.814, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Deprecated": 1516082555.053, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1518076477.672, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\Komodo\\Custom\\position-1\\currentPos": 1516193961.616, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\General\\_Templates\\PHP": 1516119385.636, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start": 1518095127.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS\\LANGUAGE\\JavaScript\\_Prototype\\Array": 1518041255.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\CRUD": 1516082538.712, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS": 1518076477.664, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL": 1518094104.474, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\Autohotkey\\_Custom\\Lib\\Ini\\Methods": 1512999947.986, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\Ko\\.currentView\\_scimoz": 1516082714.248, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670736984.596, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\String": 1518094104.482, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\window": 1671252232.763, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JavaScript\\Komodo\\Custom\\File\\Current": 1516082543.525, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT": 1670864042.819, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969}</string>
   <string id="sortDirection">natural</string>
 </preference-set>
   <boolean id="triggering_macros_enabled">1</boolean>
@@ -1327,7 +1291,7 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
   <string id="ui.tabs.sidepanes.left.layout">vertical</string>
   <string id="ui.tabs.sidepanes.right.layout">vertical</string>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":true,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <boolean id="upgradeKomodo.dontask">1</boolean>
   <boolean id="useSmartTabs">0</boolean>
   <boolean id="useTabs">1</boolean>
@@ -1345,61 +1309,23 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="windowDimensions-prefProjectsWindow">1012,797,535,273</string>
 <preference-set id="windowWorkspace">
 <preference-set id="1">
-  <string id="current_project">file:///C:/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://940/_m.snippet","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://960/_e.snippet","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://985/_a.snippet","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://1032/_v.snippet","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://1061/_v.snippet","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://1061/_a.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1060/_r.snippet","tabIndex":2},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1067/ret.snippet","tabIndex":2},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/Menu/Menu.ms","tabIndex":2},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SCENE/Scene.mcr","tabIndex":3}]</string>
+  <string id="rctabs_list">[]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
-  <string id="spv_projects">["file:///C:/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject"]</string>
+  <string id="spv_projects">[]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1671038294</long>
+  <long id="timestamp">1671252552</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
-  <long id="current_view_index">2</long>
+  <long id="current_view_index">0</long>
 <ordered-preference id="view_prefs">
 <preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-vilTools3/QuadMenu/VilToolsQuadMenu.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/QuadMenu.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/Menu/Menu.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-</ordered-preference>
-</preference-set>
-<preference-set>
-  <long id="current_view_index">5</long>
-<ordered-preference id="view_prefs">
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edges.mcr</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edit.mcr</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/Menu/_Test/SubmenuTest.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-vilTools3/QuadMenu/VilToolsQuadMenu.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Vertex.mcr</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SCENE/Scene.mcr</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Abbreviations/AUTOHOTKEY/window/KomodotoolConvertor_Autohotkey.ahk</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
@@ -1407,17 +1333,10 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-SCENE/Scene.mcr?parentId=view-2</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/Menu/Menu.ms?parentId=view-1</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Vertex.mcr?parentId=view-2</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/QuadMenu/VilToolsQuadMenu.ms?parentId=view-1</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edges.mcr?parentId=view-2</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-EDIT-POLY/Edit.mcr?parentId=view-2</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/QuadMenu.ms?parentId=view-1</string>
-  <string>file:///C:/scripts/MAXSCRIPT-vilTools3/QuadMenu/VilToolsQuadMenu.ms?parentId=view-2</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/Menu/_Test/SubmenuTest.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Abbreviations/AUTOHOTKEY/window/KomodotoolConvertor_Autohotkey.ahk?parentId=view-1</string>
 </ordered-preference>
 </preference-set>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <long id="windowNum">1</long>
 </preference-set>
 </preference-set>

@@ -1,0 +1,13 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "WinActivate", 
+  "value": [
+    "WinActivate, [[%tabstop:%$[[%tabstop:win_title]]%]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.0.12", 
+  "treat_as_ejs": 0, 
+  "type": "snippet", 
+  "indent_relative": "false", 
+  "auto_abbreviation": "false"
+}

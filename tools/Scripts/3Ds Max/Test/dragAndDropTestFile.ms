@@ -1,0 +1,2 @@
+messagebox "runMaxScript Success"
+  

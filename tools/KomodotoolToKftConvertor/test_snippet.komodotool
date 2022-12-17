@@ -1,15 +1,16 @@
 {
   "keyboard_shortcut": "", 
-  "name": "fileReadToArray", 
+  "name": "test_snippet", 
+  "language": "", 
   "value": [
     "$[[%tabstop1:lines]] := []", 
     "Loop, read, [[%tabstop:file]]", 
     "\t$[[%tabstop1:lines]].insert( A_LoopReadLine )!@#_currentPos!@#_anchor"
   ], 
   "set_selection": "true", 
-  "version": "1.0.12", 
-  "indent_relative": "true", 
-  "type": "snippet", 
+  "version": "1.1.5", 
   "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
   "auto_abbreviation": "false"
 }

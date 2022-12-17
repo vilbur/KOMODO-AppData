@@ -1,0 +1,105 @@
+<%#
+komodo tool: tabstop
+====================
+auto_abbreviation: false
+indent_relative: true
+keyboard_shortcut: Ctrl+Shift+T
+language: Komodo Snippet
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+====================%>
+<%
+/** Insert literal '[[%tabstop:]]' to snippet file
+ *  Use selected text as value of tabstop
+ *
+ * 
+ */
+
+var tabstop_inactive = '[~~[%tabstoptabstop_active]~~]';
+//var tabstop_inactive = '[~~[%tabstop:"[~~[%tabstop:tabstop_active]~~]"]~~]';
+
+/** tabstop
+ */
+var tabstop_active = (function()
+{
+	var scimoz   = ko.views.manager.currentView.scimoz;
+	//alert( scimoz.text );
+	//var word_cursor = ko.interpolate.getWordUnderCursor(scimoz);
+	var selectedText = scimoz.selText;
+	//if (selectedText === '' && word_cursor!=='' ) {
+	//	scimoz.anchor     = scimoz.wordStartPosition(scimoz.currentPos, true);
+	//	scimoz.currentPos = scimoz.wordEndPosition(  scimoz.currentPos, true);
+	//	selectedText = word_cursor; 
+	//}
+
+	var tabstop_or_soft	= selectedText.match(/^\s*[}\)\]"';]+\s*$/gi) === null ? 'tabstop' : 'soft';
+	var tabstop_number	= tabstop_or_soft == 'tabstop' ? '[[%tabstop:]]:' : ':';	
+	
+	return tabstop_number + '[[%'+tabstop_or_soft+':'+selectedText+']]';
+})(); 
+
+
+/** insertNestedSnippet
+ */
+var insertNestedSnippet = (function()
+{
+	/** Remove '~' form [[%~~tabstop:]~~]
+	*/
+	var removeTabstopTilda = function()
+	{		
+		require('ko/editor').setValue( require('ko/editor').getValue().replace(/([\[]*)~~([\]]*)/gi, '$1$2') );
+	}; 
+
+	/** Insert secondary snippet
+	 */
+	var insertTabstopSnippet = function()
+	{
+		/** select 'tabstop_active' in snippet file for replace with var tabstop_snippet
+		 */
+		var selectTabstopPlaceholder = function()
+		{
+			var scimoz	= ko.views.manager.currentView.scimoz;
+			var tabstops_snippet_match	= new RegExp(/tabstop_active/gi).exec( require("ko/editor").getValue() );
+			if( ! tabstops_snippet_match )
+				return; 
+
+			scimoz.currentPos	= tabstops_snippet_match.index;
+			scimoz.anchor	= tabstops_snippet_match.index + 'tabstop_active'.length; 
+		};
+		var tabstop_fake_snippet = {
+			hasAttribute: function(name) {
+				return name in this;
+			},
+			getStringAttribute: function(name) {
+				return this[name];
+			},
+			indent_relative: "true",
+			value:	tabstop_active
+		};
+		
+		selectTabstopPlaceholder();
+		ko.projects.snippetInsert(tabstop_fake_snippet);
+	};
+	setTimeout( function(){
+		removeTabstopTilda();
+		
+		setTimeout( function(){
+			insertTabstopSnippet();
+		}, 100);
+	}, 100);
+}); 
+
+ko.views.manager.currentView.scimoz.beginUndoAction()
+try
+{
+	
+%><%=tabstop_inactive%><%
+
+	insertNestedSnippet();
+
+} finally {
+	ko.views.manager.currentView.scimoz.endUndoAction()
+}
+%>!@#_currentPos!@#_anchor

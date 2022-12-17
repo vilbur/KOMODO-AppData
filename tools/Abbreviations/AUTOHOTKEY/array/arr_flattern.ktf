@@ -1,0 +1,33 @@
+/*
+komodo tool: arr_flattern
+=========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=========================*/
+/**
+ */
+flatternObject($object)
+{
+	if (! isobject($object))
+		return $object
+
+	$flat := {}
+
+	$enum := $object._newenum()
+	While $enum[$key, $value]
+		if !isobject($value)
+			$flat._Insert($value)
+		else
+		{
+			$next := flatternObject($value)
+			loop % $next._MaxIndex()
+				$flat._Insert($next[A_Index])
+		}
+	return $flat
+}!@#_currentPos!@#_anchor

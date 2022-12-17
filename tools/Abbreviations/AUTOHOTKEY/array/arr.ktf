@@ -1,0 +1,13 @@
+/*
+komodo tool: arr
+================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+================*/
+[[%tabstop:Array]] := [[[%tabstop:]]][[%tabstop:]]!@#_currentPos!@#_anchor
