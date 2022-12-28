@@ -1,0 +1,23 @@
+// komodo tool: this
+// =================
+// auto_abbreviation: false
+// indent_relative: false
+// is_clean: true
+// keyboard_shortcut: Ctrl+Shift+T
+// language: General
+// set_selection: false
+// treat_as_ejs: true
+// type: snippet
+// version: 1.1.5
+// =================
+<%
+
+	var lang = ko.views.manager.currentView.languageObj.name;
+	switch (lang) {
+		case 'PHP':	snippet = "$this->[[%tabstop:[[%tabstop:method]]($[[%tabstop:param]])]]";break;
+		case 'JavaScript':case 'HTML':case 'Maxscript':	snippet = "this.[[%tabstop:]]";break;
+		default:	snippet = "this[[%tabstop:]]";
+	}
+
+%>
+<%=snippet%>[[%tabstop:]]!@#_currentPos!@#_anchor

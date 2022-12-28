@@ -1,0 +1,14 @@
+/*
+komodo tool: GroupActivate
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================*/
+GroupAdd, $[[%tabstop1:win]]_group, [[%tabstop:ahk_class [[%tabstop:Chrome_WidgetWin_1]] ]]
+GroupActivate $[[%tabstop1:win]]_group !@#_currentPos!@#_anchor

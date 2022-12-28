@@ -1,0 +1,13 @@
+/*
+komodo tool: WinMove
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================*/
+WinMove, $[[%tabstop:win_title]],, $[[%tabstop:x]], $[[%tabstop:y]], $[[%tabstop:width]], $[[%tabstop:height]]!@#_currentPos!@#_anchor

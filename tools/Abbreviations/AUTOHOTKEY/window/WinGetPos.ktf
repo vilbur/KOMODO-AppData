@@ -1,0 +1,13 @@
+/*
+komodo tool: WinGetPos
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================*/
+WinGetPos, $[[%tabstop1:]][[%tabstop:X]], $[[%tabstop1:]][[%tabstop:Y]], $[[%tabstop1:]][[%tabstop:width]], $[[%tabstop1:]][[%tabstop:height]], %$[[%tabstop:win_title]]%!@#_currentPos!@#_anchor

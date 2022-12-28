@@ -1,0 +1,61 @@
+/*
+komodo tool: Uncomment Selected
+===============================
+async: 0
+is_clean: true
+keyboard_shortcut: Ctrl+Shift+Q
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+===============================*/
+komodo.assertMacroVersion(3);
+ko.views.manager.currentView.scimoz.beginUndoAction()
+
+try {
+
+        if (komodo.view) { komodo.view.setFocus(); }
+        scimoz = ko.views.manager.currentView.scimoz;
+        var lang = ko.views.manager.currentView.languageObj.name;
+        var selectedText = scimoz.selText;
+
+        //alert( lang );
+
+        if (selectedText == '' ) {
+            //alert('NOTHING SELECTED');
+            // select line
+            ko.commands.doCommand('cmd_home')
+            ko.commands.doCommand('cmd_selectEnd')
+        }
+
+        //if ( lang == 'LaravelBlade' ) {
+
+            //ko.find.replaceAllInMacro(window, 1, '({{--!!)(.*?)(!!--}})', '{!!\\2!!}', false, 0, 1, false, false);
+            //ko.find.replaceAllInMacro(window, 1, '({{--!!)(.*?)(!!--}})', '{!!\\2!!}', false, 0, 1, false, false);
+            //ko.find.replaceAllInMacro(window, 1, '({{--@)(.*?)(--}})', '@\\2', false, 0, 1, false, false);
+            //ko.find.replaceAllInMacro(window, 1, '({{+)--(.*?)--(}}+)', '\\1\\2\\3', false, 0, 1, false, false);
+            //ko.find.replaceAllInMacro(window, 1, '(<!--{{+)--(.*?)--(}}+-->)', '\\2', false, 0, 1, false, false);
+            //ko.find.replaceAllInMacro(window, 1, '^//(.*)$', '\\1', false, 0, 1, false, false);
+
+
+        //} else {
+        //
+        //}
+
+            ko.commands.doCommand('cmd_uncomment')
+
+
+
+
+
+        //ko.commands.doCommand('cmd_save')
+        //ko.statusBar.AddMessage('SAVED', 'editor', 3000);
+
+        ko.commands.doCommand('cmd_cancel')
+
+
+} finally {
+    ko.views.manager.currentView.scimoz.endUndoAction()
+}

@@ -1,0 +1,70 @@
+/*
+komodo tool: struct
+===================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+===================*/
+<%
+	var file_current_path	= ko.views.manager.currentView.koDoc.file.path;
+	var file_current_basename	= require("ko/file").basename(file_current_path);
+	var file_current_name	= file_current_basename.split(/\./g).shift();
+
+	/* Ask for function name and return value
+	*/
+	var ask = ko.interpolate.interpolateString([
+		'%(ask1:Struct name:'+file_current_name+')',
+	]).split(',');
+	
+	var fn_name_sanitized	= ask[0].replace(/([A-Z])/g, ' $1').replace(/[\s+|-]+/g, ' ').replace(/\s+/g, ' ').trim();
+	
+	var fn_summary	= fn_name_sanitized.charAt(0).toUpperCase() + fn_name_sanitized.slice(1).toLowerCase();
+	
+	var struct_name = (function()
+	{
+		var fn_name_pascal 	= fn_name_sanitized.toLowerCase().replace(/(?:(^.)|(\s+.))/g, function(match) {
+			return match.charAt(match.length-1).toUpperCase();
+		});
+		return fn_name_pascal;
+
+		//return fn_name_pascal.charAt(0).toLowerCase() + fn_name_pascal.slice(1);
+	})(); 
+
+	
+	//ko.run.output.endSession(); -- SET TO CLIPBOARD IS OPENING BOTTOM PANE
+	//ko.run.runEncodedCommand( window, 'set /p="'+struct_name+'"<nul| clip' );
+%>
+[[%tabstop:/** [[%tabstop:<%=fn_summary%>]][[%tabstop:]]
+ */]]
+struct [[%tabstop1:<%=struct_name%>]]_[[%tabstop:v]]
+(
+	/* construct */
+	[[%tabstop:]]
+	
+	/* properties */
+    [[%tabstop:]]
+	
+	/* dependency */
+	/* reference */
+	/* inhered */
+	
+	[[%tabstop:]]
+	
+	private
+	
+	
+	/**  
+	 */
+	on create do
+	(
+		--format "\n"; print "[[%tabstop1:<%=struct_name%>]].onCreate()"
+		--for prop in #(  ) where getProperty this prop == undefined do -- CHECK CONSTRUCT PROPERTIES -- Array of this struct properties necessary to run
+		--	throw ("\n\n\nUNDEFINED CONSTRUCT PROPERTY\n\n\nSTRUCT:\n\n"+ ((filterString( classof this as string )"(:")[2]) +"\n\n\nPROPERTY:\n\n"+ prop ) 
+	)
+	
+)[[%tabstop:]]!@#_currentPos!@#_anchor

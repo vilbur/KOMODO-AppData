@@ -1,0 +1,127 @@
+/*
+komodo tool: link
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================*/
+<%
+	/** CREATE link to file or folder in markdown  
+	 *	
+	 */
+
+	var koFile	= require("ko/file");
+	var file_current	= ko.views.manager.currentView.koDoc.file.path;
+	var link	= '[[%tabstop:url]]';
+	var caption	= 'caption';
+	
+	var snippet_string = '[[[%tabstop:caption]]]([[%tabstop:url]])'
+	///** Loop path end search for  file
+	//*/
+	//var git_folder_path = (function()
+	//{
+	//	var path_dir_split	= koFile.dirname( file_current ).split('\\');
+	//	/**
+	//	 */
+	//	var gitFolderExists = function()
+	//	{
+	//		return koFile.exists(path_dir_split.join('\\')+'\\.git' );
+	//	} 
+	//
+	//	while ( path_dir_split.length > 1 && ! gitFolderExists() )
+	//		path_dir_split.pop();
+	//
+	//	return path_dir_split.length > 1 ? path_dir_split.join('\\') : false;
+	//})();
+	
+	var file_import = (function()
+	{
+		return ko.filepicker.browseForFile();
+	})();
+		
+	if( file_import )
+	{
+		/**
+		 */
+		var sanitizeString = function(string)
+		{
+			return string.charAt(0).toUpperCase() + string.slice(1).replace(/[_-]/g, ' ');
+		}
+		
+		var link = (function()
+		{
+			var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
+								  .createInstance(Components.interfaces.nsILocalFile);
+			nsFileFrom.initWithPath(file_current);
+			var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
+								  .createInstance(Components.interfaces.nsILocalFile);
+			nsFileTo.initWithPath(file_import);
+			
+			var link = nsFileTo.getRelativeDescriptor(nsFileFrom);
+			
+			return link.substring(3, link.length);
+		
+		})();
+		/**
+		 */
+		var extension = (function()
+		{
+			return koFile.basename(link).split(/\./).pop();
+		})();
+		/**
+		 */ 
+		var dir_name = (function()
+		{
+			return koFile.basename( file_import.replace(/\\[^\\]+$/g, '') );
+		})();
+		/**
+		 */
+		var caption = (function()
+		{		
+			return koFile.basename(file_import).split(/\./gi).shift().replace(/[_-]/g, ' ');
+		})();
+		
+		/**
+		 */
+		snippet_string = (function()
+		{
+			/** Get image or make image clickable
+			 * 
+			 * [![caption](folder/image.gif)	// normal image
+			 * [![caption](folder/image.gif)](folder/image.gif)	// clickable image
+			 */
+			var getImageLink = function()
+			{
+				var image_link	= '!'+snippet_string;
+				
+				var answer = confirm ('Make Image clickable ?');
+			
+				return answer ? '['+ image_link + ']('+link+'?raw=true)' : image_link;
+			}; 
+			
+			/* Link to md */
+			if( extension.match(/md/) )
+				caption = sanitizeString(dir_name);
+
+			/* Link to dir */
+			else if( ! extension.match(/jpeg|png|gif/) )
+				link = link.replace(/\/[^\/]+$/g, '');
+
+			var snippet_string = '[[[%tabstop:'+caption+']]]('+link+')';
+			
+			//return extension.match(/jpeg|png|gif/) ? '!'+snippet_string : '[[%tabstop1:__]]'+snippet_string+'[[%tabstop1:__]]';
+			return extension.match(/jpeg|png|gif/) ? getImageLink() : '[[%tabstop1:__]]'+snippet_string+'[[%tabstop1:__]]';
+			
+		})();
+		
+
+	}
+
+
+%>
+<%=snippet_string%>[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,16 @@
+/*
+komodo tool: GroupLoop
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================*/
+GroupAdd, [[%tabstop1:group_name]], [[%tabstop:%$[[%tabstop:win_title]]%]][[%tabstop:, [[%tabstop:WinText]], [[%tabstop:Label]], [[%tabstop:ExcludeTitle]]]][[%tabstop:]]
+ 
+Loop %[[%tabstop1:group_name]]%
+	 MsgBox % [[%tabstop1:group_name]]%A_Index%!@#_currentPos!@#_anchor

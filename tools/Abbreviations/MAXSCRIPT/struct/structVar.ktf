@@ -1,0 +1,51 @@
+/*
+komodo tool: structVar
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================*/
+<%
+	var koEditor	= require("ko/editor");
+	var file_content	= koEditor.getValue()
+	var ending_comma	= file_content.match(/struct/gi) ? ',' : '' ;
+
+	/* Ask for function name and return value
+	*/
+	var ask = ko.interpolate.interpolateString([
+		'%(ask1:Struct name:)',
+		//'%(ask2:Return:this)',	// clear input for not return 'this'
+	]).split(',');
+	
+	var struct_name_sanitized	= ask[0]
+		.replace(/([A-Z])/g, ' $1')	// set whitespace before capital letter
+		.replace(/([A-Z])\s([A-Z])/g, '')	// Remove whitespace between twoo capital letters E.G.: 'This I S typo' >>> 'This IS typo'
+		.replace(/[\s+|-]+/g, ' ')	
+		.replace(/\s+/g, ' ')
+		.toLowerCase()
+		.trim();
+	
+	var fn_summary	= struct_name_sanitized.charAt(0).toUpperCase() + struct_name_sanitized.slice(1).toLowerCase();
+	
+	var struct_name = (function()
+	{
+		var struct_name_pascal 	= struct_name_sanitized.toLowerCase().replace(/(?:(^.)|(\s+.))/g, function(match) {
+			return match.charAt(match.length-1).toUpperCase();
+		});
+		return struct_name_pascal.charAt(0).toLowerCase() + struct_name_pascal.slice(1);
+	})(); 
+
+	//var _return_this	= ask[1]!='' && ask[1].match(/this/gi)!==null;
+
+%>
+/** [[%tabstop:<%=fn_summary%>]][[%tabstop:]]
+ */
+[[%tabstop:<%=struct_name%>]] [[%tabstop:]]= (struct [[%tabstop:<%=struct_name%>]]
+(
+	[[%tabstop:]]
+);)()<%=ending_comma%>[[%tabstop:]]!@#_currentPos!@#_anchor

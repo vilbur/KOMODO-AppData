@@ -1,0 +1,327 @@
+/*
+komodo tool: Convert Case Sense
+===============================
+async: 0
+is_clean: true
+keyboard_shortcut: Ctrl+U
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+===============================*/
+komodo.assertMacroVersion(3);
+/* snake_camelCase_toggle.js v1.2*/
+if ( komodo.view ) { komodo.view.setFocus(); }
+var scimoz             = ko.views.manager.currentView.scimoz;
+var converted_lines  = [];
+var lines  = [];
+var wodrs_to_convert = [];
+var words_array = [];
+var final_type_selection;
+var final_type_word;
+
+caseTypes = {
+	'lowercase'         :'^[^A-Z_]+$',
+	'Capital'           :'^[A-Z][^A-Z]*$',
+	'UPPERCASE'         :'^[^a-z_]+$',
+	'PascalCase'         :'^[A-Z][^A-Z_]+([A-Z][^A-Z]*)+$',
+	'camelCase'          :'^[^A-Z][^A-Z_]*(([A-Z][^A-Z]*)+)$',
+	'snake_case_low'    :'^[^A-Z]+_([^A-Z]+_*)+$',
+	'Snake_Case_Capital':'^[^a-z][^A-Z]+_([^a-z][^A-Z]+_*)+',
+	'SNAKE_CASE_UPPER'  :'^[^a-z]+_([^a-z]+_*)+$',
+};
+
+ConvertText();
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+/*			FUNCTIONS                                                                                                      */
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+/**
+**/
+function ConvertText()
+{
+	getSelectedText();
+
+	if ( selectedText!=='')
+	{
+
+		//var sel_start  = scimoz.wordStartPosition(scimoz.currentPos, true);
+		//var sel_end    = scimoz.wordEndPosition(  scimoz.currentPos, true);
+		var sel_end    = getSelectionEnd();
+
+		getLinesArray();
+		convertLines();
+		//final_text     = selectedText; // DEBUG
+		var final_text = converted_lines.join('\n');
+
+		/*	PASTE NEW TEXT	*/
+		ko.run.output.endSession();
+		ko.run.runEncodedCommand( window, 'set /p="'+final_text+'"<nul| clip' );
+		//alert('final_text: '+final_text);
+
+
+		setTimeout( function(){
+			ko.commands.doCommand('cmd_paste');
+			/*	SET CURSOR POSITION	*/
+			scimoz.anchor     = sel_end;
+			scimoz.currentPos = sel_end + final_text.length;
+			//ko.commands.doCommand('cmd_cancel')
+		}, 200);
+	}
+}
+/**
+* get selection position, cursor will be on START of selection
+**/
+function getSelectionEnd() {
+	var scimoz = ko.views.manager.currentView.scimoz;
+	return scimoz.currentPos >= scimoz.anchor ? scimoz.anchor : scimoz.currentPos ;
+}
+
+/**
+**/
+function convertLines() {
+	for (l = 0; l < lines.length; l++) {
+		var line = lines[l];
+		var words_line_array = getWordsOnLIneArray(line);
+		var word_type        = getWordType(words_line_array[0]);
+		setFinalSelType(word_type);
+		//alert('word_type: '+word_type);
+		var final_separator       = getSeparator(FinalSelType);
+		var converted_words_array = convertWords( words_line_array );
+
+		//alert( 'converted_words_array=\n'+JSON.stringify( converted_words_array, null, 2) )
+		converted_lines.push( converted_words_array.join( final_separator ) );
+	}
+}
+/**
+**/
+function convertWords(line) {
+	var line_converted = line;
+	for (w = 0; w < line.length; w++) {
+		var word = line[w];
+		if ( word!== '')
+			line_converted[w] = convertWord(word);
+
+	}
+	return line_converted;
+}
+
+/**
+**/
+function convertWord( convert_word ) {
+	var word_type = getWordType( convert_word );
+	/*    SPLIT PascalCase AND snake_case WORD    */
+	switch ( word_type ) {
+		case 'PascalCase':
+		case 'camelCase':
+			convert_word =  convert_word.replace(/([A-Z])/g, ' $1');
+			break;
+		case 'snake_case_low':
+		case 'Snake_Case_Capital':
+		case 'SNAKE_CASE_UPPER':
+			convert_word =  convert_word.replace(/_/g, ' ');
+			break;
+	}
+	var snake_word_split = convert_word.replace(/^\s/g, '').split(' ');
+	var result_word      = snake_word_split;
+	for (i = 0; i < snake_word_split.length; i++) {
+		var word = snake_word_split[i];
+		switch (FinalSelType) {
+			case 'lowercase':
+				result_word[i] = word.toLowerCase();
+				break;
+			case 'Capital':
+				result_word[i] = upperCaseFirstLetter(word);
+				break;
+			case 'UPPERCASE':
+				result_word[i] = word.toUpperCase();
+				break;
+			case 'PascalCase':
+				result_word[i] = upperCaseFirstLetter(word);
+				break;
+			case 'camelCase':
+				//alert('camelCase');
+				if (i===0)
+					word = word.toLowerCase();
+				result_word[i] = word;
+				//result_word[i] = 'test'
+
+				break;
+			case 'snake_case_low':
+				result_word[i] = word.toLowerCase();
+				break;
+			case 'SNAKE_CASE_UPPER':
+				result_word[i] = word.toUpperCase();
+				break;
+			case 'Snake_Case_Capital':
+				result_word[i] = upperCaseFirstLetter(word);
+				break;
+			default:
+				result_word[i] = word;
+		}
+		/*    EXEPTION if word is 'SIMPLEUPPERCASE' CONVERT to 'simpleuppercase'    !!! NOT TO 'Simpleuppercase'  // IT IS NESSESARY FOR RIGHT TOGGLING    */
+		if ( word_type === 'UPPERCASE' && FinalSelType === 'PascalCase' && selectedText.match(/\s/g) === null )
+			result_word[i] = word.toLowerCase();
+	}
+	var word_separator = getSeparator(FinalSelType);
+	return result_word.join( word_separator );
+}
+
+/**
+**/
+function getFetchedLines( final_separator ) {
+	var fetched_lines = [];
+	for (i = 0; i < words_array.length; i++) {
+		var line = words_array[i];
+		fetched_lines.push( line.join( final_separator ));
+	}
+	return fetched_lines;
+}
+
+/**
+**/
+function getSeparator( word_type ) {
+	switch ( word_type ) {
+		case 'PascalCase':
+		case 'camelCase':
+			separator= ''; break;
+
+		case 'snake_case_low':
+		case 'Snake_Case_Capital':
+		case 'SNAKE_CASE_UPPER':
+
+			separator= '_'; break;
+
+		default:
+			separator =  ' ';
+			break;
+	}
+	return separator;
+}
+
+/**
+**/
+function setFinalSelType(first_word) {
+	for ( var caseType in caseTypes )
+	{
+		if (success)
+		{
+			var selType = caseType;
+			break;
+		}
+		if ( caseType===first_word )
+			var success = true;
+	}
+	if( typeof selType === 'undefined')
+		var selType = Object.keys(caseTypes)[0];
+
+	FinalSelType = selType;
+}
+
+/*
+fo2o Ba2r baz
+Fo2o Ba2r Baz
+F2OO BA2R BAZ
+F2ooBa2rBaz
+f2ooBa2rBaz
+fo2o_ba2r_baz
+Fo2o_Ba2r_Baz
+FO2O_BA2R_BAZ
+*/
+
+/**
+**/
+function getSelectedText() {
+	///*    GET SELECTED TEXT    */
+	selectedText = scimoz.selText;
+	wordCursor   = ko.interpolate.getWordUnderCursor(scimoz);
+	if ( selectedText==='' && wordCursor !== '') {
+		ko.commands.doCommand('cmd_selectWordUnderCursor')
+		selectedText = scimoz.selText;
+	}
+}
+/*    SPLIT WORDS BY WHITESPACE< TAB OR ENTER    */
+/*    replace space, tab and new line with '\s', '\t' , '\n'    */
+function getLinesArray() {
+	var lines_split = selectedText.split(/\n/gi );
+		for (l = 0; l < lines_split.length; l++) {
+		lines.push( lines_split[l] );
+	}
+}
+
+/**
+**/
+function getWordsOnLIneArray( words_on_line ) {
+	var words_on_line = words_on_line.split(' ');
+	var words_on_line_splitted = [];
+
+	for(var w=0; w<words_on_line.length;w++)
+	{
+		var word_on_line = words_on_line[w];
+		if ( word_on_line.length == ' ')
+			words_on_line_splitted.push(' ');
+		else
+			words_on_line_splitted.push( word_on_line );
+	}
+	return  words_on_line_splitted;
+}
+
+/**
+**/
+function getWordType(word) {
+	for ( var caseType in caseTypes ) {
+		var match =  getRegex( word, caseTypes[caseType])
+		if (match) return caseType
+	}
+}
+
+/**
+**/
+function getRegex( word_rx, regEx ) {
+	var regex_regEx = new RegExp( regEx, "g");
+	return  regex_regEx.exec( word_rx );
+}
+
+/**
+**/
+function CamelToSnake(CamelCaseWord) {
+	var lowcase_array = [];
+	var word_split = CamelCaseWord.split(/(?=[A-Z])/)
+	for (i = 0; i < word_split.length; i++) {
+		lowcase_array.push( lowerCaseFirstLetter( word_split[i]))
+	}
+	return lowcase_array.join('_');
+}
+
+/**
+**/
+function snakeToCamel( snake_case_word ) {
+	var upper_array = [];
+	var word_split = snake_case_word.split(/_/)
+	for (i = 0; i < word_split.length; i++) {
+		upper_array.push( upperCaseFirstLetter( word_split[i]))
+	}
+	return upper_array.join('');
+}
+
+/**
+**/
+function lowerCaseFirstLetter(string) {
+	return string.charAt(0).toLowerCase() + string.slice(1);
+}
+
+/**
+**/
+function upperCaseFirstLetter(string) {
+
+	var string = string.toLowerCase();
+	return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
+
+
+

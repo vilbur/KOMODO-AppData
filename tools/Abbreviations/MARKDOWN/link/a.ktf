@@ -1,0 +1,62 @@
+/*
+komodo tool: a
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================*/
+<%
+	/** CREATE LINK TO URL OR HEADING IN MARKDOWN 
+	 *	
+	 */
+
+
+	var ask = ko.interpolate.interpolateString([[
+		////['Label', 'Value'],
+		'URL or heading',
+	].map(function(value, index){
+
+		return '%(ask'+index+':'+(typeof value === 'object'?value[0]:value)+':'+(typeof value === 'object'?value[1]:'')+')';
+	})]).split(',');
+
+	function isUrl ( url )
+	{
+		return url.match(/^\s*(http|www).*/gi) !== null
+	};
+
+	var ask_link = ask[0].trim().replace(/^#+\s*/gi, '');
+
+	/** link
+	 */
+	var link = (function()
+	{
+		//var link	= ask_link;
+
+		//if( link === '' )
+		//else
+		if ( isUrl (ask_link) )
+			return ask_link;
+		
+		return '#' + ask_link.toLowerCase().replace(/[\s+]/gi, '-');
+	})();	
+	
+	
+	/** caption
+	 */
+	var caption = (function()
+	{
+
+		if ( isUrl (ask_link) )
+			return 'label';
+		
+		return ask_link;
+		
+	})();
+	
+%>
+[[[%tabstop:<%=caption%>]]]([[%tabstop:<%=link%>]])[[%tabstop:]]!@#_currentPos!@#_anchor

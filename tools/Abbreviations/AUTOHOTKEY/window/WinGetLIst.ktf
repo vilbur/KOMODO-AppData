@@ -1,0 +1,14 @@
+/*
+komodo tool: WinGetLIst
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================*/
+WinGet, $[[%tabstop:windows]], List,  ahk_class [[%tabstop:Chrome_WidgetWin_1]]
+!@#_currentPos!@#_anchor
