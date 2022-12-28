@@ -420,6 +420,9 @@
   <boolean id="find-matchWord">0</boolean>
   <boolean id="find-multiline">0</boolean>
 <ordered-preference id="find-patternMru">
+  <string>sendFilePathTomaxListener</string>
+  <string>file_is_not_saved</string>
+  <string>_trimWhiteSpace</string>
   <string>project_name</string>
   <string>_setParamsToControl</string>
   <string>_bakOrRestore</string>
@@ -467,9 +470,6 @@
   <string>getTabsAll</string>
   <string>_getTabsFromEditor</string>
   <string>checkProjectFilesPanes</string>
-  <string>eventsOn</string>
-  <string>switchViewsIfFirstIsEmpty</string>
-  <string>splitViews</string>
 </ordered-preference>
   <long id="find-patternType">0</long>
   <long id="find-preferredContextType">0</long>
@@ -754,10 +754,6 @@ vilbur
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Unreal-Engine/rollout-UNREAL/Lib/ExporterDatasmith/ExportChecker/GroupToObjectBaker/GroupToObjectBaker.ms</string>
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Unreal-Engine/rollout-UNREAL/Lib/ExporterDatasmith/ExportChecker/_Test/ExportCheckerTest.ms</string>
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-PROJECT/readme.md</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/Controls.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/ControlParamsParser/ControlParamsParser.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/MacroScriptFileParser.ms</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/ScriptFile.ms</string>
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/bak/rollout-OPTIONS/Paths.mcr</string>
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/bak/rollout-OPTIONS/Menu.mcr</string>
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Unreal-Engine/rollout-UNREAL/3-[Export].mcr</string>
@@ -768,6 +764,7 @@ vilbur
   <string>file:///C:/scripts/MAXSCRIPT-vilTools3/README.md</string>
 </ordered-preference>
 <ordered-preference id="mruMenuItemList">
+  <string>ref%0e1 run-maxscript-via-notepad-komodo.ahk%0e</string>
   <string>menu_preferences</string>
   <string>ref%0e1 Project.mcr (1) &#8212; C:\scripts\MAXSCRIPT-vilTools3\Rollouts\rollouts-Tools\rollout-PROJECT%0eko.history.open_rctab(-1);</string>
   <string>menu_moveTab</string>
@@ -777,7 +774,6 @@ vilbur
   <string>menu_editUndo</string>
   <string>ref%0e1 GroupAttacherTest.ms%0e</string>
   <string>ref%0e5 Scene.mcr (2) &#8212; C:\scripts\MAXSCRIPT-vilTools3\Rollouts\rollouts-Tools\rollout-SCENE%0eko.history.open_rctab(5)</string>
-  <string>menu_save</string>
 </ordered-preference>
 <ordered-preference id="mruProjectList">
   <string>file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject</string>
@@ -845,8 +841,8 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3">
-  <string id="timestamp">1672204984723</string>
-  <string id="viewName">Default</string>
+  <string id="timestamp">1672214135747</string>
+  <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3">
   <string id="timestamp">1517827081177</string>
@@ -877,7 +873,7 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework">
-  <string id="timestamp">1672207058514</string>
+  <string id="timestamp">1672214143237</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator">
@@ -1083,7 +1079,7 @@ vilbur
 </preference-set>
 <preference-set id="current_project_filter_by_uri">
 <preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject">
-  <string id="timestamp">1672204791968</string>
+  <string id="timestamp">1672214135748</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Ahk_VilGUIv3.komodoproject">
@@ -1107,7 +1103,7 @@ vilbur
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject">
-  <string id="timestamp">1672207058514</string>
+  <string id="timestamp">1672214143237</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/laravel-fresh/Project-Laravel-Start.komodoproject">
@@ -1317,7 +1313,7 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
   <string id="ui.tabs.sidepanes.left.layout">vertical</string>
   <string id="ui.tabs.sidepanes.right.layout">vertical</string>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":true,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"console-widget"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":true,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"console-widget"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <boolean id="upgradeKomodo.dontask">1</boolean>
   <boolean id="useSmartTabs">0</boolean>
   <boolean id="useTabs">1</boolean>
@@ -1338,19 +1334,39 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="current_project">file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-PROJECT/Lib/Project.ms","tabIndex":1},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-PROJECT/Lib/Project.ms","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-PROJECT/Project.mcr","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlTypes/BrowsePath/BrowsePath.ms","tabIndex":1},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-PROJECT/Project.mcr","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/RolloutCreator.ms","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/basicTest/basicTest.ms","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/basicTest/Test-Content/rollouts-TestRollouts/rollout-Test/Test.mcr","tabIndex":0},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/_Test/QuadMenuTest.ms","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-vilTools3/Rollouts/rollouts-Tools/rollout-PROJECT/Lib/Project.ms","tabIndex":0}]</string>
+  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlsCreator.ms","tabIndex":0,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/Controls.ms","tabIndex":0,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/ScriptFile.ms","tabIndex":1,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/MacroScriptFileParser.ms","tabIndex":1,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/ControlParamsParser/ControlParamsParser.ms","tabIndex":1,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlTypes/BrowsePath/BrowsePath.ms","tabIndex":0,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/controlsLoadTest/Test-files/controlTypesTest.mcr","tabIndex":0,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlsCreator.ms","tabIndex":0,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/runMaxScript/run-maxscript-via-notepad-komodo.ahk","tabIndex":0,"hasDuplicateTabGroup":false,"hasDuplicateViewType":false},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/controlsLoadTest/Test-files/controlTypesTest.mcr","tabIndex":5,"hasDuplicateTabGroup":true,"hasDuplicateViewType":false}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
   <string id="spv_projects">["file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject"]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1672207051</long>
+  <long id="timestamp">1672215119</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
-  <long id="current_view_index">0</long>
+  <long id="current_view_index">3</long>
 <ordered-preference id="view_prefs">
+<preference-set>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/Controls.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/ScriptFile.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/MacroScriptFileParser.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/ControlParamsParser/ControlParamsParser.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlTypes/BrowsePath/BrowsePath.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
 <preference-set>
   <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlsCreator.ms</string>
   <string id="viewtype">editor</string>
@@ -1361,11 +1377,15 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <long id="current_view_index">1</long>
 <ordered-preference id="view_prefs">
 <preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlTypes/BrowsePath/BrowsePath.ms</string>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/controlsLoadTest/Test-files/controlTypesTest.mcr</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/controlsLoadTest/Test-files/controlTypesTest.mcr</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/runMaxScript/run-maxscript-via-notepad-komodo.ahk</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Test_file.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
@@ -1373,12 +1393,17 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlsCreator.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/runMaxScript/run-maxscript-via-notepad-komodo.ahk?parentId=view-2</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Test_file.ms?parentId=view-2</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/ControlParamsParser/ControlParamsParser.ms?parentId=view-1</string>
   <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader/controlsLoadTest/Test-files/controlTypesTest.mcr?parentId=view-2</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlTypes/BrowsePath/BrowsePath.ms?parentId=view-2</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlsCreator.ms?parentId=view-1</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlTypes/BrowsePath/BrowsePath.ms?parentId=view-1</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/MacroScriptFileParser.ms?parentId=view-1</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/ScriptFile.ms?parentId=view-1</string>
+  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/Controls.ms?parentId=view-1</string>
 </ordered-preference>
 </preference-set>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":true,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"console-widget"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <long id="windowNum">1</long>
 </preference-set>
 </preference-set>
