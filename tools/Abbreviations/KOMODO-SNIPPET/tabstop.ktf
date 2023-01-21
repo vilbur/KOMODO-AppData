@@ -15,60 +15,40 @@ version: 1.1.5
 /** Insert literal '[[%tabstop:]]' to snippet file
  *  Use selected text as value of tabstop
  *
- * 
+ *
  */
 
-var tabstop_inactive = '[~~[%tabstoptabstop_active]~~]';
-//var tabstop_inactive = '[~~[%tabstop:"[~~[%tabstop:tabstop_active]~~]"]~~]';
+var placeholder_text = 'tabstop_PLACEHOLDER'
 
-/** tabstop
- */
-var tabstop_active = (function()
-{
-	var scimoz   = ko.views.manager.currentView.scimoz;
-	//alert( scimoz.text );
-	//var word_cursor = ko.interpolate.getWordUnderCursor(scimoz);
-	var selectedText = scimoz.selText;
-	//if (selectedText === '' && word_cursor!=='' ) {
-	//	scimoz.anchor     = scimoz.wordStartPosition(scimoz.currentPos, true);
-	//	scimoz.currentPos = scimoz.wordEndPosition(  scimoz.currentPos, true);
-	//	selectedText = word_cursor; 
-	//}
+var tabstop_inactive = '[[% '+placeholder_text+']]';
 
-	var tabstop_or_soft	= selectedText.match(/^\s*[}\)\]"';]+\s*$/gi) === null ? 'tabstop' : 'soft';
-	var tabstop_number	= tabstop_or_soft == 'tabstop' ? '[[%tabstop:]]:' : ':';	
-	
-	return tabstop_number + '[[%'+tabstop_or_soft+':'+selectedText+']]';
-})(); 
+var selected_text = ko.views.manager.currentView.scimoz.selText;
 
 
 /** insertNestedSnippet
  */
 var insertNestedSnippet = (function()
 {
-	/** Remove '~' form [[%~~tabstop:]~~]
-	*/
-	var removeTabstopTilda = function()
-	{		
-		require('ko/editor').setValue( require('ko/editor').getValue().replace(/([\[]*)~~([\]]*)/gi, '$1$2') );
-	}; 
+	/** select 'TABSTOP_PLACEHOLDER' in snippet file for replace with var tabstop_snippet
+	 */
+	var selectTabstopPlaceholder = function()
+	{
+		var scimoz	= ko.views.manager.currentView.scimoz;
+		var tabstops_snippet_match	= new RegExp(/TABSTOP_PLACEHOLDER/gi).exec( require("ko/editor").getValue() );
+		if( ! tabstops_snippet_match )
+			return;
+
+		scimoz.currentPos	= tabstops_snippet_match.index -1;
+		scimoz.anchor	= tabstops_snippet_match.index + placeholder_text.length;
+	};
+
 
 	/** Insert secondary snippet
 	 */
-	var insertTabstopSnippet = function()
+	var insertTabstopSnippet = function(selected_text)
 	{
-		/** select 'tabstop_active' in snippet file for replace with var tabstop_snippet
-		 */
-		var selectTabstopPlaceholder = function()
-		{
-			var scimoz	= ko.views.manager.currentView.scimoz;
-			var tabstops_snippet_match	= new RegExp(/tabstop_active/gi).exec( require("ko/editor").getValue() );
-			if( ! tabstops_snippet_match )
-				return; 
 
-			scimoz.currentPos	= tabstops_snippet_match.index;
-			scimoz.anchor	= tabstops_snippet_match.index + 'tabstop_active'.length; 
-		};
+
 		var tabstop_fake_snippet = {
 			hasAttribute: function(name) {
 				return name in this;
@@ -77,25 +57,29 @@ var insertNestedSnippet = (function()
 				return this[name];
 			},
 			indent_relative: "true",
-			value:	tabstop_active
+			value:	"tabstop:[[%tabstop:"+selected_text+"]]"
 		};
-		
-		selectTabstopPlaceholder();
+
 		ko.projects.snippetInsert(tabstop_fake_snippet);
 	};
-	setTimeout( function(){
-		removeTabstopTilda();
-		
-		setTimeout( function(){
-			insertTabstopSnippet();
+
+	setTimeout( function()
+	{
+		selectTabstopPlaceholder();
+
+		setTimeout( function()
+		{
+			insertTabstopSnippet(selected_text);
+
 		}, 100);
 	}, 100);
-}); 
+});
 
 ko.views.manager.currentView.scimoz.beginUndoAction()
+
 try
 {
-	
+
 %><%=tabstop_inactive%><%
 
 	insertNestedSnippet();
