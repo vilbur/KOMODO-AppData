@@ -1,0 +1,13 @@
+
+komodo tool: alT
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+alert( 'this[[%tabstop1:.foo]]=\n'+JSON.stringify( this[[%tabstop1:.foo]], null, 2) );[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,49 @@
+
+komodo tool: ControlFocusedGet
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/**  
+ *	https://autohotkey.com/boards/viewtopic.php?t=23987
+ */
+GetFocusedControl(Option := "")
+{
+	;"Options": ClassNN \ Hwnd \ Text \ List \ All
+	
+	GuiWindowHwnd := WinExist("A")		;stores the current Active Window Hwnd id number in "GuiWindowHwnd" variable
+					;"A" for Active Window
+	
+	ControlGetFocus, FocusedControl, ahk_id %GuiWindowHwnd%	;stores the  classname "ClassNN" of the current focused control from the window above in "FocusedControl" variable
+							;"ahk_id" searches windows by Hwnd Id number
+	
+	if Option = ClassNN
+	return, FocusedControl
+	
+	ControlGet, FocusedControlId, Hwnd,, %FocusedControl%, ahk_id %GuiWindowHwnd%	;stores the Hwnd Id number of the focused control found above in "FocusedControlId" variable
+	
+	if Option = Hwnd
+	return, FocusedControlId
+	
+	if (Option = "Text") or (Option = "All")
+	ControlGetText, FocusedControlText, , ahk_id %FocusedControlId%		;stores the focused control texts in "FocusedControlText" variable
+								;"ahk_id" searches control by Hwnd id number
+	
+	if Option = Text	
+	return, FocusedControlText
+	
+	if (Option = "List") or (Option = "All")
+	ControlGet, FocusedControlList, List, , , ahk_id %FocusedControlId%	;"List", retrieves  all the text from a ListView, ListBox, or ComboBox controls
+	
+	if Option = List	
+	return, FocusedControlList
+	
+	return, FocusedControl " - " FocusedControlId "`n`n____Text____`n`n" FocusedControlText "`n`n____List____`n`n" FocusedControlList
+}
+!@#_currentPos!@#_anchor

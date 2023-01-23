@@ -1,0 +1,14 @@
+
+komodo tool: loopFiles
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+loop, %%[[%tabstop:[[%tabstop:A_WorkingDir]]]]%%[[%tabstop:\\]][[%tabstop:*.[[%tabstop:*]]]], [[%tabstop:0-Files|1-Both|2-Folders]], [[%tabstop:1-Recurseive]]
+	[[%tabstop:A_LoopFileFullPath]]!@#_currentPos!@#_anchor

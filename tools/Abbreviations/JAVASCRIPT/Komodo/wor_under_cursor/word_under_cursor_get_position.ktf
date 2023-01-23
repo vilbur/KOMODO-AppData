@@ -1,0 +1,14 @@
+
+komodo tool: word_under_cursor_get_position
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var [[%tabstop1:word]]_[[%tabstop:start]]	= ]]scimoz.wordStartPosition([[%tabstop:scimoz.currentPos]], true);[[%tabstop:]]
+[[%tabstop:var [[%tabstop1:word]]_[[%tabstop:end]]	= ]]scimoz.wordEndPosition([[%tabstop:scimoz.currentPos]], true);[[%tabstop:]]!@#_currentPos!@#_anchor

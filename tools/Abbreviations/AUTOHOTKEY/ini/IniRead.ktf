@@ -1,0 +1,13 @@
+
+komodo tool: IniRead
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+IniRead, $[[%tabstop:OutputVar]], [[%tabstop:%$[[%tabstop:ini_path]]%]][[%tabstop:, [[%tabstop:%$[[%tabstop:section]]%]]]][[%tabstop:, [[%tabstop:%$[[%tabstop:key]]%]]]][[%tabstop:, [[%tabstop:default]]]][[%tabstop:]]!@#_currentPos!@#_anchor

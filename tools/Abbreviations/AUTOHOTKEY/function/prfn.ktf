@@ -1,0 +1,18 @@
+
+komodo tool: prfn
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/**
+ */
+_[[%tabstop:fnName]]([[%tabstop: [[%tabstop:par]] ]])
+{
+	[[%tabstop:]]
+}!@#_currentPos!@#_anchor

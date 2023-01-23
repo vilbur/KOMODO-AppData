@@ -1,0 +1,38 @@
+
+komodo tool: class_ko_extension_object
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/**
+ *
+ * 
+ */
+ko.extensions.[[%tabstop1:namespace]].[[%tabstop2:TemplateObject]] = (function()
+{
+	function [[%tabstop2:TemplateObject]]()
+	{
+		[[%tabstop:]]
+		
+		/** Test
+		 */
+		this.test = function(string='[[%tabstop2:TemplateObject]]') {
+			alert('ko.extensions.Template.Test("'+string+'")');
+		};
+	}
+	return [[%tabstop2:TemplateObject]];
+
+})();
+
+/** Test
+ */
+new ko.extensions.[[%tabstop1:namespace]].[[%tabstop2:TemplateObject]]().test();
+
+
+!@#_currentPos!@#_anchor

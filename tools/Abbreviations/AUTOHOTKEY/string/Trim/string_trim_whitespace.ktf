@@ -1,0 +1,14 @@
+
+komodo tool: strTrWs
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+$[[%tabstop1:string]] := RegExReplace($[[%tabstop1:string]], "(^[\s'[[%tabstop2:"]]"]*|[\s'[[%tabstop2:"]]"]*$)", "" )
+!@#_currentPos!@#_anchor

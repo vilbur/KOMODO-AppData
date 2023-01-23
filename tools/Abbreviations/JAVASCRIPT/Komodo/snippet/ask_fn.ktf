@@ -1,0 +1,27 @@
+
+komodo tool: ask_fn
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+/* OLD VERSION
+[[%tabstop:var [[%tabstop:ask]] = ]]ko.interpolate.interpolateString([
+	'%(ask1:[[%tabstop:Label]]:[[%tabstop:default]])',
+]).split(',');
+
+*/
+
+%>
+[[%tabstop:var [[%tabstop:ask]] = ]]ko.interpolate.interpolateString([[
+	['[[%tabstop:Label]]', '[[%tabstop:Value]]'],[[%tabstop:]]
+	'[[%tabstop:Only Label]]',[[%tabstop:]]
+].map(function(value, index){
+	return '%(ask'+index+':'+(typeof value === 'object'?value[0]:value)+':'+(typeof value === 'object'?value[1]:'')+')';
+})]).split(',');!@#_currentPos!@#_anchor

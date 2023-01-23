@@ -1,0 +1,15 @@
+
+komodo tool: find_part
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:[[%tabstop:var]] [[%tabstop1:macro]]_[[%tabstop2:name]]	= ]]komodo.findPart('[[%tabstop1:macro]]', '[[%tabstop2:name]]')
+[[%tabstop:if (![[%tabstop1:macro]]) {alert("Couldn't find a [[%tabstop1:macro]] called 'Relative Path to file - CLIPBOARD' when executing [[%tabstop1:macro]]."); return}]]
+ko.projects.invokePart([[%tabstop1:macro]]_[[%tabstop2:name]])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,41 @@
+/*
+komodo tool: set language
+=========================
+async: 1
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 1
+type: macro
+version: 1.1.5
+=========================*/
+/*
+	Set language of current file
+
+	1) Komodo snippet file has language same as language of snippet in default
+	2) Zbrush source files are .txt, this script assign Zscript language if .txt file has "Zscripts|ZBrush" in path
+
+
+	ZSCTIPT LANGUAGE CONDITIONS:
+		If file path to .txt file contanin "Zscripts|ZBrush" in path
+		Match is case insensitive
+
+		E.G.: "c:\Program Files\Maxon ZBrush 2022\ZScripts\DefaultZScript.txt"
+
+*/
+
+var koFile	= require("ko/file");
+var koDoc	= ko.views.manager.currentView.koDoc;
+var current_file = ko.views.manager.currentView.koDoc.file
+
+if ( current_file  != null ) // if file exist, new file is not saved yet
+{
+	var file_current_extension	= koFile.basename(current_file.path).split(/\./g).pop();
+
+	if( file_current_extension == "snippet")
+		koDoc.language = 'Komodo Snippet';
+
+	else if( file_current_extension == "txt" && current_file.path.match(/.*\\(zscripts*|.*ZBrush.*)\\.*\.txt/gi) != null )
+		koDoc.language = 'Zscript';
+}

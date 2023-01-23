@@ -1,0 +1,50 @@
+
+komodo tool: file_search
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/** Search file or dir
+ * Default serach is not case sensitive
+ * @example	fileSearch( 'c:\\Foo\\Dir', 'file.js' );
+ * 	fileSearch( 'c:\\Foo\\Dir', /.*\.js/ );
+ *
+ * @param	string	path	Path where to search
+ * @param	string|RegExp	search	Search mask
+ * 
+ * @return	array|null	Full paths of found files or dirs
+ */
+var fileSearch = function( path, search )
+{
+	var koFile	= require("ko/file"); 
+	
+	var found_paths	= [];
+	var mask	= typeof search === 'object'  ? search : new RegExp( search, 'gi');
+	
+	/** Search in dir
+	 */
+	var searchInDir = function(dir_path)
+	{
+		var items = koFile.list(dir_path);
+
+		for(let i=0; i<items.length;i++)
+		{
+			var path_full = dir_path +'\\'+ items[i];
+			
+			if( items[i].match(mask) )
+				found_paths.push(path_full);
+			
+			if( ! koFile.isFile(path_full) )
+				searchInDir(path_full);
+		}
+	}; 
+	searchInDir(path);
+	 
+	return found_paths.length ? found_paths : null;
+};!@#_currentPos!@#_anchor

@@ -1,0 +1,13 @@
+/*
+komodo tool: memw
+=================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+=================*/
+[ [[%tabstop:MemWrite]], [[%tabstop:block_mame]], [[%tabstop:value]], [[%tabstop:0:omitted:float 1:signed char 2:unsigned char 3:signed short 4:unsigned short 5:signed long 6:unsigned long 7:fixed16]][[%tabstop:, offset]] ]!@#_currentPos!@#_anchor

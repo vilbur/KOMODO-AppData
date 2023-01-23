@@ -1,0 +1,13 @@
+
+komodo tool: file_copy
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:koFile]].copy([[%tabstop:path_file]], [[%tabstop:path_target]])[[%soft:;]]!@#_currentPos!@#_anchor

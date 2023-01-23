@@ -1,0 +1,13 @@
+
+komodo tool: rxr
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:$[[%tabstop1:String]] := ]]RegExReplace( [[%tabstop:$[[%tabstop1:String]]]], [[%tabstop:"[[%tabstop:search]]"]], [[%tabstop:"[[%tabstop:$1]]"]] )!@#_currentPos!@#_anchor

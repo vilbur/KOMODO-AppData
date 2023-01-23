@@ -1,0 +1,16 @@
+
+komodo tool: if_text_selected
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var sel_text	= koEditor.getSelection();
+var word_cursor	= ko.interpolate.getWordUnderCursor(scimoz);
+
+]]if([[%tabstop:sel_text [[%tabstop:!]]== [[%tabstop:'[[%tabstop1:]]']] ]][[%tabstop:&&]] [[%tabstop:word_cursor [[%tabstop:!]]== [[%tabstop:'[[%tabstop1:]][[%tabstop:]]']]]])[[%tabstop:]]!@#_currentPos!@#_anchor

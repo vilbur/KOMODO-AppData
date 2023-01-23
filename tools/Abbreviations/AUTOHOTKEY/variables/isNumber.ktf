@@ -1,0 +1,31 @@
+
+komodo tool: isNumber
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+/*
+  ; Recognize number and number in string  is little tricky
+  
+  ; WORKAROUND BELLOW
+
+	v1 := 3
+	v2 := "3"
+	MsgBox, % [v1].GetCapacity(1)
+	MsgBox, % [v2].GetCapacity(1)
+	MsgBox, % ObjGetCapacity([v1], 1)
+	MsgBox, % ObjGetCapacity([v2], 1)
+	MsgBox, % Type(v1)
+	MsgBox, % Type(v2)
+
+*/
+
+%>
+! [$[[%tabstop:variable]]].GetCapacity(1)[[%tabstop: ; [[%tabstop:isNumber]]]]!@#_currentPos!@#_anchor

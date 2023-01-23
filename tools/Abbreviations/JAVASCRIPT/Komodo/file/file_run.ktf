@@ -1,0 +1,28 @@
+
+komodo tool: file_run
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+/** Run file and get result
+ * @example runFile(  'c:\\file.exe', ['parameter first' , 'parameter second']  )
+ *
+ * @param	string	path	Path to file for execution
+ * @param	string|array	parameters	Parameters passedto file
+ *
+ * @return	mixed|null	Result of execution
+ */
+var runFile = function( path, parameters='')
+{
+	var params_string	= typeof parameters==='object' ? parameters.map(function(value){return '"' +value+'"';}).join(' ') : "" +parameters+ "";
+	var command	= 'start "" ""' + path + '"" ' + params_string;
+	var process	= Components.classes["@activestate.com/koRunService;1"].createInstance(Components.interfaces.koIRunService).RunAndNotify(command, '', '' , '' );
+	
+	return process.wait(-1)===0 ? process.getStdout():null;
+};[[%tabstop:]]!@#_currentPos!@#_anchor

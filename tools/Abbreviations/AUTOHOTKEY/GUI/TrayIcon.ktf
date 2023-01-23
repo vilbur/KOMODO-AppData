@@ -1,0 +1,13 @@
+
+komodo tool: TrayIcon
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+Menu, Tray, Icon, % [[%tabstop:A_WorkingDir]] "\[[%tabstop:Icons]]\[[%tabstop:[[%b]]]].ico",,0!@#_currentPos!@#_anchor

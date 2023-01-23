@@ -1,0 +1,13 @@
+
+komodo tool: lang
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var [[%tabstop:lang]]	= ]][[%tabstop:koEditor]].getLanguage()[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor

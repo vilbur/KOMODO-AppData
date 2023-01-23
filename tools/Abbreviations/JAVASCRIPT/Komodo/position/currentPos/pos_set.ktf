@@ -1,0 +1,14 @@
+
+komodo tool: pos_set
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+scimoz.currentPos	= [[%tabstop:pos_current]];[[%tabstop:
+scimoz.anchor	= [[%tabstop:pos_anchor]];]]!@#_currentPos!@#_anchor

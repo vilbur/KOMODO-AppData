@@ -1,0 +1,28 @@
+/*
+komodo tool: rxFn
+=================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+<%/*
+rx	= dotNetClass "System.Text.RegularExpressions.Regex"
+rx_options	= dotNetClass "System.Text.RegularExpressions.RegexOptions"
+[[%tabstop:[[%tabstop1:match]]_[[%tabstop2:string]]	= ]]rx.Match [[%tabstop2:string]] "[[%tabstop:pattern]]" [[%tabstop:rx_options.IgnoreCase]] [[%tabstop:
+matches	= for i = 1 to ([[%tabstop1:match]]_[[%tabstop2:string]].Groups.count - 1) collect ([[%tabstop1:match]]_[[%tabstop2:string]].groups.item[i].value )]]
+*/
+%>
+function regexGetMatches string pattern ignorecase:true =
+(
+	rx         = dotNetClass "System.Text.RegularExpressions.RegEx"
+	rx_options	= dotNetClass "System.Text.RegularExpressions.RegexOptions"
+	
+	matches = if (ignorecase) then rx.matches string pattern rx_options.IgnoreCase else rx.matches string pattern 
+	
+	(for matchIdx = 0 to matches.count-1 collect for groupIdx = 0 to matches.item[matchIdx].groups.count-1 collect ( matches.item[matchIdx].groups.item[groupIdx].value )) --return
+),!@#_currentPos!@#_anchor

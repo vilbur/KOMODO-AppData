@@ -1,0 +1,13 @@
+
+komodo tool: file_current_basename
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var [[%tabstop:file_current_basename]]	= ]][[%tabstop:koFile]].basename(file_current_path[[%tabstop:]]);[[%tabstop:]]!@#_currentPos!@#_anchor

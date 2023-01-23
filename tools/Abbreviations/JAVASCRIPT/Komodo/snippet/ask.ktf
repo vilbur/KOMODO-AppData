@@ -1,0 +1,42 @@
+
+komodo tool: ask
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	var tabstops_snippet = {
+		hasAttribute: function(name) {
+			return name in this;
+		},
+		getStringAttribute: function(name) {
+			return this[name];
+		},
+		name:	"autoquote snippet",
+		indent_relative: "true",
+		value:	"[[%tabstop:1]]:[[%tabstop:Label]]:[[%tabstop:Value]]"
+	};
+	
+	/* Remove '~' form [[%~~ask]~~]
+	*/
+	setTimeout( function(){
+		ko.find.replaceAllInMacro(window, 0, '~', '', false, 2, 1, false, false);
+	}, 100);
+	
+	/* Insert seondary snippet
+	*/
+	setTimeout( function(){
+		var scimoz	= ko.views.manager.currentView.scimoz;
+		scimoz.anchor	= scimoz.currentPos	= scimoz.currentPos + 6;
+
+		ko.projects.snippetInsert(tabstops_snippet);
+
+	}, 200);
+%>
+[[%~~ask]~~]!@#_currentPos!@#_anchor

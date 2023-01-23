@@ -16,4 +16,4 @@ komodo tool: @
 	var prefix	= lang.match(/php|autohotkey/gi)? "$" : "";
 
 %>
-@param	[[%tabstop:string]]	<%=prefix%>[[%tabstop:name]]	[[%tabstop:description]]!@#_currentPos!@#_anchor
+@[[%tabstop:param]]	[[%tabstop:string]]	<%=prefix%>[[%tabstop:name]]	[[%tabstop:description]]!@#_currentPos!@#_anchor

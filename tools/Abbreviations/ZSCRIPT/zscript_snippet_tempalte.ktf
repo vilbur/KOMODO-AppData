@@ -1,0 +1,13 @@
+/*
+komodo tool: zscript_snippet_tempalte
+=====================================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+=====================================*/
+//!@#_currentPos!@#_anchor

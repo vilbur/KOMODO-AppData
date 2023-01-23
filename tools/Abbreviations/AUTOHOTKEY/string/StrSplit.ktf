@@ -1,0 +1,13 @@
+
+komodo tool: StrSplit
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:$[[%tabstop:variable]]	:= ]]StrSplit( $[[%tabstop1:string]], [[%tabstop:A_Space]][[%tabstop:, "."]])!@#_currentPos!@#_anchor

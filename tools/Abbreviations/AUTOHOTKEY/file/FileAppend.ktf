@@ -1,0 +1,13 @@
+
+komodo tool: FileAppend
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+FileAppend, [[%tabstop:%$[[%tabstop1:content]]%]], [[%tabstop:%$[[%tabstop2:file_path]]%]]!@#_currentPos!@#_anchor

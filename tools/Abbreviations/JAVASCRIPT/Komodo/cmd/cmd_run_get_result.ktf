@@ -1,0 +1,25 @@
+
+komodo tool: cmd_run_get_result
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var koFile	= require("ko/file");]]
+var runSvc	= Components.classes["@activestate.com/koRunService;1"].createInstance(Components.interfaces.koIRunService);
+ko.run.output.endSession();
+/* Stringify parameters */
+var [[%tabstop2:params_string]] = typeof parameters!=='undefined' ? (Array.isArray([[%tabstop1:parameters]]) ? [[%tabstop1:parameters]].map(function(value){return '"' +value+'"';}).join(' ') : JSON.stringify([[%tabstop1:parameters]])) : '';
+
+var cmd = [[%tabstop:'[[%tabstop:command_or_path]]']][[%tabstop:.trim().replace(/\//gi, '\\\')]];
+/* Run file if exist, else send command */
+var command = (koFile.exists(cmd) ? 'start "" ""' + cmd + '"" ' : cmd) + [[%tabstop2:params_string]];
+var process = runSvc.RunAndNotify(command, "", "" , "" );
+[[%tabstop:[[%tabstop:var]] [[%tabstop3:result]]	= ]]process.wait(-1)===0 ? process.getStdout():null;
+[[%tabstop:return [[%tabstop3:result]]]];
+[[%tabstop:alert( result );]]!@#_currentPos!@#_anchor

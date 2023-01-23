@@ -1,0 +1,13 @@
+
+komodo tool: Splitpath
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+SplitPath, $[[%tabstop1:file]], $[[%tabstop2:prefix]]name, $[[%tabstop2:prefix]]dir, $[[%tabstop2:prefix]]ext, $[[%tabstop2:prefix]]noext, $[[%tabstop2:prefix]]drive!@#_currentPos!@#_anchor

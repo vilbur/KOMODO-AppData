@@ -1,0 +1,13 @@
+
+komodo tool: key_state
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:$[[%tabstop1:key]]_key	:= ]]GetKeyState("[[%tabstop1:key]][[%tabstop:]]"[[%tabstop:, "P"]]) [[%tabstop:; https://autohotkey.com/docs/KeyList.htm]]!@#_currentPos!@#_anchor

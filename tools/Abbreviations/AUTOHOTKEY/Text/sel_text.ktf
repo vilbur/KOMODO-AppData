@@ -1,0 +1,26 @@
+
+komodo tool: sel_text
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/** Get selected text
+ */
+getSelecetdText()
+{
+	$clip_bak := ClipboardAll  ; save clipboard contents
+	Send, ^c
+	ClipWait,1
+	
+	$sel_text := Clipboard 
+	
+	ClipBoard := $clip_bak         ; return original Clipboard contents
+	
+	return $sel_text
+}!@#_currentPos!@#_anchor

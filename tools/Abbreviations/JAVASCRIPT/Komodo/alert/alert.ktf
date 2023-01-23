@@ -1,0 +1,17 @@
+
+komodo tool: al
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	var koFile	= require("ko/file");
+	var current_filename = koFile.basename(ko.extensions.getCurrentFilePath()).split(/\./g).shift();
+%>
+alert( [[%tabstop:'[[%tabstop:<%=current_filename%>[[%tabstop::]][[%tabstop:]]]]']] );[[%tabstop:]]!@#_currentPos!@#_anchor

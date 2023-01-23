@@ -1,0 +1,54 @@
+
+komodo tool: fnc
+// ================
+// auto_abbreviation: true
+// indent_relative: true
+// is_clean: true
+// language: General
+// set_selection: true
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ================
+<%
+	/* PHP */
+	//public function __construct ( ){
+	//}
+		
+	/* JavaScript */
+	//ClassName.prototype.functionName = function( ) {
+	//};
+	
+	/* Autohotkey */
+	//__NEW (){
+	//}
+
+	var scimoz	= ko.views.manager.currentView.scimoz;
+	var lang	= ko.views.manager.currentView.languageObj.name;
+	var file_content	= scimoz.text 
+	//var functionName	= '[[%tabstop:functionName]]'
+	
+	var Snip = new ko.extensions.Snippet()
+	//var Var = new ko.extensions.Variable()
+
+	if(lang == "PHP" )
+		var FunctionDef  = 'public function __construct';
+	
+	if	(lang=="JavaScript"){
+		var rx_match	= /var\s*(\S+)\s*=\s*\(\s*function/gi.exec(file_content);		
+		var className	= rx_match ? rx_match[rx_match.length-1] : 'className'
+		var FunctionDef	= 'function '+className;
+	}
+	
+	if	(lang == "Autohotkey" )
+		var FunctionDef  = '__NEW';
+
+	var selection = Snip.getSelectionText()
+	Snip.selectLine()
+	
+%>
+/** <%=functionName%>
+ */
+<%=FunctionDef%>([[%tabstop:]]){
+	<%=selection%>[[%tabstop:]]
+}!@#_currentPos!@#_anchor

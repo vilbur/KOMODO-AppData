@@ -1,0 +1,14 @@
+
+komodo tool: runCmdResult
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:$[[%tabstop1:cmd]]	:= ]]"[[%tabstop:cmd]] ""[[%tabstop:" $[[%tabstop:parameter]] "]]"""
+$result	:= ComObjCreate("WScript.Shell").Exec("cmd.exe /q /c " $cmd ).StdOut.ReadAll()!@#_currentPos!@#_anchor

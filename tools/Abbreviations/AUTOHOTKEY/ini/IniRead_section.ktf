@@ -1,0 +1,18 @@
+
+komodo tool: IniRead_section
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+IniRead, $[[%tabstop1:sections]], %$[[%tabstop:ini_path]]%[[%tabstop:, %$[[%tabstop:section]]%]][[%tabstop:]]
+	Loop Parse, $[[%tabstop1:sections]], `n
+		[[%tabstop:{
+			$key_value	:= StrSplit(A_LoopField, "=")
+			
+		}]]!@#_currentPos!@#_anchor

@@ -1,0 +1,13 @@
+
+komodo tool: Gui_Tabs
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+$[[%tabstop1:GUIname]].Tabs.new([[%tabstop:"[[%tabstop:]]"]]).tabs([[%tabstop:"[[%tabstop:array|string]]"]]).add()[[%tabstop:]]!@#_currentPos!@#_anchor

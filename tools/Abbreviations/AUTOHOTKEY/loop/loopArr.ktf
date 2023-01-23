@@ -1,0 +1,14 @@
+
+komodo tool: loopArr
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+Loop, % $[[%tabstop1:array]]
+	[[%tabstop:$[[%tabstop1:array]]%A_Index%]]!@#_currentPos!@#_anchor

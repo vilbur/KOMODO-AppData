@@ -1,0 +1,19 @@
+
+komodo tool: *
+================
+language:	       General
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	var koEditor	= require("ko/editor");
+	var lang	= koEditor.getLanguage();
+	var snippet	= lang == 'Markdown' ? '<!--- [[%tabstop:]] --->' : '/* [[%tabstop:]] */';
+	
+%>
+<%=snippet%> !@#_currentPos!@#_anchor

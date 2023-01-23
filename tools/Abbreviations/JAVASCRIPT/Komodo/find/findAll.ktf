@@ -1,0 +1,14 @@
+
+komodo tool: findAll
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+<%/* http://docs.komodoide.com/SDK/api/legacy/find#find_functions__findallinview */%>
+ko.find.findAllInMacro(window, [[%tabstop:1-selected_text]], [[%tabstop:'[[%tabstop:pattern]]']], 2, 1, false, false);!@#_currentPos!@#_anchor

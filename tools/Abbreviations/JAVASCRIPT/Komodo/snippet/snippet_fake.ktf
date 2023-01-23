@@ -1,0 +1,24 @@
+
+komodo tool: snippet_fake
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+var [[%tabstop1:name]]_snippet = {
+	hasAttribute: function(name) {
+		return name in this;
+	},
+	getStringAttribute: function(name) {
+		return this[name];
+	},
+	name:	"[[%tabstop1:name]] snippet",
+	indent_relative: "true",
+	value:	[[%tabstop:"[[%tabstop1:name]][[%tabstop:]]"]]
+};
+ko.projects.snippetInsert([[%tabstop1:name]]_snippet);!@#_currentPos!@#_anchor

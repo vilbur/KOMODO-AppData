@@ -1,0 +1,25 @@
+
+komodo tool: console_clear_fn
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/** Clear Komodo Console pane
+ *  IF CONSOLE IS NOT DETACHED
+ */
+consoleClear = (function(clear_message) {
+
+	var consoleEL = document.getElementById('console-widget');
+	if(consoleEL){
+		
+		consoleEL.contentWindow.document.getElementById('output').innerHTML = '';
+		if(clear_message)
+			require('ko/console').info(clear_message);	
+	}
+});!@#_currentPos!@#_anchor

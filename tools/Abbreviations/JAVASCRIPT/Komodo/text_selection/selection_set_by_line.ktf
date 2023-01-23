@@ -1,0 +1,19 @@
+
+komodo tool: selection_set_by_line
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+<%
+/*
+[[%tabstop:koEditor]].setSelection[[%soft:(]][[%tabstop:{{line, ch}]], [[%tabstop:{{line, ch}]])[[%soft:;]][[%tabstop:]]
+
+*/
+%>
+[[%tabstop:koEditor]].setSelection([[%tabstop:{line:[[%tabstop:]], ch:[[%tabstop:]]}]], [[%tabstop:{line:[[%tabstop:]], ch:[[%tabstop:]]}]])[[%tabstop:]]!@#_currentPos!@#_anchor

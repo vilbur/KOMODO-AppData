@@ -1,0 +1,48 @@
+
+komodo tool: unused - koLogO
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+<%
+	var _Snippet = new ko.extensions.Snippet();
+	
+
+	/* FIND VARIABLES*/
+	_Snippet.findVariablesIn();
+	var variables	= _Snippet.Variable.variables;
+	//alert( '_Snippet=\n'+JSON.stringify( _Snippet, null, 2) );
+	//alert(_Snippet.line.content.before!=='');
+	/* MOVE TO NEW LINE */	
+	if(_Snippet.line.content.before!=='')
+		_Snippet._moveKeywordToNewLine(); 		
+	
+	_Snippet.selectKeyword();
+	var snippet_string = ''; 	
+	//alert( '_Snippet=\n'+JSON.stringify( _Snippet, null, 2) )	
+	//alert( 'variables=\n'+JSON.stringify( variables, null, 2) )	
+	
+	
+	if (variables.length > 0 ) {
+		snippet_string = variables.map(function(variable, index){
+			
+			//alert( this.indexOf(variable) );
+			var message = "'[[%tabstop"+(index+1)+":"+variable.name+"]] : '+JSON.stringify( [[%tabstop"+(index+1)+":"+variable.name+"]], null, 4)";
+			return "require('ko/console').info("+message+");";
+		}).join('\n');
+	}else
+		snippet_string	= "require('ko/console').info( [[%tabstop:[[%tabstop:key]]+]]'[[%tabstop1:object]]='+JSON.stringify( [[%tabstop1:object]][[%tabstop:]], null, 4));";
+		//snippet_string	= "require('ko/console').info([[%tabstop:message]]);";		
+	
+		
+		//var snippet_string = 'X';
+//alert( "[[%tabstop1:object]]=\nJSON.stringify( [[%tabstop1:object]], null, 4)
+
+%>
+<%=snippet_string%>!@#_currentPos!@#_anchor

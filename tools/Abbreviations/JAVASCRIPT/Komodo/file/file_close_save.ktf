@@ -1,0 +1,14 @@
+
+komodo tool: file_close_save
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:vim_doCommand('cmd_vim_[[%tabstop:closeNoSave]][[%tabstop:saveAndClose]]')]]
+[[%tabstop:ko.commands.doCommand([[%tabstop:'[[%tabstop:cmd_[[%tabstop:bufferClose]][[%tabstop:closeAll]]]]']]);[[%tabstop:]]]]!@#_currentPos!@#_anchor

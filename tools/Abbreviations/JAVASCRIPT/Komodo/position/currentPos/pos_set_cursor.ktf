@@ -1,0 +1,13 @@
+
+komodo tool: pos_set_cursor
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:koEditor]].setCursor([[%tabstop:position]])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor

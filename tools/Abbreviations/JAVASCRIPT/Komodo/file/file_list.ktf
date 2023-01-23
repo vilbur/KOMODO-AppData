@@ -1,0 +1,13 @@
+
+komodo tool: file_list
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var [[%tabstop:file_list]]	=]] [[%tabstop:koFile]].list([[%tabstop:path]]);[[%tabstop:]]!@#_currentPos!@#_anchor

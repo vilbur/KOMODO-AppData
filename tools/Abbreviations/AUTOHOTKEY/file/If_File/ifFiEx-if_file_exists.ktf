@@ -1,0 +1,13 @@
+
+komodo tool: ifFiEx
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+If FileExist( $[[%tabstop:filePath]] ){[[%tabstop:]][[%soft:}]]!@#_currentPos!@#_anchor

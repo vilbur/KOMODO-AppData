@@ -1,0 +1,53 @@
+
+komodo tool: alV
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+    var var_name = null;
+    var scimoz = ko.views.manager.currentView.scimoz;
+    var selection_start = scimoz.wordStartPosition( scimoz.currentPos, true );
+    var selection_end   = scimoz.wordEndPosition( scimoz.currentPos, true );
+
+    var snippet = ko.interpolate.getWordUnderCursor(scimoz);
+
+    /*	GET WHOLE LINE	*/
+    ko.commands.doCommand('cmd_home')
+    ko.commands.doCommand('cmd_selectEnd')
+    line = scimoz.selText;
+
+    var regex_line = /.*var (\S+)/gi;
+    var line_match =  regex_line.exec(line);
+    if (line_match) {
+        var_name = line_match[1]
+        /*	REMOVE SNIPPET KEYWORD FROM LINE	*/
+        current_line = line.substring(0, (line.length - snippet.length - 1));
+    }
+
+    /*	GET FIRST WORD BEFORE SNIPPET KEYWORD	*/
+
+    var regex_word_before_snippet = new RegExp("(\S+)\s"+snippet, "gi");
+    var word_before_match =  regex_word_before_snippet.exec(line);
+    if (word_before_match && line_match==null ) {
+        var_name = word_before_match[1]
+
+        //alert ( word_before_match[1] );
+    }
+
+    /*	SELCT SNIPPET KEYWORD TOO	*/
+    //scimoz.currentPos = selection_end;
+ if (line_match) { /* IF VARIABLE FOUND ON LINE E.G.: var var_name = null; alv */ %>
+alert('var <%= var_name%>:\n' + <%= var_name%>);
+<% } else if (var_name){  /* IF VARIABLE FOUND BEFORE SNIPPET KEYWORD E.G.: var_name alv */%>
+alert('var <%= var_name%>:\n' + <%= var_name%>);
+<% } else{ /* NORMAL SNIPPET */
+%>
+alert('[[%tabstop1:]]:\n'+[[%tabstop1:]]);[[%tabstop:]]
+<% } %>!@#_currentPos!@#_anchor

@@ -1,0 +1,13 @@
+
+komodo tool: Path_split
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+.split()[[%tabstop:]]

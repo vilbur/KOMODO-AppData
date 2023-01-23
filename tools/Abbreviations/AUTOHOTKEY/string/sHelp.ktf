@@ -1,0 +1,26 @@
+
+komodo tool: sHelp
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+$var1 := "foo"
+$var2 := "bar"
+
+;;; SET QUOTES
+$string := $var1 . " " . """" . $var2 . """" ;;; foo ""bar""
+MsgBox,,, %$string%, 1
+
+;;; CONCAT VARIABLES
+$string := $var1 " " $var2 ;;; foo bar
+MsgBox,,, %$string%, 1
+
+;;; SET PATH
+$path = %$var1%\%$var2%.ext
+!@#_currentPos!@#_anchor

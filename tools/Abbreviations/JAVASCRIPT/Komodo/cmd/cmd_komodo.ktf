@@ -1,0 +1,13 @@
+
+komodo tool: cmd_komodo
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+ko.commands.doCommand([[%tabstop:'[[%tabstop:cmd_[[%tabstop:cancel]]]]']]);[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,16 @@
+/*
+komodo tool: rxm
+================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================*/
+[[%tabstop1:matches]] = ( dotNetClass "System.Text.RegularExpressions.RegEx" ).matches [[%tabstop:_string]] "[[%tabstop:.*]]"[[%tabstop: ( dotNetClass "System.Text.RegularExpressions.RegexOptions" ).IgnoreCase]] 
+result	= (for matchIdx = 0 to [[%tabstop1:matches]].count-1 collect for groupIdx = 0 to [[%tabstop1:matches]].item[matchIdx].groups.count-1 collect ( [[%tabstop1:matches]].item[matchIdx].groups.item[groupIdx].value )) --return
+
+!@#_currentPos!@#_anchor

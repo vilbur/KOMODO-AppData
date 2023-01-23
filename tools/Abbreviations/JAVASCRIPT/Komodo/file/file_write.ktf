@@ -1,0 +1,18 @@
+
+komodo tool: file_write
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+
+var koFileEx	= Components.classes['@activestate.com/koFileEx;1'].createInstance(Components.interfaces.koIFileEx);
+koFileEx.path	= [[%tabstop:file_path]];
+koFileEx.open('w');
+koFileEx.puts([[%tabstop:'[[%tabstop:Hello there\n]]']]);
+koFileEx.close();!@#_currentPos!@#_anchor

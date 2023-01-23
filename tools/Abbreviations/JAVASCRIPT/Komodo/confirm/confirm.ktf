@@ -1,0 +1,16 @@
+
+komodo tool: conf
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+var answer = confirm ('[[%tabstop:Are you sure]] ?');
+if (answer){
+    [[%tabstop:]]
+}!@#_currentPos!@#_anchor

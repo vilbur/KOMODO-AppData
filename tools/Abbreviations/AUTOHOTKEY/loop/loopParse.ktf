@@ -1,0 +1,14 @@
+
+komodo tool: loopParse
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+Loop, Parse, % [[%tabstop:$[[%tabstop1:string]]]][[%tabstop:, [[%tabstop:Delimiters]]]][[%tabstop:, [[%tabstop:OmitChars]]]]
+	%[[%tabstop:A_LoopField]]%!@#_currentPos!@#_anchor

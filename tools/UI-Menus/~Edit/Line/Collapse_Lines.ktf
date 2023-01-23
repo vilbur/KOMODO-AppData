@@ -1,0 +1,91 @@
+/*
+komodo tool: Collapse Lines
+===========================
+async: False
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+===========================*/
+/*
+ * COLLAPSE lines of referenced string WITH DELIMETER,
+ * 	WRAP lines to string,
+ * 	PREFIX line,
+ * 	SUFFIX line.
+ *
+ * @param string	delimeter	character fo joining lines
+ * @param string	wrapper	character\s for wrrapping of line	// prefix and suffix wrapper is splited by '|' E.G: 'textBeforeLine|textAftrerLine'
+ * @param boolean	clear_whitespace COLLAPSE WHITE SPACE WHEN LINES ARE COLLAPSED
+ *
+ * @example
+ *		var string_multiline	= 'Atest1\n\n\nBtest2\nCline3\n';
+ *
+ *		var collapsed	= collapseLines(string_multiline, ' '),	// collapse lines
+ *		var delimeter	= collapseLines(string_multiline, ' -X- '),	// collapse lines with delimeter
+ *		var wrapped	= collapseLines(string_multiline, ' ', '"'),	// collapse lines and quote every line
+ *		var wrapped_sides	= collapseLines(string_multiline, ' ', '[|]'),	// wrap every line to brackets
+ *		var wrapped_lines	= collapseLines(string_multiline, '\n', '"|";'),	// wrap every line to brackets with EOL character on end
+ *		var line_prefix	= collapseLines(string_multiline, '\n', 'PREFIX|'),	// set line prefix
+ *		var line_suffix	= collapseLines(string_multiline, '\n', 'SUFFIX|'),	// set line suffix
+ *
+ *
+ */
+var collapseLines = function(string_multiline, delimeter=' ', wrapper='', clear_whitespace=true) {
+
+	if ( delimeter=='\\n' )
+		delimeter='\n';
+
+	var lines	= string_multiline.split(/[\r\n]/gi);
+	var lines_wrapped	= [];
+	var wrapper_pref	= wrapper;
+	var wrapper_suff	= wrapper;
+
+	if( wrapper ) {
+		var wrapper_delineter	= wrapper.indexOf('|');
+		var delimeter_length	= delimeter_length;
+
+		/* be shure that delimeter is in middle of string*/
+		if( wrapper_delineter> -1 ){
+			var wrapper_split = wrapper.split('|');
+			wrapper_pref	= wrapper_split[0];
+			wrapper_suff	= wrapper_split[1];
+		}
+	}
+
+	/* WRAP LINES, WITHOUT LEADING AND TRAILING WHITESPACE */
+	for(var l=0; l<lines.length;l++) {
+		if ( lines[l]!=='' )
+			lines_wrapped.push (
+				 lines[l].replace(/^\s*(.*?(?=\s*$))\s*$/gi, wrapper_pref + '$1' + wrapper_suff)
+			);
+	}
+
+	var lines_collapsed = lines_wrapped.join(delimeter);
+
+	/* CLEAR WHITESPACE */
+	if(clear_whitespace)
+		return lines_collapsed.replace(/\s+/gi, ' ');
+
+	return lines_collapsed;
+
+};
+/* MENU ITEM FUNCTION
+ */
+if (komodo.view) { komodo.view.setFocus(); }
+
+var delimeter	= ko.interpolate.interpolateString(["%(ask:Delimeter:\\n)"])
+var wrapper	= ko.interpolate.interpolateString(["%(ask:Wrapper:)"])
+
+/* COLLAPSE WHITE SPACE WHEN LINES ARE COLLAPSED */
+var clear_whitespace = delimeter.match(/\\n/gi) ? false : true;
+
+
+var scimoz	= ko.views.manager.currentView.scimoz;
+var sel_text	= scimoz.selText;
+var word_cursor	= ko.interpolate.getWordUnderCursor(scimoz);
+
+if(sel_text !== "")
+	scimoz.replaceSel( collapseLines(sel_text, delimeter, wrapper, clear_whitespace) );

@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "file_current_extension", 
+  "value": [
+    "[[%tabstop:[[%tabstop:var ]][[%tabstop:current_filename]] = ]]ko.views.manager.currentView.koDoc.file.path.split(/[\\\\\\/]+/g).pop().split(/\\./g).pop()[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.0.12", 
+  "treat_as_ejs": "false", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//auto.png", 
+  "type": "snippet", 
+  "indent_relative": "false", 
+  "auto_abbreviation": "true"
+}

@@ -1,0 +1,51 @@
+
+komodo tool: file_search_in_path
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/** Search file or dir in path recursive
+ * 
+ * @example fileSearchInPath( 'C:\dir\subdir', 'file.txt' )	Search 'file.txt' in 'C:\dir\subdir', C:\dir' and 'C:\'
+ * @example fileSearchInPath( 'C:\dir\subdir', /.txt/g )	Search '.txt' files 
+ * 
+ * @param	string	path	Path where to search 
+ * @param	string|RegEx	search	File or dir to search
+ *
+ * @return	string|null	Path where of found OR null if not found
+ */
+var fileSearchInPath = function( path, search )
+{
+	var koFile	= require("ko/file"); 
+	var path_split	= path.split('\\');
+	var found_path	= null;
+	
+	if( search.constructor.name !== 'RegExp' )
+		search = new RegExp(search, 'gi');
+	
+	/** fileExists
+	*/
+	function fileExists()
+	{
+		var dir_path	= path_split.join('\\') + '\\';
+		var list	= koFile.list(dir_path);
+		
+		for(var i=0; i<list.length;i++)
+			if( list[i].match(  search ) && ! found_path  )
+				found_path = dir_path + list[i];
+
+		return  found_path !== null;
+	}
+	
+	while ( ! fileExists() && path_split.length > 1 )
+		path_split.pop();
+
+	return found_path ? found_path : null;
+	
+};[[%tabstop:]]!@#_currentPos!@#_anchor

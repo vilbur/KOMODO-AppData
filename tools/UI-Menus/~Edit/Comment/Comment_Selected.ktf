@@ -56,7 +56,7 @@ try {
             if (currentLanguage == 'SCSS' ) {   // if scss: /*fooComment*/ convert to /* fooComment */
                 /*	SCSS	*/
                 //alert( currentLanguage );
-                ko.commands.doCommand('cmd_comment')
+                //ko.commands.doCommand('cmd_comment')
 
                 //if (selectedText == '' ){
                     //ko.commands.doCommand('cmd_home')
@@ -71,11 +71,10 @@ try {
                 //    }
                 //}
 
-
-
-
-            }else {
-                /*	ANOTHER FILE TYPE	*/
+            }
+			else
+			{
+                /* ANOTHER FILE TYPE */
                 ko.commands.doCommand('cmd_comment')
 
             }

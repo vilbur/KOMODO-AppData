@@ -1,0 +1,13 @@
+
+komodo tool: Fileselectfile
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+Fileselectfile, $[[%tabstop1:selected_file]], [[%tabstop:M: Multi-select|S: Save button|1: File Must Exist|2: Path Must Exist|8: Prompt to Create New File|16: Prompt to OverWrite File]], [[%tabstop:A_ScriptDir]], [[%tabstop:Browse file]][[%tabstop:, [[%tabstop:Documents (*.txt)]]]]!@#_currentPos!@#_anchor

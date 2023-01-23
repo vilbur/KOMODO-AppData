@@ -1,0 +1,27 @@
+
+komodo tool: nclass
+================
+language:	       General
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+<% 
+	var Var = new ko.extensions.Variable()
+	var lang	= ko.views.manager.currentView.languageObj.name;
+	 
+	if(lang=='Komodo Snippet') lang='JavaScript'
+	
+%> 
+<% if(lang=='PHP') { %>
+DEFINE snippet 'nclass' for <%=lang%>
+<%
+} else if(lang=='Autohotkey') { %>
+[[%tabstop:$[[%tabstop1:Class]] 	:= ]]new [[%tabstop1:Class]][[%tabstop:]]();
+<% } else if(lang=='JavaScript') { %>
+[[%tabstop:[[%tabstop:var ]][[%tabstop1:Class]]	= ]]new [[%tabstop:ko.extensions.]][[%tabstop1:Class]]([[%tabstop:]][[%soft:)]][[%soft:;]][[%tabstop:]] <% } else { %>
+DEFINE snippet 'nclass' for <%=lang%><% } %>!@#_currentPos!@#_anchor

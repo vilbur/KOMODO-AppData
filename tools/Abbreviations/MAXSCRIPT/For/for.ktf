@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ================*/
-C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Abbreviations\MAXSCRIPT\For\fori.ktf!@#_currentPos!@#_anchor
+for [[%tabstop:var]] in [[%tabstop:selection]] [[%tabstop:where [[%tabstop: == GeometryClass]] ]][[%tabstop:do]] [[%tabstop:]]!@#_currentPos!@#_anchor

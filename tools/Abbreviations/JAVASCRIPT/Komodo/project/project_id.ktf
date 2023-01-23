@@ -1,0 +1,13 @@
+
+komodo tool: project_id
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:[[%tabstop:var]] [[%tabstop:project_id]]	= ]]ko.projects.manager.currentProject.id;[[%tabstop:]]!@#_currentPos!@#_anchor

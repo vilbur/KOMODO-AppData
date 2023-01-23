@@ -1,0 +1,15 @@
+
+komodo tool: fileReadToArray
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+$[[%tabstop1:lines]] := []
+Loop, read, [[%tabstop:file]]
+	$[[%tabstop1:lines]].insert( A_LoopReadLine )!@#_currentPos!@#_anchor

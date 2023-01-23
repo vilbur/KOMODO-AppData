@@ -1,0 +1,35 @@
+
+komodo tool: TestObejctProperties
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	var koFile	= require("ko/file");
+	var class_name = koFile.basename(ko.extensions.getCurrentFilePath()).split(/\./g).shift();
+	class_name = '[[%tabstop1:'+class_name+']]';
+
+%>
+/*	-------------------------------------------------------------------------------------------------------------	*/
+/*	TEST for <%=class_name%>	*/
+/*	Properties test for object	*/
+/*	-------------------------------------------------------------------------------------------------------------	*/
+
+ko.extensions.<%=class_name%>Test = (function() {
+	var	TestObject	= new ko.extensions.<%=class_name%>();
+	var	test_properties	= [[[%tabstop:'[[%tabstop:test_prop]]']]];
+	var	test_methods	= {
+		'[[%tabstop:[[%tabstop2:methodName]][[%tabstop:suffix]]]]': [[[%tabstop:'[[%tabstop:params]]']]],[[%tabstop:]]
+	};	
+	if(ko.extensions.TestObejctProperties)
+		(new ko.extensions.TestObejctProperties(method_toggle=[[%tabstop:true]], properties_toggle=[[%tabstop:true]], clear=[[%tabstop:true]]))
+			.test(TestObject, test_methods, test_properties);
+});
+/* RUN TEST */
+ko.extensions.<%=class_name%>Test();!@#_currentPos!@#_anchor

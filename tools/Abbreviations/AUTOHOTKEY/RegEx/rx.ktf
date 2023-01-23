@@ -1,0 +1,13 @@
+
+komodo tool: rx
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:$[[%tabstop1:string]]_[[%tabstop:match]]_count	:= ]]RegExMatch( [[%tabstop:$[[%tabstop1:string]]]], [[%tabstop:"i)[[%tabstop:search]]"]][[%tabstop:, $[[%tabstop1:string]]_[[%tabstop:match]]]] )!@#_currentPos!@#_anchor

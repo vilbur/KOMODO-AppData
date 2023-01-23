@@ -1,0 +1,28 @@
+
+komodo tool: ControlFocusedGetHwnd
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/**  
+ *	https://autohotkey.com/boards/viewtopic.php?t=23987
+ */
+GetFocusedControlHwnd( )
+{
+	GuiWindowHwnd := WinExist("A")		;stores the current Active Window Hwnd id number in "GuiWindowHwnd" variable
+					;"A" for Active Window
+	
+	ControlGetFocus, FocusedControl, ahk_id %GuiWindowHwnd%	;stores the  classname "ClassNN" of the current focused control from the window above in "FocusedControl" variable
+							;"ahk_id" searches windows by Hwnd Id number
+	
+	ControlGet, FocusedControlId, Hwnd,, %FocusedControl%, ahk_id %GuiWindowHwnd%	;stores the Hwnd Id number of the focused control found above in "FocusedControlId" variable
+	
+	return, FocusedControlId
+}
+!@#_currentPos!@#_anchor

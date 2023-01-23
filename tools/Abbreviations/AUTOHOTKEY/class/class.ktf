@@ -1,0 +1,37 @@
+
+komodo tool: class
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	var filename	= ko.views.manager.currentView.koDoc.file.baseName.split(/\./g).shift();
+	//capitalize filename and wrap to string
+	var ClassName	= '[[%tabstop1:'+filename[0].toUpperCase() + filename.slice(1)+']]';
+%>
+/** Class <%=ClassName%>
+*/
+Class <%=ClassName%>[[%tabstop: extends [[%tabstop:Class]]]]
+{
+
+	__New([[%tabstop:$[[%tabstop2:parameter]]:=[[%tabstop:"[[%tabstop4:value]]"]]]]){
+		[[%tabstop:this.[[%tabstop2:parameter]] := $[[%tabstop2:parameter]]]]
+		MsgBox,262144,, <%=ClassName%>, 2
+
+	}
+	
+}
+[[%tabstop:/* CALL CLASS FUNCTION
+*/
+<%=ClassName%>([[%tabstop:$[[%tabstop2:parameter]]:=[[%tabstop:"[[%tabstop4:value]]"]]]]){
+	return % new <%=ClassName%>($[[%tabstop2:parameter]])
+}
+/* EXECUTE CALL CLASS FUNCTION
+*/
+<%=ClassName%>()]]!@#_currentPos!@#_anchor

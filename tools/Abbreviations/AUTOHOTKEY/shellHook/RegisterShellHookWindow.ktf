@@ -1,0 +1,24 @@
+
+komodo tool: RegisterShellHookWindow
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+Gui +LastFound 
+$Hwnd := WinExist()
+DllCall( "RegisterShellHookWindow", UInt, $Hwnd )
+$MsgNum := DllCall( "RegisterWindowMessage", Str,"SHELLHOOK" )
+OnMessage( $MsgNum, "ShellMessage" )
+
+ShellMessage( $wParam, $lParam )
+{
+	WinGetTitle, $title, ahk_id %$lParam%
+	MsgBox,262144,$title, %$title%,3	 
+}
+!@#_currentPos!@#_anchor

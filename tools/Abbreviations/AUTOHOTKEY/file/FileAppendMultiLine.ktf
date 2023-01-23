@@ -1,0 +1,27 @@
+
+komodo tool: FileAppendMultiLine
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop: /** join object
+*/
+_joinObject($object, $delimeter:="`n")
+{
+   For $key, $value in $object
+	   $string .= $value $delimeter
+   
+   return % SubStr( $string, 1, StrLen($string) - (StrLen($delimeter)) )
+}]]
+
+$lines :=	[[[%tabstop:"[[%tabstop:line1]]"]] 
+	[[%tabstop:,"[[%tabstop:line2]]"]] 
+	[[%tabstop:,"[[%tabstop:line3]]"]] ]
+
+FileAppend, % this._joinObject($lines), [[%tabstop:%$[[%tabstop2:file_path]]%]][[%tabstop:]]!@#_currentPos!@#_anchor

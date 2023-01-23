@@ -1,0 +1,44 @@
+
+komodo tool: class_ko_extension_singleton
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	/* Snippet of class object with optionable for parent class
+	*/
+	var project	= ko.projects.manager.currentProject;
+	var project_name	= project ? project.url.match(/([^\/]+)\.komodoproject$/).pop() : '';
+
+	var data = ko.interpolate.interpolateString([
+					'%(ask1:Parent:'+project_name+')',
+					'%(ask2:ClassName:'+ko.interpolate.interpolateString('%b')+')',
+				]).split(',');
+		
+	var tabstop_parent	= data[0] ? '.[[%tabstop1:'+data[0]+']]' : null;
+	var tabstop_class	= '[[%tabstop2:'+data[1]+']]';	
+
+%>
+<%if( tabstop_parent ) { %>[[%tabstop:if( typeof ko.extensions<%=tabstop_parent%> === 'undefined' )
+	ko.extensions<%=tabstop_parent%> = {};
+	
+]]<% } %>[[%tabstop:if( typeof ko.extensions<%=tabstop_parent%>.<%=tabstop_class%> === 'undefined' )
+	]]ko.extensions<%=tabstop_parent%>.<%=tabstop_class%> = {};
+
+/** <%=tabstop_class%>
+
+ */
+(function()
+{
+	function <%=tabstop_class%>()
+	{
+		[[%tabstop:]]
+	}
+	return <%=tabstop_class%>;
+})().apply(ko.extensions<%=tabstop_parent%>.<%=tabstop_class%>);[[%tabstop:]]!@#_currentPos!@#_anchor

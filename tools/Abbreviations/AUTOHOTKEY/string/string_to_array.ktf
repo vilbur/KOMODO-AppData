@@ -1,0 +1,15 @@
+
+komodo tool: strToArr
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+$[[%tabstop1:string]][[%tabstop2:_array]] := Array()
+Loop, Parse, $[[%tabstop1:string]], %A_Space%
+	$[[%tabstop1:string]][[%tabstop2:_array]].insert(A_LoopField)!@#_currentPos!@#_anchor

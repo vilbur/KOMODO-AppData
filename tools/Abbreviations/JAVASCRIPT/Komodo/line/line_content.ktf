@@ -1,0 +1,13 @@
+
+komodo tool: line_content
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:var [[%tabstop:line_content]]	= ]][[%tabstop:koEditor]].getLine(line_current_num[[%tabstop:]])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor

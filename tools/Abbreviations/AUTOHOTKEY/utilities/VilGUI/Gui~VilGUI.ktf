@@ -1,0 +1,14 @@
+
+komodo tool: Gui
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+$[[%tabstop1:GUIname]]	:= new VilGUI("[[%tabstop1:GUIname]][[%tabstop:]]")[[%tabstop:]]
+$[[%tabstop1:GUIname]].show()!@#_currentPos!@#_anchor

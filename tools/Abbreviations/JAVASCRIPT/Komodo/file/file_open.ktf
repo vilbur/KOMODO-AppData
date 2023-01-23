@@ -1,0 +1,13 @@
+
+komodo tool: file_open
+================
+language:	       Javascript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+ko.open.URI([[%tabstop:file_path]])!@#_currentPos!@#_anchor

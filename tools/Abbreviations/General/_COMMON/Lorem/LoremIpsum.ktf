@@ -1,0 +1,15 @@
+
+komodo tool: Lrm
+================
+language:	       General
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:Príliš žlutoucký kun úpel dábelské ódy.]] 
+[[%tabstop:Necht již hríšné saxofony dáblu rozzvucí sín údesnými tóny waltzu, tanga a quickstepu.]] 
+[[%tabstop:Lorem ipsum luctus habitasse ac aenean donec ultrices maecenas arcu, risus primis sodales urna feugiat platea conubia volutpat duis nisl, eleifend netus dolor iaculis ante diam turpis duis]]!@#_currentPos!@#_anchor!@#_currentPos!@#_anchor

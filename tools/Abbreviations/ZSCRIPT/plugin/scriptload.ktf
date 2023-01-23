@@ -1,0 +1,16 @@
+/*
+komodo tool: scriptload
+=======================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=======================*/
+[IButton, "[[%tabstop1:Menu]]:[[%tabstop2:Plugin Name]]:[[%tabstop3:script_name]]", "Load [[%tabstop3:script_name]] script",
+   [FileNameSetNext,"[[%tabstop:path to script]]"]
+   [IPress,ZScript:Load]
+]!@#_currentPos!@#_anchor

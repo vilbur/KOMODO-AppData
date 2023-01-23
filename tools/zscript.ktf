@@ -1,0 +1,16 @@
+/*
+komodo tool: zscript
+====================
+lang_default: false
+language: Zscript
+treat_as_ejs: false
+type: template
+version: 1.1.5
+====================*/
+/*
+
+*/
+[If,1,
+   [Note, "Hello World!"]
+   
+]//end of zscript

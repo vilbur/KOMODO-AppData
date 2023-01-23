@@ -1,0 +1,13 @@
+/*
+komodo tool: trim
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================*/
+[[%tabstop:[[%tabstop1:string]][[%tabstop:]]	= ]]trimRight ( trimLeft [[%tabstop1:string]][[%tabstop: "[[%tabstop2:includes]]"]] ) [[%tabstop: "[[%tabstop2:includes]]"]][[%tabstop:]]!@#_currentPos!@#_anchor

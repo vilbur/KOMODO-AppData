@@ -1,0 +1,13 @@
+
+komodo tool: strTrR
+================
+language:	       Autohotkey
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     true
+is_clean:          true
+version:           1.1.5
+================
+StringTrimRight, $[[%tabstop:String]], $[[%tabstop:String]], [[%tabstop:count]]!@#_currentPos!@#_anchor
