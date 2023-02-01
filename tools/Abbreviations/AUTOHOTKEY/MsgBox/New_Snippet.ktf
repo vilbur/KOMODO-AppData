@@ -1,4 +1,4 @@
-//komodo tool: msgbox
+// komodo tool: New Snippet
 // ========================
 // auto_abbreviation: false
 // indent_relative: true
@@ -8,4 +8,4 @@
 // type: snippet
 // version: 1.1.5
 // ========================
-MsgBox,262144,[[%tabstop1:variable]], %[[%tabstop:$[[%tabstop1:variable]]]]%,[[%tabstop:3]][[%tabstop:]]!@#_currentPos!@#
+x!@#_currentPos!@#_anchor
