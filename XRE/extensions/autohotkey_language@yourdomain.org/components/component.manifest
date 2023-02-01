@@ -1,0 +1,4 @@
+category komodo-language Autohotkey @activestate.com/koLanguage?language=Autohotkey;1
+category komodo-language-info Autohotkey %7B%22name%22%3A%20%22Autohotkey%22%2C%20%22defaultExtension%22%3A%20%22.ahk%22%7D
+component {a2b27bca-43ea-4ba7-abf5-eeb3b7c2288e} koAutohotkey_UDL_Language.py
+contract @activestate.com/koLanguage?language=Autohotkey;1 {a2b27bca-43ea-4ba7-abf5-eeb3b7c2288e}

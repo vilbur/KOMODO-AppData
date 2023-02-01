@@ -27,3 +27,5 @@
 !/XRE/
 /XRE/*
 !/XRE/chrome/
+!XRE/extensions/
+

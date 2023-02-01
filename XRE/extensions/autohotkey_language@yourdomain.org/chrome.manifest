@@ -1,0 +1,6 @@
+content autohotkey_language content/
+skin autohotkey_language classic/1.0 skin/
+locale autohotkey_language en-US locale/en-US/
+
+manifest components/component.manifest
+category udl-lexers autohotkey_language@yourdomain.org 1

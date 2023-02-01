@@ -1,0 +1,6 @@
+content maxscriptlanguage content/
+skin maxscriptlanguage classic/1.0 skin/
+locale maxscriptlanguage en-US locale/en-US/
+
+manifest components/component.manifest
+category udl-lexers maxscript_language@yourdomain.org 1

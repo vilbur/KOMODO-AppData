@@ -1,0 +1,4 @@
+category komodo-language Maxscript @activestate.com/koLanguage?language=Maxscript;1
+component {13b828a7-e4af-4a72-aa56-a43be71d5312} koMaxscript_UDL_Language.py
+category komodo-language-info Maxscript %7B%22name%22%3A%20%22Maxscript%22%2C%20%22defaultExtension%22%3A%20%22.ms%22%7D
+contract @activestate.com/koLanguage?language=Maxscript;1 {13b828a7-e4af-4a72-aa56-a43be71d5312}

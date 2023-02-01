@@ -1,0 +1,9 @@
+StrAsk
+StrExtract
+StrFind
+StrFromAsc
+StrLength
+StrLower
+StrMerge
+StrToAsc
+StrUpper

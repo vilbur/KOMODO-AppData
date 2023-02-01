@@ -1,0 +1,4 @@
+component {08598ea1-faa9-4973-8552-be6d6e1dc134} Zscript.py
+category komodo-language Zscript @activestate.com/koLanguage?language=Zscript;1
+contract @activestate.com/koLanguage?language=Zscript;1 {08598ea1-faa9-4973-8552-be6d6e1dc134}
+category komodo-language-info Zscript %7B%22name%22%3A%20%22Zscript%22%2C%20%22defaultExtension%22%3A%20%22.txt%22%7D

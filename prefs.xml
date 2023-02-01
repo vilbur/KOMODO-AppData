@@ -919,7 +919,7 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur">
-  <string id="timestamp">1675230029292</string>
+  <string id="timestamp">1675230072601</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools">
@@ -1367,14 +1367,14 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 <preference-set id="1">
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1800/alphaid.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1818/teswtes.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1817/note.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1708/conf.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1801/alphaname.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://2044/conf.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1409/cl.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://2148/cl.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://713/ret.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://705/tabstop.snippet","tabIndex":3}]</string>
+  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1818/teswtes.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1817/note.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1708/conf.snippet","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1801/alphaname.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://2044/conf.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://1409/cl.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://2148/cl.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://713/ret.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://705/tabstop.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://2201/fn.snippet","tabIndex":3}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
   <string id="spv_projects">[]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1675230067</long>
+  <long id="timestamp">1675230143</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
@@ -1402,7 +1402,6 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Run-Zbrush-Without-Wifi.ahk?parentId=view-1</string>
 </ordered-preference>
 </preference-set>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <long id="windowNum">1</long>
 </preference-set>
 </preference-set>

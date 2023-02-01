@@ -1,0 +1,9 @@
+Note
+NoteBar
+NoteIButton
+NoteIGet
+NoteISwitch
+MessageOK
+MessageOKCancel
+MessageYesNo
+MessageYesNoCancel

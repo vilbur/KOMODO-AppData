@@ -1,0 +1,10 @@
+TLDeleteKeyFrame
+TLGetActiveTrackIndex
+TLGetKeyFramesCount
+TLGetKeyFrameTime
+TLGetTime
+TLGotoKeyFrameTime
+TLGotoTime
+TLNewKeyFrame
+TLSetActiveTrackIndex
+TLSetKeyFrameTime

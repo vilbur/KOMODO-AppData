@@ -1,0 +1,173 @@
+# UDL lexer for Autohotkey.
+#
+# Note: UDL is a state machine and it uses regular expressions to move between
+#       the different language states.
+#
+
+language Autohotkey
+
+################ Boilerplate ################
+
+# Boilerplate - need to start with family set to markup and IN_M_DEFAULT state,
+# we'll later perform a null-transition change to get into the SSL state.
+family markup
+initial IN_M_DEFAULT
+# Null-transition to get into SSL state
+state IN_M_DEFAULT:
+/./ : redo, => IN_SSL_DEFAULT
+
+################ Language Start ################
+
+family ssl # server side language
+
+# Specify the min and max styles we'll be referring to.
+start_style SSL_DEFAULT
+end_style SSL_VARIABLE
+
+# If the language has keywords, specify which style needs to be transformed
+keyword_style SSL_IDENTIFIER => SSL_WORD
+keywords [
+        # Keywords
+		'Class'
+]
+
+# Set the basic patterns we'll be using for styling transitions.
+# For most programming languages, names cannot start with a number, but they
+# often allow a number after the first character - e.g. "bar21a"
+pattern FIRSTNAMECHAR = '_a-zA-Z\x80-\xff' # names (identifier, keyword, variable...) only can start with these chars
+pattern NAMECHAR = '$FIRSTNAMECHAR\d'      # rest of the name, after the first char
+pattern WS = '\s\t\r\n'                    # whitespace
+pattern OP = '!#%&\(\)\*\+,-\.\/:;<=>\?@\[\]\^\{\}~|'  # operator characters - escaping special regex values
+
+#(?<!\w)()(?=\W*(?!\w))
+pattern NUMBER = '(\d+)'
+pattern FUNCTIONS = 'TV_Add|TV_Delete|TV_GetChild|TV_GetCount|TV_GetNext|TV_Get|TV_GetParent|TV_GetPrev|TV_GetSelection|TV_GetText|TV_Modify|LV_Add|LV_Delete|LV_DeleteCol|LV_GetCount|LV_GetNext|LV_GetText|LV_Insert|LV_InsertCol|LV_Modify|LV_ModifyCol|LV_SetImageList|Abs|ACos|Asc|ASin|ATan|Ceil|Chr|Cos|DllCall|Exp|FileExist|Floor|GetKeyState|IL_Add|IL_Create|IL_Destroy|InStr|IsLabel|Ln|Log|Mod|NumGet|NumPut|OnMessage|RegExMatch|RegExReplace|RegisterCallback|Round|SB_SetIcon|SB_SetParts|SB_SetText|Sin|Sqrt|StrLen|SubStr|Tan|VarSetCapacity|WinActive|WinExist|abs|aCos|asc|aSin|aTan|ceil|chr|cos|dllCall|exp|fileExist|floor|getKeyState|iL_Add|iL_Create|iL_Destroy|inStr|isLabel|ln|log|mod|numGet|numPut|onMessage|regExMatch|regExReplace|registerCallback|round|sB_SetIcon|sB_SetParts|sB_SetText|sin|sqrt|strLen|subStr|tan|varSetCapacity|winActive|winExist'
+pattern VARIABLES = 'A_AhkPath|A_AhkVersion|A_AppData|A_AppDataCommon|A_AutoTrim|A_BatchLines|A_CaretX|A_CaretY|A_ComputerName|A_ControlDelay|A_Cursor|A_DD|A_DDD|A_DDDD|A_DefaultMouseSpeed|A_Desktop|A_DesktopCommon|A_DetectHiddenText|A_DetectHiddenWindows|A_EndChar|A_EventInfo|A_ExitReason|A_FormatFloat|A_FormatInteger|A_Gui|A_GuiEvent|A_GuiControl|A_GuiControlEvent|A_GuiHeight|A_GuiWidth|A_GuiX|A_GuiY|A_Hour|A_IconFile|A_IconHidden|A_IconNumber|A_IconTip|A_Index|A_IPAddress1|A_IPAddress2|A_IPAddress3|A_IPAddress4|A_ISAdmin|A_IsCompiled|A_IsSuspended|A_KeyDelay|A_Language|A_LastError|A_LineFile|A_LineNumber|A_LoopField|A_LoopFileAttrib|A_LoopFileDir|A_LoopFileExt|A_LoopFileFullPath|A_LoopFileLongPath|A_LoopFileName|A_LoopFileShortName|A_LoopFileShortPath|A_LoopFileSize|A_LoopFileSizeKB|A_LoopFileSizeMB|A_LoopFileTimeAccessed|A_LoopFileTimeCreated|A_LoopFileTimeModified|A_LoopReadLine|A_LoopRegKey|A_LoopRegName|A_LoopRegSubkey|A_LoopRegTimeModified|A_LoopRegType|A_MDAY|A_Min|A_MM|A_MMM|A_MMMM|A_Mon|A_MouseDelay|A_MSec|A_MyDocuments|A_Now|A_NowUTC|A_NumBatchLines|A_OSType|A_OSVersion|A_PriorHotkey|A_ProgramFiles|A_Programs|A_ProgramsCommon|A_ScreenHeight|A_ScreenWidth|A_ScriptDir|A_ScriptFullPath|A_ScriptName|A_Sec|A_Space|A_StartMenu|A_StartMenuCommon|A_Startup|A_StartupCommon|A_StringCaseSense|A_Tab|A_Temp|A_ThisFunc|A_ThisHotkey|A_ThisLabel|A_ThisMenu|A_ThisMenuItem|A_ThisMenuItemPos|A_TickCount|A_TimeIdle|A_TimeIdlePhysical|A_TimeSincePriorHotkey|A_TimeSinceThisHotkey|A_TitleMatchMode|A_TitleMatchModeSpeed|A_UserName|A_WDay|A_WinDelay|A_WinDir|A_WorkingDir|A_YDay|A_YEAR|A_YWeek|A_YYYY|Clipboard|ClipboardAll|ComSpec|ErrorLevel|ProgramFiles|True|False|clipboard|clipboardAll|comSpec|errorLevel|programFiles'
+
+pattern KEYWORDS = 'new|true|false|True|False|Max|Min|max|min|#NoTrayIcon|#SingleInstance|Read|read|#IfWinActive|#IfWinExist|#IfWinNotActive|#IfWinNotExist|#Include|#IncludeAgain|#AllowSameLineComments|#ClipboardTimeout|#CommentFlag|#ErrorStdOut|#EscapeChar|#HotkeyInterval|#HotkeyModifierTimeout|#Hotstring|#InstallKeybdHook|#InstallMouseHook|#KeyHistory|#LTrim|#MaxHotkeysPerInterval|#MaxMem|#MaxThreads|#MaxThreadsBuffer|#MaxThreadsPerHotkey|#NoEnv|#NoTrayIcon|#Persistent|#SingleInstance|#UseHook|#WinActivateForce|Pixel|Mouse|Screen|Relative|RGB|LTrim|RTrim|Join|Low|BelowNormal|Normal|AboveNormal|High|Realtime|ahk_id|ahk_pid|ahk_class|ahk_group|Between|Contains|In|Is|Integer|Float|Number|Digit|Xdigit|Alpha|Upper|Lower|Alnum|Time|Date|Not|Or|And|AlwaysOnTop|Topmost|Top|Bottom|Transparent|TransColor|Redraw|Region|ID|IDLast|ProcessName|MinMax|ControlList|Count|List|Capacity|StatusCD|Eject|Lock|Unlock|Label|FileSystem|Label|SetLabel|Serial|Type|Status|static|global|local|ByRef|Seconds|Minutes|Hours|Days|Read|Parse|Logoff|Close|Error|Single|Tray|Add|Rename|Check|UnCheck|ToggleCheck|Enable|Disable|ToggleEnable|Default|NoDefault|Standard|NoStandard|Color|Delete|DeleteAll|Icon|NoIcon|Tip|Click|Show|MainWindow|NoMainWindow|UseErrorLevel|Text|Picture|Pic|GroupBox|Button|Checkbox|Radio|DropDownList|DDL|ComboBox|ListBox|ListView|DateTime|MonthCal|Slider|StatusBar|Tab|Tab2|TreeView|UpDown|IconSmall|Tile|Report|SortDesc|NoSort|NoSortHdr|Grid|Hdr|AutoSize|Range|xm|ym|ys|xs|xp|yp|Font|Resize|Owner|Submit|NoHide|Minimize|Maximize|Restore|NoActivate|NA|Cancel|Destroy|Center|Margin|MaxSize|MinSize|OwnDialogs|GuiEscape|GuiClose|GuiSize|GuiContextMenu|GuiDropFiles|TabStop|Section|AltSubmit|Wrap|HScroll|VScroll|Border|Top|Bottom|Buttons|Expand|First|ImageList|Lines|WantCtrlA|WantF2|Vis|VisFirst|Number|Uppercase|Lowercase|Limit|Password|Multi|WantReturn|Group|Background|bold|italic|strike|underline|norm|BackgroundTrans|Theme|Caption|Delimiter|MinimizeBox|MaximizeBox|SysMenu|ToolWindow|Flash|Style|ExStyle|Check3|Checked|CheckedGray|ReadOnly|Password|Hidden|Left|Right|Center|NoTab|Section|Move|Focus|Hide|Choose|ChooseString|Text|Pos|Enabled|Disabled|Visible|LastFound|LastFoundExist|AltTab|ShiftAltTab|AltTabMenu|AltTabAndMenu|AltTabMenuDismiss|NoTimers|Interrupt|Priority|WaitClose|Wait|Exist|Close|Blind|Click|Raw|Unicode|Asc|Chr|Deref|Mod|Pow|Exp|Sqrt|Log|Ln|Round|Ceil|Floor|Abs|Sin|Cos|Tan|ASin|ACos|ATan|BitNot|BitAnd|BitOr|BitXOr|BitShiftLeft|BitShiftRight|Yes|No|Ok|Cancel|Abort|Retry|Ignore|TryAgain|On|Off|All|HKEY_LOCAL_MACHINE|HKEY_USERS|HKEY_CURRENT_USER|HKEY_CLASSES_ROOT|HKEY_CURRENT_CONFIG|HKLM|HKU|HKCU|HKCR|HKCC|REG_SZ|REG_EXPAND_SZ|REG_MULTI_SZ|REG_DWORD|REG_BINARY|pixel|mouse|screen|relative|rGB|lTrim|rTrim|join|low|belowNormal|normal|aboveNormal|high|realtime|ahk_id|ahk_pid|ahk_class|ahk_group|between|contains|in|is|integer|float|number|digit|xdigit|alpha|upper|lower|alnum|time|date|not|or|and|alwaysOnTop|topmost|top|bottom|transparent|transColor|redraw|region|iD|iDLast|processName|minMax|controlList|count|list|capacity|statusCD|eject|lock|unlock|label|fileSystem|label|setLabel|serial|type|status|static|global|local|byRef|seconds|minutes|hours|days|read|parse|logoff|close|error|single|tray|add|rename|check|unCheck|toggleCheck|enable|disable|toggleEnable|default|noDefault|standard|noStandard|color|delete|deleteAll|icon|noIcon|tip|click|show|mainWindow|noMainWindow|useErrorLevel|text|picture|pic|groupBox|button|checkbox|radio|dropDownList|dDL|comboBox|listBox|listView|dateTime|monthCal|slider|statusBar|tab|tab2|treeView|upDown|iconSmall|tile|report|sortDesc|noSort|noSortHdr|grid|hdr|autoSize|range|xm|ym|ys|xs|xp|yp|font|resize|owner|submit|noHide|minimize|maximize|restore|noActivate|nA|cancel|destroy|center|margin|maxSize|minSize|ownDialogs|guiEscape|guiClose|guiSize|guiContextMenu|guiDropFiles|tabStop|section|altSubmit|wrap|hScroll|vScroll|border|top|bottom|buttons|expand|first|imageList|lines|wantCtrlA|wantF2|vis|visFirst|number|uppercase|lowercase|limit|password|multi|wantReturn|group|background|bold|italic|strike|underline|norm|backgroundTrans|theme|caption|delimiter|minimizeBox|maximizeBox|sysMenu|toolWindow|flash|style|exStyle|check3|checked|checkedGray|readOnly|password|hidden|left|right|center|noTab|section|move|focus|hide|choose|chooseString|text|pos|enabled|disabled|visible|lastFound|lastFoundExist|altTab|shiftAltTab|altTabMenu|altTabAndMenu|altTabMenuDismiss|noTimers|interrupt|priority|waitClose|wait|exist|close|blind|click|raw|unicode|asc|chr|deref|mod|pow|exp|sqrt|log|ln|round|ceil|floor|abs|sin|cos|tan|aSin|aCos|aTan|bitNot|bitAnd|bitOr|bitXOr|bitShiftLeft|bitShiftRight|yes|no|ok|cancel|abort|retry|ignore|tryAgain|on|off|all|hKEY_LOCAL_MACHINE|hKEY_USERS|hKEY_CURRENT_USER|hKEY_CLASSES_ROOT|hKEY_CURRENT_CONFIG|hKLM|hKU|hKCU|hKCR|hKCC|rEG_SZ|rEG_EXPAND_SZ|rEG_MULTI_SZ|rEG_DWORD|rEG_BINARY'
+
+pattern COMMANDS = 'AutoTrim|BlockInput|Click|ClipWait|Control|ControlClick|ControlFocus|ControlGet|ControlGetFocus|ControlGetPos|ControlGetText|ControlMove|ControlSend|ControlSendRaw|ControlSetText|CoordMode|Critical|DetectHiddenText|DetectHiddenWindows|Drive|DriveGet|DriveSpaceFree|Edit|EnvAdd|EnvDiv|EnvGet|EnvMult|EnvSet|EnvSub|EnvUpdate|Exit|ExitApp|FileAppend|FileCopy|FileCopyDir|FileCreateDir|FileCreateShortcut|FileDelete|FileGetAttrib|FileGetShortcut|FileGetSize|FileGetTime|FileGetVersion|FileInstall|FileMove|FileMoveDir|FileRead|FileReadLine|FileRecycle|FileRecycleEmpty|FileRemoveDir|FileSelectFile|FileSelectFolder|FileSetAttrib|FileSetTime|FormatTime|GetKeyState|GroupActivate|GroupAdd|GroupClose|GroupDeactivate|Gui|GuiControl|GuiControlGet|Hotkey|ImageSearch|IniDelete|IniRead|IniWrite|Input|InputBox|KeyHistory|KeyWait|ListHotkeys|ListLines|ListVars|Menu|MouseClick|MouseClickDrag|MouseGetPos|MouseMove|MsgBox|OutputDebug|PixelGetColor|PixelSearch|PostMessage|Process|Progress|Random|RegDelete|RegRead|RegWrite|Reload|Repeat|Run|RunAs|RunWait|Send|SendEvent|SendInput|SendMessage|SendMode|SendPlay|SendRaw|SetBatchLines|SetCapslockState|SetControlDelay|SetDefaultMouseSpeed|SetEnv|SetFormat|SetKeyDelay|SetMouseDelay|SetNumlockState|SetScrollLockState|SetStoreCapslockMode|SetTitleMatchMode|SetWinDelay|SetWorkingDir|Sleep|Sort|SoundBeep|SoundGet|SoundGetWaveVolume|SoundPlay|SoundSet|SoundSetWaveVolume|SplashImage|SplashTextOff|SplashTextOn|SplitPath|StatusBarGetText|StatusBarWait|StringCaseSense|StringGetPos|StringLeft|StringLen|StringLower|StringMid|StringReplace|StringRight|StringSplit|StringTrimLeft|StringTrimRight|StringUpper|Suspend|SysGet|Thread|ToolTip|Transform|TrayTip|URLDownloadToFile|WinActivate|WinActivateBottom|WinClose|WinGet|WinGetActiveStats|WinGetActiveTitle|WinGetClass|WinGetPos|WinGetText|WinGetTitle|WinHide|WinKill|WinMaximize|WinMenuSelectItem|WinMinimize|WinMinimizeAll|WinMinimizeAllUndo|WinMove|WinRestore|WinSet|WinSetTitle|WinShow|WinWait|WinWaitActive|WinWaitClose|WinWaitNotActive|autoTrim|blockInput|click|clipWait|control|controlClick|controlFocus|controlGet|controlGetFocus|controlGetPos|controlGetText|controlMove|controlSend|controlSendRaw|controlSetText|coordMode|critical|detectHiddenText|detectHiddenWindows|drive|driveGet|driveSpaceFree|edit|envAdd|envDiv|envGet|envMult|envSet|envSub|envUpdate|exit|exitApp|fileAppend|fileCopy|fileCopyDir|fileCreateDir|fileCreateShortcut|fileDelete|fileGetAttrib|fileGetShortcut|fileGetSize|fileGetTime|fileGetVersion|fileInstall|fileMove|fileMoveDir|fileRead|fileReadLine|fileRecycle|fileRecycleEmpty|fileRemoveDir|fileSelectFile|fileSelectFolder|fileSetAttrib|fileSetTime|formatTime|getKeyState|groupActivate|groupAdd|groupClose|groupDeactivate|gui|guiControl|guiControlGet|hotkey|imageSearch|iniDelete|iniRead|iniWrite|input|inputBox|keyHistory|keyWait|listHotkeys|listLines|listVars|menu|mouseClick|mouseClickDrag|mouseGetPos|mouseMove|msgBox|outputDebug|pixelGetColor|pixelSearch|postMessage|process|progress|random|regDelete|regRead|regWrite|reload|repeat|run|runAs|runWait|send|sendEvent|sendInput|sendMessage|sendMode|sendPlay|sendRaw|setBatchLines|setCapslockState|setControlDelay|setDefaultMouseSpeed|setEnv|setFormat|setKeyDelay|setMouseDelay|setNumlockState|setScrollLockState|setStoreCapslockMode|setTitleMatchMode|setWinDelay|setWorkingDir|sleep|sort|soundBeep|soundGet|soundGetWaveVolume|soundPlay|soundSet|soundSetWaveVolume|splashImage|splashTextOff|splashTextOn|splitPath|statusBarGetText|statusBarWait|stringCaseSense|stringGetPos|stringLeft|stringLen|stringLower|stringMid|stringReplace|stringRight|stringSplit|stringTrimLeft|stringTrimRight|stringUpper|suspend|sysGet|thread|toolTip|transform|trayTip|uRLDownloadToFile|winActivate|winActivateBottom|winClose|winGet|winGetActiveStats|winGetActiveTitle|winGetClass|winGetPos|winGetText|winGetTitle|winHide|winKill|winMaximize|winMenuSelectItem|winMinimize|winMinimizeAll|winMinimizeAllUndo|winMove|winRestore|winSet|winSetTitle|winShow|winWait|winWaitActive|winWaitClose|winWaitNotActive'
+pattern CONTROLCOMMANDS = 'While|While|For|for|Break|Continue|Exit|ExitApp|Gosub|Goto|If|Else|Return|IfEqual|IfExist|IfGreater|IfGreaterOrEqual|IfInString|IfLess|IfLessOrEqual|IfMsgBox|IfNotEqual|IfNotExist|IfNotInString|IfWinActive|IfWinExist|IfWinNotActive|IfWinNotExist|Loop|OnExit|Pause|SetTimer|Shutdown|break|continue|exit|exitApp|gosub|goto|if|else|return|ifEqual|ifExist|ifGreater|ifGreaterOrEqual|ifInString|ifLess|ifLessOrEqual|ifMsgBox|ifNotEqual|ifNotExist|ifNotInString|ifWinActive|ifWinExist|ifWinNotActive|ifWinNotExist|loop|onExit|pause|setTimer|shutdown'
+
+pattern KEYNAMES = 'Object|object|Shift|LShift|RShift|Alt|LAlt|RAlt|LControl|RControl|Ctrl|LCtrl|RCtrl|LWin|RWin|AppsKey|AltDown|AltUp|ShiftDown|ShiftUp|CtrlDown|CtrlUp|LWinDown|LWinUp|RWinDown|RWinUp|LButton|RButton|MButton|WheelUp|WheelDown|XButton1|XButton2|Joy1|Joy2|Joy3|Joy4|Joy5|Joy6|Joy7|Joy8|Joy9|Joy10|Joy11|Joy12|Joy13|Joy14|Joy15|Joy16|Joy17|Joy18|Joy19|Joy20|Joy21|Joy22|Joy23|Joy24|Joy25|Joy26|Joy27|Joy28|Joy29|Joy30|Joy31|Joy32|JoyX|JoyY|JoyZ|JoyR|JoyU|JoyV|JoyPOV|JoyName|JoyButtons|JoyAxes|JoyInfo|Space|Tab|Enter|Escape|Esc|BackSpace|BS|Delete|Del|Insert|Ins|PGUP|PGDN|Home|End|Up|Down|Left|Right|PrintScreen|CtrlBreak|Pause|ScrollLock|CapsLock|NumLock|Numpad0|Numpad1|Numpad2|Numpad3|Numpad4|Numpad5|Numpad6|Numpad7|Numpad8|Numpad9|NumpadMult|NumpadAdd|NumpadSub|NumpadDiv|NumpadDot|NumpadDel|NumpadIns|NumpadClear|NumpadUp|NumpadDown|NumpadLeft|NumpadRight|NumpadHome|NumpadEnd|NumpadPgup|NumpadPgdn|NumpadEnter|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|F11|F12|F13|F14|F15|F16|F17|F18|F19|F20|F21|F22|F23|F24|Browser_Back|Browser_Forward|Browser_Refresh|Browser_Stop|Browser_Search|Browser_Favorites|Browser_Home|Volume_Mute|Volume_Down|Volume_Up|Media_Next|Media_Prev|Media_Stop|Media_Play_Pause|Launch_Mail|Launch_Media|Launch_App1|Launch_App2|shift|lShift|rShift|alt|lAlt|rAlt|control|lControl|rControl|ctrl|lCtrl|rCtrl|lWin|rWin|appsKey|altDown|altUp|shiftDown|shiftUp|ctrlDown|ctrlUp|lWinDown|lWinUp|rWinDown|rWinUp|lButton|rButton|mButton|wheelUp|wheelDown|xButton1|xButton2|joy1|joy2|joy3|joy4|joy5|joy6|joy7|joy8|joy9|joy10|joy11|joy12|joy13|joy14|joy15|joy16|joy17|joy18|joy19|joy20|joy21|joy22|joy23|joy24|joy25|joy26|joy27|joy28|joy29|joy30|joy31|joy32|joyX|joyY|joyZ|joyR|joyU|joyV|joyPOV|joyName|joyButtons|joyAxes|joyInfo|space|tab|enter|escape|esc|backSpace|bS|delete|del|insert|ins|pGUP|pGDN|home|end|up|down|left|right|printScreen|ctrlBreak|pause|scrollLock|capsLock|numLock|numpad0|numpad1|numpad2|numpad3|numpad4|numpad5|numpad6|numpad7|numpad8|numpad9|numpadMult|numpadAdd|numpadSub|numpadDiv|numpadDot|numpadDel|numpadIns|numpadClear|numpadUp|numpadDown|numpadLeft|numpadRight|numpadHome|numpadEnd|numpadPgup|numpadPgdn|numpadEnter|f1|f2|f3|f4|f5|f6|f7|f8|f9|f10|f11|f12|f13|f14|f15|f16|f17|f18|f19|f20|f21|f22|f23|f24|browser_Back|browser_Forward|browser_Refresh|browser_Stop|browser_Search|browser_Favorites|browser_Home|volume_Mute|volume_Down|volume_Up|media_Next|media_Prev|media_Stop|media_Play_Pause|launch_Mail|launch_Media|launch_App1|launch_App2'
+
+################ Default Style ################
+
+# Define what happens when in default (initial) state. This is where we set up
+# the transitions to other states.
+state IN_SSL_DEFAULT:
+
+# ----------- Entering Comments ---------- #
+
+# C-style one line comments
+#'//' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
+
+# Hash-style one line comments
+#'#' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
+
+# SQL-style one line comments
+#'--' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
+
+# Lisp-style one line comments
+';' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
+
+# Erlang-style one line comments
+#'%' : paint(upto, SSL_DEFAULT),  => IN_SSL_COMMENT_TO_EOL
+
+# C-style block comments
+'/*' : paint(upto, SSL_DEFAULT), => IN_SSL_COMMENT_C_BLOCK
+
+# Pascal-style block comments
+#'(*' : paint(upto, SSL_DEFAULT), => IN_SSL_COMMENT_PASCAL_BLOCK
+
+# ----------- Entering Whitespace ---------- #
+
+# Just stay in whatever style we currently are using.
+/[$WS]+/  : #stay
+
+# ----------- Entering Strings ---------- #
+
+'"' : paint(upto, SSL_DEFAULT), => IN_SSL_DSTRING
+#'\'' : paint(upto, SSL_DEFAULT), => IN_SSL_SSTRING
+#'`' : paint(upto, SSL_DEFAULT), => IN_SSL_XSTRING
+
+# ----------- Entering Numbers ---------- #
+
+# Go process a number, try to do it in regexes octal and hex first.
+#/0[Xx][0-9a-fA-F]+/ : paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER)  # Hex numbers
+#/[-+]?0[0-7]*/ : paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER)       # Octal numbers
+#/[-+]?[1-9]+/ : paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER)        # Regular numbers
+
+# color: orange
+/(?<!\w)($NUMBER)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, SSL_NUMBER) # Regular numbers
+
+/(?<!\w)($FUNCTIONS)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, M_ATTRNAME)
+
+# color: green
+/(?<!\w)($COMMANDS)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, SSL_WORD)
+/(?<!\w)($CONTROLCOMMANDS)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, SSL_WORD)
+/[Cc]lass\s+\w+/	: paint(upto, SSL_DEFAULT), paint(include, SSL_WORD)
+/\w+(?=\s*\(.*\))/	: paint(upto, SSL_DEFAULT), paint(include, SSL_WORD )	# colorize all functions e.g: fooFunction()
+
+/this/	: paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)	# class variable this.*
+#/this\.\w+(?!\()/	: paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)	# class variable this.*
+
+# color: red
+/(?<!\w)($VARIABLES)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, SSL_VARIABLE)
+/[\$]\w+/	: paint(upto, SSL_DEFAULT), paint(include, SSL_VARIABLE) # variable starts with$
+/(?<=this\.)\w+/	: paint(upto, SSL_DEFAULT), paint(include, SSL_VARIABLE)
+
+# color: blue
+/(?<!\w)($KEYWORDS)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)
+/(?<!\w)($KEYNAMES)(?!\w)/	: paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)
+
+# ----------- Entering Identifiers ---------- #
+
+#/[$FIRSTNAMECHAR][$NAMECHAR]*/ : paint(upto, SSL_DEFAULT), paint(include, SSL_IDENTIFIER)
+
+# ----------- Entering Operators ---------- #
+
+/[$OP]/ : paint(upto, SSL_DEFAULT), paint(include, SSL_OPERATOR)
+/%\s*\$*\w+/ : paint(upto, SSL_VARIABLE), paint(include, SSL_VARIABLE) # colorize LIKE VARIABLES: %var% | %$var% | % var | % $var | % this.var
+
+
+################ In Comments - determines how we exit a comment ################
+
+state IN_SSL_COMMENT_TO_EOL: 
+/[\r\n]/ : paint(upto, SSL_COMMENT), => IN_SSL_DEFAULT  # back to default state
+
+state IN_SSL_COMMENT_C_BLOCK: 
+'*/' : paint(include, SSL_COMMENTBLOCK), => IN_SSL_DEFAULT  # back to default state
+
+state IN_SSL_COMMENT_PASCAL_BLOCK: 
+'*)' : paint(include, SSL_COMMENTBLOCK), => IN_SSL_DEFAULT  # back to default state
+
+################ In Strings - determines how we exit a string ################
+
+state IN_SSL_DSTRING:
+'"' : paint(include, SSL_STRING), => IN_SSL_DEFAULT  # back to default state
+/\\./ : #stay, anything escaped means it's still a string
+
+#state IN_SSL_SSTRING:
+#'\'' : paint(include, SSL_STRING), => IN_SSL_DEFAULT  # back to default state
+#/\\./ : #stay, anything escaped means it's still a string
+
+#state IN_SSL_XSTRING:
+#'`' : paint(include, SSL_STRING), => IN_SSL_DEFAULT  # back to default state
+#/\\./ : #stay, anything escaped means it's still a string
+
+################ End of State Handling ################
+
+
+################ Fold Handling ################
+
+# Uncomment to enable folding on "{" and "}"
+
+fold "{" SSL_OPERATOR +
+fold "}" SSL_OPERATOR -
+
+
+fold "/*"	SSL_COMMENTBLOCK +
+fold "*/"	SSL_COMMENTBLOCK -
+
+################ End of Fold Handling ################

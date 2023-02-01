@@ -1,0 +1,8 @@
+CurveAddPoint
+CurvesCreateMesh
+CurvesDelete
+CurvesNewCurve
+CurvesNewCurve
+CurvesNew
+CurvesToUI
+CurvesToUI

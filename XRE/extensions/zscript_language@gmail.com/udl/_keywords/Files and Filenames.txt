@@ -1,0 +1,16 @@
+FileDelete
+FileExecute
+FileExists
+FileGetInfo
+FileNameAdvance
+FileNameAsk
+FileNameExtract
+FileNameGetLastTyped
+FileNameGetLastUsed
+FileNameGetNext
+FileNameHasNext
+FileNameMake
+FileNameResolvePath
+FileNameSetNext
+FileTemplateGetNext
+ShellExecute
