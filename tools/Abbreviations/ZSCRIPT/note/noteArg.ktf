@@ -1,5 +1,5 @@
 /*
-komodo tool: alphaid
+komodo tool: noteArg
 ====================
 auto_abbreviation: false
 indent_relative: true
@@ -10,4 +10,4 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ====================*/
-[IGet, ALPHA:ItemInfo]!@#_currentPos!@#_anchor
+[Note, [[%tabstop:"[[%tabstop:Text]]"]][[%tabstop:, , (0:wait for user action(default), -1:combine with next note command)]]]!@#_currentPos!@#_anchor

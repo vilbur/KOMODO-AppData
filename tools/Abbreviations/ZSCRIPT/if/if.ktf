@@ -1,6 +1,6 @@
 /*
-komodo tool: ifmem
-==================
+komodo tool: if
+===============
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
@@ -9,10 +9,10 @@ set_selection: false
 treat_as_ejs: true
 type: snippet
 version: 1.1.5
-==================*/
-[If, [[[%tabstop:MemGetSize]], $[[%tabstop1:var_mame]]],
+===============*/
+[If, [[%tabstop:Condition]]
 , // THEN
-	[[%tabstop:memget]]
+	[[%tabstop:]]
 , // ELSE
-	[[%tabstop:else]]
+	[[%tabstop:]]
 ][[%tabstop:]]!@#_currentPos!@#_anchor

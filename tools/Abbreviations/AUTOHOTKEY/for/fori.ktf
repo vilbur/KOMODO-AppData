@@ -1,0 +1,16 @@
+/*
+komodo tool: fori
+=================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: true
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+Loop, [[%tabstop:count]]
+{
+   [[%tabstop:MsgBox, %A_Index%]]
+}!@#_currentPos!@#_anchor

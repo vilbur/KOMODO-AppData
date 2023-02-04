@@ -1,0 +1,19 @@
+/*
+komodo tool: getDownloadsPath
+=============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: true
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=============================*/
+/** Get system path to downloads folder
+  */
+getDownloadsPath() {
+	RegRead, $v, HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders, {374DE290-123F-4565-9164-39C4925E467B}
+	return ComObjCreate("WScript.Shell").ExpandEnvironmentStrings($v)
+}
+[[%tabstop:msgbox % getDownloadsPath()]]!@#_currentPos!@#_anchor

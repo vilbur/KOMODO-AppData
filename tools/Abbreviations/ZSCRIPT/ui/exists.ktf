@@ -1,13 +1,13 @@
 /*
-komodo tool: memget
+komodo tool: exists
 ===================
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
 language: Zscript
 set_selection: false
-treat_as_ejs: true
+treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ===================*/
-[[[%tabstop:MVarGet]], $[[%tabstop1:var_mame]],	[[%tabstop:index]]]!@#_currentPos!@#_anchor
+[IExists, [[%tabstop:Interface item path]]]!@#_currentPos!@#_anchor

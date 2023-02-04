@@ -10,4 +10,4 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ==================*/
-[ [[%tabstop:MemGetSize]], "[[%tabstop1:var_mame]]" ]!@#_currentPos!@#_anchor
+[[[%tabstop:MemGetSize]], $[[%tabstop1:var_mame]]]!@#_currentPos!@#_anchor

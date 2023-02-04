@@ -10,4 +10,4 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ===================*/
-[ [[%tabstop:MVarSet]], "[[%tabstop:var_mame]]",	[[%tabstop:index]],	[[%tabstop:value]] ]!@#_currentPos!@#_anchor
+[[[%tabstop:MVarSet]], $[[%tabstop1:var_mame]],	[[%tabstop:index]],	[[%tabstop:value]]]!@#_currentPos!@#_anchor

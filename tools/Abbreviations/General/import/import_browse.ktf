@@ -101,6 +101,11 @@ function getSnippetValue()
 			//return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
 			return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
 		};
+		this.Zscript = function()
+		{
+			return '<zscriptinsert, "'+path_relative.substring(3)+'">';
+		};
+
 		/* Import snippets to *.xul files
 		 *
 		 * <!ENTITY % fooDTD SYSTEM "chrome://Extension/locale/en-US/foo.dtd">%fooDTD;
@@ -183,7 +188,7 @@ function getSnippetValue()
 			return '[[%tabstop:]]' + path_relative + '[[%tabstop:]]';
 		};
 
-		console.log(  'lang: ' + lang );
+		console.log(  'import_browse:LANG: ' + lang );
 
 		return typeof this[lang] !== 'undefined' ? this[lang]() : getDefault()
 	};

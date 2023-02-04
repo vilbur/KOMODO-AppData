@@ -1,0 +1,25 @@
+/*
+komodo tool: folderExists
+=========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=========================*/
+[[%tabstop://[VarSet, $ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
+[VarSet, $folder_path, [[%tabstop:"[[%tabstop:Path\To\Folder]]"]] ]
+[VarSet, folder_path, [FileNameResolvePath, $folder_path]]
+[VarSet, folderExists, [FileExecute, $ZFILE_UTILS_DLL, "FolderExists",  #folder_path]] // delete files in folder
+[If, folderExists
+, // folder exists
+	[Note,"Folder exists.",,3]
+, // folder not exists
+	[Note,"Folder does not exist.",,3]
+]
+
+
+!@#_currentPos!@#_anchor

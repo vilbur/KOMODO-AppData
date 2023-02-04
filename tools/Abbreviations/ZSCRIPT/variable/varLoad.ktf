@@ -1,0 +1,18 @@
+/*
+komodo tool: varLoad
+====================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+====================*/
+[VarSet, $[[%tabstop1:filename]], [StrMerge, [[%tabstop:"[[%tabstop:Subdir]]/"]], "filename", "[[%tabstop:suffix]]", ".zvr"]]
+
+[VarLoad, $[[%tabstop2:var_name]], $[[%tabstop1:filename]]]
+//Note
+//[Note, $[[%tabstop2:var_name]]]
+!@#_currentPos!@#_anchor

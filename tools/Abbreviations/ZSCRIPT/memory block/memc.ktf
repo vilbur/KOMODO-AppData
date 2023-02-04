@@ -10,4 +10,4 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 =================*/
-[ [[%tabstop:MemCreate]], [[%tabstop:block_mame]], [[%tabstop:length]][[%tabstop:, 0]] ]!@#_currentPos!@#_anchor
+[[[%tabstop:MemCreate]], [[%tabstop:block_mame]], [[%tabstop:length]][[%tabstop:, 0]]]!@#_currentPos!@#_anchor

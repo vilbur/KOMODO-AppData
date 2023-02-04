@@ -1,6 +1,6 @@
 /*
-komodo tool: note
-=================
+komodo tool: alphaLoad
+======================
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
@@ -9,5 +9,5 @@ set_selection: false
 treat_as_ejs: true
 type: snippet
 version: 1.1.5
-=================*/
-[Note, [[%tabstop:"[[%tabstop:Text]]"]] ]!@#_currentPos!@#_anchor
+======================*/
+[IPress,Alpha:[[%tabstop:Alpha 01]]][[%tabstop:]]!@#_currentPos!@#_anchor

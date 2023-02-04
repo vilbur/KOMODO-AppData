@@ -1,0 +1,13 @@
+/*
+komodo tool: ?
+==============
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+==============*/
+[If, [[%tabstop:Condition]]	,[VarSet, $[[%tabstop1:var_name]], [[%tabstop:value]]]	,[VarSet, $[[%tabstop1:var_name]], [[%tabstop:value]]]]!@#_currentPos!@#_anchor

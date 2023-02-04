@@ -1,13 +1,13 @@
 /*
-komodo tool: alphaid
+komodo tool: palette
 ====================
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
 language: Zscript
 set_selection: false
-treat_as_ejs: true
+treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ====================*/
-[IGet, ALPHA:ItemInfo]!@#_currentPos!@#_anchor
+[If, ! [IExists, "[[%tabstop1:Palerte Name]]"], [IPalette, "[[%tabstop1:Palerte Name]]"]]!@#_currentPos!@#_anchor

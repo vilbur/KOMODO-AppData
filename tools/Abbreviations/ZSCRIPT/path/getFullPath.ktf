@@ -1,0 +1,15 @@
+/*
+komodo tool: getFullPath
+========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+========================*/
+[VarSet, $[[%tabstop1:filename]], "[[%tabstop:Relative\Path]]"]
+
+[VarSet, $[[%tabstop1:filename]], [FileNameResolvePath, $[[%tabstop1:filename]]]]!@#_currentPos!@#_anchor

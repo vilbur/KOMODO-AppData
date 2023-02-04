@@ -1,0 +1,23 @@
+/*
+komodo tool: fnr
+================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+================*/
+/** [[%tabstop1:routineName]]
+  *
+  */
+[RoutineDef, [[%tabstop1:routineName]]
+,
+	[[%tabstop:]]
+	[VarSet,$[[%tabstop2:result]], "[[%tabstop:value]]" ]
+, // PARAMS
+	$[[%tabstop2:result]]
+] // END [[%tabstop1:routineName]]()
+//[ IButton, "[[%tabstop1:routineName]]()" , "", [VarDef, $[[%tabstop2:result]], "[[%tabstop:Init Value]]"] [RoutineCall, [[%tabstop1:routineName]], $[[%tabstop2:result]]] [Note, $[[%tabstop2:result]]] ]!@#_currentPos!@#_anchor

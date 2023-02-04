@@ -10,11 +10,14 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ===============*/
-[ RoutineDef, [[%tabstop1:routineName]],
-	[[%tabstop://code]]
-
-
-, // PARAMS
-	[[%tabstop:params]]
-
-] // END [[%tabstop1:routineName]]!@#_currentPos!@#_anchor
+/** [[%tabstop1:routineName]]
+  *
+  */
+[RoutineDef, [[%tabstop1:routineName]]
+,
+	[Note, [[%tabstop1:routineName]]]
+	[[%tabstop:]]
+[[%tabstop:, // PARAMS
+	[[%tabstop:]]]]
+] // END [[%tabstop1:routineName]]()
+//[ IButton, "[[%tabstop1:routineName]]()" , "", [RoutineCall, [[%tabstop1:routineName]]] ]!@#_currentPos!@#_anchor

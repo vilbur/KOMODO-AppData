@@ -1,13 +1,13 @@
 /*
-komodo tool: var
+komodo tool: msg
 ================
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
-language: Zscript
+language: Autohotkey
 set_selection: false
 treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ================*/
-[VarSet, [[%tabstop:var_name]], [[%tabstop:value]]]!@#_currentPos!@#_anchor
+MsgBox,262144,[[%tabstop1:variable]], %[[%tabstop:$[[%tabstop1:variable]]]]%,[[%tabstop:3]][[%tabstop:]]!@#_currentPos!@#_anchor
