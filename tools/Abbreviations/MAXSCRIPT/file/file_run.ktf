@@ -1,13 +1,13 @@
 /*
-komodo tool: strMerge
+komodo tool: file_run
 =====================
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
-language: Zscript
+language: Maxscript
 set_selection: false
 treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =====================*/
-[StrMerge, [[%tabstop:"[[%tabstop:]]"]], [[%tabstop:"[[%tabstop:]]"]]][[%tabstop:]]!@#_currentPos!@#_anchor
+DOSCommand [[%tabstop:"[[%tabstop:Start \"\"]] \"[[%tabstop:Path]]\" \"[[%tabstop:Parameters]]\"]]"!@#_currentPos!@#_anchor

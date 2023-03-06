@@ -103,7 +103,7 @@ function getSnippetValue()
 		};
 		this.Zscript = function()
 		{
-			return '<zscriptinsert, "'+path_relative.substring(3)+'">';
+			return '<zscriptinsert, "'+path_relative.substring(3)+'">	// "' + path_relative.substring(1)+'"';
 		};
 
 		/* Import snippets to *.xul files

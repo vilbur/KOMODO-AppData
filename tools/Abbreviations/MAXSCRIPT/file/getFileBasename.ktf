@@ -1,5 +1,5 @@
 /*
-komodo tool: getFilenamePath
+komodo tool: getFileBasename
 ============================
 auto_abbreviation: false
 indent_relative: true
@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ============================*/
-[[%tabstop:filename_path]] = getFilenamePath( [[%tabstop:"[[%tabstop:path]]"]] )[[%tabstop:]]!@#_currentPos!@#_anchor
+[[%tabstop:file_basename]] = getFilenameFile( [[%tabstop:"[[%tabstop:path]]"]] )[[%tabstop:]]!@#_currentPos!@#_anchor

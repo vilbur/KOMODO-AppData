@@ -15,7 +15,7 @@
 	var lang = ko.views.manager.currentView.languageObj.name;
 	switch (lang) {
 		case 'PHP':	snippet = "$this->[[%tabstop:[[%tabstop:method]]($[[%tabstop:param]])]]";break;
-		case 'JavaScript':case 'HTML':case 'Maxscript':	snippet = "this.[[%tabstop:]]";break;
+		case 'JavaScript':case 'HTML':case 'Maxscript':case 'Autohotkey':	snippet = "this.[[%tabstop:]]";break;
 		default:	snippet = "this[[%tabstop:]]";
 	}
 

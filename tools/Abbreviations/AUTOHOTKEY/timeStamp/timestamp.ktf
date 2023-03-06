@@ -1,0 +1,16 @@
+/*
+komodo tool: timestamp
+======================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+======================*/
+$timestamp := A_TickCount
+
+$time := A_TickCount - $timestamp
+$time := Round((A_TickCount - $timestamp) / 1000, 1)!@#_currentPos!@#_anchor

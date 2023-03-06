@@ -1,0 +1,13 @@
+/*
+komodo tool: arr
+================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================*/
+[VarDef, [[%tabstop1:array_name]]([[%tabstop:items_count]]),"[[%tabstop:init_value]]"]!@#_currentPos!@#_anchor

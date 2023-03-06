@@ -1,0 +1,16 @@
+/*
+komodo tool: getFiles
+=====================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=====================*/
+$[[%tabstop1:files]] := []
+
+Loop, Files, [[%tabstop:%$[[%tabstop1:directory]]%]]\[[%tabstop:*.*]]
+	$[[%tabstop1:files]].push( A_LoopFileName )!@#_currentPos!@#_anchor

@@ -1,15 +1,15 @@
 /*
 komodo tool: fn
-================
-language:	       Autohotkey
-type:              snippet
-treat_as_ejs:      false
-auto_abbreviation: false
-indent_relative:   true
-set_selection:     false
-is_clean:          true
-version:           1.1.5
-================*/
+; ===============
+; auto_abbreviation: false
+; indent_relative: true
+; is_clean: true
+; language: Markdown
+; set_selection: false
+; treat_as_ejs: false
+; type: snippet
+; version: 1.1.5
+; ===============
 __[[%tabstop:fnName]]__([[%tabstop: p[[%tabstop:]] ]])  
 	// [[%tabstop:]]
 	[[%tabstop:]]!@#_currentPos!@#_anchor

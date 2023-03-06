@@ -1,0 +1,24 @@
+/*
+komodo tool: notea
+==================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+==================*/
+[Note, [[%tabstop:"[[%tabstop:Text]]"]],[[%tabstop:
+	/* interface item */]],[[%tabstop:
+	/* Duration (in seconds) */]],[[%tabstop:
+	/* Background color (0x000000<->0xffffff) */]],[[%tabstop:
+	/* Distance of interface item */]],[[%tabstop:
+	/* Note Width */]],[[%tabstop:
+	/* optional marked windows fill color */]],[[%tabstop:
+	/* Horizontal size */]],[[%tabstop:
+	/* Vertical size (1:Max height (default)) */]],[[%tabstop:
+	/* Align Side (0:left (default), .5:center,  1:right) */]],[[%tabstop:
+	/* Align Vertical( 0:top (default),  .5:center,  1:bottom ) */]],[[%tabstop:
+	/* Icon */]]]!@#_currentPos!@#_anchor

@@ -1,0 +1,27 @@
+/*
+komodo tool: fn
+===============
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+===============*/
+<%
+	var filename	= ko.views.manager.currentView.koDoc.file.baseName.split(/\./g).shift();
+	//capitalize filename and wrap to string
+	var routineName	= '[[%tabstop1:'+filename+']]';
+%>
+/** <%=routineName%>
+  */
+[RoutineDef, <%=routineName%>
+,
+	[Note, "<%=routineName%>"]
+	[[%tabstop:]]
+[[%tabstop:, // PARAMS
+	[[%tabstop:]]]]
+]
+//[IButton, "<%=routineName%>()" , "", [RoutineCall, <%=routineName%>] ]!@#_currentPos!@#_anchor

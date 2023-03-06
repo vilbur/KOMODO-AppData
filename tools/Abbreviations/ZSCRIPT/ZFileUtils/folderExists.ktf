@@ -19,7 +19,4 @@ version: 1.1.5
 	[Note,"Folder exists.",,3]
 , // folder not exists
 	[Note,"Folder does not exist.",,3]
-]
-
-
-!@#_currentPos!@#_anchor
+]!@#_currentPos!@#_anchor

@@ -1,0 +1,15 @@
+
+komodo tool: on
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/* https://help.autodesk.com/view/MAXDEV/2021/ENU/?guid=GUID-5A4580C6-B5CF-4104-898B-9313D1AAECD4 */
+on [[%tabstop:isEnabled]]|[[%tabstop:isVisible]] return Filters.[[%tabstop:Is_EPoly]]()
+on [[%tabstop:isEnabled]]|[[%tabstop:isVisible]] return Filters.[[%tabstop:Is_EPolySpecifyLevel]]#{1..4}!@#_currentPos!@#_anchor

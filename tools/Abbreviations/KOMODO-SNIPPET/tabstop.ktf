@@ -4,7 +4,7 @@ komodo tool: tabstop
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
-keyboard_shortcut: Ctrl+Alt+Shift+T###Ctrl+Shift+T
+keyboard_shortcut: Ctrl+Alt+Shift+T
 language: Komodo Snippet
 set_selection: false
 treat_as_ejs: true

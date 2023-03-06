@@ -1,0 +1,92 @@
+/*
+komodo tool: getFilesInFolder
+=============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=============================*/
+/** getFilesInFolder
+  *
+  */
+[RoutineDef, getFilesInFolder
+,
+	//[Note, getFilesInFolder]
+	[VarSet,folderName,[FileNameResolvePath, $folder_path]]
+
+	[VarSet, dllPath, "ZFileUtils64.dll"]
+
+	[VarSet,fileCount,[FileExecute,[Var,dllPath],"GetFileNumber",folderName]]
+	[If,fileCount < 0,[Note,"Error getting number of files in folder"]]
+
+	[VarSet,err,[FileExecute,[Var,dllPath],"OpenFolder",folderName]]
+	//if we can't open the folder exit the zscript
+	[If,err,[Note,"Error opening folder."][Exit]]
+
+	//create a memblock to get the file name
+	[MemCreate,ZFileUtils_list, 512, 0]
+
+	//[VarDef, counter, 0]
+	[VarDef, files_array(fileCount),""]
+
+	[Loop,fileCount,//loop through the files
+
+		//get the filename
+		[VarSet,err,[FileExecute,[Var,dllPath],"GetFile",,,ZFileUtils_list]]
+
+		//an error means we've reached the end of the list, so exit the loop
+		[If,err,[LoopExit]]
+
+		[VarDef, fileName, ""]
+		//otherwise write the file name from the memblock to a variable
+		[MemReadString, ZFileUtils_list, fileName]
+
+		[VarSet, files_array(i), fileName]
+
+	,i]//end loop
+
+
+	[Loop, fileCount,
+		//[Note, $i ]
+		[Note, files_array(i) ]
+
+	 ,i]
+
+	[VarSet,err,[FileExecute,[Var,dllPath],"CloseFolder",folderName]]
+	[If,err,[Note,"Error closing folder."]]
+
+	//delete the memblock as we've done with it
+	//[MemDelete,ZFileUtils_list]
+
+	[VarSet, $file, files_array]
+
+, // PARAMS
+	$folder_path, fileCount, ZFileUtils_list
+	//$folder_path
+] // END getFilesInFolder()
+//[ IButton, "getFilesInFolder()" , "", [RoutineCall, getFilesInFolder] ]
+
+
+
+[IButton, TEST,"Press to play this ZScript. ZScript can be aborted at anytime by pressing the ëescí key.",
+[IConfig,2022]
+
+	[VarSet, fileCount, 0]
+	[MemCreate,ZFileUtils_list, 512, 0]
+
+	[RoutineCall, getFilesInFolder, "c:\GoogleDrive\ProgramsData\CG\ZBrush\ProgramFiles\ZStartup\ZPlugs64\MaskByAlpha\Alpha-List", ZFileUtils_list ]
+	//[RoutineCall, getFilesInFolder, "c:\GoogleDrive\ProgramsData\CG\ZBrush\ProgramFiles\ZStartup\ZPlugs64\MaskByAlpha\Alpha-List" ]
+
+	[MemDelete,ZFileUtils_list]
+
+
+
+
+]/*End of ZScript*/
+
+
+!@#_currentPos!@#_anchor

@@ -1,0 +1,13 @@
+/*
+komodo tool: new
+================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================*/
+[IKeyPress, 78,[IPress, Document:New Document]]!@#_currentPos!@#_anchor

@@ -1,0 +1,13 @@
+/*
+komodo tool: getFileExtension
+=============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=============================*/
+[[%tabstop:file_extension]] = getFilenameType( [[%tabstop:"[[%tabstop:path]]"]] )[[%tabstop:]]!@#_currentPos!@#_anchor

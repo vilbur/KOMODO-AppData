@@ -11,7 +11,5 @@ type: snippet
 version: 1.1.5
 ========================*/
 [[%tabstop://[VarSet, $ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
-[VarSet, $file_path, [[%tabstop:"[[%tabstop:Path\To\file.exe]]"]] ]
-[VarSet, file_path, [FileNameResolvePath, $file_path]]
-[VarSet, err, [FileExecute, $ZFILE_UTILS_DLL, "LaunchAppWithFile",  #file_path]] // execute file
-[If, err, [Note, "Error in execution",, 2] ]!@#_currentPos!@#_anchor
+[VarSet, file_path, [FileNameResolvePath, [StrMerge, [[%tabstop:Subfolder]], "\[[%tabstop:file]]"] ]]
+[FileExecute, $ZFILE_UTILS_DLL, "LaunchAppWithFile",  #file_path]!@#_currentPos!@#_anchor

@@ -3,14 +3,14 @@ komodo tool: loop
 =================
 auto_abbreviation: false
 indent_relative: true
+is_clean: true
 language: Zscript
 set_selection: false
 treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =================*/
-[Loop, [[%tabstop:count]],
-
- [VarSet, a, a+1]
-
- ,[[%tabstop:$i]]]!@#_currentPos!@#_anchor
+[Loop, [[%tabstop:count]]
+,
+	[[%tabstop:]]
+,[[%tabstop:$i]]]!@#_currentPos!@#_anchor
