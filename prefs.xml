@@ -812,30 +812,31 @@ vilbur
   <boolean id="lint_typescript">1</boolean>
   <string id="mappedPaths"></string>
 <ordered-preference id="mruFileList">
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Startup-Script.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/TEST.txt</string>
-  <string>file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/TEST.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/RECORDED-SCRIPT.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastTool.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.bat</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt</string>
+  <string>file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Scripts.txt</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Startup-Script.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ZBrush-Hardlinks-Create.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManagerData/HardLinkCreator.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/Create-Hardlinks-To-ZBrush.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Template/Create-Hardlinks-To-ZBrush.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/ZBrush-Hardlinks-Create.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ZBrush-Hardlinks-Create.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Create-Hardlinks-Scripts.ahk</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/TEST.txt</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/RECORDED-SCRIPT.txt</string>
   <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeAlphaButtons.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaxZbrushSync/install.ahk</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaxZbrushSync/dev-install-hardlinks.ahk</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/UI-Labels.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeSliders.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeButtons.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlphaData/importAlpha.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlpha.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlphaData/UI-MaskByAlpha.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZStartup/ZPlugs64/Off%2520Messages.txt</string>
   <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/createBrushAlpha/createBrushAlpha.txt</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/DefaultZScript.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/createBrushAlpha.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlphaData/saveCurrentAlpha.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlphaData/maskToAlpha.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlphaData/importAlpha.ahk</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlphaData/alphaToMask.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Restart-Zbrush/Restart-Zbrush.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/.gitignore</string>
 </ordered-preference>
 <ordered-preference id="mruMenuItemList">
   <string>ref%0e6 RECORDED-SCRIPT.txt%0e</string>
@@ -960,7 +961,7 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader">
-  <string id="timestamp">1678081085530</string>
+  <string id="timestamp">1678100019819</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript">
@@ -1210,7 +1211,7 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject">
-  <string id="timestamp">1678081085530</string>
+  <string id="timestamp">1678100019820</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript/Zscript.komodoproject">
@@ -1421,18 +1422,18 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="current_project">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/ToolLoader.txt","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt","tabIndex":1},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt","tabIndex":2},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt","tabIndex":2},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/saveToolPath.txt","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2490/HardLinkCreator.snippet","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.bat","tabIndex":2},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2490/HardLinkCreator.snippet","tabIndex":3}]</string>
+  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/TEST.txt","tabIndex":1},{"tabGroup":"view-1","viewType":"editor","uri":"file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.bat","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastTool.txt","tabIndex":1},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/UI-Labels.txt","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2282/palette.snippet","tabIndex":5},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2500/palette.snippet","tabIndex":5},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://2500/pall.snippet","tabIndex":9}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
   <string id="spv_projects">["file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject"]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1678088654</long>
+  <long id="timestamp">1678168817</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
-  <long id="current_view_index">2</long>
+  <long id="current_view_index">6</long>
 <ordered-preference id="view_prefs">
 <preference-set>
   <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.txt</string>
@@ -1443,56 +1444,56 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.ahk</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Restart-Zbrush/Restart-Zbrush.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZStartup/ZPlugs64/Extended.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZStartup/ZPlugs64/UI-Labels.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/TEST.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZStartup/ZPlugs64/PluginTest.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZStartup/ZPlugs64/ExtendedData/Scripts.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
 </preference-set>
 <preference-set>
-  <long id="current_view_index">11</long>
+  <long id="current_view_index">5</long>
 <ordered-preference id="view_prefs">
 <preference-set>
   <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getToolPath.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getTool.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadTool.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.bat</string>
+  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeButtons.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Create-Hardlinks-Scripts.ahk</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ZBrush-Hardlinks-Create.ahk</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/ZBrush-Hardlinks-Create.ahk</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Template/Create-Hardlinks-To-ZBrush.ahk</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/Create-Hardlinks-To-ZBrush.ahk</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManagerData/HardLinkCreator.ahk</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ZBrush-Hardlinks-Create.ahk</string>
+  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeSliders.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
@@ -1500,22 +1501,21 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
-  <string>snippet2://2490/HardLinkCreator.snippet?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.ahk?parentId=view-1</string>
-  <string>snippet2://1978/hardlink.snippet?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/Mp3tag/create_hardlinks.bat?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ZBrush-Hardlinks-Create.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManagerData/HardLinkCreator.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Template/Create-Hardlinks-To-ZBrush.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ZBrush-Hardlinks-Create.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Create-Hardlinks-Scripts.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/ZBrush-Hardlinks-Create.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/Create-Hardlinks-To-ZBrush.ahk?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt?parentId=view-2</string>
+  <string>file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/TEST.txt?parentId=view-1</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZStartup/ZPlugs64/PluginTest.txt?parentId=view-1</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZStartup/ZPlugs64/ExtendedData/Scripts.txt?parentId=view-1</string>
+  <string>snippet2://2501/ifpall.snippet?parentId=view-2</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeSliders.txt?parentId=view-2</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZStartup/ZPlugs64/Extended.txt?parentId=view-1</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeButtons.txt?parentId=view-2</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/UI-ToolLoader.txt?parentId=view-1</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getToolPath.txt?parentId=view-2</string>
   <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZStartup/ZPlugs64/UI-Labels.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getTool.txt?parentId=view-2</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getToolPath.txt?parentId=view-2</string>
+  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Restart-Zbrush/Restart-Zbrush.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadTool.txt?parentId=view-2</string>
 </ordered-preference>
 </preference-set>
   <long id="windowNum">1</long>
