@@ -19,7 +19,7 @@ version: 1.1.5
   */
 [RoutineDef, <%=routineName%>
 ,
-	[Note, "<%=routineName%>"]
+	//[Note, "<%=routineName%>"]
 	[[%tabstop:]]
 [[%tabstop:, // PARAMS
 	[[%tabstop:]]]]

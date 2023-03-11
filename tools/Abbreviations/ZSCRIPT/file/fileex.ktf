@@ -1,13 +1,13 @@
 /*
-komodo tool: memget
+komodo tool: fileex
 ===================
 auto_abbreviation: false
-indent_relative: true
+indent_relative: false
 is_clean: true
 language: Zscript
 set_selection: false
-treat_as_ejs: true
+treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ===================*/
-[[[%tabstop:MVarGet]], $[[%tabstop1:var_mame]],	[[%tabstop:index]]]!@#_currentPos!@#_anchor
+[FileExists, [[%tabstop:fullFilePath]]]!@#_currentPos!@#_anchor

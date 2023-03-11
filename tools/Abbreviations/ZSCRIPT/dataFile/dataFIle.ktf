@@ -1,0 +1,66 @@
+/*
+komodo tool: dataFIle
+=====================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=====================*/
+[VarDef, $DATAFILE, [StrMerge, [[%tabstop:"pluginData"]], "\\data_file.zvr"] ]
+
+[VarDef, $DATA_LIST([[%tabstop:999]]), ""]
+
+[VarDef, $VALUE_LOADED, ""]
+
+/** dataFileSave
+  *
+  */
+[RoutineDef, dataFileSave
+,
+	[VarSet, $DATA_LIST([Var, $index]), [Var, $value_to_save] ]
+
+	[VarSave, $DATA_LIST, $DATAFILE ]
+
+	//[Note, [StrMerge, "SAVE \n\nIndex: ", $index, "\n\nValue: ",  $value_to_save ],, 0]
+, // PARAMS
+	$index, $value_to_save
+]
+//[IButton, "dataFileSave()" , "", [RoutineCall, dataFileSave, 0, "Test value"] ]
+
+
+/** dataFileLoad
+  *
+  */
+[RoutineDef, dataFileLoad
+,
+	[VarLoad, $DATA_LIST, $DATAFILE ]
+
+	[VarSet, $VALUE_LOADED, [Var, $DATA_LIST([Var, $index]) ] ]
+
+	//[Note, [StrMerge, "LAODED \n\nIndex: ", $index, "\n\nValue: ",  $VALUE_LOADED ],, 0]
+
+, // PARAMS
+	$index
+]
+//[IButton, "dataFileLoad()" , "", [RoutineCall, dataFileLoad, 0 ] ]
+
+
+/** Load values from file to variable
+  *
+  */
+[RoutineDef, dataFileInit
+,
+	[If, [FileExists, $DATAFILE]
+	, // THEN
+		[VarLoad, $DATA_LIST, $DATAFILE ]
+
+	, // ELSE
+		[VarSave, $DATA_LIST, $DATAFILE ]
+	]
+]
+//[IButton, "dataFileInit()" , "", [RoutineCall, dataFileInit, 0 ] ]
+!@#_currentPos!@#_anchor

@@ -1,0 +1,13 @@
+/*
+komodo tool: filen
+==================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+[FileNameSetNext, [[%tabstop:[FileNameResolvePath, [[%tabstop:"[[%tabstop:FilePath]]"]]] ]] ]!@#_currentPos!@#_anchor

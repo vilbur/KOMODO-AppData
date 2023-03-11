@@ -1,0 +1,22 @@
+/*
+komodo tool: loopa
+==================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+
+[Loop, [VarSize, [[%tabstop1:array]]]
+,
+	[Note, [[%tabstop1:array]]( [[%tabstop2:i]] ),, 0.5 ]
+	
+	[VarSet, [[%tabstop3:value]], [Var, [[%tabstop1:array]]( [[%tabstop2:i]] )] ]
+	
+	[Note, [[%tabstop3:value]],, 0.5]
+	
+,[[%tabstop2:i]]]!@#_currentPos!@#_anchor

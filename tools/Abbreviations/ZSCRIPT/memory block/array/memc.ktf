@@ -1,0 +1,26 @@
+/*
+komodo tool: memc
+=================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+=================*/
+[If, [MemGetSize, [[%tabstop1:MEMBLOCK_NUMBERS_ARRAY]]]
+, // THEN memory exists
+
+	[Note, [MVarGet, [[%tabstop1:MEMBLOCK_NUMBERS_ARRAY]], [[%tabstop2:0 /* index */]] ],, 0]
+
+	[MemDelete, [[%tabstop1:MEMBLOCK_NUMBERS_ARRAY]]]
+
+, // ELSE create memory block
+
+	[MVarDef, [[%tabstop1:MEMBLOCK_NUMBERS_ARRAY]], [[%tabstop:count]] ]
+
+	[MVarSet, [[%tabstop1:MEMBLOCK_NUMBERS_ARRAY]], [[%tabstop2:0 /* index */]], [[%tabstop:0 /* value */]] ]
+
+]!@#_currentPos!@#_anchor

@@ -1,13 +1,13 @@
 /*
-komodo tool: memex
+komodo tool: filer
 ==================
 auto_abbreviation: false
-indent_relative: true
+indent_relative: false
 is_clean: true
 language: Zscript
 set_selection: false
-treat_as_ejs: true
+treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ==================*/
-[[[%tabstop:MemGetSize]], $[[%tabstop1:var_mame]]]!@#_currentPos!@#_anchor
+[FileNameResolvePath, [[%tabstop:"[[%tabstop:FilePath]]"]]]!@#_currentPos!@#_anchor
