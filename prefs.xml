@@ -90,8 +90,8 @@
   <boolean id="debuggerRestoreStartPosAtEndOfSession">1</boolean>
   <string id="defaultDateFormat">%25a %25b %25d %25H:%25M:%25S %25Y</string>
   <string id="defaultEncoding">utf-8</string>
-  <string id="defaultSelectedPref">fileProperties</string>
-  <string id="defaultSelectedSubPref">fileProperties</string>
+  <string id="defaultSelectedPref">associationsItem</string>
+  <string id="defaultSelectedSubPref">syntaxCheckingItem</string>
 <ordered-preference id="dialog-interpolationquery-%uppercaseMru">
   <string>test</string>
 </ordered-preference>
@@ -154,6 +154,9 @@
   <string>IlluminateFoundationTestingTestCase</string>
   <string>TestCase</string>
 </ordered-preference>
+<ordered-preference id="dialog-interpolationquery-Macro nameMru">
+  <string>create</string>
+</ordered-preference>
 <ordered-preference id="dialog-interpolationquery-NameMru">
   <string>TEST</string>
   <string>Trent</string>
@@ -181,27 +184,72 @@
   <string>event</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-Set method nameMru">
-  <string>_getCounterPrefix</string>
-  <string>flipUV</string>
-  <string>_exportObjects</string>
-  <string>_setImportPresets</string>
-  <string>mirrorSection</string>
-  <string>_replaceImportedObjects</string>
-  <string>setPresetFile</string>
-  <string>clearExportFolder</string>
-  <string>zbrushToMax</string>
-  <string>maxToZbrush</string>
-  <string>setExportPreset</string>
-  <string>exportObjects</string>
-  <string>createDir</string>
-  <string>isStringEmpty</string>
-  <string>_check properties</string>
-  <string>createDirectoryStructure</string>
-  <string>_setIdPrefixByControlType</string>
+  <string>get axis</string>
+  <string>lock objects transforms</string>
+  <string>loackTransformation</string>
+  <string>setVisibility</string>
+  <string>_addShellModifie</string>
+  <string>averagePoint3Array</string>
+  <string>get facve data</string>
+  <string>_rotate to normal</string>
+  <string>_add extrudee modifier</string>
+  <string>generatePin</string>
+  <string>createPins</string>
+  <string>selectVErts</string>
+  <string>_addMaterialModifier</string>
+  <string>_getObejctsArray</string>
+  <string>_rmoveLayerTypeSuffix</string>
+  <string>moveOrCOpyObjToLayer</string>
+  <string>createLayersTree</string>
+  <string>_get Layers tree</string>
+  <string>_getOrCreateTopLayer</string>
+  <string>name_key</string>
+  <string>_create top layer</string>
+  <string>getLayerKeySuffix</string>
+  <string>getLayersTree</string>
+  <string>getTopLayer</string>
+  <string>isValidTopLayer</string>
+  <string>getSourceLayerNames</string>
+  <string>replace suffix in layer names</string>
+  <string>remove suffix from layer names</string>
+  <string>createLayerByObject</string>
+  <string>moveToLayer</string>
+  <string>findTopLayer</string>
+  <string>create</string>
+  <string>get segment ends</string>
+  <string>get segment length </string>
+  <string>get  line ends</string>
+  <string>coolapseObjectIfNeeded</string>
+  <string>setSecondDown</string>
+  <string>getThisPointer</string>
+  <string>getBeamPOs</string>
+  <string>__Normalize_Spline2</string>
+  <string>addToGroup</string>
+  <string>find group</string>
+  <string>fiter selected ohelpers</string>
+  <string>filterSelectedHeObjects</string>
+  <string>_get Old Point</string>
+  <string>_useLastObjectIfNothingSelected</string>
+  <string>_manageNameAndLayer</string>
+  <string>_get source object by sync pointer</string>
+  <string>setVersData</string>
+  <string>_getVertsToGenerateFromObjects</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-Struct nameMru">
-  <string>IniSettingsMirror</string>
-  <string>MaxToZbrushSync</string>
+  <string>PinsManager</string>
+  <string>SceneLayers</string>
+  <string>ShapeKnotGetter</string>
+  <string>BeamObject</string>
+  <string>SourceObject</string>
+  <string>SupportObject</string>
+  <string>SupportOptions</string>
+  <string>MeshVertexGetter</string>
+  <string>BeamGenerator</string>
+  <string>HelperObject</string>
+  <string>HelperGenerator</string>
+  <string>SupportGenerator</string>
+  <string>SupportManager</string>
+  <string>meshVertToColorVertexConvertor</string>
   <string>Project</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-TypeMru">
@@ -286,59 +334,62 @@
   <string>App\</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-var1Mru">
-  <string>name</string>
-  <string>transform</string>
-  <string>instances</string>
-  <string>objects_to_export</string>
-  <string>import_result</string>
-  <string>ObjImp</string>
-  <string>section</string>
-  <string>importer_preset</string>
-  <string>importer_ini</string>
-  <string>source_ini</string>
-  <string>val</string>
-  <string>kry</string>
-  <string>keys</string>
-  <string>exporter_preset_path</string>
-  <string>preset_import_file</string>
-  <string>obj_files</string>
-  <string>obj.name</string>
-  <string>imported_objects</string>
-  <string>objects_before_import</string>
-  <string>imported_object</string>
+  <string>verts_cache</string>
+  <string>axis</string>
+  <string>i</string>
+  <string>second_vert</string>
+  <string>vert_pos</string>
+  <string>_normal</string>
+  <string> Options.pin_gap</string>
+  <string>(Options.pin_width</string>
+  <string>Options.pin_height</string>
+  <string>normal</string>
+  <string>_verts_position</string>
+  <string>center</string>
+  <string>verts_by_faces</string>
+  <string>faces_data</string>
+  <string>face_id</string>
+  <string>verts</string>
+  <string>verts_pos</string>
+  <string>verts_data</string>
+  <string>menu_or_name</string>
+  <string>layer_names_source</string>
+  <string>top_layers</string>
+  <string>layers_tree[1].name</string>
+  <string>new_layer.name</string>
+  <string>new_layer_name</string>
+  <string>objs</string>
+  <string>node_to_add</string>
   <string>index</string>
-  <string>o</string>
-  <string>file</string>
-  <string>result</string>
-  <string>obj_exporter</string>
-  <string>segment_length</string>
-  <string>root_dir_path</string>
-  <string>_string</string>
-  <string>count</string>
-  <string>test</string>
-  <string>project_root</string>
-  <string>project_name</string>
-  <string>type</string>
-  <string>_RolloutClass.open == false</string>
-  <string>(_RolloutClass.name</string>
-  <string>_Control.id</string>
-  <string>root_path</string>
-  <string>project_path</string>
-  <string>params</string>
-  <string>id</string>
-  <string>macro_params</string>
-  <string>baseCharacter</string>
-  <string>source_object.material</string>
-  <string>_selection</string>
-  <string>_group.children.count</string>
-  <string>decimal_count</string>
-  <string>increment_number</string>
-  <string>group_replace_object.parent</string>
-  <string>_group.parent</string>
-  <string>_group.name</string>
+  <string>/name</string>
+  <string>layer.name</string>
+  <string>layers_tree</string>
+  <string>top_layers_titles</string>
+  <string>all_top_layers</string>
+  <string>layer_name_data</string>
+  <string>layer_key</string>
+  <string>top_layer</string>
+  <string>layers_top</string>
+  <string>matches</string>
+  <string>layer_top.name</string>
+  <string>layer_top</string>
+  <string>obj_name_stripped</string>
+  <string>layer_name_source</string>
+  <string>layer_name_target</string>
+  <string>layer_names</string>
+  <string>layer</string>
+  <string>found_layers</string>
+  <string>layer_edit</string>
+  <string>used_layers_reverse</string>
+  <string>difference</string>
+  <string>longes_title</string>
+  <string>suffix</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-var2Mru">
-  <string>transform</string>
+  <string>modified_val</string>
+  <string>vertex_index</string>
+  <string>second_vert.z</string>
+  <string>normal</string>
   <string>test</string>
 </ordered-preference>
   <boolean id="diskBackgroundCheck">1</boolean>
@@ -347,15 +398,15 @@
   <string id="docs_db_version">win32-x8689474</string>
   <string id="donotask_action_allow_remote_debug"></string>
   <string id="donotask_action_allow_remote_profiling"></string>
-  <string id="donotask_action_close_all_files_on_project_close">Yes</string>
+  <string id="donotask_action_close_all_files_on_project_close">No</string>
   <string id="donotask_action_close_deleted_files"></string>
   <string id="donotask_action_debugger_confirm_close"></string>
   <string id="donotask_action_dragdrop_uri"></string>
   <string id="donotask_action_ensure_filename_has_ext">Yes</string>
   <string id="donotask_action_ensure_new_filename_has_ext"></string>
-  <string id="donotask_action_open_recent_files_on_project_open">Yes</string>
+  <string id="donotask_action_open_recent_files_on_project_open">No</string>
   <string id="donotask_action_placesAllowDragDropItemsToFolders"></string>
-  <string id="donotask_action_reload_changed_files"></string>
+  <string id="donotask_action_reload_changed_files">All</string>
   <string id="donotask_action_restore_workspace">Yes</string>
   <string id="donotask_action_save_buffer_before_preview"></string>
   <string id="donotask_action_save_on_debug"></string>
@@ -373,7 +424,7 @@
   <boolean id="donotask_ensure_new_filename_has_ext">0</boolean>
   <boolean id="donotask_open_recent_files_on_project_open">1</boolean>
   <boolean id="donotask_placesAllowDragDropItemsToFolders">0</boolean>
-  <boolean id="donotask_reload_changed_files">0</boolean>
+  <boolean id="donotask_reload_changed_files">1</boolean>
   <boolean id="donotask_restore_workspace">1</boolean>
   <boolean id="donotask_revert_buffer">0</boolean>
   <boolean id="donotask_save_buffer_before_preview">0</boolean>
@@ -424,7 +475,7 @@
   <boolean id="extensions.NST.left">0</boolean>
   <boolean id="extensions.NST.locate">0</boolean>
   <boolean id="extensions.NST.sort">1</boolean>
-  <string id="fileAssociationDiffs">[('+', u'*.asm', u'Autohotkey'), ('+', u'.htaccess', u'Zscript'), ('+', u'*.vini', u'Ini'), ('+', u'*.vue', u'HTML5'), ('+', u'*.R,.r,.Rout,.Rhistory,.Rt,.Rout.save,.Rout.fail,.S', u'Zscript'), ('+', u'*.mcr', u'Maxscript'), ('+', u'CMakeLists.txt', u'Zscript'), ('-', 'CMakeLists.txt', 'CMake'), ('-', u'*.zxt', u'Zscript'), ('-', u'*.R,.r,.Rout,.Rhistory,.Rt,.Rout.save,.Rout.fail,.S', u'R'), ('-', '*.asm', 'Assembler'), ('-', '.htaccess', 'Apache')]</string>
+  <string id="fileAssociationDiffs">[('+', u'*.max.bak', u'Maxscript'), ('+', u'*.asm', u'Autohotkey'), ('+', u'.htaccess', u'Zscript'), ('+', u'*.vini', u'Ini'), ('+', u'*.vue', u'HTML5'), ('+', u'*.mcr', u'Maxscript'), ('+', u'CMakeLists.txt', u'Zscript'), ('+', u'*.ahk.bak', u'Autohotkey'), ('+', u'*.R,.r,.Rout,.Rhistory,.Rt,.Rout.save,.Rout.fail,.S', u'Maxscript'), ('-', 'CMakeLists.txt', 'CMake'), ('-', u'*.R,.r,.Rout,.Rhistory,.Rt,.Rout.save,.Rout.fail,.S', u'R'), ('-', '*.asm', 'Assembler'), ('-', '.htaccess', 'Apache')]</string>
   <string id="fileDefaultNew">Text</string>
 <preference-set id="filepickers.defaultDirs">
   <string id="iconPicker.PickCustom">C:\GoogleDrive\Programs\Core\Komodo\Icons\Autohotkey</string>
@@ -433,7 +484,7 @@
   <string id="filtered-prefs-open-nodes-by-id">{"editorItem":true,"editorProperties":true,"languagesItem":true}</string>
   <long id="find-caseSensitivity">1</long>
   <boolean id="find-confirmReplacementsInFiles">0</boolean>
-  <string id="find-cwd">D:\GoogleDrive\TotalComander</string>
+  <string id="find-cwd">C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-PRINT-3D\Lib\SupportManager</string>
   <boolean id="find-displayInFindResults2">0</boolean>
 <ordered-preference id="find-excludeFiletypes">
   <string>*.svn</string>
@@ -448,20 +499,23 @@
   <string>.svn;CVS;.git;.hg;.bzr;*~</string>
 </ordered-preference>
 <ordered-preference id="find-folders">
-  <string>C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidVariator</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-PRINT-3D</string>
 </ordered-preference>
 <ordered-preference id="find-foldersMru">
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-PRINT-3D\Lib\SupportManager</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-PRINT-3D\Lib\PlatformGenerator</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-EXPORT\Lib</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\QuadMenu\QuadMenus</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3</string>
   <string>d:\GoogleDrive\TotalComander</string>
   <string>C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\tools</string>
 </ordered-preference>
   <boolean id="find-highlightEnabled">1</boolean>
   <long id="find-highlightTimeout">1000</long>
 <ordered-preference id="find-includeFiletypes">
-  <string>*.ini</string>
-  <string>*.bar</string>
-  <string>*.mnu</string>
 </ordered-preference>
 <ordered-preference id="find-includeFiletypesMru">
+  <string></string>
   <string>*.ini;*.bar;*.mnu</string>
   <string>.ini;.BAR;.mnu</string>
   <string>.ini;.bar;.mnu</string>
@@ -471,56 +525,56 @@
   <boolean id="find-matchWord">0</boolean>
   <boolean id="find-multiline">0</boolean>
 <ordered-preference id="find-patternMru">
-  <string>loadLastTool</string>
-  <string>Zplugin:Sliders</string>
-  <string>PLUGIN_SUBMENU</string>
-  <string>maskLoad</string>
-  <string>enableButtons</string>
-  <string>enableButton</string>
-  <string>TOOL_LIST_LOADED</string>
-  <string>ZFILE_UTILS_DLL</string>
-  <string>import_alpha_ahk</string>
-  <string>Extensions:Script</string>
-  <string>ALPHA_LIST_FOLDER</string>
-  <string>parameters</string>
-  <string>~Extensions:Script</string>
-  <string>~PluginManager:Load Plugins</string>
-  <string>_createHardlink</string>
-  <string>installed</string>
-  <string>create</string>
-  <string>_installPlugins</string>
-  <string>plugins</string>
-  <string>run_plugin_buttons</string>
-  <string>file_path</string>
-  <string>PLUGIN_DATA_PATH</string>
-  <string>CONTROLS_PATH</string>
-  <string></string>
-  <string>TxtNumList</string>
-  <string>varsave</string>
-  <string>varset</string>
-  <string>VarSave</string>
-  <string>TxtFileDateListZVR</string>
-  <string>TxtNumListZVR</string>
-  <string>TxtFileDateList</string>
-  <string>RightTrayShow</string>
-  <string>RightTrayToggle</string>
-  <string>WebZPlug</string>
-  <string>Selection_v</string>
+  <string>searchForFilepathInSubTools</string>
+  <string>getSavePath</string>
+  <string>getSavePathAndMoveSubtoolTop</string>
+  <string>mainsubtoolindex</string>
+  <string>number_subtool</string>
+  <string>subtool_active_index</string>
+  <string>filepath_save</string>
+  <string>searchForSubtoolByLastTypedPath</string>
+  <string>VarDef, ismaintool</string>
+  <string>isCurrentSubtoolMain</string>
+  <string>filepath_</string>
+  <string>subtool_</string>
+  <string>path_</string>
+  <string>name_</string>
+  <string>getSavePathAndFixSubtool</string>
+  <string>subtool_active_name</string>
+  <string>last_user_ext</string>
+  <string>last_used_name</string>
+  <string>last_user_dir</string>
+  <string>subtool_number</string>
+  <string>subtool_name</string>
+  <string>name_subtool_current</string>
+  <string>name_current_subtool</string>
+  <string>path_tool_current</string>
+  <string>_flipUV</string>
+  <string>_exportObject</string>
+  <string>FileNameAdvance</string>
+  <string>createReloadScript</string>
+  <string>tabstop3</string>
+  <string>_manageNameAndLayer</string>
+  <string>_moveOrCopyObjToLayer</string>
+  <string>new_nodes_to_addnodes</string>
+  <string>LayersManager</string>
+  <string>getTopLayers</string>
+  <string>obj_original</string>
+  <string>_vert_position</string>
+  <string>_setVertexPositions</string>
+  <string>_getVertsToGenerateFromObjects</string>
+  <string>cellColor</string>
+  <string>macroCellularMap</string>
+  <string>vert_pos</string>
+  <string>pos</string>
+  <string>Position_Script</string>
+  <string>verts_to_get</string>
   <string>_replaceImportedObjects</string>
-  <string>reset_tools</string>
-  <string>tool_paths</string>
-  <string>new_content</string>
-  <string>coord</string>
-  <string>VILBUR</string>
-  <string>prefixIndex</string>
-  <string>zeroSuppress</string>
-  <string>Vilbur</string>
-  <string>fileType</string>
-  <string>exportInfo</string>
-  <string>duppedDocument</string>
-  <string>file</string>
-  <string>file type</string>
-  <string>tga</string>
+  <string>_addMaterialModifier</string>
+  <string>name_key</string>
+  <string>new_layers</string>
+  <string>moveToLayerByObject</string>
+  <string>objects_layer</string>
 </ordered-preference>
   <long id="find-patternType">0</long>
   <long id="find-preferredContextType">0</long>
@@ -643,12 +697,11 @@ vilbur
   <string id="kpf_open_nodes_1d9b089e-d852-4c70-9046-b3cbe1bc7110">{}</string>
   <string id="kpf_open_nodes_1e4bb539-7a14-4399-961c-5170d83ae7c9">{}</string>
   <string id="kpf_open_nodes_1e5086fe-a7a9-410e-9b98-f6b7ab0dda6b">{u'1e5086fe-a7a9-410e-9b98-f6b7ab0dda6b': False}</string>
+  <string id="kpf_open_nodes_20d4e690-3f48-4fff-a6d5-0f73fe2ea45b">{u'20d4e690-3f48-4fff-a6d5-0f73fe2ea45b': False}</string>
   <string id="kpf_open_nodes_23357d1f-5415-4736-a997-116dde5b1598">{u'23357d1f-5415-4736-a997-116dde5b1598': True}</string>
   <string id="kpf_open_nodes_252585d2-7e53-4e19-a578-017baccb30d7">{'252585d2-7e53-4e19-a578-017baccb30d7': False}</string>
   <string id="kpf_open_nodes_2859ec1a-2c3f-4439-843a-5e43e8de54e8">{}</string>
   <string id="kpf_open_nodes_29b9e046-3f31-4671-9607-1d8445d3b273">{}</string>
-  <string id="kpf_open_nodes_2d9925b5-c9f0-4c24-9e33-dad66476e438">{u'2d9925b5-c9f0-4c24-9e33-dad66476e438': False}</string>
-  <string id="kpf_open_nodes_2e3a2fbe-4f7a-48f6-bb25-7502659ae184">{u'2e3a2fbe-4f7a-48f6-bb25-7502659ae184': False}</string>
   <string id="kpf_open_nodes_311a9f8f-ba4e-412d-bf52-f0abadee2242">{}</string>
   <string id="kpf_open_nodes_3205ed81-4b71-4439-89bd-3a7c8166a35d">{}</string>
   <string id="kpf_open_nodes_33d7d039-4ba9-4fa6-a0c2-6f2651bb0921">{}</string>
@@ -656,17 +709,19 @@ vilbur
   <string id="kpf_open_nodes_35020e99-1ccf-42ce-9bf7-87ace664f329">{'35020e99-1ccf-42ce-9bf7-87ace664f329': False}</string>
   <string id="kpf_open_nodes_35ca03af-146a-4b7a-b8a7-be772c4805be">{'35ca03af-146a-4b7a-b8a7-be772c4805be': False}</string>
   <string id="kpf_open_nodes_377176b2-fe0e-4146-a12f-b0f7345377cb">{u'377176b2-fe0e-4146-a12f-b0f7345377cb': True}</string>
+  <string id="kpf_open_nodes_39acb9c2-8a1e-4321-b725-24056bc641e7">{'39acb9c2-8a1e-4321-b725-24056bc641e7': False}</string>
   <string id="kpf_open_nodes_3e602990-b890-4e83-b859-d83c18dcc0b3">{}</string>
   <string id="kpf_open_nodes_3ec7bca1-fe7f-499f-9dd5-5d2ff7439ec0">{u'3ec7bca1-fe7f-499f-9dd5-5d2ff7439ec0': False}</string>
   <string id="kpf_open_nodes_3faca89a-9d0e-4020-b09c-7f80ea08f019">{}</string>
   <string id="kpf_open_nodes_40526e5f-519d-40d1-97a7-6f2b37fc48fe">{}</string>
   <string id="kpf_open_nodes_45e6e5c3-864a-4723-ba50-4f410aebdbfb">{'45e6e5c3-864a-4723-ba50-4f410aebdbfb': False}</string>
   <string id="kpf_open_nodes_466c368c-b0c1-44dc-b64f-6834842443c7">{u'466c368c-b0c1-44dc-b64f-6834842443c7': False}</string>
+  <string id="kpf_open_nodes_477f5f35-63a4-4862-b1b3-32f5be7c554d">{}</string>
   <string id="kpf_open_nodes_48e167f9-0009-4d4c-a8d6-8634086ce130">{}</string>
   <string id="kpf_open_nodes_4c45d5f7-8dce-4599-920c-752af3ff3e82">{}</string>
-  <string id="kpf_open_nodes_4d6adee3-6c49-48d2-b903-4bf5cfaea1eb">{'4d6adee3-6c49-48d2-b903-4bf5cfaea1eb': False}</string>
+  <string id="kpf_open_nodes_4d6adee3-6c49-48d2-b903-4bf5cfaea1eb">{u'4d6adee3-6c49-48d2-b903-4bf5cfaea1eb': True}</string>
   <string id="kpf_open_nodes_59d99653-5529-430b-adb1-a2ed28459a41">{'59d99653-5529-430b-adb1-a2ed28459a41': False}</string>
-  <string id="kpf_open_nodes_5a216ee7-9be8-4dff-a698-a34732b449fe">{u'5a216ee7-9be8-4dff-a698-a34732b449fe': False}</string>
+  <string id="kpf_open_nodes_5a216ee7-9be8-4dff-a698-a34732b449fe">{u'5a216ee7-9be8-4dff-a698-a34732b449fe': True}</string>
   <string id="kpf_open_nodes_5ad33b79-9e3a-4f2f-9b91-13ca5fc6df96">{'5ad33b79-9e3a-4f2f-9b91-13ca5fc6df96': True}</string>
   <string id="kpf_open_nodes_5c3f6665-728b-46ad-9537-46f150b87e14">{'5c3f6665-728b-46ad-9537-46f150b87e14': False}</string>
   <string id="kpf_open_nodes_5f166b78-038d-4193-80f8-c78c09d38f96">{}</string>
@@ -756,22 +811,18 @@ vilbur
   <boolean id="languages/Go/primary">0</boolean>
   <boolean id="languages/HTML/primary">0</boolean>
   <boolean id="languages/Handlebars/primary">0</boolean>
-  <boolean id="languages/JSX/primary">0</boolean>
   <boolean id="languages/Komodo Snippet/primary">1</boolean>
-  <boolean id="languages/LaravelBlade/primary">0</boolean>
-  <boolean id="languages/Less/primary">0</boolean>
   <boolean id="languages/Less/useTabs">0</boolean>
   <boolean id="languages/Markdown/primary">1</boolean>
   <boolean id="languages/Maxscript/primary">1</boolean>
   <boolean id="languages/Mustache/primary">0</boolean>
   <boolean id="languages/Node.js/primary">0</boolean>
-  <boolean id="languages/PHP/primary">0</boolean>
   <boolean id="languages/Perl/primary">0</boolean>
   <boolean id="languages/Python/primary">0</boolean>
   <boolean id="languages/Python3/primary">0</boolean>
   <boolean id="languages/RHTML/primary">0</boolean>
   <boolean id="languages/Ruby/primary">0</boolean>
-  <boolean id="languages/Sass/primary">0</boolean>
+  <boolean id="languages/Sass/primary">1</boolean>
   <boolean id="languages/Tcl/primary">0</boolean>
   <boolean id="languages/Twig/primary">0</boolean>
   <boolean id="languages/XML/primary">0</boolean>
@@ -780,9 +831,9 @@ vilbur
 </preference-set>
   <string id="lastTestPlanName_pref">New test plan #1</string>
   <string id="lastTestPlanProjectURL">file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/pack-VoyagerSeeder.komodoproject</string>
-  <string id="lessCacheCleanup">["1675621468415"]</string>
+  <string id="lessCacheCleanup">[]</string>
   <string id="lessCachePlatVersion">win32-x8618441</string>
-  <string id="lessCacheVersion">1675621475180</string>
+  <string id="lessCacheVersion">1669691726915</string>
   <string id="lessDefaultInterpreter">None</string>
   <string id="lessLinterType">path</string>
   <boolean id="link-schemes">1</boolean>
@@ -813,54 +864,53 @@ vilbur
   <boolean id="lint_typescript">1</boolean>
   <string id="mappedPaths"></string>
 <ordered-preference id="mruFileList">
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/UI-AlphaManager.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/enableButtons.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Custom-UI.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManager.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastToolOnStartup.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/MaskByAlpha.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolPath.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AdjustBrushSize/AdjustBrushSize.txt</string>
-  <string>file:///D:/Downloads/_archives/adjustDsize/adjustDsize.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Resize-Controls/resizeAlphaButtons.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/resizeAlphaButtons.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManager.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Scripts.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Restart-Zbrush/Restart-Zbrush.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/Startup-Scripts/Startup-Script.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManagerData/PluginManager.ahk</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManagerData/HardLinkCreator.ahk</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/UI-Labels.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/Extended.txt</string>
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/DefaultZScript.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/FocusMe/Ahk/Focusme-Window-Toggle.ahk</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/TestPulgin/Create-Hardlinks-To-ZBrush.ahk</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/TestPulgin/ZpluginPallete/PluginPalette.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/TestPulgin/TestC.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/TestPulginA/TestPulginA.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/TestPulginB/TestPulginB.txt</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/TestPulgin/TestZ.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadToolToViewport.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/Extended.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/UI-Labels.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/3DsMax/Lib/createImportScript.ahk</string>
+  <string>file:///C:/Windows/Temp/_ZBRUSH_MAX_SYNC/importToolsToZbrush.txt</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM/Lib/TransformLocker/TransformLocker.ms</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/SubTool.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/saveToolPath.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/Geometry.txt</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/notev.ktf</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Abbreviations/ZSCRIPT/subtool/subtoolSelect.ktf</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/Shortcuts-To-UI.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/MaxZbrushSyncData/importToMax.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/3DsMax/Lib/MaxToZbrushSync.ms</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/Startup-Scripts/Off-Messages/Off-Messages.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/Startup-Scripts/Startup-Script.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/DynaMesh.txt</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM/LOCK.mcr</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/MaxZbrushSyncData/importSetup.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/MaxZbrushSyncData/exportFromZbrush.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/MaxZbrushSyncData/exportSubTools.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/3DsMax/MaxToZbrushSync.mcr</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadToolPath.txt</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-ZBRUSH/Lib/MaxToZbrushSync.ms</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/Startup-Scripts/Resize-Controls/resizeButtons.txt</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/.gitignore</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-ZBRUSH/Lib/createImportScript.ahk</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/Custom-UI.txt</string>
 </ordered-preference>
 <ordered-preference id="mruMenuItemList">
-  <string>menu_openFile</string>
-  <string>menu_preferences</string>
-  <string>ref%0e6 RECORDED-SCRIPT.txt%0e</string>
+  <string>ref%0e2 Zscript-Pitfalls-Cheatsheet.md%0e</string>
+  <string>ref%0e1 Zscript-Pitfalls-Cheatsheet.md%0e</string>
+  <string>ref%0e3 createImportScript.ahk%0e</string>
   <string>ref%0e1 RECORDED-SCRIPT.txt%0e</string>
-  <string>ref%0e10 RECORDED-SCRIPT.txt%0e</string>
-  <string>ref%0e7 RECORDED-SCRIPT.txt%0e</string>
-  <string>ref%0e17 TEST.txt%0e</string>
-  <string>ref%0e5 TEST.txt%0e</string>
-  <string>ref%0e8 RECORDED-SCRIPT.txt%0e</string>
-  <string>ref%0e8 Test.ahk%0e</string>
+  <string>ref%0e9 importToolsToZbrush.txt (2) &#8212; C:\Windows\Temp\_ZBRUSH_MAX_SYNC%0eko.history.open_rctab(0)</string>
+  <string>ref%0e1 importToolsToZbrush.txt (1) &#8212; C:\Windows\Temp\_ZBRUSH_MAX_SYNC%0eko.history.open_rctab(-1);</string>
+  <string>ref%0e7 createImportScript.ahk%0e</string>
+  <string>ref%0e5 RECORDED-SCRIPT.txt%0e</string>
+  <string>ref%0e1 Animation.mcr%0e</string>
+  <string>ref%0e2 Animation.mcr &#8212; C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-ANIMATION%0eko.history.open_rctab(8)</string>
 </ordered-preference>
 <ordered-preference id="mruProjectList">
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlpha.komodoproject</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/3DsMaxSync/3DsMaxSync.komodoproject</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript/Zscript.komodoproject</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/Zscript.komodoproject</string>
-  <string>file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/Zplugin-ToolLoader.komodoproject</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/z-Extended.komodoproject</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/Zplugin-3DsMaxSync.komodoproject</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/MS-vilTools3.komodoproject</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject</string>
 </ordered-preference>
 <ordered-preference id="mruTemplateList">
   <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Class.php</string>
@@ -916,27 +966,18 @@ vilbur
   <string id="phonegapInterpreter"></string>
   <boolean id="pin_find_frame">0</boolean>
 <preference-set id="places">
-  <string id="1">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader</string>
-  <string id="2">file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib</string>
+  <string id="1">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader</string>
 <preference-set id="current_filter_by_uri">
-<preference-set id="file:///.">
-  <string id="timestamp">1678437146951</string>
-  <string id="viewName">Default</string>
+<preference-set id="file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib">
+  <string id="timestamp">1706343556702</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib/EditPolyExplode">
+  <string id="timestamp">1706343553289</string>
+  <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3">
   <string id="timestamp">1674282980926</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3">
-  <string id="timestamp">1517827081177</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor">
-  <string id="timestamp">1517827058673</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey">
-  <string id="timestamp">1517827096854</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript">
@@ -955,24 +996,44 @@ vilbur
   <string id="timestamp">1674252104590</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/3DsMaxSync">
-  <string id="timestamp">1677329344174</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED">
+  <string id="timestamp">1710661869514</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha">
-  <string id="timestamp">1678334337716</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended">
+  <string id="timestamp">1710756958672</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader">
-  <string id="timestamp">1678507899655</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData">
+  <string id="timestamp">1710624381223</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript">
-  <string id="timestamp">1677300516249</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync">
+  <string id="timestamp">1710681744305</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/3DsMax">
+  <string id="timestamp">1707721110831</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/3DsMax/Lib">
+  <string id="timestamp">1707719773190</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader">
+  <string id="timestamp">1710766975725</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData">
+  <string id="timestamp">1710756957811</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Maxscript">
+  <string id="timestamp">1706012173419</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur">
-  <string id="timestamp">1676459870736</string>
+  <string id="timestamp">1709450127903</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools">
@@ -987,17 +1048,113 @@ vilbur
   <string id="timestamp">1674246934782</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate">
-  <string id="timestamp">1517827091388</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%20Templates/Php">
-  <string id="timestamp">1516071303834</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/en-US/plugcfg">
+  <string id="timestamp">1710261322964</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-vilTools3">
-  <string id="timestamp">1677996410567</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework">
+  <string id="timestamp">1710180572213</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog">
+  <string id="timestamp">1710162224696</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus">
+  <string id="timestamp">1706047705538</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator">
+  <string id="timestamp">1710180571161</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test">
+  <string id="timestamp">1706776605754</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3">
+  <string id="timestamp">1710663450100</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenu">
+  <string id="timestamp">1710419250057</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools">
+  <string id="timestamp">1710321008416</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EDIT-POLY">
+  <string id="timestamp">1710420152296</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT">
+  <string id="timestamp">1710617903904</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-3D-PRINT">
+  <string id="timestamp">1709243522606</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS">
+  <string id="timestamp">1710263191059</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS">
+  <string id="timestamp">1710412245363</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MATERIALS">
+  <string id="timestamp">1707416052506</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK">
+  <string id="timestamp">1707021172215</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIERS">
+  <string id="timestamp">1710248634320</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-OPTIONS">
+  <string id="timestamp">1710249270720</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D">
+  <string id="timestamp">1710560308617</string>
   <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE">
+  <string id="timestamp">1710418805062</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE-MANAGER">
+  <string id="timestamp">1710343332220</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SELECTION">
+  <string id="timestamp">1710419264372</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM">
+  <string id="timestamp">1710646005517</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-UI">
+  <string id="timestamp">1709379735311</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR">
+  <string id="timestamp">1709458199089</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS">
+  <string id="timestamp">1708491769001</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VISIBILITY">
+  <string id="timestamp">1707467156312</string>
+  <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework">
   <string id="timestamp">1672214143237</string>
@@ -1007,56 +1164,8 @@ vilbur
   <string id="timestamp">1670736633445</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh">
-  <string id="timestamp">1517826923797</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/app/Http/Controllers">
-  <string id="timestamp">1516283052515</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/commads">
-  <string id="timestamp">1516073326971</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/commands/subdir">
-  <string id="timestamp">1516120522158</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio">
-  <string id="timestamp">1515931233174</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/src">
-  <string id="timestamp">1515931607207</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/tests">
-  <string id="timestamp">1515931235464</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package">
-  <string id="timestamp">1516054483572</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package/src">
-  <string id="timestamp">1515933848431</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template">
-  <string id="timestamp">1516069117940</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/laravel-fresh/vilbur">
-  <string id="timestamp">1516074159854</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/wamp64/www/portfolio">
   <string id="timestamp">1518094724182</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/app">
-  <string id="timestamp">1518080876569</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/portfolio/app/Http/Controllers">
@@ -1067,44 +1176,8 @@ vilbur
   <string id="timestamp">1518094748287</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/biography">
-  <string id="timestamp">1518076941153</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template">
-  <string id="timestamp">1518086186808</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/src">
-  <string id="timestamp">1518012388732</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/tests">
-  <string id="timestamp">1518015793361</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio">
-  <string id="timestamp">1518094017875</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish">
-  <string id="timestamp">1518082960082</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js">
   <string id="timestamp">1518094056315</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass">
-  <string id="timestamp">1518089669840</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src">
-  <string id="timestamp">1518089262064</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests">
-  <string id="timestamp">1518089203802</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills">
@@ -1123,10 +1196,6 @@ vilbur
   <string id="timestamp">1518094069835</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/resources">
-  <string id="timestamp">1518080866357</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/wamp64/www/portfolio/resources/assets">
   <string id="timestamp">1518094662784</string>
   <string id="viewName">Current Project</string>
@@ -1135,29 +1204,9 @@ vilbur
   <string id="timestamp">1518094643413</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template">
-  <string id="timestamp">1518021135791</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio">
-  <string id="timestamp">1518082619032</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/sass">
   <string id="timestamp">1518094789806</string>
   <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/sass/dev-template">
-  <string id="timestamp">1518016388131</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/resources/assets/sass/portfolio">
-  <string id="timestamp">1518082619751</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///GoogleDrive/ProgramsData/CG/ZBrush/ProgramFiles/ZStartup/ZPlugs64/Alpha-List">
-  <string id="timestamp">1675450067573</string>
-  <string id="viewName">Default</string>
 </preference-set>
 </preference-set>
 <preference-set id="current_project_filter_by_uri">
@@ -1185,10 +1234,6 @@ vilbur
   <string id="timestamp">1674378085197</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/Zscript_Language.komodoproject">
-  <string id="timestamp">1674239604771</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/zScript-Language.komodoproject">
   <string id="timestamp">1674241290739</string>
   <string id="viewName">Current Project</string>
@@ -1197,48 +1242,52 @@ vilbur
   <string id="timestamp">1674252104590</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/3DsMaxSync/3DsMaxSync.komodoproject">
-  <string id="timestamp">1677329344174</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/z-Extended.komodoproject">
+  <string id="timestamp">1710756958673</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha/MaskByAlpha.komodoproject">
-  <string id="timestamp">1678362065131</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/Z-3DsMaxSync.komodoproject">
+  <string id="timestamp">1710681688695</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject">
-  <string id="timestamp">1678507899655</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/Zplugin%3A%203DsMaxSync.komodoproject">
+  <string id="timestamp">1710681723616</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript/Zscript.komodoproject">
-  <string id="timestamp">1676627480261</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/Zplugin-3DsMaxSync.komodoproject">
+  <string id="timestamp">1710681744305</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/KOMODO-Language-Zscript/zScript.komodoproject">
-  <string id="timestamp">1674240524077</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/MaxZbrushSync/z3DsMaxSync.komodoproject">
+  <string id="timestamp">1710681703488</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/zScript-Language.komodoproject">
-  <string id="timestamp">1674239049015</string>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoader.komodoproject">
+  <string id="timestamp">1710682900511</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/Zplugin-ToolLoader.komodoproject">
+  <string id="timestamp">1710766975726</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/zToolLoader.komodoproject">
+  <string id="timestamp">1710682916050</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Maxscript/Language_Maxscript.komodoproject">
+  <string id="timestamp">1706012114920</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.0/tools/Zscript-Language/Zscript-Language.komodoproject">
   <string id="timestamp">1674246934782</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-vilTools3/MS-vilTools3.komodoproject">
-  <string id="timestamp">1677332773338</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject">
+  <string id="timestamp">1710180572213</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject">
-  <string id="timestamp">1672214143237</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/Project-portfolio.komodoproject">
-  <string id="timestamp">1518094789807</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/wamp64/www/portfolio/packages/vilbur/skills/package-skills.komodoproject">
-  <string id="timestamp">1518095138214</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/MS-vilTools3.komodoproject">
+  <string id="timestamp">1710663450101</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 </preference-set>
@@ -1269,20 +1318,30 @@ vilbur
 <ordered-preference id="history_forwardPlaces">
 </ordered-preference>
 <ordered-preference id="history_prevPlaces">
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript-Test</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript-WORKING</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.0/tools/Zscript-Language</string>
-  <string>file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/Test</string>
-  <string>file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3</string>
-  <string>file:///C:/Users/vilbur</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/3DsMaxSync</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIERS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-OPTIONS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/en-US/plugcfg</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE-MANAGER</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenu</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SELECTION</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EDIT-POLY</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended</string>
 </ordered-preference>
-  <string id="lastHomePlace">file:///.</string>
-  <string id="lastLocalDirectoryChoice">file:///.</string>
-  <string id="places-open-nodes-v2">{"file:///C:/GoogleDrive/Programs/Core/Autohotkey/Utilities/VilHotkey": 1509739490.337, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib": 1509515028.51, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage": 1515453585.277, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3": 1517827081.138, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/components": 1518094080.258, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio": 1515931233.171, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage": 1515425864.932, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/IniEditor": 1517827058.63, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/VilHotkey": 1517827096.834, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/tests": 1515931235.461, "file:///C:/wamp64/www/laravel-fresh/commands": 1516127445.53, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities": 1509129351.715, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder/tests": 1515640360.497, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib/Komodo": 1509375020.27, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/3DsMaxSync": 1677329344.155, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator": 1670736632.757, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/samples": 1515258467.966, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js": 1518094056.31, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv2": 1511272646.576, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests": 1518089203.8, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/views": 1518083036.282, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-template-package": 1516054483.316, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/VoyagerSeeder": 1515767621.051, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/udl": 1674303550.736, "file:///C:/wamp64/www/laravel-fresh/tests/Unit": 1516275996.169, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib/Controls": 1509875192.616, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/_Lib/_Documentation": 1509482548.993, "file:///C:/wamp64/www/portfolio/app/Http/Controllers": 1518094667.489, "file:///C:/scripts/MAXSCRIPT-UI-framework": 1672214143.119, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/src": 1518012388.729, "file:///.": 1678364757.86, "file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3": 1674282980.874, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src": 1515447510.805, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/KOMODO-Language-Zscript": 1674240524.064, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts": 1509168829.891, "file:///C:/wamp64/www/portfolio/packages": 1518094748.28, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/template": 1516069117.702, "file:///C:/wamp64/www/portfolio/packages/vilbur/dev-template/tests": 1518015793.076, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.0/tools/Zscript-Language": 1674246934.756, "file:///C:/wamp64/www/laravel-packages/packages/vilbur/TestPackage/src": 1515259829.585, "file:///C:/wamp64/www/portfolio": 1518094724.165, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/project-templates/ExtensionTemplate": 1517827091.362, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript-Test": 1674242567.368, "file:///C:/wamp64/www/laravel-fresh/tests": 1516275991.482, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib/Gui": 1512981815.665, "file:///C:/wamp64/www/laravel-fresh/app/Models": 1516419617.853, "file:///C:/wamp64/www/laravel-fresh": 1517826923.583, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources": 1518082853.735, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio": 1518082619.028, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Lib/VilGUI/Lib": 1511128018.565, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish": 1518094071.668, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets": 1518082855.178, "file:///C:/wamp64/www/portfolio/packages/vilbur": 1518094760.174, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Routes": 1515447512.771, "file:///C:/GoogleDrive/Programs/Core/Komodo/_AhkScripts/Lib": 1509219617.527, "file:///C:/wamp64/www/laravel-fresh/resources": 1515930387.404, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/TemplatePackage/src/Providers": 1515448187.341, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills": 1518094806.357, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/views": 1518015774.55, "file:///C:/wamp64/www/laravel-fresh/commands/events": 1516479646.302, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/MaskByAlpha": 1678334337.691, "file:///C:/wamp64/www/laravel-fresh/packages/vilbur/laravel-package-portfolio/src": 1515931607.2, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools": 1674239200.848, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/components": 1518005525.558, "file:///C:/GoogleDrive/Programs/Core/Komodo": 1509176741.175, "file:///C:/wamp64/www/laravel-fresh/app": 1515930352.929, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/pylib": 1674303570.613, "file:///C:/wamp64/www/laravel-fresh/vilbur": 1516074159.851, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI": 1512060516.056, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-vilTools3": 1677903714.905, "file:///C:/wamp64/www/portfolio/resources/assets/sass": 1518094789.803, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript": 1674897951.034, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUIv3/Lib": 1512981815.167, "file:///C:/wamp64/www/laravel-fresh/app/Http/Controllers": 1516283052.51, "file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Zscript": 1677300515.812, "file:///C:/Users/vilbur": 1676459870.45, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/components": 1518083035.149, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass": 1518089669.838, "file:///C:/wamp64/www/portfolio/resources/assets/js/dev-template/views": 1518005523.608, "file:///C:/wamp64/www/portfolio/resources/assets/js": 1518094643.407, "file:///C:/wamp64/www/portfolio/resources/assets": 1518094662.772, "file:///C:/wamp64/www/portfolio/resources/assets/js/skills_DELETE": 1518094646.073, "file:///C:/": 1515930212.992, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src/providers": 1518080808.552, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Class/VilGUI/Lib/Controls/Control": 1511523199.677, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator": 1508834718.926, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src": 1518094069.829, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src": 1518089262.061, "file:///C:/GoogleDrive/Programs/Core/AutoHotkey/Utilities/TypingAidVariator/Lib": 1508834714.916, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript-WORKING": 1674243512.419, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio/components": 1518005549.658, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader": 1678100019.799, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib": 1670736338.898, "file:///c:/wamp64/www/laravel_fresh": 1508834149.96, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/Test": 1674252104.555, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/views": 1518094078.663, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js": 1518094149.555, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish": 1518082960.077, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php": 1516071303.824, "file:///C:/wamp64/www/laravel-start": 1515929981.888}</string>
+  <string id="lastHomePlace">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData</string>
+  <string id="lastLocalDirectoryChoice">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData</string>
+  <string id="places-open-nodes-v2">{"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR/Lib/meshVertToColorVertexConvertor/Test": 1708941602.86, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS/Lib/GroupCreator": 1709674375.299, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended": 1710692492.971, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS/Lib/GroupAttacher": 1709674376.129, "file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib/EpolySelection/Test": 1706343573.126, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator": 1710180570.538, "file:///C:/wamp64/www/portfolio/resources/assets/js/portfolio": 1518082619.028, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenu": 1710419250.035, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/PlatformGenerator/PlatformGenerator/EditablePolyVertexGetter/Dev": 1709762993.624, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/components": 1518094080.258, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/Lib": 1706630315.151, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT": 1710403186.012, "file:///C:/wamp64/www/portfolio/resources/assets": 1518094662.772, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo": 1710008597.265, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src": 1518089262.061, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator": 1670736632.757, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData": 1710699720.976, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js": 1518094056.31, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/tests": 1518089203.8, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-ZBRUSH": 1710101818.026, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D": 1710560308.468, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework": 1710180572.023, "file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Languages/KOMODO-Language-Maxscript": 1706012173.379, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/udl": 1674303550.736, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib": 1710333199.947, "file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib/EditPolyExplode": 1706343553.283, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData": 1710562218.053, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/views": 1518083036.282, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EDIT-POLY": 1710420152.273, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/Lib": 1710217894.894, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/MeshVertexGetter/Test": 1710333263.053, "file:///C:/GoogleDrive/Programs/CG/3DsMax/AppData/scripts/MAXSCRIPT-vilTools3": 1674282980.874, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/en-US/plugcfg": 1710261322.917, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/KOMODO-Language-Zscript": 1674240524.064, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/PlatformGenerator/PlatformGenerator/EditablePolyVertexGetter": 1709762991.516, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/Checkers": 1707901156.585, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test": 1706776605.741, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.0/tools/Zscript-Language": 1674246934.756, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3": 1710343326.13, "file:///C:/wamp64/www/portfolio": 1518094724.165, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript-Test": 1674242567.368, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-3D-PRINT": 1710008601.881, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/Dev": 1710699741.107, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/PlatformGenerator/PlatformGenerator": 1709762956.552, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources": 1518082853.735, "file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib/EpolySelection/EditablePolySelection": 1706343574.365, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR/Lib/meshVertToColorVertexConvertor": 1708941602.135, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish": 1518094071.668, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets": 1518082855.178, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/Lib/RegExer": 1710217896.133, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-ZBRUSH/Lib/Presets": 1710261157.956, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-ZBRUSH/Lib": 1710008701.554, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS/Lib": 1709545135.603, "file:///C:/wamp64/www/portfolio/packages": 1518094748.28, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager": 1710333840.035, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills": 1518094806.357, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenu/config-files": 1706011964.846, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR/Lib": 1708941592.641, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS/Lib/SceneLayers": 1710161047.02, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools": 1674239200.848, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/Test": 1674252104.555, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SELECTION": 1710419264.349, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript/pylib": 1674303570.613, "file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader": 1710691618.375, "file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib": 1706343556.639, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls": 1706776608.643, "file:///C:/wamp64/www/portfolio/resources/assets/sass": 1518094789.803, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript": 1674897951.034, "file:///C:/Users/vilbur": 1709450127.836, "file:///C:/wamp64/www/portfolio/packages/vilbur": 1518094760.174, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS/Lib": 1709674373.153, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EDIT-POLY/Lib": 1710263294.245, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/sass": 1518089669.838, "file:///C:/wamp64/www/portfolio/resources/assets/js": 1518094643.407, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS/Lib/SceneLayers/Test": 1710161270.202, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish/resources/assets/js/components": 1518083035.149, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/MacroscriptGenerator": 1706776720.806, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog": 1710162224.682, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools": 1710321008.279, "file:///C:/wamp64/www/portfolio/resources/assets/js/skills_DELETE": 1518094646.073, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/src/providers": 1518080808.552, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE": 1710418799.253, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE-MANAGER": 1710343332.179, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/src": 1518094069.829, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/Lib/ExporterOBJ": 1710403195.456, "file:///C:/scripts/MAXSCRIPT-UI-framework": 1672214143.119, "file:///C:/wamp64/www/portfolio/app/Http/Controllers": 1518094667.489, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenu/QuadMenus": 1709205801.994, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-UTILITIES": 1710321025.393, "file:///C:/GoogleDrive/Programs/Core/Komodo/Languages/KOMODO-Language-Zscript-WORKING": 1674243512.419, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/MeshVertexGetter/Dev": 1710333261.188, "file:///B:/GoogleDrive-DELETE/GoogleDrive-old-comp/Programs/CG/3DsMax/scripts/vilTools2/_Epoly/lib/EpolySelection": 1706343571.377, "file:///C:/scripts/MAXSCRIPT-UI-framework/Lib": 1670736338.898, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js/views": 1518094078.663, "file:///C:/wamp64/www/portfolio/packages/vilbur/skills/publish/resources/assets/js": 1518094149.555, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools": 1708940465.659, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-3D-PRINT/Lib/PrintExporter": 1706589553.341, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS": 1710412245.324, "file:///C:/wamp64/www/portfolio/packages/vilbur/portfolio/publish": 1518082960.077, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib": 1706776720.33}</string>
   <long id="project_sort_direction">0</long>
   <boolean id="showProjectPath">0</boolean>
   <boolean id="showProjectPathExtension">0</boolean>
@@ -1374,9 +1433,9 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="tidy_errorlevel">errors</string>
   <long id="toolbox-open-nodes-size">100</long>
 <preference-set id="toolbox2">
-  <long id="currentIndex">-1</long>
+  <long id="currentIndex">221</long>
   <long id="firstVisibleRow">0</long>
-  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\~Tabs": 1670737408.31, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs-NEW": 1678434081.901, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\variable": 1518094104.483, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON": 1674446438.478, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-WORKING\\.komodotools": 1674243501.901, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT": 1678434694.986, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript\\.komodotools": 1674378084.465, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu\\Menu-Edit\\Line": 1518073867.597, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL": 1518095127.194, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON\\Comment-1": 1674445969.454, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\param": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1678434081.819, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\REGEX": 1518095127.2, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\Test\\.komodotools": 1674252104.237, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars": 1678434081.898, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\file\\current_file": 1674309916.049, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\property": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\control flow": 1675248730.413, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools": 1518095127.155, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_40_Fold": 1678434081.899, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General\\_Language-All\\Keywords": 1518071979.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\.komodotools": 1674240526.948, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.0\\tools\\Zscript-Language\\.komodotools": 1674246934.457, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions\\UI": 1670736995.089, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General": 1518084025.449, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Toolbars\\Menu-Edit\\Line": 1518073423.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50~Edit-NEW": 1678434081.9, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build": 1671696591.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\.komodotools": 1671696592.612, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start\\ProjectFilesOpener": 1518095127.211, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ui": 1676887778.976, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\onEvent": 1678434081.892, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build": 1674239403.518, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_SHARED": 1674405462.595, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\if": 1518094637.919, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\routine": 1676887904.396, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor\\File": 1518076477.674, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\Autohotkey\\_Custom": 1518088384.657, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content\\js": 1671696598.455, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\.komodotools": 1674239433.095, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-Test\\.komodotools": 1674242569.929, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\_COMMON": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ui_controls": 1675248736.133, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events": 1518095127.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build\\xpi": 1674239403.522, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\LANGUAGE\\JavaScript\\_Prototype": 1518076027.491, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo": 1677066295.859, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\onEvent\\onFileOpen": 1678434081.893, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build\\jar": 1671696594.999, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_Test\\Abbreviations": 1518074164.699, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1678434081.854, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\_Tabs": 1670864042.824, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\send-1": 1675608272.189, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\case": 1518094104.481, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript": 1674240623.53, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menus": 1670737057.641, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\~Edit\\Line": 1670736989.941, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\_": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL-1": 1670337598.759, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\templates": 1674240623.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\rollout": 1677330872.028, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\fn": 1676887911.393, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content": 1671696597.544, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1518076477.672, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start": 1518095127.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit": 1674303928.423, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS": 1518076477.664, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL": 1518094104.474, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670736984.596, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\String": 1518094104.482, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit\\Line": 1674285120.761, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\msgbox": 1674304008.754}</string>
+  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\tool\\old": 1710712224.434, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\~Tabs": 1670737408.31, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs-NEW": 1710712224.44, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\variable": 1518094104.483, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON": 1674446438.478, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-WORKING\\.komodotools": 1674243501.901, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT": 1710756911.062, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript\\.komodotools": 1674378084.465, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu\\Menu-Edit\\Line": 1518073867.597, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\onEvent\\onFileOpen": 1706011959.582, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON\\Comment-1": 1674445969.454, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1518076477.672, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\param": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\file": 1710162214.706, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\REGEX": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\file\\current_file": 1710162214.709, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\tool": 1710712224.433, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs": 1706011959.589, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50~Edit": 1706011959.588, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\templates": 1674240623.532, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\Test\\.komodotools": 1674252104.237, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars": 1710712224.439, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL": 1518095127.194, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\property": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools": 1518095127.155, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General\\_Language-All\\Keywords": 1518071979.052, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\.komodotools": 1674240526.948, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\SCRIPTS": 1518071369.614, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.0\\tools\\Zscript-Language\\.komodotools": 1674246934.457, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions\\UI": 1670736995.089, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\General": 1518084025.449, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Toolbars\\Menu-Edit\\Line": 1518073423.034, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo": 1706630437.814, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\dialog": 1710712224.423, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build": 1671696591.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\.komodotools": 1671696592.612, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start\\ProjectFilesOpener": 1518095127.211, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max\\runMaxScript": 1706630437.812, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build": 1674239403.518, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_SHARED": 1674405462.595, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\if": 1518094637.919, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\if": 1710692492.531, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\routine": 1710739340.003, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\string": 1710712224.426, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS\\Komodo-Editor\\File": 1518076477.674, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_OLD_Abbreviations\\Autohotkey\\_Custom": 1518088384.657, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content\\js": 1671696598.455, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\.komodotools": 1674239433.095, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\file\\If_File": 1710692492.53, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-Test\\.komodotools": 1674242569.929, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\_COMMON": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ui_controls": 1674405143.106, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events": 1518095127.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\key": 1710692492.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build\\xpi": 1674239403.522, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\LANGUAGE\\JavaScript\\_Prototype": 1518076027.491, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build\\jar": 1671696594.999, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\_Test\\Abbreviations": 1518074164.699, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max": 1706630437.812, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\array\\makeUniqueArray": 1710420291.525, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1710756911.026, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\_Tabs": 1670864042.824, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\case": 1518094104.481, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1710756910.972, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\getUserProp ": 1706446963.836, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript": 1674240623.53, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menus": 1670737057.641, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\file": 1710741924.846, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\~Edit\\Line": 1670736989.941, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\_": 1518095127.183, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL-1": 1670337598.759, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\_KO_": 1674309916.037, "C:\\GoogleDrive\\ProgramsData\\Core\\Komodo\\Languages\\KOMODO-Language-Maxscript\\.komodotools": 1706012123.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\subtool": 1710712224.429, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content": 1671696597.544, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\primitives": 1710420291.527, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\recorded-script": 1710712224.424, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start": 1518095127.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit": 1674303928.423, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Scripts\\PROGRAMS": 1518076477.664, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL": 1518094104.474, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\array": 1710420291.524, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\vector": 1710420291.527, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670736984.596, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\JAVASCRIPT\\GENERAL\\string\\String": 1518094104.482, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit\\Line": 1674285120.761, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\msgbox": 1674304008.754}</string>
   <string id="sortDirection">natural</string>
 </preference-set>
   <boolean id="triggering_macros_enabled">1</boolean>
@@ -1388,7 +1447,7 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
   <string id="ui.tabs.sidepanes.left.layout">vertical</string>
   <string id="ui.tabs.sidepanes.right.layout">vertical</string>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":1143},{"id":"klint_tabpanel","width":654},{"id":"notifications-widget","width":1182}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <boolean id="upgradeKomodo.dontask">1</boolean>
   <boolean id="useSmartTabs">0</boolean>
   <boolean id="useTabs">1</boolean>
@@ -1406,81 +1465,85 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="windowDimensions-prefProjectsWindow">1012,797,535,273</string>
 <preference-set id="windowWorkspace">
 <preference-set id="1">
-  <string id="current_project">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject</string>
+  <string id="current_project">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/Zplugin-ToolLoader.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastTool.txt","tabIndex":4},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/PluginManager/PluginManager.txt","tabIndex":2},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/Extended/ExtendedData/Custom-UI.txt","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2493/sleep.snippet","tabIndex":7},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/enableButtons.txt","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/initToolList.txt","tabIndex":3},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/UI-AlphaManager.txt","tabIndex":1},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2272/memc.snippet","tabIndex":10},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2540/memc.snippet","tabIndex":11},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2539/memc.snippet","tabIndex":10}]</string>
+  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/getSavePathAndMoveSubtoolTop.txt","tabIndex":5},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/ExtendedData/UI-Labels.txt","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/saveToolBySubtool.txt","tabIndex":4},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://3492/strf.snippet","tabIndex":7},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/Extended.txt","tabIndex":2},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2934/loop.snippet","tabIndex":7},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://2935/loopa.snippet","tabIndex":7},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt","tabIndex":3},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadToolToViewport.txt","tabIndex":6},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://3487/nv.snippet","tabIndex":6}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
-  <string id="spv_projects">["file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.komodoproject"]</string>
+  <string id="spv_projects">["file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/Zplugin-ToolLoader.komodoproject"]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1678531024</long>
+  <long id="timestamp">1710776833</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
-  <long id="current_view_index">0</long>
+  <long id="current_view_index">3</long>
 <ordered-preference id="view_prefs">
 <preference-set>
-  <string id="URI">file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/TEST.txt</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/SupportManager.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.txt</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/SupportOptions/SupportOptions.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getToolList.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoader.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/UI-ToolLoader.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadLastTool.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadTool.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/initToolList.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/getToolList.txt</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
 </preference-set>
 <preference-set>
-  <long id="current_view_index">10</long>
+  <long id="current_view_index">5</long>
 <ordered-preference id="view_prefs">
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/UI-ToolLoader.txt</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/HelperGenerator/HelperGenerator.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/maskLoad.txt</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/HelperObject/HelperObject.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getNewTool.txt</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/MeshDataGetter/MeshDataGetter.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/configFile.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/Zscript-Pitfalls-Cheatsheet.md</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastToolOnStartup.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/Dev/tool_subtool_commands_exploration.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastTool.txt</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/initToolList.txt</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadTool.txt</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/alphaToggle.txt</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/saveToolBySubtool.txt</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
@@ -1488,25 +1551,60 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
-  <string>file:///C:/Program%2520Files/Pixologic/ZBrush%25202022/ZScripts/TEST.txt?parentId=view-1</string>
-  <string>snippet2://2544/memc.snippet?parentId=view-2</string>
-  <string>snippet2://2543/memc.snippet?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/alphaToggle.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastToolOnStartup.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadLastTool.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/initToolList.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoader.txt?parentId=view-1</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/UI-ToolLoader.txt?parentId=view-2</string>
-  <string>file:///c:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt?parentId=view-1</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getToolList.txt?parentId=view-1</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadToolToViewport.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/configFile.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/AlphaManager/AlphaManagerData/maskLoad.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/loadTool.txt?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/ToolLoader/ToolLoaderData/getNewTool.txt?parentId=view-2</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/saveToolBySubtool.txt?parentId=view-2</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/UI-ToolLoader.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/getToolList.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoader.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/ProgramFiles/ZScripts/RECORDED-SCRIPT.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadTool.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/loadLastTool.txt?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Config/Zscript-Pitfalls-Cheatsheet.md?parentId=view-2</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/initToolList.txt?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/SupportManager.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/SupportOptions/SupportOptions.ms?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/ToolLoaderData/Dev/tool_subtool_commands_exploration.txt?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/MeshDataGetter/MeshDataGetter.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/HelperGenerator/HelperGenerator.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/HelperObject/HelperObject.ms?parentId=view-2</string>
 </ordered-preference>
 </preference-set>
   <long id="windowNum">1</long>
+</preference-set>
+<preference-set id="2">
+<preference-set id="coordinates">
+  <long id="outerHeight">2119</long>
+  <long id="outerWidth">3008</long>
+  <long id="screenX">-7</long>
+  <long id="screenY">0</long>
+  <long id="windowState">3</long>
+</preference-set>
+<preference-set id="history_rctabs">
+  <string id="rctabs_list">[]</string>
+</preference-set>
+<preference-set id="opened_projects_v7">
+  <string id="mpv_projects">[]</string>
+  <string id="spv_projects">[]</string>
+</preference-set>
+  <boolean id="restoreOnRestart">0</boolean>
+  <long id="timestamp">1709450128</long>
+<preference-set id="topview">
+<ordered-preference id="childState">
+<preference-set>
+  <long id="current_view_index">0</long>
+<ordered-preference id="view_prefs">
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/MeshVertexGetter/MeshVertexGetter.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+</ordered-preference>
+</preference-set>
+</ordered-preference>
+  <string id="orientation">horizontal</string>
+<ordered-preference id="viewHistoryState">
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/MeshVertexGetter/MeshVertexGetter.ms?parentId=view-1</string>
+</ordered-preference>
+</preference-set>
+  <long id="windowNum">2</long>
 </preference-set>
 </preference-set>
   <boolean id="wizard.finished">1</boolean>

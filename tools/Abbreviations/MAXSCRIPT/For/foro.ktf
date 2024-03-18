@@ -1,12 +1,13 @@
-/*
+
 komodo tool: foro
-=================
-auto_abbreviation: false
-indent_relative: false
-language: Maxscript
-set_selection: false
-treat_as_ejs: false
-type: snippet
-version: 1.1.5
-=================*/
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
 for obj in [[%tabstop:selection]] [[%tabstop:where [[%tabstop:superClassOf obj == GeometryClass]] ]][[%tabstop:do]] [[%tabstop:]]!@#_currentPos!@#_anchor

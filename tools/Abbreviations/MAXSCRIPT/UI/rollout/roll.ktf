@@ -1,0 +1,43 @@
+
+komodo tool: roll
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+	/* Ask for function name and return value
+	*/
+	var ask = ko.interpolate.interpolateString([
+		'%(ask1:Rolllout name:)',
+	]).split(',');
+	
+	var fn_name_sanitized	= ask[0].replace(/([A-Z])/g, ' $1').replace(/[\s+|-]+/g, ' ').replace(/\s+/g, ' ').trim();
+	
+	var fn_summary	= fn_name_sanitized.charAt(0).toUpperCase() + fn_name_sanitized.slice(1).toLowerCase();
+	
+	var fn_name = (function()
+	{
+		var fn_name_pascal 	= fn_name_sanitized.toLowerCase().replace(/(?:(^.)|(\s+.))/g, function(match) {
+			return match.charAt(match.length-1).toUpperCase();
+		});
+		return fn_name_pascal;
+
+		//return fn_name_pascal.charAt(0).toLowerCase() + fn_name_pascal.slice(1);
+	})(); 
+
+	
+	ko.run.output.endSession();
+	ko.run.runEncodedCommand( window, 'set /p="'+fn_name+'"<nul| clip' );
+%>
+[[%tabstop:/** [[%tabstop:<%=fn_summary%>]][[%tabstop:]]
+ */]]
+rollout [[%tabstop:<%=fn_name%>]]_roll "[[%tabstop:<%=fn_summary%>]]"
+(
+    [[%tabstop:]]
+)[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,4 +1,4 @@
-/*
+
 komodo tool: new
 ================
 language:	       Maxscript
@@ -9,5 +9,5 @@ indent_relative:   true
 set_selection:     false
 is_clean:          true
 version:           1.1.5
-================*/
+================
 [[%tabstop:[[%tabstop:]][[%tabstop1:Struct]][[%tabstop:]] 	= ]][[%tabstop1:Struct]]_v[[%tabstop:]]()[[%tabstop:]]!@#_currentPos!@#_anchor

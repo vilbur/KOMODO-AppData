@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "liai", 
+  "language": "RHTML", 
+  "value": [
+    "<% link_to(\"[[%tabstop:text]]\", :action => \"[[%tabstop:edit]]\", :id => [[%tabstop:@item]] %>!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "false", 
+  "auto_abbreviation": "false"
+}

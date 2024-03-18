@@ -1,0 +1,32 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "macroEpoly", 
+  "language": "Maxscript", 
+  "value": [
+    "\ton isEnabled return Filters.Is_EPolySpecifyLevel #{[[%tabstop:2..3]]}", 
+    "\ton isVisible return Filters.Is_EPolySpecifyLevel #{[[%tabstop:2..3]]}", 
+    "\t", 
+    "\ton execute do (", 
+    "\t\ttry (", 
+    "\t\t\tmax modify mode", 
+    "\t\t\tlocal _Mod = Filters.GetModOrObj()", 
+    "", 
+    "\t\t\tif (Filters.Is_EPoly()) then", 
+    "\t\t\t\tprint \"Edit Poly or Editable Poly\"", 
+    "", 
+    "\t\t\tif (Filters.Is_This_EditPolyMod _Mod) then", 
+    "\t\t\t\t[[%tabstop:print \"Edit Poly\"]]", 
+    "\t\t\t", 
+    "\t\t\telse if (Filters.Is_EditPoly()) then", 
+    "\t\t\t\t[[%tabstop:print \"Editable Poly\"]]", 
+    "\t\t)", 
+    "\t\tcatch ()", 
+    "\t)!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "false", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "false"
+}

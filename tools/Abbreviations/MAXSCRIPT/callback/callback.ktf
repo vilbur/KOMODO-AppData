@@ -1,0 +1,38 @@
+
+komodo tool: callback
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/**
+ * [[%tabstop:https://help.autodesk.com/view/3DSMAX/2015/ENU/?guid=__files_GUID_C1F6495F_5831_4FC8_A00C_667C5F2EAE36_htm]]
+ */
+function [[%tabstop2:callback]]Event =
+(
+	print "Start: [[%tabstop2:callback]]()"
+	try( callbacks.addScript #[[%tabstop1:selectionSetChanged]] "[[%tabstop2:callback]]()" id:#[[%tabstop2:callback]] )catch()
+)
+
+
+/** 
+ */
+function [[%tabstop2:callback]]Kill =
+(
+	print "Kill: [[%tabstop2:callback]]()"
+	try( callbacks.removeScripts #[[%tabstop1:selectionSetChanged]] id:#[[%tabstop2:callback]] )catch()
+)
+
+
+/** 
+ */
+function [[%tabstop2:callback]] =
+(
+	print "[[%tabstop2:callback]]()"
+	[[%tabstop:]]
+)!@#_currentPos!@#_anchor

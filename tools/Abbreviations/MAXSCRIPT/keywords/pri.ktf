@@ -1,0 +1,15 @@
+
+komodo tool: pri
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+
+private
+!@#_currentPos!@#_anchor

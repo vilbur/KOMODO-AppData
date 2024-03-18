@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "switch", 
+  "language": "JavaScript-common", 
+  "value": [
+    "switch [[%soft:(]][[%tabstop:expression]][[%soft:) {]]", 
+    "\t[[%tabstop://case]]", 
+    "}"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "true"
+}

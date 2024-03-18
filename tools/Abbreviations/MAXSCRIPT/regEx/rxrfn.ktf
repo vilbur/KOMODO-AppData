@@ -1,0 +1,15 @@
+/*
+komodo tool: rxrfn
+==================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+/** Reg ex replace
+ */
+function regExReplace [[%tabstop1:_string]] [[%tabstop2:_search]] [[%tabstop3:_replace]] = ( dotNetObject "System.Text.RegularExpressions.Regex" [[%tabstop2:_search]] [[%tabstop:( dotNetClass "System.Text.RegularExpressions.RegexOptions" ).IgnoreCase]] ).Replace [[%tabstop1:_string]] [[%tabstop3:_replace]]!@#_currentPos!@#_anchor

@@ -1,0 +1,16 @@
+/*
+komodo tool: getVectorsAngle
+============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+============================*/
+function getVectorsAngle v1 v2 =
+ (
+	the_angle = acos(dot (normalize v1) (normalize v2))
+)!@#_currentPos!@#_anchor

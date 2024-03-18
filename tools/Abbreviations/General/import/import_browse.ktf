@@ -99,7 +99,9 @@ function getSnippetValue()
 
 
 			//return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
-			return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
+			//return '[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )[[%tabstop:]]';
+			return '[[%tabstop:[[%tabstop:filein]]( getFilenamePath(getSourceFileName()) + "'+path_relative.substring(2)+'" )	]][[%tabstop:--"./'+path_relative.substring(3)+'"]]';
+
 		};
 		this.Zscript = function()
 		{

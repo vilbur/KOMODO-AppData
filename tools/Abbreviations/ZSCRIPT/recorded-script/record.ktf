@@ -1,0 +1,19 @@
+/*
+komodo tool: record
+===================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===================*/
+[IButton, RECORDED, "",
+[IConfig,2022]
+
+
+
+,/*Disabled*/, 256 ,/*Hotkey*/,/*Icon*/,64]
+!@#_currentPos!@#_anchor

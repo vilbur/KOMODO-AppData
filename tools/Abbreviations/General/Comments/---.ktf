@@ -1,7 +1,8 @@
 // komodo tool: ---
 // ================
 // auto_abbreviation: false
-// indent_relative: false
+// indent_relative: true
+// is_clean: true
 // language: General
 // set_selection: false
 // treat_as_ejs: true

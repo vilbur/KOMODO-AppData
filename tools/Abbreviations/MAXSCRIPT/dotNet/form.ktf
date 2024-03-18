@@ -1,0 +1,68 @@
+
+komodo tool: form
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+/*
+https://forums.cgsociety.org/t/dotnet-edittext-example-for-maxscript/1694427/5
+*/
+
+clearlistener()
+try(destroyDialog MyForm)catch()
+
+Global FONTSTYLE = dotnetclass "System.Drawing.FontStyle"
+Global TITLEFONT = dotnetobject "System.Drawing.Font" "Arial" 8 FONTSTYLE.italic  ---FontStyle.regular FontStyle.bold FontStyle.italic FontStyle.underline FontStyle.strikeou
+Global MESSAGEFONT = dotnetobject "System.Drawing.Font" "Arial" 8 FONTSTYLE.italic  ---FontStyle.regular FontStyle.bold FontStyle.italic FontStyle.underline FontStyle.strikeout
+
+fn showProps obj = (
+	clearListener()
+	format "Properties:
+"
+	showProperties obj
+	format "
+Methods:
+"
+	showMethods obj
+	format "
+Events:
+"
+	showEvents obj
+)
+
+rollout MyForm "MyForm" width:300 height:400(
+	dotNetControl TextBox "System.Windows.Forms.TextBox" width:200 height:16
+
+	on MyForm open do(
+		TextBox.Visible = true
+		TextBox.MultiLine = false
+		TextBox.enabled = true
+		TextBox.ForeColor = (dotnetclass "System.Drawing.Color").FromArgb 20 20 20
+		TextBox.BackColor = (dotnetclass "System.Drawing.Color").FromArgb 180 180 180
+		TextBox.BorderStyle = (dotNetClass "System.Windows.Forms.BorderStyle").FixedSingle
+		TextBox.Text = "Hello world"
+		TextBox.Font = TITLEFONT
+		TextBox.DeselectAll()
+		showProps TextBox
+	)
+	
+	on TextBox keydown pressedKey do ( --- this works great
+		print pressedKey.keyvalue
+	)
+	
+	on TextBox Enter state  do (  ---- not working
+		showProps TextBox
+	)
+	
+	on TextBox mouseDown arg do( --- works great too
+		TextBox.clear()
+	)	
+)
+createdialog MyForm
+!@#_currentPos!@#_anchor

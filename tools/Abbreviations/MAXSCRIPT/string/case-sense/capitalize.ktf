@@ -1,0 +1,13 @@
+
+komodo tool: capitalize
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:[[%tabstop1:string]][[%tabstop:]]_capital	= ]]toUpper [[%tabstop1:string]][1] + substring [[%tabstop1:string]] 2 -1[[%tabstop:]]!@#_currentPos!@#_anchor

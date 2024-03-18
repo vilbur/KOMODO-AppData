@@ -1,0 +1,13 @@
+
+komodo tool: layer_current
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:[[%tabstop:current_layer]]	= ]]LayerManager.getLayer [[%tabstop:1]]!@#_currentPos!@#_anchor

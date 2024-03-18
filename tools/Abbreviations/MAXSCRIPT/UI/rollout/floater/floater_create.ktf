@@ -1,0 +1,19 @@
+
+komodo tool: floater_create
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+try(cui.UnRegisterDialogBar 	[[%tabstop1:NameFloater]])catch()	--try to unregister if already registered
+try(closeRolloutFloater	[[%tabstop1:NameFloater]])catch()	--try to destroy the dialog if already existing
+
+[[%tabstop1:NameFloater]] = newRolloutFloater "[[%tabstop1:NameFloater]]" 270 1000 0 90
+
+cui.RegisterDialogBar	[[%tabstop1:NameFloater]] style:#(#cui_dock_left,#cui_dock_right,#cui_floatable,#cui_handles)				
+cui.DockDialogBar	[[%tabstop1:NameFloater]] #cui_dock_[[%tabstop:right]][[%tabstop:]]!@#_currentPos!@#_anchor

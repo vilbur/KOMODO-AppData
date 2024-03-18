@@ -1,0 +1,26 @@
+
+komodo tool: try
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+<%
+/**
+ * TODO: make snippet interaktive with ask for file, insert current file path as default
+ *
+ *
+    ONLY EXCEPTION 
+		format "\n************ EXCEPTION ************\n%\n***********************************\n" (getCurrentException())
+	
+	WITH FILE
+		format "\n**************** EXCEPTION File: % ****************\n\n%\n\n**************************************************************************************************************************************\n" filein_path (getCurrentException())
+	
+ */
+%>
+try( [[%tabstop:]] )catch()[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,12 @@
+/*
+komodo tool: onexe
+==================
+auto_abbreviation: false
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+on execute do!@#_currentPos!@#_anchor

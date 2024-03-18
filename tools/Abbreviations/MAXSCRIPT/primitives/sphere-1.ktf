@@ -1,0 +1,12 @@
+/*
+komodo tool: sphere
+===================
+auto_abbreviation: true
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===================*/
+_sphere = Sphere()!@#_currentPos!@#_anchor

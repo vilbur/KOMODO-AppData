@@ -10,7 +10,6 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =================*/
-[Loop, [[%tabstop:count]]
-,
+[Loop, [[%tabstop:count]],
 	[[%tabstop:]]
 ,[[%tabstop:$i]]]!@#_currentPos!@#_anchor

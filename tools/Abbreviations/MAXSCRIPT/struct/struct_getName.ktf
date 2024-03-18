@@ -1,4 +1,4 @@
-/*
+
 komodo tool: struct_getName
 ================
 language:	       Maxscript
@@ -9,7 +9,7 @@ indent_relative:   true
 set_selection:     false
 is_clean:          true
 version:           1.1.5
-================*/
+================
 <%
 /**  Get struct name via dotNetObject
 [[%tabstop:[[%tabstop1:this]]_[[%tabstop:name]]	= ]]( dotNetObject "System.Text.RegularExpressions.Regex" @"#Struct:([^\(]+)(.*\n*)+" ).Replace ( classof [[%tabstop1:this]] as string ) "$1"[[%tabstop:]]

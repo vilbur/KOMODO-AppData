@@ -1,0 +1,17 @@
+/*
+komodo tool: getBboxFn
+======================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+======================*/
+/** Get values of wolrd aligned bbox
+  * getBbox ($) (#min) (#z)
+  * @return float
+ */
+function getBbox obj minmax axis = getProperty (( nodeGetBoundingBox obj (matrix3 1) )[if minmax == #min then 1 else 2 ]) axis!@#_currentPos!@#_anchor

@@ -1,0 +1,19 @@
+/*
+komodo tool: while
+==================
+auto_abbreviation: false
+indent_relative: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+$counter := 1
+
+While, $counter < 5
+{
+	Sleep 500
+
+	$counter += 1
+}!@#_currentPos!@#_anchor

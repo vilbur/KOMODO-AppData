@@ -1,0 +1,16 @@
+
+komodo tool: prompt
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+dialog	= dotNetObject "MaxCustomControls.RenameInstanceDialog" "[[%tabstop:Default]]"
+dialog.text	= "[[%tabstop:Title]]"
+modal	= dialog.Showmodal()[[%tabstop:]]
+result	= dialog.InstanceName!@#_currentPos!@#_anchor

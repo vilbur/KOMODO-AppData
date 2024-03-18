@@ -1,0 +1,42 @@
+
+komodo tool: textbox
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: false
+indent_relative:   false
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+try(destroyDialog [[%tabstop1:rollout_name]]) catch()
+rollout [[%tabstop1:rollout_name]] "[[%tabstop:Label]]"
+(
+	dotNetControl TextBox "TextBox"
+
+	on [[%tabstop1:rollout_name]] open do
+	(
+		TextBox.Visible = true
+		TextBox.MultiLine = false
+		TextBox.enabled = true
+		TextBox.ForeColor = (dotNetClass "System.Drawing.Color").FromArgb 20 20 20
+		TextBox.BackColor = (dotNetClass "System.Drawing.Color").FromArgb 180 180 180
+		TextBox.BorderStyle = (dotNetClass "System.Windows.Forms.BorderStyle").FixedSingle
+		TextBox.Text = "Hello world"
+		TextBox.Font = TITLEFONT
+		TextBox.DeselectAll()
+	)
+	
+	on TextBox KeyUp s e do
+	(
+		if e.KeyCode == e.KeyCode.Escape then print "Escape!"
+		
+		else if e.KeyCode == e.KeyCode.Enter then print "Enter!"
+		
+	)
+)
+
+CreateDialog [[%tabstop1:rollout_name]] width:256 height:40
+	
+setFocus [[%tabstop1:rollout_name]].TextBox!@#_currentPos!@#_anchor

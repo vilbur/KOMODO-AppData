@@ -1,0 +1,14 @@
+
+komodo tool: dialog_create
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:DestroyDialog [[%tabstop:[[%tabstop2:RolloutName]][[%tabstop3:_roll]]]] -- must be above rollout definition
+]]CreateDialog [[%tabstop:[[%tabstop2:RolloutName]][[%tabstop3:_roll]]]] width:[[%tabstop:128]] pos:[[[%tabstop:(mouse.screenpos.x-70)]], [[%tabstop:mouse.screenpos.y +(-30)]]][[%tabstop:]]!@#_currentPos!@#_anchor

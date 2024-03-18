@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "section", 
+  "language": "HTML5", 
+  "value": [
+    "<section>", 
+    "\t!@#_currentPos!@#_anchor", 
+    "<section>"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

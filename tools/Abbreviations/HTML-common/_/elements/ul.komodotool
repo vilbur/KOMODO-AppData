@@ -1,0 +1,17 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "ul", 
+  "language": "HTML-common", 
+  "value": [
+    "<%= ko.snippets.HTML_emitLessThanIfNeeded()", 
+    "%>ul>", 
+    "\t<li>[[%tabstop:text]]</li>", 
+    "</ul>!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

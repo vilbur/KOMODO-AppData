@@ -1,0 +1,17 @@
+/*
+komodo tool: round
+==================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+/*  round 123.456 -2 >>> 100.0
+	round 123.456  0 >>> 123.0
+	round 123.456  2 >>> 123.46
+*/
+fn round_to val n = ( local mult = 10.0 ^ n (floor ((val * mult) + 0.5)) / mult )!@#_currentPos!@#_anchor

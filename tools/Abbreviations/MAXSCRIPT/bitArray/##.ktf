@@ -1,0 +1,13 @@
+
+komodo tool: ##
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+#{[[%tabstop:1]][[%tabstop:..]][[%tabstop:]]}[[%tabstop:]]!@#_currentPos!@#_anchor

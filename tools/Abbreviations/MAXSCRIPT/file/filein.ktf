@@ -6,8 +6,11 @@ indent_relative: true
 is_clean: true
 language: Maxscript
 set_selection: false
-treat_as_ejs: false
+treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ===================*/
-filein [[%tabstop:( [[%tabstop:]]getFilenamePath(getSourceFileName()) + "/[[%tabstop:relative/path]]" )]][[%tabstop:]]!@#_currentPos!@#_anchor
+<%
+	var current_path	= ko.views.manager.currentView.koDoc.file.path;
+%>
+filein @"[[%tabstop:<%=current_path%>]]"[[%tabstop:]]!@#_currentPos!@#_anchor

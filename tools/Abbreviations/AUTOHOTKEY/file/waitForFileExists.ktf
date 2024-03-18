@@ -1,0 +1,27 @@
+/*
+komodo tool: waitForFileExists
+==============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: true
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==============================*/
+$timeout	:= [[%tabstop:3000]]
+$tick     := [[%tabstop:100]]
+$counter	:= 0
+
+While ( $counter <= $timeout && ! FileExist( [[%tabstop:"[[%tabstop:C:\Filename.ext]]"]] ) )
+{
+	Sleep $tick
+
+	;MsgBox,262144,counter, %$counter%,3
+	$counter += $tick
+}
+
+
+$result := $counter != $timeout // return true if counter not reach max
+!@#_currentPos!@#_anchor

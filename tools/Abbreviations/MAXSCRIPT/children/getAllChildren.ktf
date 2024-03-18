@@ -1,0 +1,17 @@
+/*
+komodo tool: getAllChildren
+===========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===========================*/
+/* STRUCT */
+mapped function getAllChildren _node &children = ( join children _node.children;	if _node.children.count > 0 then this.getAllChildren _node.children &children ),
+
+/* FUNCTION */
+mapped function getAllChildren _node &children = ( join children _node.children;	if _node.children.count > 0 then getAllChildren _node.children &children )!@#_currentPos!@#_anchor

@@ -1,0 +1,15 @@
+/*
+komodo tool: joinStr
+====================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+====================*/
+/** Join array to string
+ */ 
+function arrayToString array delimeter = ( _string = ""; for item in array do _string +=  as string  + delimeter; substring _string 1 (_string.count-delimeter.count))[[%tabstop:]]!@#_currentPos!@#_anchor

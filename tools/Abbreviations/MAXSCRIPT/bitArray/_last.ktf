@@ -1,0 +1,13 @@
+
+komodo tool: ##last
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:[[%tabstop1:BitArray]]_last	= ]]( [[%tabstop1:BitArray]] as Array )[([[%tabstop1:BitArray]] as Array).count][[%tabstop:]]!@#_currentPos!@#_anchor

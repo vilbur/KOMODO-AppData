@@ -1,4 +1,4 @@
-/*
+
 komodo tool: structVar
 ================
 language:	       Maxscript
@@ -9,7 +9,7 @@ indent_relative:   true
 set_selection:     false
 is_clean:          true
 version:           1.1.5
-================*/
+================
 <%
 	var koEditor	= require("ko/editor");
 	var file_content	= koEditor.getValue()

@@ -1,0 +1,13 @@
+
+komodo tool: sel
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+[[%tabstop:_selection]] = for o in [[%tabstop:selection]] [[%tabstop:where [[%tabstop:superClassOf o == GeometryClass]]]] collect o[[%tabstop:]]!@#_currentPos!@#_anchor

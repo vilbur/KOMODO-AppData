@@ -1,0 +1,24 @@
+/*
+komodo tool: renameSubtool
+==========================
+auto_abbreviation: false
+indent_relative: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==========================*/
+[IButton,SubtoolRename,"Rename selected subtool",
+  [RoutineCall, CheckSystem]
+  [VarSet,newName,"My New Name"]
+  [VarSet,buttonPath,"Tool:SubTool:Rename"]
+  //set buttonPath to the button you want
+  //"Tool:SubTool:Rename" - for SubTool
+  //"Tool:Layers:Rename" - for Layers
+  //"Preferences:Transpose Units:Set Units" - for Transpose Units 
+  [If, (([IExists, buttonPath]) && ([IsEnabled, buttonPath])),
+	[FileExecute, [Var, dllPath], RenameSetNext, newName]
+	[IPress, buttonPath]
+  ]	
+]//end button!@#_currentPos!@#_anchor

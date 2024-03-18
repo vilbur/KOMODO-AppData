@@ -1,0 +1,17 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "style", 
+  "language": "HTML-common", 
+  "value": [
+    "<%= ko.snippets.HTML_emitLessThanIfNeeded()", 
+    "%>style type=\"text/css\">", 
+    "[[%tabstop:]]", 
+    "</style>!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

@@ -1,0 +1,13 @@
+/*
+komodo tool: compareColors
+==========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==========================*/
+[[%tabstop:fn compareColors [[%tabstop1:color_A]] [[%tabstop2:color_B]] = ]]( [[%tabstop1:color_A]] as string == [[%tabstop2:color_B]] as string )!@#_currentPos!@#_anchor

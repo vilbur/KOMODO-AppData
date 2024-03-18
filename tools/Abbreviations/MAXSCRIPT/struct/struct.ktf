@@ -1,15 +1,15 @@
-/*
+
 komodo tool: struct
-===================
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
 auto_abbreviation: true
-indent_relative: true
-is_clean: true
-language: Maxscript
-set_selection: false
-treat_as_ejs: true
-type: snippet
-version: 1.1.5
-===================*/
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
 <%
 	var file_current_path	= ko.views.manager.currentView.koDoc.file.path;
 	var file_current_basename	= require("ko/file").basename(file_current_path);

@@ -1,0 +1,13 @@
+/*
+komodo tool: pathToZbrushFolders
+================================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================================*/
+[FileNameResolvePath,[StrMerge, ZBRUSH_[[%tabstop1:ZStartup]], [[%tabstop:"\[[%tabstop:fooFile.txt]]"]]] ]!@#_currentPos!@#_anchor

@@ -1,0 +1,16 @@
+
+komodo tool: while
+================
+language:	       Maxscript
+type:              snippet
+treat_as_ejs:      false
+auto_abbreviation: true
+indent_relative:   true
+set_selection:     false
+is_clean:          true
+version:           1.1.5
+================
+while [[%tabstop:x > 0]] do
+(
+	[[%tabstop:]]
+)!@#_currentPos!@#_anchor
