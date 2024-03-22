@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =======================*/
-[VarSet, $ZFILE_UTILS_DLL, "[[%tabstop:subfolder]]\ZFileUtils64.dll"]!@#_currentPos!@#_anchor
+[VarSet, ZFILEUTILSDLL, [StrMerge, [[%tabstop:PLUGINDATAPATH]], "\ZFileUtils64.dll"]]!@#_currentPos!@#_anchor

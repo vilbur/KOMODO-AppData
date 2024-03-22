@@ -10,24 +10,24 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =====================*/
-[VarDef, $DATAFILE, [StrMerge, [[%tabstop:"pluginData"]], "\\data_file.zvr"] ]
+[VarDef, DATAFILE, [StrMerge, [[%tabstop:"pluginData"]], "\\data_file.zvr"] ]
 
-[VarDef, $DATA_LIST([[%tabstop:999]]), ""]
+[VarDef, DATA_LIST([[%tabstop:999]]), ""]
 
-[VarDef, $VALUE_LOADED, ""]
+[VarDef, VALUE_LOADED, ""]
 
 /** dataFileSave
   *
   */
 [RoutineDef, dataFileSave
 ,
-	[VarSet, $DATA_LIST([Var, $index]), [Var, $value_to_save] ]
+	[VarSet, DATA_LIST([Var, index]), [Var, value_to_save] ]
 
-	[VarSave, $DATA_LIST, $DATAFILE ]
+	[VarSave, DATA_LIST, DATAFILE ]
 
-	//[Note, [StrMerge, "SAVE \n\nIndex: ", $index, "\n\nValue: ",  $value_to_save ],, 0]
+	//[Note, [StrMerge, "SAVE \n\nIndex: ", index, "\n\nValue: ",  value_to_save ],, 0]
 , // PARAMS
-	$index, $value_to_save
+	index, value_to_save
 ]
 //[IButton, "dataFileSave()" , "", [RoutineCall, dataFileSave, 0, "Test value"] ]
 
@@ -37,14 +37,14 @@ version: 1.1.5
   */
 [RoutineDef, dataFileLoad
 ,
-	[VarLoad, $DATA_LIST, $DATAFILE ]
+	[VarLoad, DATA_LIST, DATAFILE ]
 
-	[VarSet, $VALUE_LOADED, [Var, $DATA_LIST([Var, $index]) ] ]
+	[VarSet, VALUE_LOADED, [Var, DATA_LIST([Var, index]) ] ]
 
-	//[Note, [StrMerge, "LAODED \n\nIndex: ", $index, "\n\nValue: ",  $VALUE_LOADED ],, 0]
+	//[Note, [StrMerge, "LAODED \n\nIndex: ", index, "\n\nValue: ",  VALUE_LOADED ],, 0]
 
 , // PARAMS
-	$index
+	index
 ]
 //[IButton, "dataFileLoad()" , "", [RoutineCall, dataFileLoad, 0 ] ]
 
@@ -54,12 +54,12 @@ version: 1.1.5
   */
 [RoutineDef, dataFileInit
 ,
-	[If, [FileExists, $DATAFILE]
+	[If, [FileExists, DATAFILE]
 	, // THEN
-		[VarLoad, $DATA_LIST, $DATAFILE ]
+		[VarLoad, DATA_LIST, DATAFILE ]
 
 	, // ELSE
-		[VarSave, $DATA_LIST, $DATAFILE ]
+		[VarSave, DATA_LIST, DATAFILE ]
 	]
 ]
 //[IButton, "dataFileInit()" , "", [RoutineCall, dataFileInit, 0 ] ]

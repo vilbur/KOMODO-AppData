@@ -11,13 +11,13 @@ type: snippet
 version: 1.1.5
 =========================*/
 
-[[%tabstop://[VarSet, $ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
+[[%tabstop://[VarSet, ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
 [VarSet, folder_path, [[%tabstop:"[[%tabstop:Path\To\Folder]]"]] ]
-[VarSet, folder_path, [FileNameResolvePath, $folder_path]]
+[VarSet, folder_path, [FileNameResolvePath, folder_path]]
 
-[VarSet,folderExists, [FileExecute, $ZFILE_UTILS_DLL, "FolderExists", #folder_path]]
+[VarSet,folderExists, [FileExecute, ZFILE_UTILS_DLL, "FolderExists", #folder_path]]
 [If, ! folderExists
 , // THEN
-	[VarSet, err, [FileExecute, $ZFILE_UTILS_DLL, "MakeFolder", #folder_path]]	// create the folder
+	[VarSet, err, [FileExecute, ZFILE_UTILS_DLL, "MakeFolder", #folder_path]]	// create the folder
 ]
 !@#_currentPos!@#_anchor

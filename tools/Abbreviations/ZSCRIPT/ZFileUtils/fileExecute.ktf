@@ -10,6 +10,6 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 ========================*/
-[[%tabstop://[VarSet, $ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
+[[%tabstop://[VarSet, ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
 [VarSet, file_path, [FileNameResolvePath, [StrMerge, [[%tabstop:Subfolder]], "\[[%tabstop:file]]"] ]]
-[FileExecute, $ZFILE_UTILS_DLL, "LaunchAppWithFile",  #file_path]!@#_currentPos!@#_anchor
+[FileExecute, ZFILE_UTILS_DLL, "LaunchAppWithFile",  #file_path]!@#_currentPos!@#_anchor

@@ -10,8 +10,8 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =========================*/
-[[%tabstop://[VarSet, $ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
+[[%tabstop://[VarSet, ZFILE_UTILS_DLL, "ZFileUtils64.dll"]]]
 [VarSet, folder_path, [[%tabstop:"[[%tabstop:Path\To\Folder]]"]] ]
-[VarSet, folder_path, [FileNameResolvePath, $folder_path]]
-[VarSet, err, [FileExecute, $ZFILE_UTILS_DLL, "EmptyFolder",  #folder_path]] // delete files in folder
-[VarSet, err, [FileExecute, $ZFILE_UTILS_DLL, "DeleteFolder", #folder_path]]	// delete the folder!@#_currentPos!@#_anchor
+[VarSet, folder_path, [FileNameResolvePath, folder_path]]
+[VarSet, err, [FileExecute, ZFILE_UTILS_DLL, "EmptyFolder",  #folder_path]] // delete files in folder
+[VarSet, err, [FileExecute, ZFILE_UTILS_DLL, "DeleteFolder", #folder_path]]	// delete the folder!@#_currentPos!@#_anchor

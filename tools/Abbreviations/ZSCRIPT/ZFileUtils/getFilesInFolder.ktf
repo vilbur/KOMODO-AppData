@@ -16,7 +16,7 @@ version: 1.1.5
 [RoutineDef, getFilesInFolder
 ,
 	//[Note, getFilesInFolder]
-	[VarSet,folderName,[FileNameResolvePath, $folder_path]]
+	[VarSet,folderName,[FileNameResolvePath, folder_path]]
 
 	[VarSet, dllPath, "ZFileUtils64.dll"]
 
@@ -51,7 +51,7 @@ version: 1.1.5
 
 
 	[Loop, fileCount,
-		//[Note, $i ]
+		//[Note, i ]
 		[Note, files_array(i) ]
 
 	 ,i]
@@ -62,11 +62,11 @@ version: 1.1.5
 	//delete the memblock as we've done with it
 	//[MemDelete,ZFileUtils_list]
 
-	[VarSet, $file, files_array]
+	[VarSet, file, files_array]
 
 , // PARAMS
-	$folder_path, fileCount, ZFileUtils_list
-	//$folder_path
+	folder_path, fileCount, ZFileUtils_list
+	//folder_path
 ] // END getFilesInFolder()
 //[ IButton, "getFilesInFolder()" , "", [RoutineCall, getFilesInFolder] ]
 

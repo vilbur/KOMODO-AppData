@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =====================*/
-[VarSet, $[[%tabstop:path_tool_current]], [ToolGetPath, [IGet, Tool:ItemInfo] ]]!@#_currentPos!@#_anchor
+[VarSet, [[%tabstop:path_tool_current]], [ToolGetPath, [IGet, Tool:ItemInfo] ]]!@#_currentPos!@#_anchor

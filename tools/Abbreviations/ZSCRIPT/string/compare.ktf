@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ====================*/
-[VarSet, $[[%tabstop:strings_match]], (([StrLength, $[[%tabstop1:stri_1]]]==[StrLength, $[[%tabstop2:stri_2]]]) && ([StrFind, $[[%tabstop1:stri_1]], $[[%tabstop2:stri_2]]] > -1))]!@#_currentPos!@#_anchor
+[VarSet, [[%tabstop:strings_match]], (([StrLength, [[%tabstop1:stri_1]]]==[StrLength, [[%tabstop2:stri_2]]]) && ([StrFind, [[%tabstop1:stri_1]], [[%tabstop2:stri_2]]] > -1))]!@#_currentPos!@#_anchor

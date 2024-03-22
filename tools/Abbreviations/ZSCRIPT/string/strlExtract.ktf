@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ========================*/
-[StrExtract, $[[%tabstop:string]], [[%tabstop:Start character index (0:left)]], [[%tabstop:End character index (0:left)]]] // [StrExtract, "abcdefgh", 3, 5] Returns the “def”!@#_currentPos!@#_anchor
+[StrExtract, [[%tabstop:string]], [[%tabstop:Start character index (0:left)]], [[%tabstop:End character index (0:left)]]] // [StrExtract, "abcdefgh", 3, 5] Returns the “def”!@#_currentPos!@#_anchor

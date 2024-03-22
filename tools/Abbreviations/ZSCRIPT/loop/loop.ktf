@@ -12,4 +12,4 @@ version: 1.1.5
 =================*/
 [Loop, [[%tabstop:count]],
 	[[%tabstop:]]
-,[[%tabstop:$i]]]!@#_currentPos!@#_anchor
+,[[%tabstop:i]]]!@#_currentPos!@#_anchor

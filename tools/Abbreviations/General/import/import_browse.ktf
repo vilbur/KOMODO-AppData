@@ -81,7 +81,7 @@ function getSnippetValue()
 		};
 		this.Autohotkey = function()
 		{
-			return "#Include %A_LineFile%\\"+path_relative.replace(/\//gi,'\\')+"[[%tabstop:]]";
+			return "#Include %A_LineFile%\\"+path_relative.replace(/\//gi,'\\')+"	;;; "+path_relative.substring(1)+"'[[%tabstop:]]";
 		};
 		this.Markdown = function()
 		{

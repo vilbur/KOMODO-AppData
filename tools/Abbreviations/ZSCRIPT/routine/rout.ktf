@@ -15,15 +15,15 @@ version: 1.1.5
 [RoutineDef, [[%tabstop1:fnName]]
 , /* function */
 
-	[[%tabstop: [VarSet, $[[%tabstop4:output]], $[[%tabstop2:input_or_output]]]]]
+	[[%tabstop: [VarSet, [[%tabstop4:output]], [[%tabstop2:input_or_output]]]]]
 
 , /* parameters or output */
 
-	$[[%tabstop2:input_or_output]][[%tabstop:,	$[[%tabstop3:UP_TO_10_PARAMETERS]]]]
+	[[%tabstop2:input_or_output]][[%tabstop:,	[[%tabstop3:UP_TO_10_PARAMETERS]]]]
 ]
 
-[VarDef, $[[%tabstop2:input_or_output]], 0]
+[VarDef, [[%tabstop2:input_or_output]], 0]
 
-[RoutineCall, [[%tabstop1:fnName]],  $[[%tabstop2:input_or_output]]]
+[RoutineCall, [[%tabstop1:fnName]],  [[%tabstop2:input_or_output]]]
 
-[NoteBar, $[[%tabstop4:output]]]!@#_currentPos!@#_anchor
+[NoteBar, [[%tabstop4:output]]]!@#_currentPos!@#_anchor
