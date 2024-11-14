@@ -1,0 +1,14 @@
+/*
+komodo tool: subtoolSetVisible
+==============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==============================*/
+[IModSet, Tool:SubTool:[[%tabstop:SubtoolName]], [[%tabstop:2|34]] ] // 2: invisible 34:visbible
+!@#_currentPos!@#_anchor

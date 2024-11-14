@@ -170,7 +170,6 @@ binding cmd_viewLeftPane F11
 binding cmd_gotoLine Ctrl+L
 binding cmd_gotoLine Ctrl+0
 binding Ctrl+Alt+Space 
-binding cmd_foldExpand Ctrl+E
 binding cmd_homeAbsolute Ctrl+Home
 binding cmd_endOfWordExtend Ctrl+Alt+W
 binding cmd_endOfWordExtend Ctrl+Alt+Shift+Right
@@ -179,13 +178,13 @@ binding cmd_movetab Ctrl+Tab
 binding cmd_selectWordUnderCursor Ctrl+Alt+Shift+W
 binding cmd_browserPreviewInternal Ctrl+Alt+4
 binding cmd_switchpane Ctrl+Shift+Tab
+binding cmd_placeView_showCurrent_TabInPlaces Ctrl+P
+binding cmd_placeView_showCurrent_TabInPlaces Ctrl+Shift+F
 binding cmd_placeView_showCurrent_TabInPlaces Ctrl+Shift+F
 binding cmd_showProjectInPlaces Ctrl+Page_Up
 binding cmd_showProjectInPlaces Ctrl+Shift+F
 binding cmd_showProjectInPlaces Ctrl+Shift+F
-binding cmd_showProjectInPlaces Ctrl+P
 binding cmd_openDirectory Alt+D
-binding cmd_openDirectory Ctrl+Shift+F
 binding cmd_viewCodeBrowser Ctrl+Shift+C
 binding cmd_editCenterVertically Alt+Up
 binding cmd_editMoveCurrentLineToTop Alt+Down
@@ -236,3 +235,4 @@ binding undefined Ctrl+Up
 binding cmd_lineTransposeDown Ctrl+Down
 binding cmd_lineTransposeUp Ctrl+Up
 binding cmd_foldCollapseAll Ctrl+Shift+E
+binding cmd_foldExpandRecursive Ctrl+E

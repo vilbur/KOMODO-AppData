@@ -1,15 +1,15 @@
-
+/*
 komodo tool: try
 ================
-language:	       Maxscript
-type:              snippet
-treat_as_ejs:      false
 auto_abbreviation: true
-indent_relative:   true
-set_selection:     false
-is_clean:          true
-version:           1.1.5
-================
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+================*/
 <%
 /**
  * TODO: make snippet interaktive with ask for file, insert current file path as default

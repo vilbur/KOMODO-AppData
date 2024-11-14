@@ -10,5 +10,5 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ==================*/
-if queryBox "[[%tabstop:[[%tabstop:Question]] ?]]" title:"[[%tabstop:Title]]" [[%tabstop: beep:false]] then
+if queryBox ("[[%tabstop:[[%tabstop:Question]] ?]]") title:"[[%tabstop:Title]]" [[%tabstop: beep:false]] then
 	[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ==================*/
-[MessageOKCancel, "[[%tabstop:Message]]"]!@#_currentPos!@#_anchor
+[MessageOKCancel, [[%tabstop:[StrMerge, [[%tabstop:"[[%tabstop:]]"]], [[%tabstop:"[[%tabstop:]]"]]] ]]]!@#_currentPos!@#_anchor

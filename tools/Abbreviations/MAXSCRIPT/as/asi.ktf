@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ================*/
-as Integer!@#_currentPos!@#_anchor
+as integer!@#_currentPos!@#_anchor

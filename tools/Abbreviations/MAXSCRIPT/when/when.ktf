@@ -1,0 +1,33 @@
+/*
+komodo tool: when
+=================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+global [[%tabstop1:WHEN_SELECT_CHANGED]] = #()
+
+/** When attribute change https://help.autodesk.com/view/MAXDEV/2024/ENU/?guid=GUID-513285B3-DBF6-471E-B587-B5BE14D4D875
+ */
+function whenSelectionChange objs =
+(
+	if classOf objs == Array then
+		join [[%tabstop1:WHEN_SELECT_CHANGED]] objs
+
+	else
+		append [[%tabstop1:WHEN_SELECT_CHANGED]] objs
+
+	deleteAllChangeHandlers id:#[[%tabstop1:WHEN_SELECT_CHANGED]]
+
+	when [[%tabstop:select]] [[%tabstop1:WHEN_SELECT_CHANGED]] changes id:#[[%tabstop1:WHEN_SELECT_CHANGED]] obj do
+	(
+		format "[[%tabstop1:WHEN_SELECT_CHANGED]]: %\n" obj
+	)
+)
+
+whenSelectionChange( selection as Array )!@#_currentPos!@#_anchor

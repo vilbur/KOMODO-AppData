@@ -1,0 +1,13 @@
+/*
+komodo tool: nbtn
+=================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+[NoteIButton, [[%tabstop:[[%tabstop:Button Text]]]], [[%tabstop:/*image*/]], [[%tabstop:]]/*pressed?*/, [[%tabstop:0]] /*disabled?*/, [[%tabstop:]]/*HPos*/,	[[%tabstop:]]/*VPos*/, [[%tabstop:]]/*HSize*/, [[%tabstop:]]/*VSize*/, [[%tabstop:]]/*color*/, [[%tabstop:]]/*text color*/, [[%tabstop:]]/*opacity*/, [[%tabstop:]]/*text opacity*/, [[%tabstop:]]/*image opacity*/	]!@#_currentPos!@#_anchor

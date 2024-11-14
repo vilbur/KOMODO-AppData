@@ -1,7 +1,7 @@
 // komodo tool: ===
 // ================
 // auto_abbreviation: false
-// indent_relative: false
+// indent_relative: true
 // is_clean: true
 // language: General
 // set_selection: false
@@ -13,5 +13,5 @@
 	var new_line_if_ahk	= require("ko/editor").getLanguage()==='Autohotkey' ? '\n': '';
 %>
 /*==============================================================================
-	[[%tabstop:COMMENT]]
+	[[%tabstop:]]
 ================================================================================<%=new_line_if_ahk%>*/[[%tabstop:]]!@#_currentPos!@#_anchor

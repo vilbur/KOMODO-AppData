@@ -14,7 +14,8 @@ version: 1.1.5
 [Loop, [SubToolGetCount],
 
 	[SubToolSelect, i ]
-	[VarSet, subtool_path, [GetActiveToolPath] ]
-	[VarSet, subtool_name, [FileNameExtract, [GetActiveToolPath], 2]]
+	[VarSet, subtoolPath, [GetActiveToolPath] ]
+	[VarSet, subtoolName, [IGetTitle, "Tool:Current Tool"]]
+	[VarSet, subtoolControl, [[StrMerge, "Tool:SubTool:", subtoolName]] ]
 
 , i]!@#_currentPos!@#_anchor

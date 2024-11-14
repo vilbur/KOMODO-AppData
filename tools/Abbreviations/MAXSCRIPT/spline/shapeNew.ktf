@@ -1,0 +1,13 @@
+/*
+komodo tool: shapeNew
+=====================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+=====================*/
+_[[%tabstop:shape]] = SplineShape name:[[%tabstop:"[[%tabstop:]]"]]!@#_currentPos!@#_anchor

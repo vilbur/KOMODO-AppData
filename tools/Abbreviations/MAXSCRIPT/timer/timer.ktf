@@ -10,6 +10,6 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ==================*/
-timer_[[%tabstop1:start]] = timeStamp()
-format "\n [[%tabstop1:start]]: % ms\n" (( timeStamp()) - timer_[[%tabstop1:start]])
-format "\n [[%tabstop1:start]]: % seconds\n" ((( timeStamp()) - timer_[[%tabstop1:start]]) / 1000.0)!@#_currentPos!@#_anchor
+timer_[[%tabstop1:]] = timeStamp()
+format "[[%tabstop1:]]: % ms\n" (( timeStamp()) - timer_[[%tabstop1:]])
+format "[[%tabstop1:]]: % seconds\n" ((( timeStamp()) - timer_[[%tabstop1:]]) / 1000.0)!@#_currentPos!@#_anchor

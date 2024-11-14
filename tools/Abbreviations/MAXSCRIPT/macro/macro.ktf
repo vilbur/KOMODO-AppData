@@ -21,24 +21,23 @@ version: 1.1.5
 	var fn_name_sanitized	= macro_name[0]
 		.replace(/([A-Z])/g, ' $1')	// set whitespace before capital letter
 		.replace(/([A-Z])\s([A-Z])/g, '')	// Remove whitespace between twoo capital letters E.G.: 'This I S typo' >>> 'This IS typo'
-		.replace(/[\s+|-]+/g, ' ')	
+		.replace(/[\s+|-]+/g, ' ')
 		.replace(/\s+/g, ' ')
 		.toLowerCase()
 		.trim();
-	
+
 	var snake_case	= fn_name_sanitized.replace(/\s+/gi, '_');
 	var snake_case_tab	= '[[%tabstop2:'+snake_case+']]';
-	
+
 	var koFile	= require("ko/file");
 	var file_current_path	= ko.views.manager.currentView.koDoc.file.path;
 	var file_current_basename	= koFile.basename(file_current_path);
 	var file_current_name	= file_current_basename.split(/\./g).shift();
 	var file_current_dir	= koFile.basename(koFile.dirname(koFile.dirname(file_current_path))); // get grandparent folder name
-	
-	
+
+
 %>
 /**  
- *	
  */
 macroscript	[[%tabstop:<%=file_current_name.toLowerCase().replace(/_/g, '')%>]]_<%=snake_case_tab%>
 category:	"[[%tabstop:<%=file_current_dir%>]]-[[%tabstop:<%=file_current_name%>]]"
@@ -51,7 +50,7 @@ toolTip:	"[[%tabstop3:<%=fn_name_sanitized%>]][[%tabstop:]]"
 	on IsVisible return Filters.Is_EPolySpecifyLevel #{2..5}
 	on IsChecked Do (
 		try (
-	
+
 		)
 		catch ( false )
 	)
@@ -62,7 +61,7 @@ toolTip:	"[[%tabstop3:<%=fn_name_sanitized%>]][[%tabstop:]]"
 		)
 		catch()
 	)
-	
+
 	on AltExecute type do (
 		try (
 			messageBox "Alt execute" beep:false

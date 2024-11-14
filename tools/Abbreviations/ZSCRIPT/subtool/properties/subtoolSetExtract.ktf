@@ -1,0 +1,13 @@
+/*
+komodo tool: subtoolSetExtract
+==============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==============================*/
+[IModSet, [StrMerge, "Tool:SubTool:", [[%tabstop:subtoolName]]],38]!@#_currentPos!@#_anchor

@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ========================*/
-[[%tabstop:file_exists]] = doesFileExist [[%tabstop:"[[%tabstop:path]]"]]!@#_currentPos!@#_anchor
+[[%tabstop:file_exists]] = doesFileExist [[%tabstop:"[[%tabstop:path]]"]][[%tabstop: allowDirectory:[[%tabstop:false]]]]!@#_currentPos!@#_anchor

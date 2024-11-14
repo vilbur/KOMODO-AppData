@@ -73,7 +73,7 @@ version: 1.1.5
 %>
 /** [[%tabstop:<%=fn_summary%>]][[%tabstop:]]
  */
-function [[%tabstop:<%=fn_name%>]] [[%tabstop:]]=
+function [[%tabstop1:<%=fn_name%>]] =
 (
-	[[%tabstop:--format "\n"; print "<%=struct_name%>.[[%tabstop:<%=fn_name%>]]()"]]
+	[[%tabstop:--format "\n"; print "<%=struct_name%>.[[%tabstop1:<%=fn_name%>]]()"]]
 )<%=ending_comma%>[[%tabstop:]]!@#_currentPos!@#_anchor

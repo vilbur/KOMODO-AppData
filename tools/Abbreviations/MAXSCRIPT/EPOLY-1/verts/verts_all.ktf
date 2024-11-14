@@ -1,0 +1,14 @@
+/*
+komodo tool: verts_all
+======================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+======================*/
+vertex_count = getNumVerts obj.mesh
+verts_all = #{1..vertex_count[[%tabstop:]]}!@#_currentPos!@#_anchor

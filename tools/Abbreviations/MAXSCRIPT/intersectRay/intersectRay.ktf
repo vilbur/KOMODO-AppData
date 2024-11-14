@@ -1,0 +1,17 @@
+// komodo tool: intersectRay
+// =========================
+// auto_abbreviation: true
+// indent_relative: false
+// is_clean: true
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// =========================
+rmgi = RayMeshGridIntersect()
+rmgi.initialize [[%tabstop:10]]
+rmgi.addNode [[%tabstop:obj]]
+rmgi.buildGrid()
+
+if ( hits = rmgi.intersectRay ( [[%tabstop:pos]]) direction true ) > 0 then!@#_currentPos!@#_anchor

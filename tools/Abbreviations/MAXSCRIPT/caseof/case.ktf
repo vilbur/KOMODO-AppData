@@ -12,7 +12,7 @@ version: 1.1.5
 =================*/
 case [[%tabstop1:expr]] of
 (
-	([[%tabstop2:result_or_]][[%tabstop1:expr]]):	[[%tabstop:]]
-	([[%tabstop2:result_or_]][[%tabstop1:expr]]):	[[%tabstop:]]
-	default:	[[%tabstop:]]
+	([[%tabstop2:result_or_]][[%tabstop1:expr]]): [[%tabstop:]]
+	([[%tabstop2:result_or_]][[%tabstop1:expr]]): [[%tabstop:]]
+	default: [[%tabstop:]]
 )[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -1,0 +1,16 @@
+/*
+komodo tool: slider
+===================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===================*/
+[ISlider, [[%tabstop:"[[%tabstop:Slider Text]]"]], /*CurValue*/[[%tabstop:CurValue]], /*Resolution*/[[%tabstop:Resolution]], /*MinValue*/[[%tabstop:MinValue]], /*MaxValue*/[[%tabstop:MaxValue]], "[[%tabstop:Tooltip]]"
+, [[%tabstop://Commands]]
+	[[%tabstop:]]
+[[%tabstop:,	[[%tabstop:/*Disabled*/]],	[[%tabstop:/*Width*/]],	[[%tabstop:/*Height*/]]]]]!@#_currentPos!@#_anchor

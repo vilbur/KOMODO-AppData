@@ -1,0 +1,13 @@
+/*
+komodo tool: fba
+================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+================*/
+format "[[%tabstop1:bitAeeay]]: %\n" [[%tabstop1:bitAeeay]].numberSet!@#_currentPos!@#_anchor

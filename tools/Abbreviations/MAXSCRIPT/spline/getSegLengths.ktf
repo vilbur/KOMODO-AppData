@@ -1,0 +1,15 @@
+/*
+komodo tool: getSegLengths
+==========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+==========================*/
+[[%tabstop1:shape]]_lengths = getSegLengths [[%tabstop1:shape]] [[%tabstop:spline_i]]
+
+segments_lengths = for i = ( numSegments [[%tabstop1:shape]]  [[%tabstop:spline_i]] ) + 1 to [[%tabstop1:shape]]_lengths.count - 1 collect [[%tabstop1:shape]]_lengths[i]!@#_currentPos!@#_anchor

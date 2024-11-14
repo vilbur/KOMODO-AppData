@@ -10,21 +10,21 @@ treat_as_ejs: true
 type: snippet
 version: 1.1.5
 =================*/
-[If, [MemGetSize, [[%tabstop1:MEMBLOCK_STRING]]]
+[If, [MemGetSize, [[%tabstop1:MEMBLOCKSTRING]]]
 , // THEN memory exists
 
-	[VarDef, [[%tabstop3:memory_string]] ]
+	[VarDef, [[%tabstop3:memoryString]], "" ] // IMPORTANT fill with mepty string to prevent error
 
-	[MemReadString, [[%tabstop1:MEMBLOCK_STRING]], [[%tabstop3:memory_string]], 0 /* offset */ ]
+	[MemReadString, [[%tabstop1:MEMBLOCKSTRING]], [[%tabstop3:memoryString]], 0 /* offset */ ]
 
-	[Note, [[%tabstop3:memory_string]],, 0]
+	[Note, [[%tabstop3:memoryString]],, 0]
 
-	[MemDelete, [[%tabstop1:MEMBLOCK_STRING]]]
+	[MemDelete, [[%tabstop1:MEMBLOCKSTRING]]]
 
 , // ELSE create memory block
 
-	[MemCreate, [[%tabstop1:MEMBLOCK_STRING]], [[%tabstop:256 /* size */]] ]
+	[MemCreate, [[%tabstop1:MEMBLOCKSTRING]], [[%tabstop:256 /* size */]] ]
 
-	[MemWriteString, [[%tabstop1:MEMBLOCK_STRING]], [[%tabstop:"[[%tabstop:value]]" /* value */]] ]
+	[MemWriteString, [[%tabstop1:MEMBLOCKSTRING]], [[%tabstop:"[[%tabstop:value]]" /* value */]] ]
 
 ]!@#_currentPos!@#_anchor

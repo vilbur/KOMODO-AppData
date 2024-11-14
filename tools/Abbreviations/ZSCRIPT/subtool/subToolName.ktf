@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ========================*/
-[VarSet, [[%tabstop1:subtool_name_current]], [FileNameExtract, [GetActiveToolPath], 2]]!@#_currentPos!@#_anchor
+[VarSet, [[%tabstop1:subtoolNameCurrent]], [FileNameExtract, [GetActiveToolPath], 2]]!@#_currentPos!@#_anchor

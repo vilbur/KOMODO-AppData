@@ -1,0 +1,35 @@
+/*
+komodo tool: subtoolAppend
+==========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==========================*/
+[VarDef,toolID,0]
+[VarSet,toolID,[IGet,Tool:Item Info]]
+
+/* DEFAULT TOOL */
+[IPress,Tool:Cube3D]
+
+/* IMPORT FILE TOOL */
+//[FileNameSetNext,"C:\Users\John\SimpleCube.obj"]
+//[IPress,Tool:Import]
+//[IPress,Tool:PolyMesh3D]
+
+
+/* store the new OBJ tool name */
+[VarSet,toolName,[IGetTitle,Tool:Current Tool,0]]
+
+/* select the main OBJ ztool */
+[ISet,Tool:ItemInfo,#toolID]
+
+/* append the new OBJ */
+[If,[IExists,Tool:SubTool:Append],
+	[IPress,Tool:SubTool:Append]
+	[IPress,[StrMerge,"PopUp:",[Var,toolName]]]
+]!@#_currentPos!@#_anchor

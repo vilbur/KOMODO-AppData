@@ -10,4 +10,10 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ===================*/
-[[%tabstop:_sphere]]	= Sphere()!@#_currentPos!@#_anchor
+[[%tabstop:_sphere]]	= Sphere radius:[[%tabstop:50]] segs:[[%tabstop:32]]
+
+
+
+
+[[%tabstop:[[%tabstop: hemisphere:[[%tabstop:0]]]][[%tabstop: slicefrom:[[%tabstop:0]]]][[%tabstop: sliceto:[[%tabstop:0]]]] ]]
+!@#_currentPos!@#_anchor

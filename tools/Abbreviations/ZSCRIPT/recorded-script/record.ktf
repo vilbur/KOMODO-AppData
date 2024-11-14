@@ -13,7 +13,7 @@ version: 1.1.5
 [IButton, RECORDED, "",
 [IConfig,2022]
 
-
+	[[%tabstop:]]
 
 ,/*Disabled*/, 256 ,/*Hotkey*/,/*Icon*/,64]
 !@#_currentPos!@#_anchor

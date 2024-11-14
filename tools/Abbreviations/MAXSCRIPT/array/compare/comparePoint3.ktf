@@ -1,0 +1,13 @@
+/*
+komodo tool: comparePoint3
+==========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==========================*/
+fn comaprePoint3 p1 p2 eps:1e-3 = distance p1 p2 < eps --  preccision of deciaml points: eps=1e-3 >>> 0.001 | eps=1e-6 >>> 0.000001!@#_currentPos!@#_anchor

@@ -1,0 +1,20 @@
+/*
+komodo tool: roundPoint3
+========================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+========================*/
+fn round p3 dp =
+(
+	local tempArr = #(p3.x,p3.y,p3.z)
+	local mult = 10.00^(dp as float)
+	local rp3Arr = for c in tempArr collect ((floor ((c * mult)+0.5)) / mult)
+	point3 rp3Arr[1] rp3Arr[2] rp3Arr[3]
+)
+--round [111.1589,12.856,85.5896] 3!@#_currentPos!@#_anchor

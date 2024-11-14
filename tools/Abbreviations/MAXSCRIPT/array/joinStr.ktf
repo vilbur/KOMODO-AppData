@@ -11,5 +11,5 @@ type: snippet
 version: 1.1.5
 ====================*/
 /** Join array to string
- */ 
-function arrayToString array delimeter = ( _string = ""; for item in array do _string +=  as string  + delimeter; substring _string 1 (_string.count-delimeter.count))[[%tabstop:]]!@#_currentPos!@#_anchor
+ */
+function arrayToString arr delimeter = ( _string = ""; for item in arr do _string += item as string  + delimeter; substring _string 1 (_string.count-delimeter.count))[[%tabstop:]]!@#_currentPos!@#_anchor

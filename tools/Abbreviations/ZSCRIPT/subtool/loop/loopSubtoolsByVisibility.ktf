@@ -1,0 +1,52 @@
+/*
+komodo tool: loopSubtoolsByVisibility
+=====================================
+auto_abbreviation: false
+indent_relative: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=====================================*/
+[RoutineDef, SubToolIsVisible,
+
+	[VarSet, isVisible, 0]
+	[VarSet,st,[SubToolGetStatus,id]]
+	[VarSet,fInd,[SubToolGetFolderIndex,id]]
+
+	[If,(fInd > -1),//it's in a folder
+
+		[VarSet,stFld,[SubToolGetStatus,fInd]]//get folder visibility
+
+		[If,([Val,stFld]&0x2 == 0x2)&&([Val,st]&0x1 == 0x1), [VarSet,isVisible,1] ] , //else no folder
+
+		[If,([Val,st]&0x1 == 0x1), [VarSet,isVisible,1] ]
+	]
+
+ ,isVisible,id
+]
+
+
+[IButton,"Do Visible","Run routine on Visible subtools", [VarSet,activST,[SubToolGetActiveIndex]]//store active subtool
+	[VarSet,isVis,0]
+
+	[Loop,[SubToolGetCount],//loop through all subtools
+		[SubToolSelect,[Val,n]] //check visibility
+		[RoutineCall,SubToolIsVisible,isVis,[Val,n]]
+
+		[If,(isVis), //code for visible subtool
+			[Note,[StrMerge,"SubTool ",[Val,n]," is Visible"]] //
+
+			//[RoutineCall,DoIt]
+
+		,//else
+			[Note,[StrMerge,"SubTool ",[Val,n]," is Hidden"]]
+		]
+
+	,n]
+
+	//end loop
+	[SubToolSelect,activST]//reselect active subtool
+
+ ]//end button!@#_currentPos!@#_anchor

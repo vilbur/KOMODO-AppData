@@ -1,0 +1,14 @@
+/*
+komodo tool: label
+==================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==================*/
+/* LABEL */
+[ISwitch,[StrMerge, CONTROLSPATH,"[[%tabstop:--- [[%tabstop:MANUAL EXECUTION]] ---]]"],1,"[[%tabstop:Tooltip]]",,, /*Initially Disabled*/,/* width */ [[%tabstop:196]],/* height */ [[%tabstop:18]] ]!@#_currentPos!@#_anchor

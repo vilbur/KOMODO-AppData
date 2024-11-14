@@ -1,0 +1,25 @@
+/*
+komodo tool: keyCaseof
+======================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+======================*/
+ctrl = keyboard.controlPressed; alt = keyboard.altPressed; shift = keyboard.shiftPressed
+
+case of
+(
+	[[%tabstop:( ctrl and shift ):	[[%tabstop:]]]]
+	[[%tabstop:( alt  and shift):	[[%tabstop:]]]]
+	[[%tabstop:( ctrl and alt ):	[[%tabstop:]]]]
+	[[%tabstop:( shift ):	[[%tabstop:]]]]
+	[[%tabstop:( ctrl ):	[[%tabstop:]]]]
+	[[%tabstop:( alt ):	[[%tabstop:]]]]
+
+	default:	[[%tabstop:]]
+)!@#_currentPos!@#_anchor

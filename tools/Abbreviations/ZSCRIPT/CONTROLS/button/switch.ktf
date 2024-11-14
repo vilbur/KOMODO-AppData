@@ -1,0 +1,19 @@
+/*
+komodo tool: switch
+===================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===================*/
+[ISwitch, [[%tabstop1:"[[%tabstop:Button Text]]"]], [[%tabstop:/* state */]], "[[%tabstop:Tooltip]]"
+, /* Pressed */
+
+, /* Unpressed */
+
+[[%tabstop:,	[[%tabstop:/*Disabled*/]],,	[[%tabstop:/*Height*/]],	[[%tabstop:/*Height*/]]]]]
+[IModify, [[%tabstop1:"[[%tabstop:Button Text]]"]],	[[%tabstop:/*Width*/]] ] // with breaks plugin if defined in [iSwitch], must be defined after switch!@#_currentPos!@#_anchor

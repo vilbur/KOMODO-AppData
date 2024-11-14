@@ -1,0 +1,16 @@
+/*
+komodo tool: btn
+================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Zscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================*/
+[IButton, [[%tabstop:"[[%tabstop:Button Text]]"]], "[[%tabstop:Tooltip]]"
+, [[%tabstop://Commands]]
+	[[%tabstop:]]
+[[%tabstop:,	[[%tabstop:/*Disabled*/]],	[[%tabstop:/*Width*/]],	[[%tabstop:/*Hotkey CTRL+SHIFT+ALT+'Q' */]],	[[%tabstop:/*Icon*/]],	[[%tabstop:/*Height*/]]]]]!@#_currentPos!@#_anchor
