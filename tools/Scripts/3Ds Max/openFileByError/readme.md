@@ -3,14 +3,14 @@
 
 1. Execute Open-Macroscript-Exception-In-Komodo.ahk
 
-1. Get filename, line and position
+2. Get filename, line and position
 
      - A) From maxscript error message
      - B) From maxscript listener
 
-1. Write data to "error-data.json"
+3. Write data to "error-data.json"
 
-1. Execute "goToLineInKomodoIfException.komodotool"
+4. Execute "goToLineInKomodoIfException.komodotool"
 
      -> Read "error-data.json"
 

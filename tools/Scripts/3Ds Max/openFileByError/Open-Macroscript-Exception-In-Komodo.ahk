@@ -1,4 +1,13 @@
 /**
+  
+  
+  FIRED BY DisplayFusion TRIGERED when Maxscript EXCEPTION WINDOW is created
+  
+  
+  DisplayFusion MUST BE EXECUTED AS ADMINISTRATOR ( also 3Ds Max and Komodo )
+  
+  
+  
 
   # Get error file from 3Ds Max and open it in Komodo
 
@@ -37,13 +46,13 @@ getTextFromListenerWindow($listener_window)
 
 	ControlGetText, $window_text , MXS_Scintilla1, ahk_id %$listener_window%
 
-	msgBox,,, %$window_text%,1
+	;msgBox,,, %$window_text%,1
 
 	RegExMatch( $window_text, "i).*filename: ([^;]+)", $filename )
 	RegExMatch( $window_text, "i).*position: (\d+);", $position )
 	RegExMatch( $window_text, "i).*line: (\d+)", $line )
 
-	;msgBox,,, %$filename1%,1
+	;msgBox,,, %$filename1%,10
 	;msgBox,,, %$position1%,1
 	;msgBox,,, %$line1%,1
 
@@ -88,12 +97,13 @@ createFileInfoFile( $error_data )
  */
 callGoToLineInKomodoIfException($komodo_window)
 {
+	;msgBox,,, %$komodo_window%,10
 
 	SetKeyDelay, 10, 10
+	;SetKeyDelay, 100, 100
 	BlockInput, on
 
 	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
-
 
 	BlockInput, off
 }
@@ -105,9 +115,6 @@ $listener_window  := WinExist( "ahk_class #32770")
 $komodo_window :=  WinExist( "ahk_exe komodo.exe" )
 
 
-if( $exception_window )
-	WinClose, ahk_id %$exception_window%
-
 
 $error_data  := getTextFromListenerWindow($listener_window)
 
@@ -116,4 +123,10 @@ createFileInfoFile( $error_data )
 
 
 callGoToLineInKomodoIfException($komodo_window)
+
+
+sleep 10000
+
+if( $exception_window )
+	WinClose, ahk_id %$exception_window%
 

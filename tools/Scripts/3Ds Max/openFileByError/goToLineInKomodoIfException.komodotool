@@ -22,7 +22,7 @@
     " */", 
     "var goToLine = function()", 
     "{", 
-    "\talert (file_info_path)", 
+    "\t//alert (file_info_path)", 
     "", 
     "\tif ( koFile.exists(file_info_path) )", 
     "\t\tsetPositionFromErrorDataFile();", 
