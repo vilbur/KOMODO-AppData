@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ================*/
-for [[%tabstop1:item]] in [[%tabstop:[[%tabstop1:item]][[%tabstop:s]]]] [[%tabstop:do]] [[%tabstop:]]!@#_currentPos!@#_anchor
+for [[%tabstop1:item]] in [[%tabstop:[[%tabstop1:item]][[%tabstop:s]]]] do [[%tabstop:]]!@#_currentPos!@#_anchor

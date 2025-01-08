@@ -1,6 +1,6 @@
 /*
-komodo tool: copy
-=================
+komodo tool: cloneNodes
+=======================
 auto_abbreviation: false
 indent_relative: true
 is_clean: true
@@ -9,5 +9,5 @@ set_selection: false
 treat_as_ejs: false
 type: snippet
 version: 1.1.5
-=================*/
+=======================*/
 maxOps.CloneNodes [[%tabstop:node_to_copy_array]][[%tabstop: offset:[[%tabstop:point3]]]][[%tabstop: expandHierarchy:[[%tabstop:true]]]][[%tabstop: cloneType:[[%tabstop:#[[%tabstop:instance]][[%tabstop:reference]]]]]][[%tabstop: actualNodeList:&[[%tabstop:node_array]]]] [[%tabstop: newNodes:[[%tabstop:&nnl]]]]!@#_currentPos!@#_anchor

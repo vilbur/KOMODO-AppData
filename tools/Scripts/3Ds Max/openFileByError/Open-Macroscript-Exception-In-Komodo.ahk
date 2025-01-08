@@ -35,6 +35,38 @@
 
  */
 
+/**
+  
+  UNABLE TO GE TEXT FROM WINDOW "MAXScript MacroScript Error Exception"
+  
+  
+  
+ */
+getTextFromExceptionWindow($exception_window)
+{
+	;msgBox,,, %$listener_window%,1
+DetectHiddenText, On
+
+	WinActivate, ahk_id %$exception_window%
+
+	WinGetText, window_text, ahk_id %$exception_window%
+
+	msgBox,,, %window_text%,1
+
+	
+	RegExMatch( $window_text, "i).*file name: ([^;]+)", $filename )
+	;RegExMatch( $window_text, "i).*position: (\d+);", $position )
+	RegExMatch( $window_text, "i).*line number: (\d+)", $line )
+
+	;msgBox,,, %$filename1%,10
+	;msgBox,,, %$position1%,1
+	;msgBox,,, %$line1%,1
+
+	;return	{file:	RegExReplace( $filename1, "\\", "\\" )
+	;	,line:	$line1
+	;	,col:	$position1
+	;	,offset:	$position1}
+}
 
 /**
  */
@@ -48,6 +80,7 @@ getTextFromListenerWindow($listener_window)
 
 	;msgBox,,, %$window_text%,1
 
+	
 	RegExMatch( $window_text, "i).*filename: ([^;]+)", $filename )
 	RegExMatch( $window_text, "i).*position: (\d+);", $position )
 	RegExMatch( $window_text, "i).*line: (\d+)", $line )
@@ -79,7 +112,6 @@ _joinObject($object, $delimeter:="`n")
  */
 createFileInfoFile( $error_data )
 {
-
 	;$error_data	:= getErrorDataFromMaxscriptEditor()
 	;$error_data.exception	:= getTextFromExceptionWindow()
 	;;Dump($error_data, "error_data", 1)
@@ -93,30 +125,45 @@ createFileInfoFile( $error_data )
 	FileAppend, % _joinObject($error_data), %$error_data_file%
 }
 
+
 /** Execute 'goToLineInKomodoIfException.komodotool'
  */
 callGoToLineInKomodoIfException($komodo_window)
 {
 	;msgBox,,, %$komodo_window%,10
 
-	SetKeyDelay, 10, 10
-	;SetKeyDelay, 100, 100
+	;SetKeyDelay, 10, 10
+	SetKeyDelay, 100, 100
+
 	BlockInput, on
 
-	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
+	;ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
+	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_exe komodo.exe
 
 	BlockInput, off
 }
 
 
 
-$exception_window := WinExist( "MAXScript MacroScript Error Exception")
+;$exception_window := WinExist( "MAXScript MacroScript Error Exception")
+
+;SetTitleMatchMode, 2
+;
+;$exception_window := WinExist( "MAXScript MacroScript Error Exception")
+$exception_window := WinExist( "MAXScript MacroScript Compile Exception")
+
 $listener_window  := WinExist( "ahk_class #32770")
 $komodo_window :=  WinExist( "ahk_exe komodo.exe" )
 
+	;msgBox,,, %$exception_window%,10
 
+;if( $exception_window )
+;	$error_data  := getTextFromExceptionWindow($exception_window)
+;else
 
-$error_data  := getTextFromListenerWindow($listener_window)
+if( $listener_window )
+	$error_data  := getTextFromListenerWindow($listener_window)
+
 
 
 createFileInfoFile( $error_data )
@@ -124,9 +171,8 @@ createFileInfoFile( $error_data )
 
 callGoToLineInKomodoIfException($komodo_window)
 
+;sleep 10000
 
-sleep 10000
-
-if( $exception_window )
-	WinClose, ahk_id %$exception_window%
+;if( $exception_window )
+	;WinClose, ahk_id %$exception_window%
 
