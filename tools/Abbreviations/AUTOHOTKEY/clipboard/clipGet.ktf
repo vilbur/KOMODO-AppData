@@ -1,0 +1,13 @@
+/*
+komodo tool: clipGet
+====================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+====================*/
+$cliboard := RegExReplace( clipboard, "[^[:ascii:]]") ;;; CLIPBOARD TEXT CAN CONTAIN HIDDEN CHARACTERS BECASUSE OF ENCODING, This is cleanup of string!@#_currentPos!@#_anchor

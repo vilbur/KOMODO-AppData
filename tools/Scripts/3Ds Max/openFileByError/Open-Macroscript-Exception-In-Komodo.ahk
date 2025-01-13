@@ -164,8 +164,8 @@ callGoToLineInKomodoIfException($komodo_window)
 
 	BlockInput, on
 
-	;ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
-	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_exe komodo.exe
+	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
+	;ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_exe komodo.exe
 
 	BlockInput, off
 }
@@ -190,7 +190,6 @@ closeMaxscriptEditorFile()
 
 }
 
-;$exception_window := WinExist( "MAXScript MacroScript Error Exception")
 
 
 /**
@@ -205,9 +204,6 @@ else if ( $exception_compile )
 
 else if( $listener_window )
 	$error_data  := getTextFromListenerWindow($listener_window)
-
-	;msgBox,,, %$error_data%,10
-
 
 
 
