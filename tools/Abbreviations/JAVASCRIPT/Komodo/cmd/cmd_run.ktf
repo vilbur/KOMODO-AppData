@@ -1,26 +1,14 @@
 
 komodo tool: cmd_run
-================
-language:	       Javascript
-type:              snippet
-treat_as_ejs:      false
-auto_abbreviation: true
-indent_relative:   true
-set_selection:     false
-is_clean:          true
-version:           1.1.5
-================
-<%
-/* THIS vERSION ACTIvATE 'Command output' pane
- * 
-	var command = [[%tabstop:'[[%tabstop2:commmand]]']];
-   
-   ko.run.output.endSession();
-   ko.run.runEncodedCommand( window, command );[[%tabstop:]]
-
-*/
-
-
-%>
+// ====================
+// auto_abbreviation: true
+// indent_relative: true
+// is_clean: true
+// language: Javascript
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ====================
 var command = [[%tabstop:'[[%tabstop2:commmand]]']];
 [[%tabstop:koShell]].exec(command, {});[[%tabstop:]]!@#_currentPos!@#_anchor

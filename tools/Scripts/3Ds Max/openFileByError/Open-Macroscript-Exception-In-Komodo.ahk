@@ -38,6 +38,11 @@ $CLOSE_EXCEPTION_TIMEOUT := 3000
 
 $exception_error	:= WinExist( "MAXScript MacroScript Error Exception")
 $exception_compile	:= WinExist( "MAXScript MacroScript Compile Exception")
+$exception_struct	:= WinExist( "MAXScript Scripted Struct Definition Handler Exception")
+
+;msgBox,,, %$exception_error%,1
+;msgBox,,, %$exception_compile%,1
+;msgBox,,, %$exception_struct%,1
 
 $listener_window  := WinExist( "ahk_class #32770")
 
@@ -72,7 +77,7 @@ getTextFromExceptionWindow($exception_window)
 		;ControlSend, {Ctrl down}c{Ctrl up}, ahk_id %$exception_window%
 		
 		
-		;Sleep, 1000
+		Sleep, 200
 		ClipWait
 		;MsgBox,  %clipboard%
 		
@@ -82,7 +87,8 @@ getTextFromExceptionWindow($exception_window)
 	;WinGetText, window_text, ahk_id %$exception_window%
 	
 	$cliboard := RegExReplace( clipboard, "[^[:ascii:]]") ;;; CLIPBOARD TEXT CAN CONTAIN HIDDEN CHARACTERS BECASUSE OF ENCODING, This is cleanup of string
-	
+	;msgBox,,, %$cliboard%,1
+
 	RegExMatch( $cliboard, "i).*file name: ([^\n]+)", $filename )
 
 	RegExMatch( $cliboard, "i).*line number: (\d+)", $line )
@@ -202,9 +208,13 @@ else if ( $exception_compile )
 	$error_data  := getTextFromExceptionWindow($exception_compile)
 	
 
+else if ( $exception_struct )
+	$error_data  := getTextFromExceptionWindow($exception_struct)
+	
+/* CHECK LSITENER AS LAST
+*/ 
 else if( $listener_window )
 	$error_data  := getTextFromListenerWindow($listener_window)
-
 
 
 createFileInfoFile( $error_data )
@@ -217,14 +227,20 @@ Sleep, %$CLOSE_EXCEPTION_TIMEOUT%
 
 
 /**
-	CLOSE WINDOWS
+	CLOSE EXCEPTION WINDOW
   
   */
-if ( $exception_error )
-	WinClose, ahk_id %$exception_error%
+;if ( $exception_error )
+;	WinClose, ahk_id %$exception_error%
+;	
+;else if ( $exception_compile )
+;	WinClose, ahk_id %$exception_compile%
+;	
+;else if ( $exception_struct )
+;	WinClose, ahk_id %$exception_struct%
 	
-else if ( $exception_compile )
-	WinClose, ahk_id %$exception_compile%
+	
+	
 	
 closeMaxscriptEditorFile()
 

@@ -1,0 +1,13 @@
+/*
+komodo tool: setCurrentObject
+=============================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=============================*/
+modPanel.setCurrentObject [[%tabstop:modifier | node | node_baseobject]][[%tabstop: node:[[%tabstop:node]]]][[%tabstop: ui:[[%tabstop:true]]]]!@#_currentPos!@#_anchor

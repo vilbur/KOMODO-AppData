@@ -1,18 +1,18 @@
-
+/*
 komodo tool: win_pos_get
-================
-language:	       Maxscript
-type:              snippet
-treat_as_ejs:      false
+========================
 auto_abbreviation: true
-indent_relative:   true
-set_selection:     false
-is_clean:          true
-version:           1.1.5
-================
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+========================*/
 <%
 	var ask = ko.interpolate.interpolateString([
-		'%(ask1:X | Y - empty for both:)',
+		'%(ask1:X | Y - Empty for both:)',
 	]).split(',');
 	
 	var xy	= ask[0] ? '.'+ask[0] : '';
