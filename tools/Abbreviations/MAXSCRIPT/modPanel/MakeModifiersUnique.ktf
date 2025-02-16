@@ -1,0 +1,13 @@
+/*
+komodo tool: MakeModifiersUnique
+================================
+auto_abbreviation: false
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================================*/
+InstanceMgr.MakeModifiersUnique <node array>nodes <maxObject array>modifiers <enum>multiNodeOption
+       multiNodeOption enums: {#prompt|#individual|#group}!@#_currentPos!@#_anchor
