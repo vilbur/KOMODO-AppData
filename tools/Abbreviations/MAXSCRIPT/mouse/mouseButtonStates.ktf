@@ -1,0 +1,25 @@
+// komodo tool: mouseButtonStates
+// ==============================
+// auto_abbreviation: false
+// indent_relative: false
+// is_clean: true
+// language: Text
+// set_selection: false
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ==============================
+fn getMouseButtonStates =
+(
+    local buttonStates = mouse.buttonStates
+    local leftButton = buttonStates[1]
+    local middleButton = buttonStates[2]
+    local rightButton = buttonStates[3]
+
+    format "Left Button: %\n" leftButton
+    format "Middle Button: %\n" middleButton
+    format "Right Button: %\n" rightButton
+)
+
+-- Call the function to print the state of the mouse buttons
+getMouseButtonStates()!@#_currentPos!@#_anchor

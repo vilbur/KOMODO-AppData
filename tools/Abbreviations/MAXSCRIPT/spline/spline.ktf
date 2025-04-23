@@ -1,0 +1,19 @@
+/*
+komodo tool: spline
+===================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===================*/
+[[%tabstop1:spline_shape]] = SplineShape()
+
+addNewSpline [[%tabstop1:spline_shape]]
+
+addKnot [[%tabstop1:spline_shape]] [[%tabstop:spline_index]] #corner #line [[%tabstop:[ [[%tabstop:0,0]] ] ]]]
+
+updateShape [[%tabstop1:spline_shape]]!@#_currentPos!@#_anchor

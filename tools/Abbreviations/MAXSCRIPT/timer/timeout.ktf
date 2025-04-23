@@ -16,7 +16,7 @@ counter = 1
 
 /** Timer callback
  */
-function timerCallback =
+function timerCallback TimerObject evt =
 (
 	--format "\n"; print "timerCallback()"
 	format "timerCallback	= % \n" counter

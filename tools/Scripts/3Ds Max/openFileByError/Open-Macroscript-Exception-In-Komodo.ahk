@@ -36,6 +36,7 @@
 $CLOSE_EXCEPTION_TIMEOUT := 3000
 
 
+
 $exception_error	:= WinExist( "MAXScript MacroScript Error Exception")
 $exception_compile	:= WinExist( "MAXScript MacroScript Compile Exception")
 $exception_struct	:= WinExist( "MAXScript Scripted Struct Definition Handler Exception")
@@ -160,19 +161,39 @@ createFileInfoFile( $error_data )
 
 /** Execute 'goToLineInKomodoIfException.komodotool'
  */
-callGoToLineInKomodoIfException($komodo_window)
+callGoToLineInKomodoIfException($komodo_window, $error_data)
 {
 	;msgBox,,, callGoToLineInKomodoIfException,3
 	;msgBox,,, %$komodo_window%,10
-
-	;SetKeyDelay, 10, 10
+	
+	;msgBox,,,  "C:\\Program Files (x86)\\ActiveState Komodo Edit 12\\komodo.exe " + $error_data.file
+	
+	/*
+		OPEN FILE IN KOMODO 
+	*/ 
+	RunWait, % "C:\\Program Files (x86)\\ActiveState Komodo Edit 12\\komodo.exe """ $error_data.file """"
+	
+	;sleep 500
+	
 	SetKeyDelay, 100, 100
+	;SetKeyDelay, 500, 500
 
 	BlockInput, on
+	
+
+	;ControlSend,, {Ctrl down}L{Ctrl up}, ahk_id %$komodo_window%
+	;sleep 500
+	;ControlSend,, $error_data.line, ahk_id %$komodo_window%
+	;sleep 500
+	;ControlSend,, {Enter down}{Enter up}, ahk_id %$komodo_window%
+
+	;SetKeyDelay, 10, 10
+
+	;sleep 500
 
 	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
-	;ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_exe komodo.exe
 
+	
 	BlockInput, off
 }
 
@@ -220,7 +241,7 @@ else if( $listener_window )
 createFileInfoFile( $error_data )
 
 
-callGoToLineInKomodoIfException($komodo_window)
+callGoToLineInKomodoIfException($komodo_window, $error_data)
 
 
 Sleep, %$CLOSE_EXCEPTION_TIMEOUT%
@@ -247,3 +268,4 @@ closeMaxscriptEditorFile()
 
 WinActivate, ahk_id %$komodo_window%
 
+exitApp

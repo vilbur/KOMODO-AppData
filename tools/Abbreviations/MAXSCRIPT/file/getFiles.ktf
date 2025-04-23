@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =====================*/
-[[%tabstop:files]] = getFiles "[[%tabstop:c:\foo\*.max]]"[[%tabstop:]]!@#_currentPos!@#_anchor
+[[%tabstop:files]] = getFiles ( [[%tabstop:]][[%tabstop:\\\\"[[%tabstop:*.max]]"]] )!@#_currentPos!@#_anchor

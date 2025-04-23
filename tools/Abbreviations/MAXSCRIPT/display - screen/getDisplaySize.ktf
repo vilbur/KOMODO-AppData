@@ -1,0 +1,15 @@
+/*
+komodo tool: getDisplaySize
+===========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===========================*/
+display_info = ( dotNetClass "System.Windows.Forms.Screen").PrimaryScreen.Bounds
+display_info.width
+display_info.height!@#_currentPos!@#_anchor

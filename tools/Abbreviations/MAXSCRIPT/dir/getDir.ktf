@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ===================*/
-[[%tabstop1:TEMP]]_path = getDir #[[%tabstop1:TEMP]][[%tabstop: -- HELP: https://help.autodesk.com/view/MAXDEV/2023/ENU/?guid=GUID-F7577416-051E-478C-BB5D-81243BAAC8EC]]!@#_currentPos!@#_anchor
+[[%tabstop:[[%tabstop1:TEMP]]_dir]] = getDir #[[%tabstop1:TEMP]][[%tabstop: -- HELP: https://help.autodesk.com/view/MAXDEV/2023/ENU/?guid=GUID-F7577416-051E-478C-BB5D-81243BAAC8EC]]!@#_currentPos!@#_anchor

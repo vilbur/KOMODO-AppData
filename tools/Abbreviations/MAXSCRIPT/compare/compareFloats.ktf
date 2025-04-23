@@ -1,0 +1,13 @@
+/*
+komodo tool: compareFloats
+==========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==========================*/
+fn compareFloats f1 f2 eps:0.001 = f1 == f2 OR abs (f1 - f2) <= eps!@#_currentPos!@#_anchor

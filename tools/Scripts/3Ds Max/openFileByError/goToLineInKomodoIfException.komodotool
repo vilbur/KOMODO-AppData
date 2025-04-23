@@ -98,7 +98,7 @@
     "\t\tsetTimeout( function()", 
     "\t\t{", 
     "\t\t\tvar scimoz\t= ko.views.manager.currentView.scimoz;", 
-    "\t\t\tvar line\t= parseInt(file_info.line) +1; // GET LINE INDEX -1", 
+    "\t\t\tvar line\t= parseInt(file_info.line) ; // GET LINE INDEX -1", 
     "\t\t\tvar pos_from_line\t= scimoz.positionFromLine(line);", 
     "\t\t\tvar line_end \t= pos_from_line + scimoz.lineLength(line);", 
     "", 

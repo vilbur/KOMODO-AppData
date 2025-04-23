@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ================*/
-as Float!@#_currentPos!@#_anchor
+as float!@#_currentPos!@#_anchor

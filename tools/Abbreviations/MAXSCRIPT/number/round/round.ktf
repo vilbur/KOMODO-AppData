@@ -2,7 +2,7 @@
 komodo tool: round
 ==================
 auto_abbreviation: false
-indent_relative: false
+indent_relative: true
 is_clean: true
 language: Maxscript
 set_selection: false

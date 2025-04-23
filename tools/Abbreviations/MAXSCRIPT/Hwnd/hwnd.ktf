@@ -1,13 +1,14 @@
-
+/*
 komodo tool: hwnd
-================
-language:	       Maxscript
-type:              snippet
-treat_as_ejs:      false
+=================
 auto_abbreviation: false
-indent_relative:   true
-set_selection:     true
-is_clean:          true
-version:           1.1.5
-================
-hwnd = (for child in ( windows.getChildrenHWND 0) where child[5] == "[[%tabstop:Window Tilte]]"" collect child[1])[1]!@#_currentPos!@#_anchor
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: true
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+hwnd = if ( window_data = windows.getChildHWND 0 "[[%tabstop:Window Tilte]]"" parent:#max  != undefinde ) then window_data[1]
+!@#_currentPos!@#_anchor

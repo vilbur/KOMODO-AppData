@@ -236,3 +236,4 @@ binding cmd_lineTransposeDown Ctrl+Down
 binding cmd_lineTransposeUp Ctrl+Up
 binding cmd_foldCollapseAll Ctrl+Shift+E
 binding cmd_foldExpandRecursive Ctrl+E
+binding cmd_splittab Shift+Tab
