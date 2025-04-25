@@ -1,13 +1,13 @@
 
 komodo tool: line_count
-================
-language:	       Javascript
-type:              snippet
-treat_as_ejs:      false
-auto_abbreviation: false
-indent_relative:   true
-set_selection:     true
-is_clean:          true
-version:           1.1.5
-================
-[[%tabstop:scimoz.]]lineCount()[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor
+// =======================
+// auto_abbreviation: false
+// indent_relative: true
+// is_clean: true
+// language: Javascript
+// set_selection: true
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// =======================
+[[%tabstop:scimoz.]]lineCount[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor

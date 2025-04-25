@@ -1,0 +1,63 @@
+/*
+komodo tool: format-ON
+======================
+async: 0
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+======================*/
+(function() {
+
+    var scimoz = ko.views.manager.currentView.scimoz;
+
+    var line_count = scimoz.lineCount;
+    var comment_pattern = /^(\s*)format\b/;        // capture leading spaces
+    var uncomment_pattern = /^(\s*)--\s*format\b/;  // capture spaces before and after --
+
+    // Helper: get full text of a line
+    function getLine(index) {
+        var start = scimoz.positionFromLine(index);
+        var end = scimoz.getLineEndPosition(index);
+        return scimoz.getTextRange(start, end);
+    }
+
+    // Helper: set full text of a line
+    function setLine(index, new_text) {
+        var start = scimoz.positionFromLine(index);
+        var end = scimoz.getLineEndPosition(index);
+        scimoz.targetStart = start;
+        scimoz.targetEnd = end;
+        scimoz.replaceTarget(new_text);
+    }
+
+    // Determine selected line range or default to whole file
+    var sel_start = scimoz.selectionStart;
+    var sel_end = scimoz.selectionEnd;
+
+    var first_line = scimoz.lineFromPosition(sel_start);
+    var last_line = scimoz.lineFromPosition(sel_end);
+
+    if (sel_start === sel_end) {
+        first_line = 0;
+        last_line = line_count - 1;
+    }
+
+    scimoz.beginUndoAction();
+
+    for (var i = first_line; i <= last_line; i++) {
+        var line_text = getLine(i);
+
+        if (uncomment_pattern.test(line_text)) {
+            // preserve indent from capture group
+            var uncommented = line_text.replace(uncomment_pattern, "$1format");
+            setLine(i, uncommented);
+        } 
+    }
+
+    scimoz.endUndoAction();
+
+})();
