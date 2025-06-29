@@ -1,0 +1,66 @@
+/*
+komodo tool: limit object transform in range
+============================================
+auto_abbreviation: false
+indent_relative: false
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+============================================*/
+/*
+  function to clamp point3 position inside given min and max bounds = 
+*/
+function clampPosition position_point3 min_point3 max_point3 = 
+(
+    position_point3.x = amax min_point3.x (amin max_point3.x position_point3.x)
+    position_point3.y = amax min_point3.y (amin max_point3.y position_point3.y)
+    position_point3.z = amax min_point3.z (amin max_point3.z position_point3.z)
+
+    position_point3 -- return
+)
+
+/*
+  struct to setup real-time clamping using 'when transform changes' handler
+*/
+struct positionLimiter_v
+(
+    node,
+    min_limit = [0,0,0],
+    max_limit = [100,100,100],
+    handler_ref,
+
+    function enableLimiter = 
+    (
+        if node != undefined do
+        (
+            if isValidNode node do
+            (
+                handler_ref = when transform node changes do
+                (
+                    node.position = clampPosition node.position min_limit max_limit
+                )
+            )
+        )
+    ),
+
+    function disableLimiter = 
+    (
+        if isValidNode node do
+        (
+            try (deleteChangeHandler handler_ref) catch()
+        )
+    ),
+
+    on create do
+    (
+    )
+)
+
+/* TEST */
+delete objects
+box_node = box()
+
+positionLimiter = positionLimiter_v node:box_node min_limit:(point3 0 0 0) max_limit:(point3 100 100 0)
+positionLimiter.enableLimiter()!@#_currentPos!@#_anchor

@@ -1,0 +1,25 @@
+/*
+komodo tool: Reset-Dialog-Windows.js
+====================================
+async: 0
+icon: chrome://fugue/skin/icons/exclamation-button.png
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+====================================*/
+/* Open maxscript error file in komodo  
+
+*/ 
+//var user_data_dir = ko.interpolate.interpolateString('%(path:userDataDir)');
+
+var path = 'c:\\GoogleDrive\\ProgramsData\\Core\\Komodo\\Ahk\\Reset-Dialog-Windows.ahk';
+
+var koShell	= require("ko/shell");
+
+var command = 'start "" "' + path + '"';
+
+koShell.exec(command, {});

@@ -1,0 +1,53 @@
+/*
+komodo tool: whenBinder
+=======================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=======================*/
+global [[%tabstop1:WHEN_SELECT_CHANGED]] = #()
+
+/** When attribute change https://help.autodesk.com/view/MAXDEV/2024/ENU/?guid=GUID-513285B3-DBF6-471E-B587-B5BE14D4D875
+ * 
+ *  whenSelectionChange( selection as Array )
+ * 
+ */
+function when[[%tabstop2:SelectionChange]] objs =
+(
+	-- format "\n"; print when[[%tabstop2:SelectionChange]]()"
+
+	if classOf objs == Array then
+		join [[%tabstop1:WHEN_SELECT_CHANGED]] objs
+
+	else
+		append [[%tabstop1:WHEN_SELECT_CHANGED]] objs
+
+	deleteAllChangeHandlers id:#[[%tabstop1:WHEN_SELECT_CHANGED]]
+
+	when [[%tabstop:select]] [[%tabstop1:WHEN_SELECT_CHANGED]] changes id:#[[%tabstop1:WHEN_SELECT_CHANGED]] obj do
+	(
+		format "[[%tabstop1:WHEN_SELECT_CHANGED]]: %\n" obj
+	)
+)
+
+
+/** Start events
+ */
+function when[[%tabstop2:SelectionChange]]Start =
+(
+	-- format "\n"; print when[[%tabstop2:SelectionChange]]Start()"
+	when[[%tabstop2:SelectionChange]]Stop ([[%tabstop1:WHEN_SELECT_CHANGED]])
+)
+
+/** Stop events
+ */
+function when[[%tabstop2:SelectionChange]]Stop =
+(
+	-- format "\n"; print when[[%tabstop2:SelectionChange]]Stop()"
+	deleteAllChangeHandlers id:#[[%tabstop1:WHEN_SELECT_CHANGED]]
+)!@#_currentPos!@#_anchor

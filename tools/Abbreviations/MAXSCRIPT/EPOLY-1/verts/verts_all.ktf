@@ -10,5 +10,5 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ======================*/
-vertex_count = getNumVerts obj.mesh
-verts_all = #{1..vertex_count[[%tabstop:]]}!@#_currentPos!@#_anchor
+[[%tabstop:vertex_count = getNumVerts obj.mesh
+]]verts_all = #{1..[[%tabstop:vertex_count]]|[[%tabstop:getNumVerts obj.mesh]]}!@#_currentPos!@#_anchor

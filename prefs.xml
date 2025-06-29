@@ -191,58 +191,69 @@
   <string>event</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-Set method nameMru">
-  <string>update normals</string>
-  <string>hasSplines</string>
-  <string>pairExist</string>
-  <string>createTestObjects</string>
-  <string>createTestPlane</string>
-  <string>_getDirVector</string>
-  <string>deleteSplineSubobject</string>
-  <string>_replaceSupportWithProxy</string>
-  <string>Is support proxy point</string>
-  <string>_isSUpportProxyPoint</string>
-  <string>_rebulidSupport</string>
-  <string>_isSupportValid</string>
-  <string>_createSupportObject</string>
-  <string>_getProxyPoint</string>
-  <string>_replacePointAndSupport</string>
-  <string>_isPositionAndVEctorValid</string>
-  <string>_set foot exists</string>
-  <string>_getSupportObjectsByNodes</string>
-  <string>_isOnGround</string>
-  <string>setKnotZposition</string>
-  <string>updateSupportsHeight</string>
-  <string>loadNormalsLocal</string>
-  <string>_load user props from node</string>
-  <string>_saveUserProps</string>
-  <string>updateThisValues</string>
-  <string>view_name</string>
-  <string>z axis is actove</string>
-  <string>transformByArrow</string>
-  <string>getEventTypesByPriority</string>
-  <string>importFileTest</string>
-  <string>valueChanged</string>
-  <string>_checkChangedProps</string>
-  <string>_setNormalLenght</string>
-  <string>raftLenght</string>
-  <string>splitUserProps</string>
-  <string>rotationOfSourceObjectChanged</string>
-  <string>checkDirVector</string>
-  <string>_setSupportLinePoints</string>
-  <string>_makeRaftShorter</string>
-  <string>updateLeg</string>
-  <string>setFootToGround</string>
-  <string>updateRaft</string>
-  <string>_getSupportPoints</string>
-  <string>_saveProps</string>
-  <string>get base point</string>
-  <string>_getBasePOint</string>
-  <string>createFoot</string>
-  <string>generateLeg</string>
-  <string>get second point position</string>
-  <string>generateRaft</string>
+  <string>select normal down verts</string>
+  <string>_get bottom verts</string>
+  <string>get verts to process</string>
+  <string>getSecondPoint position </string>
+  <string>selectSupportsBy ground</string>
+  <string>_updateRaftRadioButton</string>
+  <string>connenctBarWidthToBase</string>
+  <string>_initDefaultModifiers</string>
+  <string>add to hits</string>
+  <string>ahhToHits</string>
+  <string>rotateBox</string>
+  <string>roteteBox</string>
+  <string>_testPositionsAroundCenterOfCell</string>
+  <string>testHit</string>
+  <string>appendClosestVert</string>
+  <string>createBox</string>
+  <string>createBOx</string>
+  <string>_getClosestVert</string>
+  <string>getClosestVertsOfEmptyCells</string>
+  <string>_removeSnapshots</string>
+  <string>_convertTargetsToMesh</string>
+  <string>setGrid</string>
+  <string>Create WaveBox</string>
+  <string>refreshNodeList</string>
+  <string>createTestObject</string>
+  <string>selectVertsEditablePoly</string>
+  <string>getVertsAndColors</string>
+  <string>getExistingVertexPaintModifier</string>
+  <string>addVertexPaintModifier</string>
+  <string>serarchForVertexPaint</string>
+  <string>addPaintLayerMod</string>
+  <string>setPaintLayerMod</string>
+  <string>createaSource Object </string>
+  <string>getTopLayerTitle</string>
+  <string>_get  top layer title</string>
+  <string>renameObjectsAndChildren</string>
+  <string>_rename object</string>
+  <string>_get objects by name</string>
+  <string>_getSuffixByLayerType</string>
+  <string>referenceTo</string>
+  <string>instanceTo</string>
+  <string>copyTo</string>
+  <string>moveTo</string>
+  <string>objectWithNameExists</string>
+  <string>getLayerContours</string>
+  <string>_getShiftMode</string>
+  <string>_showVertsInLayer</string>
+  <string>getBottom Verts</string>
+  <string>delete snapshot</string>
+  <string>isolateVerts</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-Struct nameMru">
+  <string>GridOfNodes_v</string>
+  <string>IslandFInder</string>
+  <string>LowestVertIslandFinder</string>
+  <string>PrintLayerManager</string>
+  <string>EpolyVertsSelector</string>
+  <string>ExportNodeResizer</string>
+  <string>NewIslandFinder</string>
+  <string>whenEventBinder</string>
+  <string>whenEvent</string>
+  <string>ModifierValue</string>
+  <string>WhenTransfromChanges</string>
   <string>SupportRaft</string>
   <string>ScreenShooter</string>
   <string>SupportLegUpdater</string>
@@ -282,17 +293,6 @@
   <string>NormalLimits</string>
   <string>VertexColorGetter</string>
   <string>vertDataGetter</string>
-  <string>getLowestVertsInGrid</string>
-  <string>PinsManager</string>
-  <string>SceneLayers</string>
-  <string>ShapeKnotGetter</string>
-  <string>SupportOptions</string>
-  <string>MeshVertexGetter</string>
-  <string>HelperObject</string>
-  <string>HelperGenerator</string>
-  <string>SupportManager</string>
-  <string>meshVertToColorVertexConvertor</string>
-  <string>Project</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-TypeMru">
   <string>class</string>
@@ -379,56 +379,56 @@
   <string>App\</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-var1Mru">
-  <string>POINTS</string>
-  <string>dir_vector</string>
-  <string>this.dir_vector</string>
-  <string>update_normals</string>
-  <string>Support.hasSplines()</string>
-  <string>TEST NORMAL</string>
-  <string>obj</string>
-  <string>support</string>
-  <string>support_A</string>
-  <string>numKnots support_B</string>
-  <string>numKnots support_A</string>
-  <string>numSplines support</string>
-  <string>num_knots</string>
-  <string>points_on_supports[1].count</string>
-  <string>_shape</string>
-  <string>new_beams</string>
-  <string>segment_height</string>
-  <string>segments_count</string>
-  <string>point_i</string>
-  <string>points_on_supports[1].count </string>
-  <string>spline_i</string>
-  <string>points_of_lines[2][1]</string>
-  <string>points_of_lines[1][1]</string>
-  <string>points_of_lines</string>
-  <string>max_connections_per_object</string>
-  <string>support_nodes</string>
-  <string>SUPPORT_OPTIONS.min_height</string>
-  <string>vectors</string>
-  <string>HEIGHT</string>
-  <string>support_A.min.z </string>
-  <string>support_A.pos.z</string>
-  <string>isTallEnough()</string>
-  <string>is_duplicate</string>
-  <string>item</string>
-  <string>support_node.name</string>
-  <string>support.name</string>
-  <string>next_support_i</string>
-  <string>SupportObject.support_key</string>
-  <string>SupportObject</string>
-  <string>SupportObjects.keys</string>
-  <string>_objects.count</string>
-  <string>SupportObjectsNew.keys</string>
-  <string>this.Supports</string>
-  <string>SupportObjects</string>
-  <string>object_key</string>
+  <string>indexes</string>
+  <string>cell_size</string>
+  <string>distance</string>
+  <string>result</string>
+  <string>min_p</string>
+  <string>hit</string>
+  <string>intersect_objs</string>
+  <string>cell_center</string>
+  <string>num_rows</string>
+  <string>num_cols</string>
+  <string>empty_cells</string>
+  <string>classOf _mod</string>
+  <string>lowesrt_verts.count</string>
+  <string>obj.parent</string>
+  <string>mesh_node.parent</string>
+  <string>lowesrt_verts</string>
+  <string>hit_data</string>
+  <string>closest_vert_pos</string>
+  <string>closest_verts</string>
+  <string>verts_normal_down</string>
+  <string>lowest_vert_data</string>
+  <string>update_or_generate</string>
+  <string>normal_length</string>
+  <string>TEST</string>
+  <string>MIN_Z</string>
+  <string>supports_and_rafts</string>
+  <string>supports_on_ground</string>
+  <string>Support.bar_width</string>
+  <string>hit_raft_auto</string>
+  <string>direction</string>
+  <string>raft_direction_val</string>
+  <string>raft_mode</string>
+  <string>roll</string>
+  <string>modifiers</string>
+  <string>supports_exists</string>
+  <string>bar_width</string>
+  <string>objects_by_type</string>
+  <string>prop_key</string>
   <string>obj_type</string>
-  <string>_objects</string>
-  <string>supports.count</string>
-  <string>Support.min_foot_pos</string>
-  <string>Support.points[</string>
+  <string>max_file_name</string>
+  <string>max_key</string>
+  <string>numKeys controller</string>
+  <string>controller</string>
+  <string>anim_keys</string>
+  <string>mode</string>
+  <string>classOf obj.modifiers[obj.modifiers.count]</string>
+  <string>obj</string>
+  <string>closest_verts[obj_pointer]</string>
+  <string>source_objects</string>
+  <string>support_mockup</string>
 </ordered-preference>
 <ordered-preference id="dialog-interpolationquery-var2Mru">
   <string>shift</string>
@@ -546,9 +546,9 @@
   <string id="listbox.pathEditor.add">C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\tools</string>
 </preference-set>
   <string id="filtered-prefs-open-nodes-by-id">{"editorItem":true,"editorProperties":true,"languagesItem":true}</string>
-  <long id="find-caseSensitivity">0</long>
+  <long id="find-caseSensitivity">2</long>
   <boolean id="find-confirmReplacementsInFiles">0</boolean>
-  <string id="find-cwd">C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\Lib\SupportManager</string>
+  <string id="find-cwd">C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\Lib\SupportManager\SourceObject</string>
   <boolean id="find-displayInFindResults2">0</boolean>
 <ordered-preference id="find-excludeFiletypes">
   <string>*.svn</string>
@@ -563,12 +563,16 @@
   <string>.svn;CVS;.git;.hg;.bzr;*~</string>
 </ordered-preference>
 <ordered-preference id="find-folders">
-  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-TRANSFORM</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer</string>
 </ordered-preference>
 <ordered-preference id="find-foldersMru">
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\MaxSlicer</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\Lib</string>
+  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-NodeExporter\NodeExporter</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\Lib\SupportManager</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools</string>
-  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\Lib</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\content</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-UI-framework\Lib</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\QuadMenu\QuadMenus</string>
@@ -582,7 +586,6 @@
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-PRINT-3D\Lib\SupportManager</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-PRINT-3D\Lib\PlatformGenerator</string>
   <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-EXPORT\Lib</string>
-  <string>C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3</string>
   <string>d:\GoogleDrive\TotalComander</string>
   <string>C:\GoogleDrive\Programs\code\Komodo\AppData\ActiveState\KomodoIDE\10.1\tools</string>
 </ordered-preference>
@@ -601,60 +604,62 @@
   <boolean id="find-matchWord">0</boolean>
   <boolean id="find-multiline">0</boolean>
 <ordered-preference id="find-patternMru">
-  <string>comment_pattern</string>
-  <string>alert</string>
-  <string>_getDirVector</string>
-  <string>custom</string>
-  <string>_setSupportLinePoints</string>
-  <string>has</string>
-  <string>_getSyncKey</string>
-  <string>_getSegmentEndPoints</string>
-  <string>_drawLines</string>
-  <string>_updateBeamsBySupports</string>
-  <string>update_leg</string>
-  <string>update_raft</string>
-  <string>rotationOfSourceObjectChanged</string>
-  <string>beams_split</string>
-  <string>vectors</string>
-  <string>_getBeamsEndPoints</string>
-  <string>_disableSupportByRemoveSpline</string>
-  <string>wirecolor</string>
-  <string>WIRECOLOR</string>
-  <string>_redWirecolorToInvalidSupport</string>
-  <string>supportHasMaxConnections</string>
-  <string>createTestObjects</string>
-  <string>hasConnection</string>
-  <string>_setSupportObject</string>
-  <string>_sortSupportsByDistance</string>
-  <string>getSupportObjects</string>
-  <string>_getSupportObjectsByNodes</string>
-  <string>_getSupportsOrRaftsNodes</string>
-  <string>next_support_i</string>
-  <string>_saveUserPropsToSupport</string>
+  <string>file_is_not_saved</string>
+  <string>allowedExtensions</string>
+  <string>_testHit</string>
+  <string>cell_size</string>
+  <string>_convertTargetsToMeshSnapshots</string>
+  <string>fitZpozitions</string>
+  <string>EpolyVertsSelector</string>
+  <string>setSelection</string>
+  <string>_getClosestVertToHit</string>
+  <string>_addToHits</string>
+  <string>mode</string>
+  <string>_getVertsToProcess</string>
+  <string>verts_sel</string>
+  <string>ISLANDS_SYSTEM</string>
+  <string>findIslandsPerLayer</string>
+  <string>point</string>
+  <string>getVertsPositions</string>
+  <string>colors</string>
   <string>_saveOptionsToUserProps</string>
-  <string>_saveUserPropsToNode</string>
-  <string>SupportManager_v.isType</string>
-  <string>SupportObjects</string>
-  <string>SourceObjects</string>
+  <string>_alignPivotToRaft</string>
+  <string>_testHitOfSourceObject</string>
+  <string>intersectRaySourceObject</string>
+  <string>raft_direction</string>
+  <string>direction</string>
+  <string>update_or_generate</string>
+  <string>_setSupportLinePoints</string>
+  <string>_setNormalLenght</string>
+  <string>normal_length</string>
   <string>_setMinLimints</string>
-  <string>raftHasFullLenght</string>
-  <string>raftHasMinLenght</string>
-  <string>isSpaceForRaftAndLeg</string>
-  <string>isLegPointAboveMinLimit</string>
-  <string>isMoreThen</string>
-  <string>_setDirVector</string>
-  <string>_drawLine</string>
-  <string>updateSupportHeight</string>
-  <string>_isPositionAndVectorValid</string>
-  <string>deleteSplineSubobject</string>
-  <string>support_obj.pivot</string>
-  <string>nu</string>
-  <string>_replaceSupportWithProxy</string>
-  <string>_isSupportProxyPoint</string>
+  <string>_wireBarAndTopWidth</string>
+  <string>_setSweepRadius</string>
+  <string>_setSweepProperties</string>
+  <string>whenSupportSelectionChanges</string>
+  <string>whenSourceObjectSelectionChanges</string>
+  <string>_loadSupportsFromScene</string>
+  <string>setSliderByModifier</string>
+  <string>VertexColors == undefined</string>
+  <string>VertexColors</string>
+  <string>_getPositionsFromLineOnConvert</string>
+  <string>_postUpdate</string>
+  <string>NORMAL_LENGTH</string>
+  <string>setUserPropVal</string>
+  <string>offset</string>
+  <string>_setRaftLenght</string>
+  <string>convertSupportType</string>
+  <string>_initDefaultModifiers</string>
+  <string>getSweepRadius</string>
+  <string>getChamferBarValue</string>
+  <string>getModVal</string>
+  <string>_addCustomAttributes</string>
 </ordered-preference>
   <long id="find-patternType">0</long>
   <long id="find-preferredContextType">0</long>
 <ordered-preference id="find-replacementMru">
+  <string>DIALOG_maxslicer</string>
+  <string>ExportNodePlugin</string>
   <string>top_width</string>
   <string></string>
   <string>https://chrome.google.com/webstore/detail/</string>
@@ -703,8 +708,6 @@
   <string>setRangesFound</string>
   <string>ranges_found</string>
   <string>range_data</string>
-  <string>setSearchFor</string>
-  <string>search_for</string>
 </ordered-preference>
   <boolean id="find-searchBackward">0</boolean>
   <boolean id="find-searchInSubfolders">1</boolean>
@@ -713,7 +716,7 @@
   <boolean id="find-skipLargeFilesEnabled">1</boolean>
   <boolean id="find_in_view">0</boolean>
   <boolean id="focusmode_on">0</boolean>
-  <string id="focusmode_state">{"toolbars":true,"menu":false,"leftPane":true,"rightPane":true,"bottomPane":true}</string>
+  <string id="focusmode_state">{"toolbars":true,"menu":false,"leftPane":true,"rightPane":true,"bottomPane":false}</string>
   <boolean id="foldSeparateBlockParts">1</boolean>
   <boolean id="hyperlinksEnableColorPicker">1</boolean>
   <boolean id="hyperlinksEnableGotoDefinition">1</boolean>
@@ -753,6 +756,9 @@ vilbur
   <string id="addConnection-last-dbtype">SQLite3</string>
   <string id="dbexplorer-open-nodes">{}</string>
 </preference-set>
+  <boolean id="ko.extensions.todo.case_sensitive">1</boolean>
+  <string id="ko.extensions.todo.markers">TODO</string>
+  <string id="ko.extensions.todo.search_context">todo.openedFiles</string>
   <boolean id="koSkin_use_custom_scrollbars">1</boolean>
   <boolean id="komodo_normal_shutdown">0</boolean>
   <string id="kpf_open_nodes_000c6a97-bd81-46d7-bac9-7da7c7a2d4da">{}</string>
@@ -832,6 +838,7 @@ vilbur
   <string id="kpf_open_nodes_850b9c0e-fea1-4969-af7f-9e73fb66a78f">{}</string>
   <string id="kpf_open_nodes_8916cf21-0e15-4e8b-aa6b-5bccac888db5">{'8916cf21-0e15-4e8b-aa6b-5bccac888db5': True}</string>
   <string id="kpf_open_nodes_90403e5f-ce62-4bfa-a5c9-49ae1a96804b">{}</string>
+  <string id="kpf_open_nodes_915be27b-849f-4831-95a7-572a691d0b34">{'915be27b-849f-4831-95a7-572a691d0b34': True}</string>
   <string id="kpf_open_nodes_9248ccf9-889e-4818-bf6e-bc22acce763c">{}</string>
   <string id="kpf_open_nodes_93e30723-ae95-4da4-ac20-a8b0bee132df">{}</string>
   <string id="kpf_open_nodes_972d487c-bbea-4a3f-ac8b-6e0ca1584ef0">{}</string>
@@ -871,6 +878,7 @@ vilbur
   <string id="kpf_open_nodes_d36240d6-5991-4027-b2a9-13e2d1eb0a4d">{}</string>
   <string id="kpf_open_nodes_d47eec58-7219-4d00-b9e5-768b2160a2d4">{'d47eec58-7219-4d00-b9e5-768b2160a2d4': True}</string>
   <string id="kpf_open_nodes_d4db3122-baed-44fb-a020-f44f539570cc">{}</string>
+  <string id="kpf_open_nodes_d58bfe2a-a946-4ff0-9091-3cc8bd39f635">{'d58bfe2a-a946-4ff0-9091-3cc8bd39f635': True}</string>
   <string id="kpf_open_nodes_d912b906-fb58-4c59-b545-27708ba25342">{}</string>
   <string id="kpf_open_nodes_dc8bf196-b725-4c02-9f42-d977c19c061f">{u'dc8bf196-b725-4c02-9f42-d977c19c061f': True}</string>
   <string id="kpf_open_nodes_dced37b1-bfab-41b2-8eaa-6df96cfe44c6">{}</string>
@@ -962,48 +970,56 @@ vilbur
   <boolean id="lint_typescript">1</boolean>
   <string id="mappedPaths"></string>
 <ordered-preference id="mruFileList">
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/SupportModifiers/SupportModifiers.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/CallbackManager/CallbackManager.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportHud/_importHUD.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportHud/toggleHudCallback.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms.bak</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/dev/find%2520closest%2520pairs.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/test.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE/1-SCENE.mcr</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE/2-MANAGE%2520SCENE.mcr</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-vilTools3/VilTools/rollouts-Tools/rollout-SCENE/3-SCENE%2520RESET.mcr</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/bindOnObjectDeletedCallback/bindOnObjectDeletedCallback.ms</string>
-  <string>file:///D:/Downloads/palacinky.csv</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros/_Scene_Reset-_scene_reset.mcr</string>
-  <string>file:///c:/users/vilbur/appdata/local/autodesk/3dsmax/2023%2520-%252064bit/enu/scripts/maxscript-viltools3/viltools/rollouts-tools/rollout-viewports/lib/viewporthud/HudDisplay.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros/_Transform-_transform_set_angle_snap_value.mcr</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/21-MANAGE%2520LAYOUT%2520PRESET.mcr</string>
-  <string>file:///D:/Downloads/archives/LockTool/LockTool.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectTransformEventBinder/SourceObjectTransformEventBinder.ms</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-vilTools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/30-HUD.mcr</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/TOOLS.mcr</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/MacroscriptGenerator/MacroscriptGenerator.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/StartUpScriptImporter/StartUpScriptImporter.ms</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter/FileInImporter.ms</string>
-  <string>file:///c:/users/vilbur/appdata/local/autodesk/3dsmax/2023%2520-%252064bit/enu/scripts/maxscript-viltools3/viltools/rollouts-tools/rollout-viewports/lib/viewporthud/Callbacks/viewportHudCallback.ms</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros/_Pivot-_pivot_center_to_objects_in_selection.mcr</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-SELECTION/SUPPORTS%2520and%2520RAFTS.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/TOOLS.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertSelector/Test/vertSelectorTest.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/LowestVertIslandFInder/LowestVertIslandFInder.ms</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandsSystem.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder/Test/GridSupportSeederTest.ms</string>
+  <string>file:///c:/users/vilbur/appdata/local/autodesk/3dsmax/2023%2520-%252064bit/enu/scripts/maxscript-viltools3/viltools/rollouts-tools/rollout-layers/lib/layerstoogledialog/layerstoogledialog.ms</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSourceObjectSelectionChanges/whenSourceObjectSelectionChanges.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportLeg/SupportLeg.ms</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColors/MeshVertToColorVertexConvertor/MeshVertToColorVertexConvertor.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/MANAGE%2520COLORS.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/01-GENERATE.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/30-HUD.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-99-TEST/Create-Test-Objects.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/Lib/generateSupportsOrRafts.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/openVertexColorSubmenu/openVertexColorSubmenu.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColorProcessor/VertexColorProcessor.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/1-%255BExport-Nodes-Lists%255D.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenus/Alt.ms</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER/Lib/SlicerSystem/SlicerCallbacks.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/EpolyVertsSelector/EpolyVertsSelector.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/LowestVertIslandFInder/Test/LowestVertIslandFInderTest.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER/01-SLICER.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/01-generateSupportTest.ms</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros/Vertex_Color_Manage-epoly_vertex_color_select_submenu.mcr</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-12-RAFTS/3-%255BRAFTS%255D.mcr</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectNormals/SourceObjectNormals.ms</string>
 </ordered-preference>
 <ordered-preference id="mruMenuItemList">
-  <string>about_menu</string>
+  <string>ko_custom_macro_4483</string>
+  <string>ref%0e1 GridSupportSeederTest.ms (2) &#8212; C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-MaxSlicer\Lib\SupportManager\GridSupportSeeder\Test%0eko.history.open_rctab(-1);</string>
+  <string>menu_toggleMenubar</string>
+  <string>sdk_menuitem_popup_viewmenu_toggleFocusMode</string>
   <string>menu_splitTab</string>
-  <string>menu_file_newFile</string>
-  <string>ref%0e1 LockTool.ms &#8212; D:\Downloads\archives\LockTool%0eko.history.open_rctab(-1);</string>
-  <string>ko_custom_macro_1069</string>
-  <string>ref%0e3 HudDisplay.ms &#8212; C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\scripts\MAXSCRIPT-viltools3\VilTools\rollouts-Tools\rollout-VIEWPORTS\Lib\ViewportHud%0eko.history.open_rctab(7)</string>
-  <string>ref%0e1 _Viewports_HUD-_viewport_hud_info_object.mcr &#8212; C:\Users\vilbur\AppData\Local\Autodesk\3dsMax\2023 - 64bit\ENU\usermacros%0eko.history.open_rctab(-1);</string>
-  <string>menu_preferences</string>
-  <string>ref%0e1 _Viewports_Screenshot-viewport_open_gifrecorder_dialog.mcr%0e</string>
-  <string>ref%0e1 Activate-mediamonkey.ahk%0e</string>
+  <string>ref%0e10 ModifiersManager.ms%0e</string>
+  <string>menu_saveAll</string>
+  <string>menu_toggleToolbars</string>
+  <string>menu_save</string>
+  <string>ref%0e9 SupportOptions.ms%0e</string>
 </ordered-preference>
 <ordered-preference id="mruProjectList">
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/Komodo-Tools.komodoproject</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MS-MaxSlicer.komodoproject</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/MS-vilTools3.komodoproject</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/MS-nodeExporter.komodoproject</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Extensions/_3rdParty/Todo/Extension_Todo.komodoproject</string>
+  <string>file:///D:/Downloads/_ChatGPT/SCRIPTS/GPT.komodoproject</string>
 </ordered-preference>
 <ordered-preference id="mruTemplateList">
   <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoIDE/10.1/templates/My%2520Templates/Php/Class.php</string>
@@ -1059,247 +1075,247 @@ vilbur
   <string id="phonegapInterpreter"></string>
   <boolean id="pin_find_frame">0</boolean>
 <preference-set id="places">
-  <string id="1">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer</string>
+  <string id="1">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0</string>
   <string id="2">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer</string>
 <preference-set id="current_filter_by_uri">
 <preference-set id="file:///C:/Users/vilbur">
-  <string id="timestamp">1744055928969</string>
+  <string id="timestamp">1748457074450</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%20Max/openFileByError">
-  <string id="timestamp">1742356736229</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0">
+  <string id="timestamp">1751203617070</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%20Max">
+  <string id="timestamp">1748207150464</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%20Max/runMaxScript">
+  <string id="timestamp">1748207145522</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer">
-  <string id="timestamp">1745434475100</string>
+  <string id="timestamp">1751190236026</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib">
-  <string id="timestamp">1744929496277</string>
-  <string id="viewName">maxscript</string>
+  <string id="timestamp">1751184004923</string>
+  <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager">
-  <string id="timestamp">1745379255786</string>
+  <string id="timestamp">1751089918373</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager">
-  <string id="timestamp">1742356653173</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer">
+  <string id="timestamp">1751089919844</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject">
-  <string id="timestamp">1744855684405</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER">
+  <string id="timestamp">1751030905915</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents">
-  <string id="timestamp">1744872326404</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS">
+  <string id="timestamp">1751170053376</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform">
-  <string id="timestamp">1744872323311</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR">
+  <string id="timestamp">1751144139864</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS">
+  <string id="timestamp">1751144145372</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-12-RAFTS">
+  <string id="timestamp">1751033793221</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-SELECTION">
+  <string id="timestamp">1751197102159</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-TOOLS">
+  <string id="timestamp">1751027700368</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS">
+  <string id="timestamp">1751203225738</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION">
+  <string id="timestamp">1751184014768</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-99-TEST">
+  <string id="timestamp">1751110775402</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content">
-  <string id="timestamp">1744340431318</string>
-  <string id="viewName">maxscript</string>
+  <string id="timestamp">1748657137445</string>
+  <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-01-SLICER">
-  <string id="timestamp">1743194211180</string>
+  <string id="timestamp">1748525337279</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-02-ISLANDS">
-  <string id="timestamp">1739943808276</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR">
-  <string id="timestamp">1745376733766</string>
+  <string id="timestamp">1748435314559</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator">
-  <string id="timestamp">1738394119690</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR">
+  <string id="timestamp">1748576031234</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS">
-  <string id="timestamp">1744541805330</string>
-  <string id="viewName">maxscript</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-12-RAFTS">
-  <string id="timestamp">1740108644422</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-13-BEAMS">
-  <string id="timestamp">1745351410163</string>
+  <string id="timestamp">1748576028110</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-14-DRAINS">
-  <string id="timestamp">1740108753538</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-SELECTION">
-  <string id="timestamp">1741722838192</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-07-VERTEX_SELECTION">
+  <string id="timestamp">1748529960109</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-TOOLS">
-  <string id="timestamp">1740078375591</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter">
+  <string id="timestamp">1751141246216</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-VERTEX_COLORS">
-  <string id="timestamp">1742024453084</string>
-  <string id="viewName">Default</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter">
+  <string id="timestamp">1750931534117</string>
+  <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-VERTEX_SELECTION">
-  <string id="timestamp">1739943802626</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/Lib">
+  <string id="timestamp">1748631759966</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/rollouts-ExportTo/rollout-3D-PRINT">
+  <string id="timestamp">1750931466471</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework">
-  <string id="timestamp">1744855685260</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib">
-  <string id="timestamp">1744228894756</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/CallbackManager">
-  <string id="timestamp">1742708760989</string>
+  <string id="timestamp">1750943259629</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader">
-  <string id="timestamp">1744384192102</string>
+  <string id="timestamp">1750188690834</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog">
-  <string id="timestamp">1744254708481</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter">
-  <string id="timestamp">1744565908226</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter/Test">
-  <string id="timestamp">1744566435118</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator">
-  <string id="timestamp">1742791650361</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/StartUpScriptImporter">
-  <string id="timestamp">1744566206038</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/StdScriptImporter">
-  <string id="timestamp">1744223917825</string>
+  <string id="timestamp">1747942248818</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test">
-  <string id="timestamp">1744257683021</string>
+  <string id="timestamp">1748137270476</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3">
-  <string id="timestamp">1744855904260</string>
+  <string id="timestamp">1751143747789</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/CallBacks">
-  <string id="timestamp">1742708733483</string>
+  <string id="timestamp">1750965277892</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/Lib">
-  <string id="timestamp">1742821391316</string>
+  <string id="timestamp">1751027149463</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenus">
-  <string id="timestamp">1744560817344</string>
+  <string id="timestamp">1751143752167</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools">
-  <string id="timestamp">1744872468328</string>
+  <string id="timestamp">1750932881793</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-ANIMATION">
+  <string id="timestamp">1750932907547</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT">
-  <string id="timestamp">1741725171541</string>
+  <string id="timestamp">1748453320742</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK">
-  <string id="timestamp">1743144687247</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-3D-PRINT">
+  <string id="timestamp">1748206445437</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIERS">
-  <string id="timestamp">1743144685770</string>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-EXPORT/rollouts-ExportTo/rollout-OBJ">
+  <string id="timestamp">1748206369307</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS">
+  <string id="timestamp">1749664107509</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS">
+  <string id="timestamp">1749755567533</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-LAYERS-MANAGER">
+  <string id="timestamp">1749756447368</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-OPTIONS">
-  <string id="timestamp">1743824365931</string>
-  <string id="viewName">maxscript</string>
+  <string id="timestamp">1750937690600</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D">
+  <string id="timestamp">1748161524753</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager">
+  <string id="timestamp">1748161420632</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-PRINT-3D/Lib/SupportManager/SupportOptions">
+  <string id="timestamp">1748161490091</string>
+  <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE">
-  <string id="timestamp">1744892604231</string>
+  <string id="timestamp">1750955535405</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SELECTION">
+  <string id="timestamp">1749662483278</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SPLINE">
+  <string id="timestamp">1751088550804</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TOOLS">
-  <string id="timestamp">1744380599178</string>
+  <string id="timestamp">1750937636941</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM">
-  <string id="timestamp">1744872476646</string>
+  <string id="timestamp">1749321733624</string>
+  <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR">
+  <string id="timestamp">1751027157095</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS">
-  <string id="timestamp">1744855913134</string>
+  <string id="timestamp">1751026556555</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib">
-  <string id="timestamp">1742123510878</string>
+<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents">
+  <string id="timestamp">1751124094100</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/GifRecorder">
-  <string id="timestamp">1742123507008</string>
+<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSourceObjectSelectionChanges">
+  <string id="timestamp">1751124091757</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ScreenShooter">
-  <string id="timestamp">1742010621136</string>
+<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSupportSelectionChanges">
+  <string id="timestamp">1751115150289</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportHud">
-  <string id="timestamp">1744688748661</string>
+<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER">
+  <string id="timestamp">1749392782400</string>
   <string id="viewName">Default</string>
 </preference-set>
-<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/usermacros">
-  <string id="timestamp">1744563793538</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager">
-  <string id="timestamp">1745177364167</string>
-  <string id="viewName"></string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator">
-  <string id="timestamp">1745114339227</string>
-  <string id="viewName">maxscript</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/dev">
-  <string id="timestamp">1745177433615</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject">
-  <string id="timestamp">1743330112182</string>
-  <string id="viewName">maxscript</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject">
-  <string id="timestamp">1743330956317</string>
-  <string id="viewName">maxscript</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SourceObjectNormals">
-  <string id="timestamp">1739648638689</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportLegUpdater">
-  <string id="timestamp">1741406916976</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-vilTools3/VilTools/rollouts-Tools/rollout-OBJECT_NAME">
-  <string id="timestamp">1741755817427</string>
-  <string id="viewName">Default</string>
-</preference-set>
-<preference-set id="file:///c:/users/vilbur/appdata/local/autodesk/3dsmax/2023%20-%2064bit/enu/scripts/maxscript-viltools3/viltools/rollouts-tools/rollout-viewports/lib/viewportlayoutmanager">
-  <string id="timestamp">1742907288918</string>
+<preference-set id="file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColorProcessor">
+  <string id="timestamp">1750103622325</string>
   <string id="viewName">Default</string>
 </preference-set>
 </preference-set>
@@ -1308,20 +1324,8 @@ vilbur
   <string id="timestamp">1720552527995</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/AlphaManager/Z-AlphaManager.komodoproject">
-  <string id="timestamp">1711395576743</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/AlphaManager/zPlugin-AlphaManager.komodoproject">
   <string id="timestamp">1711395998198</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/zBrush-Config.komodoproject">
-  <string id="timestamp">1711203221975</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/zBrush-ConfigX.komodoproject">
-  <string id="timestamp">1710800082753</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/Extended/zPlugin-Extended.komodoproject">
@@ -1336,28 +1340,24 @@ vilbur
   <string id="timestamp">1719888775999</string>
   <string id="viewName">Current Project</string>
 </preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/PluginManager/PluginManager.komodoproject">
-  <string id="timestamp">1711001675031</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/PluginManager/zPlugin-PluginManager.komodoproject">
   <string id="timestamp">1737727069989</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/INSTALLED/ToolLoader/Zplugin-ToolLoader.komodoproject">
-  <string id="timestamp">1711356138188</string>
-  <string id="viewName">Current Project</string>
-</preference-set>
-<preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/NOT-INSTALLED/Template/Template.komodoproject">
-  <string id="timestamp">1710905917256</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/GoogleDrive/ProgramsData/CG/ZBrush/Plugins/NOT-INSTALLED/Template/zPlugin-Template.komodoproject">
   <string id="timestamp">1723493026562</string>
   <string id="viewName">Current Project</string>
 </preference-set>
+<preference-set id="file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Extensions/_3rdParty/Todo/Extension_Todo.komodoproject">
+  <string id="timestamp">1747240540130</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/Komodo-Tools.komodoproject">
+  <string id="timestamp">1751203617071</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MS-MaxSlicer.komodoproject">
-  <string id="timestamp">1745434475100</string>
+  <string id="timestamp">1751203225739</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxToPrint/MS-MaxToPrint.komodoproject">
@@ -1366,6 +1366,18 @@ vilbur
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-MaxToPrint/MyProject.komodoproject">
   <string id="timestamp">1712380590593</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter/MS-NodeExporter.komodoproject">
+  <string id="timestamp">1748631717876</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter/MS-NodeExporterX.komodoproject">
+  <string id="timestamp">1748462805427</string>
+  <string id="viewName">Current Project</string>
+</preference-set>
+<preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-NodeExporter/MS-nodeExporter.komodoproject">
+  <string id="timestamp">1751141246216</string>
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-PrintSupports/MS-PrintSupports.komodoproject">
@@ -1377,12 +1389,16 @@ vilbur
   <string id="viewName">Current Project</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-UI-framework/MS-UI-Framework.komodoproject">
-  <string id="timestamp">1744855685263</string>
+  <string id="timestamp">1750943259629</string>
   <string id="viewName">Default</string>
 </preference-set>
 <preference-set id="file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%20-%2064bit/ENU/scripts/MAXSCRIPT-viltools3/MS-vilTools3.komodoproject">
-  <string id="timestamp">1744892604231</string>
+  <string id="timestamp">1751143752168</string>
   <string id="viewName">Default</string>
+</preference-set>
+<preference-set id="file:///D:/Downloads/_ChatGPT/SCRIPTS/GPT.komodoproject">
+  <string id="timestamp">1746077822230</string>
+  <string id="viewName"></string>
 </preference-set>
 </preference-set>
   <boolean id="dblClickRebases">0</boolean>
@@ -1418,30 +1434,30 @@ vilbur
 <ordered-preference id="history_forwardPlaces">
 </ordered-preference>
 <ordered-preference id="history_prevPlaces">
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/StartUpScriptImporter</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter/Test</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/dev</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-13-BEAMS</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-TOOLS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-12-RAFTS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-99-TEST</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSupportSelectionChanges</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSourceObjectSelectionChanges</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenus</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-SELECTION</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS</string>
 </ordered-preference>
-  <string id="lastHomePlace">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer</string>
-  <string id="lastLocalDirectoryChoice">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer</string>
-  <string id="places-open-nodes-v2">{"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM": 1744872476.636, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-01-SLICER/Lib": 1742010468.21, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Events": 1742379617.484, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR": 1745376733.753, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter/Test": 1744566435.104, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/SupportModifiers": 1738008217.539, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/dev": 1745177433.607, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TRANSFORM/Lib": 1744340978.561, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlEventCreator/DefaultControlEvents/BrowsePath": 1741965921.008, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator": 1742791650.343, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportLayoutManager/ViewportData": 1742071117.52, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/StartUpScriptImporter/Test": 1744565881.667, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TOOLS": 1744380599.173, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/Lib": 1737918834.387, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject": 1744855683.644, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportLeg": 1743329673.962, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/_Test": 1742821495.878, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportHud": 1744571597.732, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/ContentLoader": 1742379609.97, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/bindOnObjectDeletedCallback": 1744872330.5, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter": 1744565908.218, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectNormals/_Test": 1739649193.82, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectNormals": 1745377132.17, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-13-BEAMS": 1745351410.154, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework": 1744855684.94, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/ControlTypes": 1741965897.722, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK/Lib/ModifierStackRemote/Test": 1739706939.128, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/helpers": 1739648628.747, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlEventBinder": 1742019594.078, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content": 1744340431.31, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/openFileByError": 1742356736.222, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK": 1743050671.041, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK/Lib/ModifierStackRemote": 1739706932.589, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject": 1743328956.683, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ScreenShooter": 1742010621.129, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject": 1737805789.97, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents": 1743266382.664, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenus": 1744560817.34, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlEventBinder/EventFiredCreator": 1742394885.167, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/EventTypes": 1742019612.911, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlEventCreator/DefaultControlEvents": 1741965920.513, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform": 1743267356.687, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TOOLS/Lib": 1744366455.009, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator": 1742427079.058, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3": 1744855904.033, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK/Lib/ModifierStackRemote/ListBoxStack": 1739706935.526, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager": 1745379254.897, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator": 1745114339.137, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager": 1745114345.1, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSupportTransformCallback": 1739981107.712, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlEventCreator": 1741965920.011, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportFoot": 1743329674.852, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader": 1744384192.08, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu": 1742821493.706, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/CallbackManager": 1742708760.984, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts": 1744384197.308, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Dialog": 1742409708.982, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject": 1743330110.467, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TEXTURE": 1742188596.965, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/CallBacks/filePostOpen": 1742708612.817, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/Test": 1745114474.39, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions": 1737838136.943, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib": 1742123510.868, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportRaft": 1743329753.993, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/_Test": 1743328818.828, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS": 1744855913.129, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSupportTransformCallback": 1743266385.061, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros": 1744563790.688, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser/ControlParamsParser": 1744384208.597, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK/Lib/ModifierStackRemote/ModifierStack": 1739707009.451, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIERS": 1743050664.152, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls": 1742058354.176, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib": 1744929496.264, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS": 1744541805.32, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectNormals": 1739649191.691, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/CallbackManager/Callbacks-Special": 1742708765.463, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK/Lib/InstancedModifierFinder": 1743050685.738, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents": 1744872326.386, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/StartUpScriptImporter": 1744566205.937, "file:///C:/Users/vilbur": 1743824369.086, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSourceObjectGeometryChange": 1739981317.807, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/CallbackManager/Callback": 1742708772.149, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser": 1744384206.173, "file:///c:/users/vilbur/appdata/local/autodesk/3dsmax/2023%2520-%252064bit/enu/scripts/maxscript-viltools3/viltools/rollouts-tools/rollout-viewports/lib/viewportlayoutmanager/_Test": 1742907332.371, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer": 1745432491.329, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog": 1742791661.001, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools": 1744872468.246, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus": 1742821492.416, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-01-SLICER/Lib/SlicerSystem": 1742010476.327, "file:///c:/users/vilbur/appdata/local/autodesk/3dsmax/2023%2520-%252064bit/enu/scripts/maxscript-viltools3/viltools/rollouts-tools/rollout-viewports/lib/viewportlayoutmanager": 1742907288.91, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-OPTIONS": 1742710816.84, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE": 1744892604.226, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test": 1744257680.071, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SourceObjectNormals/_Test": 1739648658.4, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/FileInImporter/Test/scripts-to-import": 1744566071.018, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Error": 1742057259.727, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform": 1744872323.229, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-MODIFIER-STACK/Lib": 1739706893.972, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools": 1743050655.712, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib": 1742821467.959}</string>
+  <string id="lastHomePlace">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0</string>
+  <string id="lastLocalDirectoryChoice">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0</string>
+  <string id="places-open-nodes-v2">{"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/LowestVertIslandFInder": 1751170526.9, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertSelector": 1751184016.928, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS/Lib/GroupAttacher": 1749662531.754, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColors/Test": 1749963902.001, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/rollouts-ExportTo/rollout-3D-PRINT": 1750931466.46, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColorProcessor": 1750103621.488, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/_Test": 1749956514.27, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/runMaxScript": 1751203643.945, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertIslandFinder": 1750434766.054, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS/Lib/GroupCreator": 1749662503.102, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-TOOLS": 1750937636.933, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter": 1750931534.11, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu/_Test": 1750189484.479, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportHud": 1750473681.406, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-TOOLS": 1751027700.36, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-99-TEST": 1751110775.38, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS": 1751170053.371, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib": 1751183959.123, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SPLINE": 1751087891.149, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout": 1750188696.826, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColors": 1750153220.375, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework": 1750943259.324, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-12-RAFTS": 1751033793.211, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS": 1751144145.365, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertSelector/Test": 1750219739.988, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/Test": 1749963897.342, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/ModifierValue": 1751000053.256, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/Lib/ExporterSetup": 1750930995.94, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/Lib": 1751027149.432, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportHud/Callbacks": 1750473711.599, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/Lib": 1750574831.942, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents": 1751124094.083, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenus": 1751143752.147, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/LowestVertIslandFinder": 1750416215.695, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/IslandFInder": 1750435390.978, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/CallBacks": 1750965277.88, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts": 1751203629.969, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexPaintMod/Test": 1749968522.626, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-ANIMATION": 1750932907.543, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/LowestVertFinder": 1750273773.941, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3": 1751143747.379, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager": 1751190236.162, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS": 1751203225.714, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/_Test": 1751170628.564, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-05-SELECTION": 1751197102.128, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/LowestVertFinder/Dev": 1750273801.378, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder": 1751169683.531, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexPaintMod": 1749968474.652, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColorProcessor/Test": 1750014579.582, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/Callbacks/filePostOpen": 1750965360.366, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader": 1750188690.827, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/LowestVertIslandFInder/Test": 1751170545.179, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus/QuadMenu": 1750189482.407, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder/Test": 1750598596.71, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportLayoutManager": 1750954092.004, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts": 1750188693.031, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder": 1750472606.693, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSourceObjectSelectionChanges": 1751124091.751, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/CallBacks/filePostOpen": 1750937723.521, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile": 1750188701.225, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/rollouts-ExportTo/rollout-3D-PRINT/Lib": 1750931472.387, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR/Lib": 1751027079.635, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/LowestVertIslandFinder/Dev": 1750416216.534, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer": 1751027212.485, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools": 1751203622.694, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem": 1750435836.593, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS": 1751026556.521, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/Lib/NodeList/Callback": 1750574901.818, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-OPTIONS": 1750937690.591, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE/RecentFile": 1750958096.231, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib": 1751184004.882, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR": 1751027157.091, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib": 1750473671.379, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/ViewportLayoutManager/_Test": 1750954705.418, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents": 1751032174.419, "file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSupportSelectionChanges": 1751115150.283, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0": 1751203616.888, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-GROUPS/Lib": 1749662501.049, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter": 1751141245.939, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION": 1751184014.755, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/Callbacks": 1750965340.472, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/ContentLoader/ContentSubrollouts/ContentRollout/ScriptFile/MacroScriptFileParser": 1750188705.981, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/getLowestVertsInGrid": 1750435573.032, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/callMethodByVertexColor": 1751123484.681, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER": 1751030905.894, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer": 1751190235.997, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools": 1750932881.714, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Menus": 1750189481.905, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-NodeExporter/NodeExporter/Lib/NodeList": 1750574832.445, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-SCENE": 1750955535.398, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib": 1751123457.761, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/Callbacks": 1750965252.782, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR": 1751144139.857, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib": 1751170370.258, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VERTEX-COLOR/Lib/meshVertToColorVertexConvertor": 1751027081.81, "file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max": 1751203631.893, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools": 1750937752.568, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertIslandFinder/Dev": 1750273555.634, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/openVertexColorSubmenu": 1751123470.53, "file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib": 1750188674.319}</string>
   <long id="project_sort_direction">0</long>
   <boolean id="showProjectPath">0</boolean>
   <boolean id="showProjectPathExtension">0</boolean>
@@ -1514,7 +1530,7 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <boolean id="spellCheckWithinStrings">1</boolean>
   <string id="spellcheckLangID">en-US</string>
   <boolean id="startupFullScreen">0</boolean>
-  <boolean id="startupMaximized">0</boolean>
+  <boolean id="startupMaximized">1</boolean>
   <boolean id="svn_uses_externaldiff">0</boolean>
   <long id="tabWidth">4</long>
   <boolean id="tdk_installed">0</boolean>
@@ -1533,9 +1549,9 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="tidy_errorlevel">errors</string>
   <long id="toolbox-open-nodes-size">100</long>
 <preference-set id="toolbox2">
-  <long id="currentIndex">72</long>
+  <long id="currentIndex">41</long>
   <long id="firstVisibleRow">0</long>
-  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\~Tabs": 1670737408.31, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs-NEW": 1745434291.107, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\Test\\.komodotools": 1674252104.237, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-WORKING\\.komodotools": 1674243501.901, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript\\.komodotools": 1674378084.465, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ZFileUtils": 1727322358.912, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\timeout": 1735881182.466, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\spline": 1745434291.076, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\clipboard": 1736774212.718, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\onEvent\\onFileOpen": 1706011959.582, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON\\Comment-1": 1674445969.454, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\subtool\\loop": 1727322358.904, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1745434290.897, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\REGEX": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\tool": 1727322358.907, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs": 1706011959.589, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50~Edit": 1706011959.588, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MARKDOWN\\link": 1737918881.915, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts": 1745434291.082, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON": 1674446438.478, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars": 1745434291.105, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\file\\current_file": 1710162214.709, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\property": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\CONTROLSc": 1711171071.331, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.0\\tools\\Zscript-Language\\.komodotools": 1674246934.457, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions\\UI": 1670736995.089, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\line": 1737870967.056, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50~Edit-NEW": 1745434291.106, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build": 1671696591.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\.komodotools": 1671696592.612, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start\\ProjectFilesOpener": 1518095127.211, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max\\runMaxScript": 1745434291.088, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\Format": 1711313683.27, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build": 1674239403.518, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_SHARED": 1674405462.595, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1745434290.993, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\memory block": 1727322358.894, "C:\\GoogleDrive\\ProgramsData\\Core\\Komodo\\Languages\\KOMODO-Language-Maxscript\\.komodotools": 1706012123.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\Console": 1737829530.229, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\macro\\Filter": 1725762704.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\string": 1743330063.359, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\.komodotools": 1674240526.948, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\epoly": 1723954724.496, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content\\js": 1671696598.455, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\.komodotools": 1674239433.095, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\memory block\\string": 1727322358.895, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\file\\If_File": 1727894745.426, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-Test\\.komodotools": 1674242569.929, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Abbreviations\\GENERAL\\_COMMON": 1518095127.2, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ui_controls": 1674405143.106, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events": 1518095127.207, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit\\Comment": 1745434291.098, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build\\xpi": 1674239403.522, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\shape": 1719123272.507, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo": 1741938271.451, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build\\jar": 1671696594.999, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\variable": 1727322358.908, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max": 1745434291.086, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\EPOLY-1\\verts": 1743050644.763, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\param": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\_Tabs": 1670864042.824, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\CONTROLS\\button": 1711358729.508, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\dialog": 1736663578.846, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\getUserProp ": 1706446963.836, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript": 1674240623.53, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menus": 1670737057.641, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\~Edit\\Line": 1670736989.941, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL-1": 1670337598.759, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\_KO_": 1741938242.94, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\templates": 1674240623.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\subtool": 1727322358.903, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content": 1671696597.544, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\controls": 1711171062.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\UI": 1737829530.23, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus": 1745434291.093, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\compare": 1745434291.072, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Events\\On_Start": 1518095127.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max\\openFileByError": 1745434291.088, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit": 1745434291.097, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\variable": 1737829530.208, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670736984.596, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\window": 1745227421.905, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT": 1745434291.071, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit\\Line": 1745434291.099, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\msgbox": 1674304008.754}</string>
+  <string id="open-nodes">{"C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\~Tabs": 1670737408.31, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs-NEW": 1751208134.582, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\Test\\.komodotools": 1674252104.237, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-WORKING\\.komodotools": 1674243501.901, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\view": 1745691843.566, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript\\.komodotools": 1674378084.465, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ZFileUtils": 1746009678.649, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY": 1751208134.545, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\timeout": 1735881182.466, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\onEvent\\onFileOpen": 1706011959.582, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON\\Comment-1": 1674445969.454, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\subtool\\loop": 1727322358.904, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools": 1751208134.436, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\number\\round": 1750738381.722, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\tool": 1727322358.907, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_60-Tabs": 1706011959.589, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50~Edit": 1706011959.588, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MARKDOWN\\link": 1737918881.915, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts": 1751208134.561, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_COMMON": 1674446438.478, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars": 1751208134.578, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\file\\current_file": 1710162214.709, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\property": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit": 1670328696.696, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_40_Fold": 1751208134.58, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\CONTROLSc": 1711171071.331, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.0\\tools\\Zscript-Language\\.komodotools": 1674246934.457, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Extensions\\UI": 1670736995.089, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\UI\\dialog": 1746674817.663, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Toolbars\\Toolbar_50~Edit-NEW": 1751208134.58, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build": 1671696591.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\.komodotools": 1671696592.612, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Menu": 1518095127.232, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max\\runMaxScript": 1751208134.568, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\Format": 1711313683.27, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max\\Toggle-format": 1751208134.568, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build": 1674239403.518, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\epoly": 1723954724.496, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\_SHARED": 1674405462.595, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations": 1751208134.497, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur\\core": 1518095127.226, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\memory block": 1727322358.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\_SCIMOZ_": 1745691843.564, "C:\\GoogleDrive\\ProgramsData\\Core\\Komodo\\Languages\\KOMODO-Language-Maxscript\\.komodotools": 1706012123.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\string": 1743330063.359, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\.komodotools": 1674240526.948, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoIDE\\10.1\\tools\\Ko.extensions.vilbur": 1518095127.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\convert": 1751203616.084, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content\\js": 1671696598.455, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\.komodotools": 1674239433.095, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\memory block\\string": 1727322358.895, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\file\\If_File": 1727894745.426, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Ko.extensions.vilbur": 1670328696.689, "C:\\GoogleDrive\\Programs\\Core\\Komodo\\Languages\\KOMODO-Language-Zscript-Test\\.komodotools": 1674242569.929, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\ui_controls": 1674405143.106, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit\\Comment": 1751144132.649, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\build\\xpi": 1674239403.522, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\shape": 1719123272.507, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo": 1746009678.529, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\build\\jar": 1671696594.999, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\variable": 1727322358.908, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max": 1751208134.566, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\EPOLY-1\\verts": 1750436289.219, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\array\\compare": 1751171136.259, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Editor": 1669989244.234, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\array\\makeUniqueArray": 1751171135.958, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL\\comments\\param": 1672899906.645, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\_Tabs": 1670864042.824, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\CONTROLS\\button": 1711358729.508, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\dialog": 1736663578.846, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\line\\Template": 1746009678.539, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS": 1670330107.446, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\getUserProp ": 1706446963.836, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript": 1674240623.53, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menus": 1670737057.641, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\~Edit\\Line": 1670736989.941, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\~Edit\\Line": 1670328696.698, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\GENERAL-1": 1670337598.759, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu\\_z_OLD-scripts": 1669989655.411, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\BATCH": 1670328696.688, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\_KO_": 1745691843.564, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\KOMODO-Language-Zscript\\templates": 1674240623.532, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\subtool": 1746009678.638, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\Komodo\\CaseConverter\\content": 1671696597.544, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\ZSCRIPT\\controls": 1711171062.21, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus": 1751208134.571, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\compare": 1751203616.083, "C:\\GoogleDrive\\ProgramsData\\Core\\Komodo\\Extensions\\_3rdParty\\Todo\\.komodotools": 1747240539.257, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\3Ds Max\\openFileByError": 1751208134.568, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\JAVASCRIPT\\Komodo\\variable": 1745691843.566, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\Msgbox": 1670302363.894, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Menu": 1670736984.596, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\AUTOHOTKEY\\window": 1751208134.553, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\UI-Menus\\~Edit\\Line": 1751144132.65, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Scripts\\PROGRAMS\\Komodo-Edit": 1669989245.969, "C:\\Users\\vilbur\\AppData\\Local\\ActiveState\\KomodoEdit\\12.0\\tools\\Abbreviations\\MAXSCRIPT\\msgbox": 1674304008.754}</string>
   <string id="sortDirection">natural</string>
 </preference-set>
   <boolean id="triggering_macros_enabled">1</boolean>
@@ -1547,7 +1563,7 @@ test.js (C:\GoogleDrive\Programs\Core\AutoHotkey\Utilities\TypingAidInstancer\In
   <string id="ui.tabs.sidepanes.bottom.layout">horizontal</string>
   <string id="ui.tabs.sidepanes.left.layout">vertical</string>
   <string id="ui.tabs.sidepanes.right.layout">vertical</string>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":true,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"console-widget"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","insertBefore":"findresults720_tabpanel","width":783},{"id":"klint_tabpanel","insertBefore":"findresults720_tabpanel","width":483},{"id":"notifications-widget","insertBefore":"findresults720_tabpanel","width":633}],[{"id":"findresults720_tabpanel","insertBefore":"findresults_tabpanel720"}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
   <boolean id="upgradeKomodo.dontask">1</boolean>
   <boolean id="useSmartTabs">0</boolean>
   <boolean id="useTabs">1</boolean>
@@ -1565,130 +1581,24 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="windowDimensions-prefProjectsWindow">1012,797,535,273</string>
 <preference-set id="windowWorkspace">
 <preference-set id="1">
-<preference-set id="coordinates">
-  <long id="outerHeight">2119</long>
-  <long id="outerWidth">2645</long>
-  <long id="screenX">-7</long>
-  <long id="screenY">0</long>
-  <long id="windowState">3</long>
-</preference-set>
-  <string id="current_project">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MS-MaxSlicer.komodoproject</string>
-<preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/QuadMenus/Scene.ms","tabIndex":7},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/30-HUD.mcr","tabIndex":7},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform/onSourceObjectTransform.ms","tabIndex":6},{"tabGroup":"view-2","viewType":"editor","uri":"file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms","tabIndex":0},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/01-generateSupportTest.ms","tabIndex":3},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/Callbacks/hudMaxInfoCallback.ms","tabIndex":8},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/Lib/Callbacks/hudObjectInfoCallback.ms","tabIndex":8},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/30-HUD.mcr","tabIndex":7},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/21-MANAGE%2520LAYOUT%2520PRESET.mcr","tabIndex":2},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectTransformEventBinder/SourceObjectTransformEventBinder.ms","tabIndex":8}]</string>
-</preference-set>
-<preference-set id="opened_projects_v7">
-  <string id="mpv_projects">[]</string>
-  <string id="spv_projects">["file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MS-MaxSlicer.komodoproject"]</string>
-</preference-set>
-  <boolean id="restoreOnRestart">0</boolean>
-  <long id="timestamp">1744055903</long>
-<preference-set id="topview">
-<ordered-preference id="childState">
-<preference-set>
-  <long id="current_view_index">5</long>
-<ordered-preference id="view_prefs">
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/01-%255BSUPPORTS%255D.mcr</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms.bak</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SupportManager.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObject.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSupportTransformCallback/onSupportTransformCallback.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform/onSourceObjectTransform.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-</ordered-preference>
-</preference-set>
-<preference-set>
-  <long id="current_view_index">0</long>
-<ordered-preference id="view_prefs">
-<preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportRaft/SupportRaft.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/SupportModifiers/SupportModifiers.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/30-SETUP.mcr</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectTransformEventBinder/SourceObjectTransformEventBinder.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-</ordered-preference>
-</preference-set>
-</ordered-preference>
-  <string id="orientation">horizontal</string>
-<ordered-preference id="viewHistoryState">
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportRaft/SupportRaft.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectTransformEventBinder/SourceObjectTransformEventBinder.ms?parentId=view-2</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SupportManager.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObject.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform/onSourceObjectTransform.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSupportTransformCallback/onSupportTransformCallback.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/SupportModifiers/SupportModifiers.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/VilTools/rollouts-Tools/rollout-VIEWPORTS/30-SETUP.mcr?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/01-%255BSUPPORTS%255D.mcr?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms.bak?parentId=view-1</string>
-</ordered-preference>
-</preference-set>
-  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","width":783},{"id":"klint_tabpanel","width":483},{"id":"notifications-widget","width":633}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":true,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":true,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
-  <long id="windowNum">1</long>
-</preference-set>
-<preference-set id="2">
-  <string id="current_project">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MS-MaxSlicer.komodoproject</string>
+  <string id="current_project">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/Komodo-Tools.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/BeamGenerator.ms","tabIndex":6},{"tabGroup":"view-2","viewType":"editor","uri":"file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/dev/test-beams.ms","tabIndex":9},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://4460/numSplines.snippet","tabIndex":9},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/Core/Windows/_AhkScripts/get-elevated-rights-of-programs.ahk","tabIndex":9},{"tabGroup":"view-2","viewType":"editor","uri":"snippet2://3480/notev.snippet","tabIndex":10},{"tabGroup":"view-2","viewType":"editor","uri":"macro2://4466/test.js","tabIndex":10},{"tabGroup":"view-1","viewType":"editor","uri":"snippet2://607/line_count.snippet","tabIndex":13},{"tabGroup":"view-1","viewType":"editor","uri":"macro2://1067/Comment_Selected.js","tabIndex":14},{"tabGroup":"view-1","viewType":"editor","uri":"macro2://4466//koEditor.setLine","tabIndex":13},{"tabGroup":"view-1","viewType":"editor","uri":"macro2://4472/format-OFF.js","tabIndex":13}]</string>
+  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/usermacros/_Pivot-_pivot_center_to_objects_in_selection.mcr","tabIndex":12},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/Core/Notepad++/AHk/Open-specific-file-types-from-clipboard-in-Notepad.ahk","tabIndex":12},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/_Test/IslandFinderTest.ms","tabIndex":8},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/_Test/IslandFinderTest.ms","tabIndex":12},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/GoogleDrive/ProgramsData/CG/3DsMax/Scripts-install/Spline-To-Maxscript/Spline-To-Maxscript.mcr","tabIndex":13}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
-  <string id="spv_projects">["file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MS-MaxSlicer.komodoproject"]</string>
+  <string id="spv_projects">["file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/Komodo-Tools.komodoproject"]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1745601024</long>
+  <long id="timestamp">1751208126</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
   <long id="current_view_index">12</long>
 <ordered-preference id="view_prefs">
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/vilTools3.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSupportTransformCallback/onSupportTransformCallback.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform/onSourceObjectTransform.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
@@ -1696,44 +1606,76 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/SupportOptions.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObject.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/Lib/generateSupportsOrRafts.ms</string>
+  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/ModifiersManager.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/01-generateSupportTest.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/02-CONFIG.mcr</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/Core/ChatGPT/ahk/run-chat-and-start-or-stop--dictate-mode.ahk</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/01-%255BSUPPORTS%255D.mcr</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-13-BEAMS/%255BBEAMS%255D.mcr</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/01-FIND%2520ISLANDS.mcr</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/01-GENERATOR%2520CONFIG.mcr</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/02-SEEDER.mcr</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/callMethodByVertexColor/callMethodByVertexColor.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder/Test/GridSupportSeederTest.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/helpers/createTestObjectPackMan.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColors/VertexColors.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexPaintMod/Test/VertexPaintModTest.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/runMaxScript/run-maxscript-via-notepad-komodo.ahk</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/_Test/IslandFinderTest.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
 </preference-set>
 <preference-set>
-  <long id="current_view_index">0</long>
+  <long id="current_view_index">12</long>
 <ordered-preference id="view_prefs">
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObject.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/test.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/SupportModifiers/SupportModifiers.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/IslandFinder.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertSelector/VertSelector.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/ModifierValue/ModifierValue.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER/Lib/SlicerSystem/SlicerSystem.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
@@ -1745,31 +1687,23 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportLeg/SupportLeg.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/SupportOptions.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportFoot/SupportFoot.ms</string>
+  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSupportSelectionChanges/whenSupportSelectionChanges.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/BeamGenerator.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder/GridSupportSeeder.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamObject/BeamObject.ms</string>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/callMethodByVertexColor/callMethodByVertexColor.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectNormals/SourceObjectNormals.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/ModifiersManager.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
-  <string id="URI">file:///C:/GoogleDrive/ProgramsData/Core/Windows/_AhkScripts/which-running-programs-has-ADMIN-rights.ahk</string>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/Core/Notepad++/AHk/Open-specific-file-types-from-clipboard-in-Notepad.ahk</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
@@ -1777,32 +1711,69 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObject.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/_Test/IslandFinderTest.ms?parentId=view-1</string>
+  <string>file:///C:/GoogleDrive/ProgramsData/Core/Notepad++/AHk/Open-specific-file-types-from-clipboard-in-Notepad.ahk?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/runMaxScript/run-maxscript-via-notepad-komodo.ahk?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder/Test/GridSupportSeederTest.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexPaintMod/Test/VertexPaintModTest.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/callMethodByVertexColor/callMethodByVertexColor.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/VertexColors/VertexColors.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObject.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/GridSupportSeeder/GridSupportSeeder.ms?parentId=view-2</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/SupportModifiers/SupportModifiers.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/02-SEEDER.mcr?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/01-FIND%2520ISLANDS.mcr?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/02-CONFIG.mcr?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-02-ISLANDS/Lib/IslandsSystem/IslandFInder/IslandFinder.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-07-VERTEX_SELECTION/Lib/VertSelector/VertSelector.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/test.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportRaft/SupportRaft.ms?parentId=view-2</string>
-  <string>macro2://4475/format-ON.js?parentId=view-2</string>
-  <string>macro2://4472/format-OFF.js?parentId=view-2</string>
-  <string>macro2://4466/test.js?parentId=view-1</string>
-  <string>macro2://1067/Comment_Selected.js?parentId=view-2</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/Windows/_AhkScripts/which-running-programs-has-ADMIN-rights.ahk?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/ModifiersManager.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportObject.ms?parentId=view-2</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenSupportSelectionChanges/whenSupportSelectionChanges.ms?parentId=view-2</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SupportManager.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSupportTransformCallback/onSupportTransformCallback.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamObject/BeamObject.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-13-BEAMS/%255BBEAMS%255D.mcr?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/01-generateSupportTest.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-06-VERTEX_COLORS/Lib/callMethodByVertexColor/callMethodByVertexColor.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/_Test/helpers/createTestObjectPackMan.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/BeamGenerator/BeamGenerator.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/SupportOptions.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SourceObjectNormals/SourceObjectNormals.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/onSourceObjectTransform/onSourceObjectTransform.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/content/rollouts-Main/rollout-03-GENERATOR/01-GENERATOR%2520CONFIG.mcr?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/Lib/generateSupportsOrRafts.ms?parentId=view-1</string>
-  <string>file:///C:/GoogleDrive/ProgramsData/Core/ChatGPT/ahk/run-chat-and-start-or-stop--dictate-mode.ahk?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/vilTools3.ms?parentId=view-1</string>
-  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportFoot/SupportFoot.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/SourceObject/SupportObject/SupportLeg/SupportLeg.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-03-GENERATOR/rollouts-Generator/rollout-11-SUPPORTS/01-%255BSUPPORTS%255D.mcr?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/SupportOptions.ms?parentId=view-2</string>
+  <string>file:///c:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/ModifiersManager/ModifiersManager.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/ModifierValue/ModifierValue.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/MaxSlicer/rollouts-Main/rollout-01-SLICER/Lib/SlicerSystem/SlicerSystem.ms?parentId=view-2</string>
+</ordered-preference>
+</preference-set>
+  <string id="ui.tabs.sidepanes.state">{"widgets":{},"panes":{"workspace_bottom_area":{"collapsed":false,"children":[[{"id":"runoutput-desc-tabpanel","insertBefore":"console-widget"}],[{"id":"console-widget","insertBefore":"findresults720_tabpanel","width":783},{"id":"klint_tabpanel","insertBefore":"findresults720_tabpanel","width":483},{"id":"notifications-widget","insertBefore":"findresults720_tabpanel","width":633}],[{"id":"findresults720_tabpanel","insertBefore":"findresults_tabpanel720"}]],"selectedTab":"runoutput-desc-tabpanel"},"workspace_right_area":{"collapsed":false,"children":[[{"id":"toolbox2viewbox","height":1055}]],"selectedTab":"toolbox2viewbox"},"workspace_left_area":{"collapsed":false,"children":[[{"id":"placesViewbox","insertBefore":"openfilesViewbox"}],[{"id":"openfilesViewbox"}]],"selectedTab":"placesViewbox"}}}</string>
+  <long id="windowNum">1</long>
+</preference-set>
+<preference-set id="2">
+<preference-set id="coordinates">
+  <long id="outerHeight">2119</long>
+  <long id="outerWidth">1003</long>
+  <long id="screenX">2844</long>
+  <long id="screenY">0</long>
+  <long id="windowState">3</long>
+</preference-set>
+<preference-set id="history_rctabs">
+  <string id="rctabs_list">[]</string>
+</preference-set>
+<preference-set id="opened_projects_v7">
+  <string id="mpv_projects">[]</string>
+  <string id="spv_projects">[]</string>
+</preference-set>
+  <boolean id="restoreOnRestart">0</boolean>
+  <long id="timestamp">1747562373</long>
+<preference-set id="topview">
+<ordered-preference id="childState">
+<preference-set>
+  <long id="current_view_index">0</long>
+<ordered-preference id="view_prefs">
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenEventBinder/Test/whenEventBinderTest.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+</ordered-preference>
+</preference-set>
+</ordered-preference>
+  <string id="orientation">horizontal</string>
+<ordered-preference id="viewHistoryState">
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportManager/onEvents/whenEventBinder/Test/whenEventBinderTest.ms?parentId=view-1</string>
 </ordered-preference>
 </preference-set>
   <long id="windowNum">2</long>

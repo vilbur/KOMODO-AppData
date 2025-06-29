@@ -10,5 +10,5 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =================*/
-hwnd = if ( window_data = windows.getChildHWND 0 "[[%tabstop:Window Tilte]]"" parent:#max  != undefinde ) then window_data[1]
+hwnd = if ( window_data = windows.getChildHWND 0 "[[%tabstop:Window Tilte]]" parent:#max  != undefinde ) then window_data[1]
 !@#_currentPos!@#_anchor

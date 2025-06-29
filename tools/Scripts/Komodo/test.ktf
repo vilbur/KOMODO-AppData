@@ -10,58 +10,39 @@ trigger_enabled: 0
 type: macro
 version: 1.1.5
 =================*/
-(function() {
+// Komodo IDE 12 Userscript to jump to a line and expand it if folded
 
-    var scimoz = ko.views.manager.currentView.scimoz;
+var editor = require("ko/editor");
 
-    var line_count = scimoz.lineCount;
-    var comment_pattern = /^(\s*)format\b/;        // capture leading spaces
-    var uncomment_pattern = /^(\s*)--\s*format\b/;  // capture spaces before and after --
+var view = ko.views.manager.currentView;
 
-    // Helper: get full text of a line
-    function getLine(index) {
-        var start = scimoz.positionFromLine(index);
-        var end = scimoz.getLineEndPosition(index);
-        return scimoz.getTextRange(start, end);
+if (!view)
+{
+    ko.dialogs.alert("Error", "No active view found. Please open a file.");
+}
+else
+{
+    var doc_editor = view.editor;
+
+    if (!doc_editor)
+    {
+        ko.dialogs.alert("Error", "No editor found in active view.");
     }
+    else
+    {
+        var scimoz = doc_editor.scimoz;
 
-    // Helper: set full text of a line
-    function setLine(index, new_text) {
-        var start = scimoz.positionFromLine(index);
-        var end = scimoz.getLineEndPosition(index);
-        scimoz.targetStart = start;
-        scimoz.targetEnd = end;
-        scimoz.replaceTarget(new_text);
-    }
+        var line_number = 42; // <<< SET your line number here
+        var zero_based_line = line_number - 1;
 
-    // Determine selected line range or default to whole file
-    var sel_start = scimoz.selectionStart;
-    var sel_end = scimoz.selectionEnd;
+        // Move caret to line
+        scimoz.gotoLine(zero_based_line);
 
-    var first_line = scimoz.lineFromPosition(sel_start);
-    var last_line = scimoz.lineFromPosition(sel_end);
-
-    if (sel_start === sel_end) {
-        first_line = 0;
-        last_line = line_count - 1;
-    }
-
-    scimoz.beginUndoAction();
-
-    for (var i = first_line; i <= last_line; i++) {
-        var line_text = getLine(i);
-
-        if (uncomment_pattern.test(line_text)) {
-            // preserve indent from capture group
-            var uncommented = line_text.replace(uncomment_pattern, "$1format");
-            setLine(i, uncommented);
-        } else if (comment_pattern.test(line_text)) {
-            // preserve indent from capture group
-            var commented = line_text.replace(comment_pattern, "$1-- format");
-            setLine(i, commented);
+        // Expand if the line is folded
+        if (!scimoz.getLineVisible(zero_based_line))
+        {
+            var SC_FOLDACTION_EXPAND = 2;
+            scimoz.foldLine(zero_based_line, SC_FOLDACTION_EXPAND);
         }
     }
-
-    scimoz.endUndoAction();
-
-})();
+}

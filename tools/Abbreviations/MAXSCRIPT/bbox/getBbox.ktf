@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ====================*/
-bbox	= nodeGetBoundingBox [[%tabstop:obj]] ( Matrix3 1) -- return array of max\min positions E.G.: bbox[1].z | bbox[2].z!@#_currentPos!@#_anchor
+bbox	= nodeGetBoundingBox [[%tabstop:obj]] ( Matrix3 1) -- return array of min\max positions E.G.: bbox[1].z | bbox[2].z!@#_currentPos!@#_anchor

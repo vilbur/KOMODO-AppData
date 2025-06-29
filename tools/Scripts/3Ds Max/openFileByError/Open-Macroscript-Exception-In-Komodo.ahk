@@ -180,17 +180,20 @@ callGoToLineInKomodoIfException($komodo_window, $error_data)
 
 	BlockInput, on
 	
-
-	;ControlSend,, {Ctrl down}L{Ctrl up}, ahk_id %$komodo_window%
+	/**  GO TO LINE
+	  *	
+	  */
+	;ControlSend,, {Ctrl down}L{Ctrl down}, ahk_id %$komodo_window%
 	;sleep 500
-	;ControlSend,, $error_data.line, ahk_id %$komodo_window%
 	;sleep 500
-	;ControlSend,, {Enter down}{Enter up}, ahk_id %$komodo_window%
+	;ControlSend,, {Enter up}{Enter up}, ahk_id %$komodo_window%
 
 	;SetKeyDelay, 10, 10
 
 	;sleep 500
 
+	/** EXECUTE KOMODO SCRIPT WITH HOTKEY COMMAND
+	*/ 
 	ControlSend,, {Ctrl down}{Alt down}{Shift down}{F8}{Ctrl up}{Alt up}{Shift up}, ahk_id %$komodo_window%
 
 	

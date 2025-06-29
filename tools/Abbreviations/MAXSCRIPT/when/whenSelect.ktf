@@ -1,0 +1,19 @@
+/*
+komodo tool: whenSelect
+=======================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=======================*/
+when select [[%tabstop:obj[s] ]] change id:#foo obj do
+(
+	if obj.isSelected then
+		format "% was selected.\n" obj.name
+	else
+		format "% was deselected.\n" obj.name
+)!@#_currentPos!@#_anchor

@@ -1,0 +1,18 @@
+// komodo tool: drmenu
+// ===================
+// auto_abbreviation: false
+// indent_relative: true
+// is_clean: true
+// set_selection: true
+// treat_as_ejs: false
+// type: snippet
+// version: 1.1.5
+// ===================
+$items[] = array(
+  'path'=>'[[%tabstop:path]]',
+  'title' => t('[[%tabstop0:]]'),
+  'access' => user_access('access content'),
+  'callback' => '[[%tabstop:callback:]]',
+  'type' => 'MENU_NORMAL_ITEM',
+);
+!@#_currentPos!@#_anchor

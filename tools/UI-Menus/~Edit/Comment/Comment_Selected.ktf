@@ -12,85 +12,61 @@ type: macro
 version: 1.1.5
 =============================*/
 komodo.assertMacroVersion(3);
-ko.views.manager.currentView.scimoz.beginUndoAction()
+var scimoz = ko.views.manager.currentView.scimoz;
+scimoz.beginUndoAction();
 
 try {
-        if (komodo.view) { komodo.view.setFocus(); }
-        scimoz = ko.views.manager.currentView.scimoz;
-        var currentLanguage = ko.views.manager.currentView.languageObj.name;
-        var selectedText = scimoz.selText;
-        var blade_re = /^(@.*)$/;
-        var blade_bracket = /^({{.*)$/;
-        var blade_bracket_esc = /^({\!\!.*)$/;
-        var blade_bracket_trigger = false
+    if (komodo.view) komodo.view.setFocus();
 
-        if (selectedText == '' ) {
-            //alert('NOTHING SELECTED');
-            // select line
-            ko.commands.doCommand('cmd_home')
-            ko.commands.doCommand('cmd_selectEnd')
-            selectedText = scimoz.selText;
+    var currentLanguage = ko.views.manager.currentView.languageObj.name;
+    var sel_start = scimoz.selectionStart;
+    var sel_end = scimoz.selectionEnd;
+    var selectedText = scimoz.selText;
+
+    // fallback: select current line if nothing selected
+    if (!selectedText) {
+        var line = scimoz.lineFromPosition(scimoz.currentPos);
+        sel_start = scimoz.positionFromLine(line);
+        sel_end = scimoz.getLineEndPosition(line);
+        scimoz.setSelection(sel_start, sel_end);
+        selectedText = scimoz.getTextRange(sel_start, sel_end);
+    }
+
+    var blade_re = /^@.*/;
+    var blade_bracket = /^{{.*$/;
+    var blade_bracket_esc = /^{!!.*$/;
+    var blade_bracket_trigger = false;
+
+    if (blade_re.test(selectedText) && currentLanguage !== 'Less' && currentLanguage !== 'SCSS') {
+        // Blade @ directive
+        var newText = "{{--" + selectedText + "--}}";
+        scimoz.replaceSel(newText);
+    }
+    else if (blade_bracket.test(selectedText) || blade_bracket_esc.test(selectedText)) {
+        blade_bracket_trigger = true;
+    }
+    else {
+        // SCSS
+        if (currentLanguage === 'SCSS') {
+            var lines = selectedText.split('\n').map(function(line) {
+                return line.replace(/^/, '//');
+            }).join('\n');
+            scimoz.replaceSel(lines);
+        } else {
+            // fallback comment toggle
+            ko.commands.doCommand('cmd_comment');
         }
+    }
 
-        if (selectedText.match(blade_re)!==null && currentLanguage !== 'Less' && currentLanguage !== 'SCSS') {
-            /*	if blade template	e.g. @include  */
-            //alert('blade_re');
-            ko.commands.doCommand('cmd_cut')
-            komodo.view.selection = '{{--';
+    if (blade_bracket_trigger) {
+        var transformed = selectedText
+            .replace(/({{+)(.*?)(}}+)/g, '$1--$2--$3')
+            .replace(/({!!)(.*?)(!!})/g, '{{--!!$2!!--}}');
+        scimoz.replaceSel(transformed);
+    }
 
-            ko.commands.doCommand('cmd_paste')
-            komodo.view.selection = '--}}';
-            ko.commands.doCommand('cmd_home')
-            ko.commands.doCommand('cmd_selectEnd')
-
-        }else if (selectedText.match(blade_bracket)!==null) {
-            /*	if blade template	e.g. @include  */
-            blade_bracket_trigger = true;
-
-        }else if (selectedText.match(blade_bracket_esc)!==null) {
-            /*	if blade template	e.g. @include  */
-            blade_bracket_trigger = true
-
-        }else {
-            //alert('comment');
-            if (currentLanguage == 'SCSS' ) {   // if scss: /*fooComment*/ convert to /* fooComment */
-                /*	SCSS	*/
-                //alert( currentLanguage );
-                //ko.commands.doCommand('cmd_comment')
-
-                //if (selectedText == '' ){
-                    //ko.commands.doCommand('cmd_home')
-                    //ko.commands.doCommand('cmd_selectEnd')
-                //}
-
-                ko.find.replaceAllInMacro(window, 1, '^(.*)$', '//\\1', false, 2, 0, false, false);
-                //}else {
-                //    var selectedText = scimoz.selText;
-                //    if (selectedText.match(/\/\*(.*)\*\//)!=null ) {
-                //        ko.find.replaceAllInMacro(window, 1, '\\/\\*(.*)\\*\\/', '/* \\1 */', false, 2, 0, false, false);
-                //    }
-                //}
-
-            }
-			else
-			{
-                /* ANOTHER FILE TYPE */
-                ko.commands.doCommand('cmd_comment')
-
-            }
-
-
-        }
-
-
-        if (blade_bracket_trigger) {
-             ko.find.replaceAllInMacro(window, 1, '({{+)(.*?)(}}+)', '\\1--\\2--\\3', false, 2, 0, false, false);
-             ko.find.replaceAllInMacro(window, 1, '({\!\!)(.*?)(\!\!})', '{{--!!\\2!!--}}', false, 2, 0, false, false);
-        }
-        //ko.commands.doCommand('cmd_save')
-        //ko.statusBar.AddMessage('SAVED', 'editor', 3000);
-        ko.commands.doCommand('cmd_cancel')
-
-} finally {
-    ko.views.manager.currentView.scimoz.endUndoAction()
+    ko.commands.doCommand('cmd_cancel'); // clear selection
+}
+finally {
+    scimoz.endUndoAction();
 }

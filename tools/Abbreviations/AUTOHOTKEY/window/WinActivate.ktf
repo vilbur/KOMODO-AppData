@@ -1,13 +1,13 @@
 /*
 komodo tool: WinActivate
-================
-language:	       Autohotkey
-type:              snippet
-treat_as_ejs:      false
+========================
 auto_abbreviation: false
-indent_relative:   false
-set_selection:     true
-is_clean:          true
-version:           1.1.5
-================*/
-WinActivate, [[%tabstop:%$[[%tabstop:win_title]]%]]!@#_currentPos!@#_anchor
+indent_relative: false
+is_clean: true
+language: Autohotkey
+set_selection: true
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+========================*/
+[[%tabstop:$[[%tabstop:hwnd]]_[[%tabstop:]] := ]]WinActivate, ( [[%tabstop: $[[%tabstop:win_title]] ]])[[%tabstop:]]!@#_currentPos!@#_anchor

@@ -9,9 +9,4 @@
 // type: snippet
 // version: 1.1.5
 // =========================
-rmgi = RayMeshGridIntersect()
-rmgi.initialize [[%tabstop:10]]
-rmgi.addNode [[%tabstop:obj]]
-rmgi.buildGrid()
-
-if ( hits = rmgi.intersectRay ( [[%tabstop:pos]]) direction true ) > 0 then!@#_currentPos!@#_anchor
+hit = intersectRay [[%tabstop:obj]] [[%tabstop:( [[%tabstop:Ray [[%tabstop:pos]] [[%tabstop:[ 0, 0, 1 ] ]] ]] )]]!@#_currentPos!@#_anchor

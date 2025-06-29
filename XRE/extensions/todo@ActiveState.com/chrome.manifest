@@ -1,0 +1,6 @@
+content todo jar:todo.jar!/content/
+
+locale todo en-US jar:todo.jar!/locale/en-US/
+skin todo classic/1.0 jar:todo.jar!/skin/
+
+overlay chrome://komodo/content/komodo.xul chrome://todo/content/overlay-TODO-ko7.xul appversion>6.99

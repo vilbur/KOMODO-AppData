@@ -1,0 +1,22 @@
+/*
+komodo tool: disable auto expand
+================================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================================*/
+/* GET LAYER MANAGER AUTO EXPAND STATE */
+if ( layer_manager_dialog = SceneExplorerManager.GetActiveExplorer() ) != undefined and ( auto_expand = layer_manager_dialog.AutoExpand ) then
+	layer_manager_dialog.AutoExpand = false
+
+	[[%tabstop:--- CODE HERE ---]]
+
+/* RESET AUTO EXPAND */
+if layer_manager_dialog != undefined and auto_expand then
+	layer_manager_dialog.AutoExpand = true
+!@#_currentPos!@#_anchor

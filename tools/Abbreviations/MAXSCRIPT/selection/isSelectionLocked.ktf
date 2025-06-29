@@ -1,0 +1,41 @@
+/*
+komodo tool: isSelectionLocked
+==============================
+auto_abbreviation: false
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+==============================*/
+function isSelectionLocked =
+(
+    local currentSel = getCurrentSelection()
+    deselect selection
+    local newSel = getCurrentSelection()
+    local locked = (currentSel as string == newSel as string) -- Compare if selection changed
+    
+    if not locked then -- If it wasn't locked, reselect what was originally selected
+    (
+        select currentSel
+    )
+    else -- If it was locked, the deselect didn't happen, so original selection is still active
+    (
+        -- No need to reselect if it was locked, but if you toggled it off
+        -- for a test, you might want to toggle it back on here.
+        -- However, for just *checking*, you don't toggle.
+    )
+    return locked
+)
+
+-- To use the function to check:
+if isSelectionLocked() then
+(
+    print "Selection is LOCKED"
+--    actionMan.executeAction 0 "59231" -- Toggle it off
+)
+else
+(
+    print "Selection is UNLOCKED"
+)!@#_currentPos!@#_anchor

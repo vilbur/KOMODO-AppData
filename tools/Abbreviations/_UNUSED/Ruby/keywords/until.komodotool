@@ -1,0 +1,20 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "until", 
+  "language": "Ruby", 
+  "value": [
+    "<% if (ko.snippets.rightOfFirstKeyword()) {%>", 
+    "until [[%tabstop:test]]", 
+    "\t[[%tabstop:#code]]", 
+    "end", 
+    "<% } else {", 
+    "  throw new ko.snippets.RejectedSnippet(\"not at start of line\");", 
+    "   } %>!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

@@ -1,0 +1,19 @@
+/*
+komodo tool: WinWait
+====================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Autohotkey
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+====================*/
+WinWaitActive, %$[[%tabstop:win_title]]%,, [[%tabstop:3]]
+if ErrorLevel == 0
+{
+	[[%tabstop:MsgBox, Win Exists]]
+}
+else
+    MsgBox, WinWait timed out.!@#_currentPos!@#_anchor
