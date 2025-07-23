@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ====================*/
-addKnot [[%tabstop1:spline_shape]] [[%tabstop:spline_index]] #[[%tabstop:corner]]|[[%tabstop:smooth]] #[[%tabstop:line]]|[[%tabstop:curve ]] [[%tabstop:[ [[%tabstop:0,0,0]] ] ]]]!@#_currentPos!@#_anchor
+addKnot [[%tabstop1:spline_shape]] [[%tabstop:spline_index]] #[[%tabstop:corner]]|[[%tabstop:smooth]] #[[%tabstop:line]]|[[%tabstop:curve ]] [[%tabstop:[ [[%tabstop:0,0,0]] ] ]]!@#_currentPos!@#_anchor

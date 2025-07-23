@@ -1,0 +1,143 @@
+/*
+komodo tool: getAllTriangulations
+=================================
+auto_abbreviation: false
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================================*/
+clearListener(); print("Cleared in:\n"+getSourceFileName())
+
+
+
+/*
+================================================================================
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+    Function:       getAllTriangulations
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+    Description:
+    Calculates all possible triangulations of a convex polygon. The polygon is
+    defined by an array of vertex indices in clockwise or counter-clockwise order.
+
+    Parameters:
+    <array>vertIndexArray: An array of N vertex indices defining the polygon. e.g., #(1, 5, 10, 12, 7)
+
+    Returns:
+    <array> An array containing all possible triangulations.
+    Each triangulation is an array of triangles.
+    Each triangle is an array of 3 vertex indices.
+    Example return for a quad: #( #( #(1,2,3), #(1,3,4) ), #( #(1,2,4), #(2,3,4) ) )
+
+    Notes:
+    - This script assumes the input polygon is CONVEX. It will produce incorrect
+      results for non-convex (concave) polygons.
+    - The number of triangulations grows very quickly (Catalan numbers).
+      Use with caution on polygons with many vertices (> 15) as it can be slow.
+
+================================================================================
+*/
+fn getAllTriangulations vertIndexArray =
+(
+    -- Local variables for the function
+    local n = vertIndexArray.count
+    local resultTriangulations = #()
+    local v_first, v_last, v_k
+    local subPoly_A, subPoly_B
+    local triangulations_A, triangulations_B
+    local combinedTriangulation
+
+    -- A polygon must have at least 3 vertices.
+    if n < 3 then return #()
+
+    -- Base case: If the polygon is already a triangle, there is only one triangulation: itself.
+    if n == 3 then return #( #(vertIndexArray) )
+
+    -- Define the main diagonal we will use to split the polygon.
+    v_first = vertIndexArray[1]
+    v_last = vertIndexArray[n]
+
+    -- Recursive Step: Iterate through all possible intermediate vertices (v_k)
+    -- to form a triangle (v_first, v_k, v_last) and two sub-polygons.
+    for k = 2 to (n - 1) do
+    (
+        v_k = vertIndexArray[k]
+        local new_triangle = #(v_first, v_k, v_last)
+
+        -- Create the first sub-polygon from v_first to v_k
+        subPoly_A = for i = 1 to k collect vertIndexArray[i]
+        triangulations_A = getAllTriangulations subPoly_A
+
+        -- Create the second sub-polygon from v_k to v_last
+        subPoly_B = for i = k to n collect vertIndexArray[i]
+        triangulations_B = getAllTriangulations subPoly_B
+
+        -- Combine the triangulations from the two sub-polygons.
+
+        if triangulations_A.count == 0 and triangulations_B.count > 0 then
+        (
+            -- Case: The first sub-polygon was just a line (2 verts), so it has no triangulations.
+            -- Add the new triangle to each triangulation of the second sub-polygon.
+            for t_B in triangulations_B do
+            (
+                append resultTriangulations (t_B + #(new_triangle))
+            )
+        )
+        else if triangulations_A.count > 0 and triangulations_B.count == 0 then
+        (
+            -- Case: The second sub-polygon was just a line.
+            -- Add the new triangle to each triangulation of the first sub-polygon.
+            for t_A in triangulations_A do
+            (
+                append resultTriangulations (t_A + #(new_triangle))
+            )
+        )
+        else if triangulations_A.count > 0 and triangulations_B.count > 0 then
+        (
+            -- Case: Both sub-polygons returned triangulations.
+            -- Create a new combined triangulation from every possible pair.
+            for t_A in triangulations_A do
+            (
+                for t_B in triangulations_B do
+                (
+                    -- It's crucial to use deepcopy to avoid modifying arrays that are being iterated over.
+                    combinedTriangulation = deepcopy t_A
+                    for tri in t_B do append combinedTriangulation tri
+                    append combinedTriangulation #(new_triangle)
+                    append resultTriangulations combinedTriangulation
+                )
+            )
+        )
+    )
+
+    return resultTriangulations
+)
+
+-- Example Usage:
+-- Define a pentagon using an array of vertex indices.
+--my_polygon_verts = #(10, 25, 30, 41, 55)
+my_polygon_verts = #( 1, 2, 3, 4 )
+
+-- Get all possible triangulations.
+all_triangulations = getAllTriangulations my_polygon_verts
+format "ALL_TRIANGULATIONS: %\n" all_triangulations
+-- Print the results to the MAXScript Listener.
+format "Found % triangulations for polygon: %\n" all_triangulations.count my_polygon_verts
+for i = 1 to all_triangulations.count do
+(
+    format "  Triangulation %: %\n" i all_triangulations[i]
+)
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- Example Output for a Pentagon #(10, 25, 30, 41, 55)
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+-- Found 5 triangulations for polygon: #(10, 25, 30, 41, 55)
+--   Triangulation 1: #(#(25, 30, 41), #(25, 41, 55), #(10, 25, 55))
+--   Triangulation 2: #(#(25, 30, 55), #(30, 41, 55), #(10, 25, 55))
+--   Triangulation 3: #(#(10, 25, 30), #(10, 30, 55), #(30, 41, 55))
+--   Triangulation 4: #(#(10, 25, 41), #(10, 41, 55), #(25, 30, 41))
+--   Triangulation 5: #(#(10, 25, 30), #(10, 30, 41), #(10, 41, 55))
+!@#_currentPos!@#_anchor

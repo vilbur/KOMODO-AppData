@@ -1,0 +1,14 @@
+/*
+komodo tool: verts_all
+======================
+auto_abbreviation: true
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+======================*/
+[[%tabstop:vertex_count = _mod.getNumVertices()
+]]verts_all = #{1..[[%tabstop:vertex_count]]|[[%tabstop:(_mod.getNumVertices())]]}!@#_currentPos!@#_anchor

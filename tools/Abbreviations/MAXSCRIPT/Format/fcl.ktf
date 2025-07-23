@@ -1,0 +1,13 @@
+/*
+komodo tool: fcl
+================
+auto_abbreviation: false
+indent_relative: false
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: true
+type: snippet
+version: 1.1.5
+================*/
+format "classOf [[%tabstop1:obj]]: %\n" ( classOf [[%tabstop1:obj]] )!@#_currentPos!@#_anchor

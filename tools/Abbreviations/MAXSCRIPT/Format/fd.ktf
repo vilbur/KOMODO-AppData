@@ -1,0 +1,14 @@
+/*
+komodo tool: fd
+===============
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+===============*/
+for [[%tabstop2:key]] in [[%tabstop1:Dictionary]].keys do
+	format "[[%tabstop2:key]]: % \nVALUE: %\n\n" key [[%tabstop1:Dictionary]][[[%tabstop2:key]]]!@#_currentPos!@#_anchor
