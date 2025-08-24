@@ -1,0 +1,39 @@
+/*
+komodo tool: getBboxOfMultipleObjects
+=====================================
+auto_abbreviation: false
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=====================================*/
+/** Get bbox of multiple objects
+ */
+function getBboxOfMultipleObjects objs =
+(
+	--format "\n"; print "PrintExporter_v.getBboxOfMultip[leObjects()"
+	min_x =	min_y = min_z = 1e9
+	
+	max_x = max_y = max_z = -1e9
+
+	
+	for obj in objs do
+	(
+		bbox	= nodeGetBoundingBox obj ( Matrix3 1) -- return array of min\max positions E.G.: bbox[1].z | bbox[2].z
+	
+		if bbox[1].x < min_x then min_x = bbox[1].x
+		if bbox[1].y < min_y then min_y = bbox[1].y
+		if bbox[1].z < min_z then min_z = bbox[1].z
+		
+		if bbox[2].x > max_x then max_x = bbox[2].x
+		if bbox[2].y > max_y then max_y = bbox[2].y	
+		if bbox[2].z > max_z then max_z = bbox[2].z	
+		
+		
+	)
+	
+	#( [ min_x, min_y, min_z ], [ max_x, max_y, max_z ]   ) --return
+)
+!@#_currentPos!@#_anchor
