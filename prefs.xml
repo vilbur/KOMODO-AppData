@@ -1597,18 +1597,18 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="current_project">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/MS-vilTools3.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
-  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/ControlTypes/ControlTypes.ms","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlValue/ControlValue.ms","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/List/ListBody.ms","tabIndex":12},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlParamsCreator/ControlParamsCreator.ms","tabIndex":11},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/Control/Control.ms","tabIndex":10},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/4_AcrossParamTest.ms","tabIndex":15},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/DefaultParameters/DefaultParameters.ms","tabIndex":20},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/Lib/UIAccessorWrapper/UIAccessorWrapper.ms","tabIndex":10},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/Dev/across_parameter_default_beahaviour.ms","tabIndex":21},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/Dev/across_parameter_default_beahaviour.ms","tabIndex":10}]</string>
+  <string id="rctabs_list">[{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlValue/ControlValue.ms","tabIndex":13},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/List/ListBody.ms","tabIndex":12},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlParamsCreator/ControlParamsCreator.ms","tabIndex":11},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/Control/Control.ms","tabIndex":10},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/4_AcrossParamTest.ms","tabIndex":15},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/DefaultParameters/DefaultParameters.ms","tabIndex":20},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/Lib/UIAccessorWrapper/UIAccessorWrapper.ms","tabIndex":10},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/Dev/across_parameter_default_beahaviour.ms","tabIndex":21},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/Dev/across_parameter_default_beahaviour.ms","tabIndex":10},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/GroupBoxes/GroupBoxes.ms","tabIndex":14}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
   <string id="spv_projects">["file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-viltools3/MS-vilTools3.komodoproject"]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1756030783</long>
+  <long id="timestamp">1756031159</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
-  <long id="current_view_index">12</long>
+  <long id="current_view_index">14</long>
 <ordered-preference id="view_prefs">
 <preference-set>
   <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/test.ms</string>
@@ -1667,10 +1667,6 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="viewtype">editor</string>
 </preference-set>
 <preference-set>
-  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/GroupBoxes/GroupBoxes.ms</string>
-  <string id="viewtype">editor</string>
-</preference-set>
-<preference-set>
   <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/1.0_GroupBoxBasicTest.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
@@ -1697,7 +1693,7 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
 </preference-set>
 <preference-set>
-  <long id="current_view_index">9</long>
+  <long id="current_view_index">11</long>
 <ordered-preference id="view_prefs">
 <preference-set>
   <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/Lib/SupportOptions/SupportOptions.ms</string>
@@ -1739,19 +1735,28 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/GroupBoxCreator/GroupBoxCreator.ms</string>
   <string id="viewtype">editor</string>
 </preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/GroupBoxes/GroupBoxes.ms</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/openFileByError/Open-Macroscript-Exception-In-Komodo.ahk</string>
+  <string id="viewtype">editor</string>
+</preference-set>
 </ordered-preference>
 </preference-set>
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
+  <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/3Ds%2520Max/openFileByError/Open-Macroscript-Exception-In-Komodo.ahk?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/GroupBoxes/GroupBoxes.ms?parentId=view-2</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/1.0_GroupBoxBasicTest.ms?parentId=view-1</string>
+  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/0.0_Group_GroupBox_Controls_Layout.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/ControlsCreator.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/ControlsCreator/GroupBoxCreator/GroupBoxCreator.ms?parentId=view-2</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/0.0_Group_GroupBox_Controls_Layout.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/RolloutCreator/RolloutCreator.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/test2.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/3_ControlsBoxTest.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/Rollout/Controls/GroupBoxes/GroupBoxes.ms?parentId=view-1</string>
-  <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/1.0_GroupBoxBasicTest.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/Groupbox/1.1_GroupBoxMultipleControlsTest.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Test/Controls/4.1_ControlPosition.ms?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-MaxSlicer/test.ms?parentId=view-1</string>

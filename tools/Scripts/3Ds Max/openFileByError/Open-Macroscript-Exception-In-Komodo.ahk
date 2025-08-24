@@ -33,9 +33,9 @@
 
  */
 
-$CLOSE_EXCEPTION_TIMEOUT := 3000
+$CLOSE_EXCEPTION_TIMEOUT := 1000
 
-
+$sleep := 300
 
 $exception_error	:= WinExist( "MAXScript MacroScript Error Exception")
 $exception_compile	:= WinExist( "MAXScript MacroScript Compile Exception")
@@ -173,7 +173,7 @@ callGoToLineInKomodoIfException($komodo_window, $error_data)
 	*/ 
 	RunWait, % "C:\\Program Files (x86)\\ActiveState Komodo Edit 12\\komodo.exe """ $error_data.file """"
 	
-	;sleep 500
+	;sleep %$sleep%
 	
 	SetKeyDelay, 100, 100
 	;SetKeyDelay, 500, 500
@@ -184,13 +184,13 @@ callGoToLineInKomodoIfException($komodo_window, $error_data)
 	  *	
 	  */
 	;ControlSend,, {Ctrl down}L{Ctrl down}, ahk_id %$komodo_window%
-	;sleep 500
-	;sleep 500
+	;sleep %$sleep%
+	;sleep %$sleep%
 	;ControlSend,, {Enter up}{Enter up}, ahk_id %$komodo_window%
 
 	;SetKeyDelay, 10, 10
 
-	;sleep 500
+	;sleep %$sleep%
 
 	/** EXECUTE KOMODO SCRIPT WITH HOTKEY COMMAND
 	*/ 
@@ -209,12 +209,12 @@ closeMaxscriptEditorFile()
 
 	$hwnd_active := WinActive( "A" )
 
-	sleep 500
+	sleep %$sleep%
 	;SetKeyDelay, 100, 100
 	WinActivate, ahk_class MXS_SciTEWindow
 	;ControlSend,, {Ctrl down}w{Ctrl up}, ahk_class MXS_SciTEWindow
 	Send, ^w
-	sleep 500
+	sleep %$sleep%
 
 	WinActivate, ahk_id %$hwnd_active%
 
