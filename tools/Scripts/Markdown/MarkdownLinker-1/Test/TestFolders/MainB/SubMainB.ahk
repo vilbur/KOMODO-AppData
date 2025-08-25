@@ -1,0 +1,7 @@
+/** SubMainB
+ *
+ */
+Class SubMainB
+{
+	
+}

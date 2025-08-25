@@ -1,0 +1,4 @@
+/** LibNestedFolder
+ *
+ */
+Class LibNestedFolder{}

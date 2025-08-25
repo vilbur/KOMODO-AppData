@@ -85,7 +85,17 @@ function getSnippetValue()
 		};
 		this.Markdown = function()
 		{
-			return "[include:"+path_relative.replace(/\//gi,'\\').substring(2)+"][[%tabstop:]]";
+			
+			
+				return "[include:"+path_relative.replace(/\//gi,'\\').substring(2)+"][[%tabstop:]]";
+			
+			//if (browsed_extension == "md")
+			//	return "[include:"+path_relative.replace(/\//gi,'\\').substring(2)+"][[%tabstop:]]";
+			//
+			//else
+			//	return browsed_extension
+			//	
+		
 		};
 		this.SCSS = function()
 		{
@@ -138,6 +148,7 @@ function getSnippetValue()
 
 			return typeof this[method_by_file_name] !== 'undefined' ? this[method_by_file_name]() : getDefault()
 		};
+		
 		/*----------------------------------------------------------------------
 			BY FILENAME - lower case filename + extension
 		------------------------------------------------------------------------

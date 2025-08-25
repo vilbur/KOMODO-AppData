@@ -1,0 +1,28 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "onSave-markdown", 
+  "language": "JavaScript", 
+  "trigger": "trigger_presave", 
+  "value": [
+    "/* Tabify file on file open", 
+    " */", 
+    "if( typeof ko.views.manager.currentView.languageObj !== 'undefined' ){", 
+    "", 
+    "\tvar lang\t= ko.views.manager.currentView.languageObj.name;", 
+    "\tvar file_has_changes\t= ko.views.manager.currentView.koDoc.isDirty;", 
+    "", 
+    "\tif( lang=='Markdown' && file_has_changes){", 
+    "\t\t//alert('TETS');", 
+    "\t\t//ko.extensions.vilbur.addLineBreaks();", 
+    "\t\tko.extensions.vilbur.markdownFormatter();", 
+    "\t\t", 
+    "\t}", 
+    "", 
+    "}"
+  ], 
+  "version": "1.1.5", 
+  "rank": 100, 
+  "trigger_enabled": 1, 
+  "async": 0, 
+  "type": "macro"
+}
