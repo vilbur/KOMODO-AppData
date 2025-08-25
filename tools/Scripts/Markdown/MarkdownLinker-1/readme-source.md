@@ -24,7 +24,7 @@
 
 ## RESULT RENDERED IN MARKDOWN  
 
-## Include codeblock  
+## Include content of linked file as codeblock  
 [include:\Test\TestFolders\MainA\MainA.ahk]  
 
 
@@ -68,6 +68,11 @@
 ![MainA suffix](Test/TestFolders/MainA/MainA-suffix.jpg)  
 ![MainA](Test/TestFolders/MainA/MainA.jpg)  
 ![SubA](Test/TestFolders/MainA/SubA/SubA.jpg)  
+
+
+## EXAMPLES OF CONFIGURATION  
+;[include:\Test\MarkdownLinkerTest.komodotool]  
+
 
 ```  
   
