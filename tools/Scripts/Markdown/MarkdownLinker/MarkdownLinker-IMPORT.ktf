@@ -1,575 +1,647 @@
+/*
+komodo tool: MarkdownLinker-IMPORT
+==================================
+async: 0
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+==================================*/
+if( typeof ko.extensions.vilbur === 'undefined' )
+	ko.extensions.vilbur = {};
+	
+if( typeof ko.extensions.vilbur.markdown === 'undefined' )
+	ko.extensions.vilbur.markdown = {};
+
+/** Search in tree of current file, and write links to files matching criteria
+ *
+ * @method	self	searchName( string search_name )	Search file name	DEFAULT: '.*'
+ * @method	self	searchExt( string file_ext )	Search file extension	DEFAULT: 'php|ahk|js'
+ * @method	self	matchDirName( boolean|string match )	Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"	DEFAULT: false
+ * 
+ * @method	self	maxLevel( int max_level )	Set depth of tree for searching	DEFAULT: unlimited
+ *
+ * @method	self	linkToDir( boolean link_to_dir )	Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"	DEFAULT: false
+ * @method	self	textBy( string text_by )	Set text of link by sanitized filename or directory*	DEFAULT: 'dir'
+ * @method	self	indentation( boolean|string indentation )	Set indentation of links by directory tree*	DEFAULT: false
+ * @method	self	codeBlock( boolean code_block)	Link is included as codeblock E.G.: [include:\dir\file.komodotool] 	DEFAULT: false
+ *
+ * @method	self	heading( string heading )	Set heading above included block	DEFAULT: ''
+ * @method	self	update( boolean update )	Update mode will update existing section, heading must be set	DEFAULT: true
+ * @method	self	unique( boolean unique )	Include only if not in file content already	DEFAULT: false
+ * 
+ * @method	void	include()	Include matching files as links
+ */
+ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 {
-  "keyboard_shortcut": "", 
-  "name": "MarkdownLinker", 
-  "language": "JavaScript", 
-  "trigger_enabled": 1, 
-  "value": [
-    "if( typeof ko.extensions.vilbur === 'undefined' )", 
-    "\tko.extensions.vilbur = {};", 
-    "\t", 
-    "if( typeof ko.extensions.vilbur.markdown === 'undefined' )", 
-    "\tko.extensions.vilbur.markdown = {};", 
-    "", 
-    "/** Search in tree of current file, and write links to files matching criteria", 
-    " *", 
-    " * @method\tself\tsearchName( string search_name )\tSearch file name\tDEFAULT: '.*'", 
-    " * @method\tself\tsearchExt( string file_ext )\tSearch file extension\tDEFAULT: 'php|ahk|js'", 
-    " * @method\tself\tmatchDirName( boolean|string match )\tSearch only files which name is same as folder name E.G.: \"FooBar\\FooBar.php\"\tDEFAULT: false", 
-    " * ", 
-    " * @method\tself\tmaxLevel( int max_level )\tSet depth of tree for searching\tDEFAULT: unlimited", 
-    " *", 
-    " * @method\tself\tlinkToDir( boolean link_to_dir )\tSet link to dir E.G.: \"\\dir\\subdir\\file.*\" >>> \"\\dir\\subdir\"\tDEFAULT: false", 
-    " * @method\tself\ttextBy( string text_by )\tSet text of link by sanitized filename or directory*\tDEFAULT: 'dir'", 
-    " * @method\tself\tindentation( boolean|string indentation )\tSet indentation of links by directory tree*\tDEFAULT: false", 
-    " * @method\tself\tcodeBlock( boolean code_block)\tLink is included as codeblock E.G.: [include:\\dir\\file.komodotool] \tDEFAULT: false", 
-    " *", 
-    " * @method\tself\theading( string heading )\tSet heading above included block\tDEFAULT: ''", 
-    " * @method\tself\tupdate( boolean update )\tUpdate mode will update existing section, heading must be set\tDEFAULT: true", 
-    " * @method\tself\tunique( boolean unique )\tInclude only if not in file content already\tDEFAULT: false", 
-    " * ", 
-    " * @method\tvoid\tinclude()\tInclude matching files as links", 
-    " */", 
-    "ko.extensions.vilbur.markdown.MarkdownLinker = (function()", 
-    "{", 
-    "\tvar komodo_view = komodo.view;", 
-    "\t", 
-    "\tfunction MarkdownLinker()", 
-    "\t{", 
-    "\t\tvar Logger\t= ko.extensions.Logger_v3 ? new ko.extensions.Logger_v3(this).clear(true).off(false) : require('ko/console');", 
-    "\t\t", 
-    "\t\tvar koFile\t= require(\"ko/file\");", 
-    "\t\tvar koEditor\t= require(\"ko/editor\");", 
-    "\t\tvar scimoz\t= ko.views.manager.currentView.scimoz; ", 
-    "\t\tvar current_file\t= ko.views.manager.currentView.koDoc.file.path;", 
-    "\t\tvar current_dir\t= koFile.dirname(current_file);", 
-    "\t\tvar file_content\t= koEditor.getValue();", 
-    "\t\t", 
-    "\t\tvar include_lines\t= [];", 
-    "", 
-    "\t\t/* Search options */", 
-    "\t\tvar search_extensions\t= /\\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension", 
-    "\t\tvar search_ext\t= '';", 
-    "\t\tvar search_name\t= '.*';\t\t\t\t", 
-    "\t\tvar match_dir_name\t= false;", 
-    "\t\t", 
-    "\t\t/* Tree options */", 
-    "\t\tvar max_level\t= null;", 
-    "\t\t", 
-    "\t\t/* Write options */", 
-    "\t\tvar link_to_dir\t= false;", 
-    "\t\tvar text_by\t= 'dir';", 
-    "\t\tvar indentation\t= false;", 
-    "\t\tvar code_block\t= false;", 
-    "\t\tvar update\t= true;", 
-    "\t\tvar unique\t= false;", 
-    "\t\tvar heading\t= '';", 
-    "\t\t\t", 
-    "\t\t/* result array", 
-    "\t\t */", 
-    "\t\tvar match_files\t= [];\t\t\t", 
-    "", 
-    "\t\t/*---------------------------------------", 
-    "\t\t\tSEARCH OPTIONS", 
-    "\t\t-----------------------------------------", 
-    "\t\t*/", 
-    "\t\t/** Search file name", 
-    "\t\t * @param\tstring\tsearch_name\tFile name for search", 
-    "\t\t * @return\tself", 
-    "\t\t */", 
-    "\t\tthis.searchName = function(_search_name)", 
-    "\t\t{", 
-    "\t\t\tsearch_name = _search_name;", 
-    "\t\t\treturn this; ", 
-    "\t\t}; ", 
-    "\t\t", 
-    "\t\t/** Set search_ext for search match", 
-    "\t\t *", 
-    "\t\t * @param\tstring\tsearch_ext\textension searched in dirs E.G.: 'php|md'", 
-    "\t\t * @return\tself", 
-    "\t\t */", 
-    "\t\tthis.searchExt = function(_file_ext)", 
-    "\t\t{", 
-    "\t\t\tsearch_ext = _file_ext;", 
-    "\t\t\treturn this; ", 
-    "\t\t};", 
-    "\t\t/** Search only files which name is same as folder name E.G.: \"FooBar\\FooBar.php\"", 
-    "\t\t * @param\tstring|boolean\tmatch\tIf TRUE, then full match is searched, If anything else, folder name with any suffix E.G.: 'FolderName-any-suffix.jpg'", 
-    "\t\t * @return\tself", 
-    "\t\t */", 
-    "\t\tthis.matchDirName = function(match=true)", 
-    "\t\t{", 
-    "\t\t\tmatch_dir_name = match;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "\t\t/*---------------------------------------", 
-    "\t\t\tTREE OPTIONS", 
-    "\t\t-----------------------------------------", 
-    "\t\t*/", 
-    "\t\t/** Set depth of tree for searching", 
-    "\t\t * Default is unlimited levels", 
-    "\t\t * ", 
-    "\t\t * @param\tint\tmax_level\tMax level of tree E.g.: max_level=0 // search only current dir, max_level=1 search only 1 subdir", 
-    "\t\t * @return\tself", 
-    "\t\t */", 
-    "\t\tthis.maxLevel = function(_max_level)", 
-    "\t\t{", 
-    "\t\t\t//max_level = _max_level +1;", 
-    "\t\t\tmax_level = _max_level;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "\t\t", 
-    "\t\t/*---------------------------------------", 
-    "\t\t\tWRITE OPTIONS ", 
-    "\t\t-----------------------------------------", 
-    "\t\t*/", 
-    "\t\t/** Set link to dir E.G.: \"\\dir\\subdir\\file.*\" >>> \"\\dir\\subdir\"", 
-    "\t\t *", 
-    "\t\t * @param\tboolean \tlink_to_dir", 
-    "\t\t * @return\tthis ", 
-    "\t\t */", 
-    "\t\tthis.linkToDir = function(_link_to_dir=true)", 
-    "\t\t{", 
-    "\t\t\tlink_to_dir = _link_to_dir;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "", 
-    "\t\t/** Set indentation of links by directory tree", 
-    "\t\t *", 
-    "\t\t * @param\tboolean|string\t", 
-    "\t\t * @return\tthis ", 
-    "\t\t */", 
-    "\t\tthis.indentation = function(_indentation='\\t')", 
-    "\t\t{", 
-    "\t\t\tindentation = _indentation === true ? '\\t' : (indentation==' ' ? '  ' : _indentation); // prevent only 1 whitespace, 2 spaces are minimum", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    " ", 
-    "\t\t/** Set text of link by sanitized filename or directory", 
-    "\t\t * Default is by dir", 
-    "\t\t *", 
-    "\t\t * @param\tstring\ttext_by", 
-    "\t\t * @return\tthis ", 
-    "\t\t */", 
-    "\t\tthis.textBy = function(_text_by='')", 
-    "\t\t{", 
-    "\t\t\ttext_by = _text_by;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    " ", 
-    "\t\t/** Set heading above included block", 
-    "\t\t * @param\tstring\theading", 
-    "\t\t * @return\tself", 
-    "\t\t */", 
-    "\t\tthis.heading = function(_heading='')", 
-    "\t\t{", 
-    "\t\t\theading = _heading;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "", 
-    "\t\t/** Include only if not in file content already", 
-    "\t\t *", 
-    "\t\t * @param\tboolean\tunique", 
-    "\t\t * @return\tthis ", 
-    "\t\t */", 
-    "\t\tthis.unique = function(_unique=true)", 
-    "\t\t{", 
-    "\t\t\tunique = _unique;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "", 
-    "\t\t/** Link is included as codeblock E.G.: [include:\\dir\\file.komodotool]  ", 
-    "\t\t *  Include is treated with markdownFormatter.komodotool", 
-    "\t\t *", 
-    "\t\t * @param\tboolean\tcode_block", 
-    "\t\t * @return\tthis ", 
-    "\t\t */", 
-    "\t\tthis.codeBlock = function(_code_block=true)", 
-    "\t\t{", 
-    "\t\t\tcode_block = _code_block;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "", 
-    "\t\t/** Update mode will update existing section", 
-    "\t\t *\tSection start with heading and end on next heading", 
-    "\t\t *\tHeading must be set", 
-    "\t\t * ", 
-    "\t\t * @param\tstring\tpdate", 
-    "\t\t * @return\tthis ", 
-    "\t\t */", 
-    "\t\tthis.update = function(_update=true)", 
-    "\t\t{", 
-    "\t\t\tupdate = _update;", 
-    "\t\t\treturn this;", 
-    "\t\t};", 
-    "", 
-    "\t\t/*---------------------------------------", 
-    "\t\t\tINCLUDE", 
-    "\t\t-----------------------------------------", 
-    "\t\t*/", 
-    "\t\t", 
-    "\t\t/** Include matching files as links", 
-    "\t\t */", 
-    "\t\tthis.include = function()", 
-    "\t\t{", 
-    "\t\t\tvar rx_file_types = {", 
-    "\t\t\t\timage:\t/\\.(jpg|png|jpg)$/gi,", 
-    "\t\t\t\tmarkdown:\t/\\.(md)$/gi,", 
-    "\t\t\t\tcodeblock:\tsearch_extensions,", 
-    "\t\t\t};", 
-    "\t\t\t\t/** Get directory tree", 
-    "\t\t\t *", 
-    "\t\t\t */", 
-    "\t\t\tvar dirTree = function(path, level = 1)", 
-    "\t\t\t{", 
-    "\t\t\t\tvar subdirs\t= getSubDirs(path);", 
-    "\t\t\t\tvar dir_subdirs\t= {};", 
-    "\t\t\t\tvar depth_added\t= false;", 
-    "\t\t\t\t", 
-    "\t\t\t\t//Logger.info(max_level, 'MarkdownLinker: '+'max_level');", 
-    "\t\t\t\t//Logger.info(level, 'MarkdownLinker: '+'level');", 
-    "\t\t\t\t", 
-    "\t\t\t\t//Logger.info(level >= max_level, 'MarkdownLinker: '+'level >= max_level'); ", 
-    "\t\t\t\tif( max_level && level == max_level )", 
-    "\t\t\t\t\treturn; ", 
-    "\t\t\t\t", 
-    "\t\t\t\tif( subdirs.length )", 
-    "\t\t\t\t{", 
-    "\t\t\t\t\tif( ! depth_added )", 
-    "\t\t\t\t\t\tdepth_added = level++;", 
-    "\t\t\t\t\t", 
-    "\t\t\t\t\tfor(var d=0; d<subdirs.length;d++)", 
-    "\t\t\t\t\t\tdir_subdirs[subdirs[d]] = dirTree(path+'\\\\'+subdirs[d], level); ", 
-    "\t\t\t\t}", 
-    "\t\t\t\t", 
-    "\t\t\t\treturn subdirs.length ? dir_subdirs : null;", 
-    "\t\t\t", 
-    "\t\t\t};", 
-    "\t\t\t", 
-    "\t\t\t\t\t\t", 
-    "\t\t\t/** addMarkdownSyntax", 
-    "\t\t\t */", 
-    "\t\t\tvar addMarkdownSyntax = function(sub_tree, indent_count)", 
-    "\t\t\t{", 
-    "\t\t\t\tvar indentation_added = false;", 
-    "", 
-    "\t\t\t\t/** setInlcudeFile", 
-    "\t\t\t\t */", 
-    "\t\t\t\tvar setInlcudeFile = function(path)", 
-    "\t\t\t\t{", 
-    "\t\t\t\t\t/** findIncludeFileType", 
-    "\t\t\t\t\t */", 
-    "\t\t\t\t\tvar findIncludeFileType = function()", 
-    "\t\t\t\t\t{", 
-    "\t\t\t\t\t\tfor(var file_type in rx_file_types)", 
-    "\t\t\t\t\t\t\tif (rx_file_types.hasOwnProperty(file_type))", 
-    "\t\t\t\t\t\t\t\tif( path.match(rx_file_types[file_type]) )", 
-    "\t\t\t\t\t\t\t\t\treturn file_type;", 
-    "\t\t\t\t\t};", 
-    "\t\t\t\t\t/** getCodeblockLink", 
-    "\t\t\t\t\t */", 
-    "\t\t\t\t\tvar getCodeblockLink = function()", 
-    "\t\t\t\t\t{", 
-    "\t\t\t\t\t\treturn '[include:\\\\'+getRelativePath(current_dir, path).replace(/\\//g, '\\\\') +']';", 
-    "\t\t\t\t\t}; ", 
-    "\t\t\t\t\t/** getFileLink", 
-    "\t\t\t\t\t */", 
-    "\t\t\t\t\tvar getFileLink = function()", 
-    "\t\t\t\t\t{", 
-    "\t\t\t\t\t\tvar prefix\t= include_type==='image' ? '!' : '';", 
-    "\t\t\t\t\t\tvar path_to\t= link_to_dir ? koFile.dirname(path) : path;", 
-    "\t\t\t\t\t\treturn prefix+'['+getLinkText(path)+']('+getRelativePath(current_dir, path_to)+')';", 
-    "\t\t\t\t\t};", 
-    "\t\t\t\t\t/** setLinkToIncludes", 
-    "\t\t\t\t\t */", 
-    "\t\t\t\t\tvar setLinkToIncludes = function(link)", 
-    "\t\t\t\t\t{", 
-    "\t\t\t\t\t\t/** getIndentation", 
-    "\t\t\t\t\t\t */", 
-    "\t\t\t\t\t\tvar getIndentation = function()", 
-    "\t\t\t\t\t\t{", 
-    "\t\t\t\t\t\t\treturn indentation!==false ? Array(indent_count).join(indentation) + '* ' : '';", 
-    "\t\t\t\t\t\t}; ", 
-    "\t\t\t\t\t\t", 
-    "\t\t\t\t\t\tif( isNotInFile(link) )", 
-    "\t\t\t\t\t\t\tinclude_lines.push( getIndentation() + link );", 
-    "\t\t\t\t\t}; ", 
-    "\t\t\t\t\tvar include_type = findIncludeFileType();", 
-    "\t\t\t\t\t", 
-    "\t\t\t\t\tsetLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );", 
-    "\t\t\t\t\t//setLinkToIncludes( getFileLink() );\t\t\t\t\t", 
-    "\t\t\t\t};", 
-    "\t\t\t\t", 
-    "\t\t\t\tfor(var c=0; c<sub_tree.length;c++)", 
-    "\t\t\t\t\tif( typeof sub_tree[c] === 'string'  ){", 
-    "\t\t\t\t\t\t", 
-    "\t\t\t\t\t\tif( indentation_added===false )", 
-    "\t\t\t\t\t\t\tindentation_added=indent_count++;", 
-    "\t", 
-    "\t\t\t\t\t\tsetInlcudeFile(sub_tree[c]);  ", 
-    "\t\t\t\t\t}else", 
-    "\t\t\t\t\t\taddMarkdownSyntax(sub_tree[c], indent_count);", 
-    "\t\t\t};", 
-    "", 
-    "\t\t\tvar matching_files = searchForFiles(current_dir, dirTree(current_dir));", 
-    "", 
-    "\t\t\taddMarkdownSyntax(matching_files, 0);", 
-    "\t\t\t", 
-    "\t\t\tLogger.info(include_lines, 'MarkdownLinker: '+'include_lines'); ", 
-    "\t\t\t", 
-    "\t\t\twriteToFile();", 
-    "\t\t};", 
-    "", 
-    "\t\t/*---------------------------------------", 
-    "\t\t\tPRIVATE", 
-    "\t\t-----------------------------------------", 
-    "\t\t*/", 
-    "\t\t/** Get direcory names in path", 
-    "\t\t */", 
-    "\t\tvar getSubDirs = function(path)", 
-    "\t\t{", 
-    "\t\t\treturn koFile", 
-    "\t\t\t\t\t.list(path)", 
-    "\t\t\t\t\t\t.filter(function(dir){", 
-    "\t\t\t\t\t\t\treturn ! koFile.isFile(path+'\\\\'+dir);", 
-    "\t\t\t\t\t\t});", 
-    "\t\t};", 
-    "", 
-    "\t\t/** setMatchingFiles", 
-    "\t\t*/", 
-    "\t   var setMatchingFiles = function(dir_path)", 
-    "\t   {", 
-    "\t\t   ", 
-    "\t\t   /** Find matching file type in files by search_extensions", 
-    "\t\t\t*/", 
-    "\t\t   var findFileExt = function(dir_path)", 
-    "\t\t   {", 
-    "\t\t\t   koFile.list(dir_path).map(function(file){", 
-    "\t\t\t\t   ", 
-    "\t\t\t\t   var file_match = search_extensions.exec(dir_path+'\\\\'+file);", 
-    "\t\t\t\t   ", 
-    "\t\t\t\t   if (file_match)", 
-    "\t\t\t\t\t   search_ext = file_match.pop();", 
-    "\t\t\t\t   //Logger.info(search_ext, 'MarkdownLinker: '+'search_ext'); ", 
-    "\t\t\t   }); ", 
-    "\t\t   }; ", 
-    "\t\t\t   ", 
-    "\t\t\t   ", 
-    "\t\t   /* FIND EXTENSION AUTOMATICALY */ ", 
-    "\t\t   if( ! search_ext )", 
-    "\t\t\t   findFileExt(dir_path);", 
-    "\t\t   ", 
-    "\t\t   /* LOOP EACH FILE IN DIRECOTRY */ ", 
-    "\t\t   koFile.list(dir_path).map(function(name)", 
-    "\t\t   {", 
-    "\t\t\t   ", 
-    "\t\t\t   var file_path\t= dir_path +'\\\\'+ name;", 
-    "", 
-    "", 
-    "\t\t\t   if (file_path != current_file)", 
-    "\t\t\t   {", 
-    "\t\t\t\t   if( match_dir_name )", 
-    "\t\t\t\t\t   search_name = koFile.basename(dir_path) + (match_dir_name===true ? '' : '.*');", 
-    "\t\t\t\t   //Logger.info(search_ext, 'MarkdownLinker: '+'search_ext');", 
-    "\t\t\t\t   //Logger.info(search_name, 'MarkdownLinker: '+'search_name');\t\t\t\t\t\t", 
-    "\t\t\t\t   //Logger.info( new RegExp(search_name+'\\.('+search_ext+')$', 'gi').exec(name) , 'match: '+name); ", 
-    "\t\t\t\t   ", 
-    "\t\t\t\t   if( new RegExp( '^'+search_name+'\\.('+search_ext+')$', 'gi').exec(name) )", 
-    "\t\t\t\t\t   match_files.push(file_path);", 
-    "\t\t\t   }", 
-    "\t\t   });", 
-    "\t   };", 
-    "", 
-    "\t\t", 
-    "\t\t/** Search in subdirs for files matching criteria", 
-    "\t\t */", 
-    "\t\tvar searchForFiles = function(dir_path, dir_tree)", 
-    "\t\t{", 
-    "\t\t\t/** removeEmptyDirs", 
-    "\t\t\t */", 
-    "\t\t\tvar removeEmptyDirs = function(dirs)", 
-    "\t\t\t{", 
-    "\t\t\t\treturn dirs.filter(function(dir){", 
-    "\t\t\t\t\treturn dir.length;", 
-    "\t\t\t\t});", 
-    "\t\t\t};", 
-    "\t\t\tconsole.log(  'DIR_TREE: ' + dir_tree );", 
-    "", 
-    "\t\t\tsetMatchingFiles(dir_path);", 
-    "", 
-    "\t\t\t/* LOOP SUBDIRS */ ", 
-    "\t\t\tfor(var key in dir_tree)", 
-    "\t\t\t{", 
-    "\t\t\t\tconsole.log(  'DIR: ' + key );", 
-    "\t\t\t", 
-    "\t\t\t\tif (dir_tree.hasOwnProperty(key))", 
-    "\t\t\t\t{", 
-    "\t\t\t\t\tvar subdirs \t= dir_tree[key];", 
-    "\t\t\t\t\tvar subdir_path\t= dir_path+'\\\\'+key;", 
-    "\t\t\t\t\t", 
-    "\t\t\t\t\t", 
-    "\t\t\t\t\tif( subdirs )", 
-    "\t\t\t\t\t\tsetMatchingFiles(subdir_path, subdirs);", 
-    "\t\t\t\t\t", 
-    "\t\t\t\t\t\t//match_files.push(searchForFiles(subdir_path, subdirs));", 
-    "\t\t\t\t}", 
-    "\t\t\t}", 
-    "", 
-    "\t\t\treturn removeEmptyDirs(match_files); ", 
-    "\t\t};", 
-    "\t\t", 
-    "\t\t/** rx_escaped_string", 
-    "\t\t */", 
-    "\t\tvar escapedRegexString = function(string)", 
-    "\t\t{", 
-    "\t\t\treturn string.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&').replace(/\\s+/g,'\\\\s+'); // $& means the whole matched string", 
-    "\t\t};", 
-    "\t\t", 
-    "\t\t/** isNotInFile", 
-    "\t\t */", 
-    "\t\tvar isNotInFile = function(string)", 
-    "\t\t{", 
-    "\t\t\treturn file_content.match( new RegExp(escapedRegexString(string), 'gi') )===null || ! unique || update;", 
-    "\t\t};", 
-    "\t\t", 
-    "\t\t/** Get link text by dir name or sanitized filename file", 
-    "\t\t * Filename is sanitized by replacing '-_' with space", 
-    "\t\t *", 
-    "\t\t * @return\tstring\tText of link", 
-    "\t\t */", 
-    "\t\tvar getLinkText = function(path)", 
-    "\t\t{", 
-    "\t\t\tif( text_by=='dir' )", 
-    "\t\t\t\treturn koFile.basename(koFile.dirname(path));", 
-    "\t\t\t", 
-    "\t\t\tvar filename\t= koFile.basename(path).split('.').shift().replace(/[-|_]/gi, ' ');", 
-    "\t\t\t", 
-    "\t\t\treturn  filename.charAt(0).toUpperCase() + filename.slice(1);", 
-    "\t\t};", 
-    "\t\t", 
-    "\t\t/**", 
-    "\t\t *", 
-    "\t\t */", 
-    "\t\tvar getRelativePath = function(fromPath, toPath)", 
-    "\t\t{", 
-    "\t\t\tvar nsFileFrom = Components.classes[\"@mozilla.org/file/local;1\"]", 
-    "\t\t\t\t\t\t\t\t  .createInstance(Components.interfaces.nsILocalFile);", 
-    "\t\t\tnsFileFrom.initWithPath(fromPath);", 
-    "\t\t\tvar nsFileTo = Components.classes[\"@mozilla.org/file/local;1\"]", 
-    "\t\t\t\t\t\t\t\t  .createInstance(Components.interfaces.nsILocalFile);", 
-    "\t\t\tnsFileTo.initWithPath(toPath);", 
-    "\t\t\treturn nsFileTo.getRelativeDescriptor(nsFileFrom);", 
-    "\t\t};", 
-    "\t\t", 
-    "", 
-    "\t\t/** updateContent", 
-    "\t\t */", 
-    "\t\tvar updateContent = function()", 
-    "\t\t{", 
-    "\t\t\t", 
-    "\t\t\t/** getLabel", 
-    "\t\t\t */", 
-    "\t\t\tvar getLabel = function()", 
-    "\t\t\t{", 
-    "\t\t\t\treturn heading ? '## '+heading+'\\n' : '';", 
-    "\t\t\t};", 
-    "\t\t\t", 
-    "\t\t\t/** Update mode will update existing section", 
-    "\t\t\t *\tSection will be searched from heading up to next heading", 
-    "\t\t\t *", 
-    "\t\t\t * @return\t{start: int, end: int}", 
-    "\t\t\t */", 
-    "\t\t\tvar getUpdatePosition = function()", 
-    "\t\t\t{", 
-    "\t\t\t\tvar heading_match\t= new RegExp( escapedRegexString(getLabel()) + '[^#]+', 'gmi').exec(file_content); ", 
-    "\t\t\t\tif( ! update || ! heading_match  )", 
-    "\t\t\t\t\treturn null;", 
-    "", 
-    "\t\t\t\t//Logger.info(heading_match, 'MarkdownLinker: '+'heading_match'); ", 
-    "\t\t\t\treturn { 'start': heading_match.index, 'end':  heading_match.index + heading_match[0].length };\t\t", 
-    "\t\t\t};", 
-    "", 
-    "", 
-    "\t\t\t/** replaceRange", 
-    "\t\t\t */", 
-    "\t\t\tvar replaceRange = function(update_pos)", 
-    "\t\t\t{", 
-    "\t\t\t\t//alert('replaceRange');", 
-    "\t\t\t\t/* HERE IS BUG MAYBE - IT INSERST FILE TREE ON START OF FILE */ ", 
-    "\t\t\t\tvar content_before \t= file_content.substring( 0,\tupdate_pos.start );", 
-    "\t\t\t\tvar content_after\t= file_content.substring( update_pos.end,\tkoEditor.getLength() );\t\t\t\t", 
-    "\t\t\t\t", 
-    "\t\t\t\tkoEditor.setValue( content_before + content_update + '\\n' );", 
-    "\t\t\t\tkoEditor.goDocEnd();", 
-    "\t\t\t\t", 
-    "\t\t\t\tvar end_of_range\t= koEditor.getCursorPosition('absolute');", 
-    "\t\t\t\tkoEditor.insert(content_after);", 
-    "\t\t\t\tkoEditor.setCursor(end_of_range-1);", 
-    "\t\t\t};", 
-    "\t\t\t", 
-    "\t\t\t/** insertContent", 
-    "\t\t\t */", 
-    "\t\t\tvar insertContent = function()", 
-    "\t\t\t{", 
-    "\t\t\t\t//alert('updateContent');", 
-    "", 
-    "\t\t\t\t/** goToInsertPosition", 
-    "\t\t\t\t */", 
-    "\t\t\t\tvar goToInsertPosition = function()", 
-    "\t\t\t\t{", 
-    "\t\t\t\t\tvar line_content\t= koEditor.getLine( koEditor.getLineNumber() );", 
-    "\t\t\t\t\t", 
-    "\t\t\t\t\tif( ! line_content.match(/^\\s*$/gi)  )", 
-    "\t\t\t\t\t\tkoEditor.goLineEnd();", 
-    "\t\t\t\t\t\t//scimoz.newLine();", 
-    "\t\t\t\t\telse", 
-    "\t\t\t\t\t\tkoEditor.goLineStart();", 
-    "\t\t\t\t\t\t", 
-    "\t\t\t\t\t//scimoz.newLine();", 
-    "\t\t\t\t};", 
-    "\t\t\t\t", 
-    "\t\t\t\tgoToInsertPosition();", 
-    "\t\t\t\t", 
-    "\t\t\t\tkoEditor.insert( '\\n'+ content_update);", 
-    "\t\t\t};", 
-    "\t\t\t\t\t\t", 
-    "\t\t\tvar content_update\t= getLabel() + include_lines.join('\\n') + '\\n';", 
-    "\t\t\t", 
-    "\t\t\tvar update_pos\t= getUpdatePosition();", 
-    "\t\t\t//console.log(  'update_pos: ' + update_pos );", 
-    "\t\t\t//console.log(  'heading: ' + heading );", 
-    "", 
-    "\t\t\tif( update_pos && heading!=='' )", 
-    "\t\t\t\treplaceRange(update_pos);\t\t\t\t", 
-    "\t\t\telse", 
-    "\t\t\t\tinsertContent();", 
-    "\t\t\t", 
-    "\t\t};", 
-    "\t\t", 
-    "\t\t/** writeToFile", 
-    "\t\t */", 
-    "\t\tvar writeToFile = function()", 
-    "\t\t{", 
-    "\t\t\tif( ! include_lines.length  )", 
-    "\t\t\t\treturn;", 
-    "", 
-    "\t\t\tko.views.manager.currentView.scimoz.beginUndoAction();", 
-    "\t\t\t", 
-    "\t\t\ttry {", 
-    "\t\t\t\tupdateContent();", 
-    "\t\t\t\t", 
-    "\t\t\t} finally {", 
-    "\t\t\t\tko.views.manager.currentView.scimoz.endUndoAction();", 
-    "\t\t\t} ", 
-    "\t\t}; ", 
-    "\t\t", 
-    "\t}", 
-    "\treturn MarkdownLinker;", 
-    "  ", 
-    "})();"
-  ], 
-  "version": "1.1.5", 
-  "rank": 100, 
-  "async": 1, 
-  "type": "macro", 
-  "trigger": "trigger_startup"
-}
+	var komodo_view = komodo.view;
+	
+	function MarkdownLinker()
+	{
+		var Logger	= ko.extensions.Logger_v3 ? new ko.extensions.Logger_v3(this).clear(true).off(false) : require('ko/console');
+		
+		var koFile	= require("ko/file");
+		var koEditor	= require("ko/editor");
+		var scimoz	= ko.views.manager.currentView.scimoz; 
+		var current_file	= ko.views.manager.currentView.koDoc.file.path;
+		var current_dir	= koFile.dirname(current_file);
+		var file_content	= koEditor.getValue();
+		
+		var include_lines	= [];
+
+		/* Search options */
+		var search_extensions	= /\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension
+		var search_ext	= '';
+		var search_name	= '.*';				
+		var match_dir_name	= false;
+		
+		/* TYPES OF INCLUDED CONTETN */ 
+		var rx_file_types = {
+			image:	/\.(jpg|png|jpg)$/gi,
+			markdown:	/\.(md)$/gi,
+			codeblock:	search_extensions,
+		};
+						
+		/* Tree options */
+		var max_level	= null;
+		
+		/* Write options */
+		var link_to_dir	= false;
+		var text_by	= 'dir';
+		var indentation	= false;
+		var code_block	= false;
+		var update	= true;
+		var unique	= false;
+		var heading	= '';
+			
+		/* result array
+		 */
+		var match_files	= [];			
+
+		/*---------------------------------------
+			SEARCH OPTIONS
+		-----------------------------------------
+		*/
+		/** Search file name
+		 * @param	string	search_name	File name for search
+		 * @return	self
+		 */
+		this.searchName = function(_search_name)
+		{
+			search_name = _search_name;
+			return this; 
+		}; 
+		
+		/** Set search_ext for search match
+		 *
+		 * @param	string	search_ext	extension searched in dirs E.G.: 'php|md'
+		 * @return	self
+		 */
+		this.searchExt = function(_file_ext)
+		{
+			search_ext = _file_ext;
+			return this; 
+		};
+		/** Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"
+		 * @param	string|boolean	match	If TRUE, then full match is searched, If anything else, folder name with any suffix E.G.: 'FolderName-any-suffix.jpg'
+		 * @return	self
+		 */
+		this.matchDirName = function(match=true)
+		{
+			match_dir_name = match;
+			return this;
+		};
+		/*---------------------------------------
+			TREE OPTIONS
+		-----------------------------------------
+		*/
+		/** Set depth of tree for searching
+		 * Default is unlimited levels
+		 * 
+		 * @param	int	max_level	Max level of tree E.g.: max_level=0 // search only current dir, max_level=1 search only 1 subdir
+		 * @return	self
+		 */
+		this.maxLevel = function(_max_level)
+		{
+			//max_level = _max_level +1;
+			max_level = _max_level;
+			return this;
+		};
+		
+		/* ================ WRITE OPTIONS ================ */
+
+		/** Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"
+		 *
+		 * @param	boolean 	link_to_dir
+		 * @return	this 
+		 */
+		this.linkToDir = function(_link_to_dir=true)
+		{
+			link_to_dir = _link_to_dir;
+			return this;
+		};
+
+		/** Set indentation of links by directory tree
+		 *
+		 * @param	boolean|string	
+		 * @return	this 
+		 */
+		this.indentation = function(_indentation='\t')
+		{
+			indentation = _indentation === true ? '\t' : (indentation==' ' ? '  ' : _indentation); // prevent only 1 whitespace, 2 spaces are minimum
+			return this;
+		};
+ 
+		/** Set text of link by sanitized filename or directory
+		 * Default is by dir
+		 *
+		 * @param	string	text_by
+		 * @return	this 
+		 */
+		this.textBy = function(_text_by='')
+		{
+			text_by = _text_by;
+			return this;
+		};
+ 
+		/** Set heading above included block
+		 * @param	string	heading
+		 * @return	self
+		 */
+		this.heading = function(_heading='')
+		{
+			heading = _heading;
+			return this;
+		};
+
+		/** Include only if not in file content already
+		 *
+		 * @param	boolean	unique
+		 * @return	this 
+		 */
+		this.unique = function(_unique=true)
+		{
+			unique = _unique;
+			return this;
+		};
+
+		/** Link is included as codeblock E.G.: [include:\dir\file.komodotool]  
+		 *  Include is treated with markdownFormatter.komodotool
+		 *
+		 * @param	boolean	code_block
+		 * @return	this 
+		 */
+		this.codeBlock = function(_code_block=true)
+		{
+			code_block = _code_block;
+			return this;
+		};
+
+		/** Update mode will update existing section
+		 *	Section start with heading and end on next heading
+		 *	Heading must be set
+		 * 
+		 * @param	string	pdate
+		 * @return	this 
+		 */
+		this.update = function(_update=true)
+		{
+			update = _update;
+			return this;
+		};
+
+		/* ================ INCLUDE ================ */
+		
+		/** Include matching files as links
+		 */
+		this.include = function()
+		{
+
+			/*------ GET DIRECTORY TREE ------
+			 */
+			var getDirectoryTree = function(path, level = 0 )
+			{
+				/** Get direcory names in path
+				 */
+				var getSubDirs = function(path)
+				{
+					return koFile.list(path).filter(function(dir){
+									return ! koFile.isFile(path+'\\'+dir);
+								});
+				};
+				
+				var getFiles = function(path)
+				{
+					return koFile.list(path).filter(function(dir){
+									return koFile.isFile(path+'\\'+dir);
+								});
+				};
+				
+				var subdirs	= getSubDirs(path);
+				var files	= getFiles(path);
+				var dirs_and_files	= {};
+
+				//Logger.info(level >= max_level, 'MarkdownLinker: '+'level >= max_level'); 
+				if( max_level && level == max_level )
+					return; 
+				
+				if( subdirs.length )
+				{
+					//if( ! depth_added )
+					depth_added = level++;
+					
+					/* FOR EACH SUBDIR */ 
+					for(var d=0; d<subdirs.length;d++)
+						/* GET SUBDIRS OF SUBDIR */
+						{
+							subdir_path = path+'\\'+subdirs[d];
+							
+							dirs_and_files[subdir_path] = getDirectoryTree( subdir_path, level); 
+						}
+				}
+
+				for( index in files)
+					if (files.hasOwnProperty(index))
+							//console.log(  'index: ' +index+':' + files[index] );
+						dirs_and_files[index] = files[index];
+				
+				/* RETURN SUBDIRS if any exists */
+				//var dirs_and_files = subdirs.concat(files) ;
+				//return subdirs.length ? dirs_and_files : null;
+				//return subdirs.length ? dirs_and_files : null;
+				return Object.keys(dirs_and_files).length ? dirs_and_files : null;
+				//return subdirs.length ? Object.assign({}, subdirs, files) : null;
+			};
+			
+			/*------ SEARCH IN SUBDIRS FOR FILES matching criteria ------
+			 */
+			var searchForFiles = function(_dir_path, dir_tree)
+			{
+
+				/** filterFilesByExtension
+				*/
+				var filterFilesByExtension = function(_dir_path)
+				{
+				   /** Find matching file type in files by search_extensions
+					*/
+				   var findFileExt = function(_dir_path)
+				   {
+					   koFile.list(_dir_path).map(function(file){
+						   
+						   var file_match = search_extensions.exec(_dir_path+'\\'+file);
+						   
+						   if (file_match)
+							   search_ext = file_match.pop();
+						   //Logger.info(search_ext, 'MarkdownLinker: '+'search_ext'); 
+					   }); 
+				   }; 
+					   
+				   /* FIND EXTENSION AUTOMATICALY */ 
+				   if( ! search_ext )
+					   findFileExt(_dir_path);
+				   
+				   /* LOOP EACH FILE IN DIRECOTRY */ 
+				   koFile.list(_dir_path).map(function(name)
+				   {
+					   
+					   var file_path	= _dir_path +'\\'+ name;
+				
+						console.log(  'file: ' + file_path );
+
+					   if (file_path != current_file)
+					   {
+						   if( match_dir_name )
+							   search_name = koFile.basename(_dir_path) + (match_dir_name===true ? '' : '.*');
+						   //Logger.info(search_ext, 'MarkdownLinker: '+'search_ext');
+						   //Logger.info(search_name, 'MarkdownLinker: '+'search_name');						
+						   //Logger.info( new RegExp(search_name+'\.('+search_ext+')$', 'gi').exec(name) , 'match: '+name); 
+						   
+						   if( new RegExp( '^'+search_name+'\.('+search_ext+')$', 'gi').exec(name) )
+							   match_files.push(file_path);
+					   }
+				   });
+				};
+				
+				/** REMOVE EMPTY DIRS
+				 */
+				var removeEmptyDirs = function(dirs)
+				{
+					return dirs.filter(function(dir){
+						return dir.length;
+					});
+				};
+				
+
+				/*------ SEARCH FOR FILES ------*/
+				
+				//console.log(  'DIR_TREE: ' + dir_tree );
+	
+				//filterFilesByExtension(_dir_path);
+	
+				/* LOOP SUBDIRS */ 
+				//for(var subdir_path in dir_tree)
+				//{
+				//		console.log(  'SUBDIR: ' + subdir_path );
+				//
+				//		var subdirs 	= dir_tree[subdir_path];
+				//		
+				//		if( subdirs )
+				//			filterFilesByExtension(subdir_path, subdirs);
+				//			//match_files.push(filterFilesByExtension(subdir_path, subdirs));
+				//		
+				//	//else
+				//		//console.log(  'FILE: ' + dir_path );
+				//	
+				//};
+	
+				return removeEmptyDirs(match_files); 
+			};
+				/** getIndentation
+			 */
+			var getIndentation = function(indent_count)
+			{
+				return indentation!==false ? Array(indent_count).join(indentation) + '* ' : '';
+			}; 			
+			/** ADD MARKDOWN SYNTAX
+			 */
+			var addMarkdownSyntax = function(sub_tree, indent_count)
+			{
+				//var indentation_added = false;
+
+				/** setInlcudeFile
+				 */
+				var setInlcudeFile = function(path)
+				{
+					/** Get link text by dir name or sanitized filename file
+					 * Filename is sanitized by replacing '-_' with space
+					 *
+					 * @return	string	Text of link
+					 */
+					var getLinkText = function(path)
+					{
+						if( text_by=='dir' )
+							return koFile.basename(koFile.dirname(path));
+						
+						var filename	= koFile.basename(path).split('.').shift().replace(/[-|_]/gi, ' ');
+						
+						return  filename.charAt(0).toUpperCase() + filename.slice(1);
+					};
+					/** findIncludeFileType
+					 */
+					var findIncludeFileType = function()
+					{
+						for(var file_type in rx_file_types)
+							if (rx_file_types.hasOwnProperty(file_type))
+								if( path.match(rx_file_types[file_type]) )
+									return file_type;
+					};
+
+				
+					
+					/** getCodeblockLink
+					 */
+					var getCodeblockLink = function()
+					{
+						return '[include:\\'+_getRelativePath(current_dir, path).replace(/\//g, '\\') +']';
+					}; 
+					/** getFileLink
+					 */
+					var getFileLink = function(include_type)
+					{
+						//var prefix	= include_type==='image' ? '!' : '';
+						var prefix	=  '';
+						var path_to	= link_to_dir ? koFile.dirname(path) : path;
+						return prefix+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
+					};
+					/** setLinkToIncludes
+					 */
+					var setLinkToIncludes = function(link)
+					{
+
+						
+						if( _isNotInFile(link) )
+							include_lines.push( getIndentation(indent_count) + link );
+					}; 
+
+					var include_type = findIncludeFileType();
+									//console.log(  'include_type: ' + include_type );
+									//console.log(  'indent_count: ' + indent_count );
+
+					//setLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );
+					//setLinkToIncludes( getFileLink() );
+					include_lines.push( getIndentation(indent_count) + path );
+
+				};
+				
+				/* ADD INDENTATION */ 
+				indent_count++
+				
+				/*------ LOOP ------*/
+				for(var dir_path in sub_tree) if (sub_tree.hasOwnProperty(dir_path)) 
+				{
+					/*------------------------------------------------------------------------------
+						ADD DIR PATH
+					--------------------------------------------------------------------------------*/
+
+					//console.log(  'dir_path: ' + dir_path +':'+ typeof sub_tree[dir_path] );
+
+					/*------------------------------------------------------------------------------
+						IF FILE
+					--------------------------------------------------------------------------------*/
+					if( typeof sub_tree[dir_path] === "string" )
+					{
+						
+						//if( indentation_added===false )
+							//indentation_added=indent_count++;
+						
+						/*------------------------------------------------------------------------------
+							ADD FILE PATH
+						--------------------------------------------------------------------------------*/
+						//include_lines.push( dir_path );
+
+						setInlcudeFile(sub_tree[dir_path]);  
+					}
+					/*------------------------------------------------------------------------------
+						IF DIRECTORY
+					--------------------------------------------------------------------------------*/
+					else
+					{
+						setInlcudeFile(dir_path);  
+
+						addMarkdownSyntax(sub_tree[dir_path], indent_count);
+					}
+					
+				}
+	
+			};
+			
+			var loopRecursive = function(dir_tree, level = 0 )
+			{
+				for(var path in dir_tree)
+				{
+					//console.log( childKey + ': ' + obj );
+						console.log( getIndentation(level) + '-'+path + ': ' + dir_tree[path] );
+					if( typeof dir_tree[path] === "object" )
+						loopRecursive(dir_tree[path], level++ );
+					
+				}
+			  
+			};
+			
+			/*------ GET  ------*/
+			var dir_tree = getDirectoryTree(current_dir);
+			
+			loopRecursive( dir_tree ) ;
+
+			/*------ FILTER ------*/
+			//var matching_files = searchForFiles( current_dir, dir_tree );
+
+			/*------ MARKDOWN SYNTAX ------*/
+			addMarkdownSyntax(dir_tree, 0);
+			
+			/*------ WRITE TO FILE ------*/
+			writeToFile();
+			//Logger.info(include_lines, 'MarkdownLinker: '+'include_lines'); 
+		};
+
+		/* ================ PRIVATE ================ */
+
+
+		/** rx_escaped_string
+		 */
+		var _escapedRegexString = function(string)
+		{
+			return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g,'\\s+'); // $& means the whole matched string
+		};
+		
+		/** _isNotInFile
+		 */
+		var _isNotInFile = function(string)
+		{
+			return file_content.match( new RegExp(_escapedRegexString(string), 'gi') )===null || ! unique || update;
+		};
+		
+		/**
+		 *
+		 */
+		var _getRelativePath = function(fromPath, toPath)
+		{
+			var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
+								  .createInstance(Components.interfaces.nsILocalFile);
+			nsFileFrom.initWithPath(fromPath);
+			var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
+								  .createInstance(Components.interfaces.nsILocalFile);
+			nsFileTo.initWithPath(toPath);
+			return nsFileTo.getRelativeDescriptor(nsFileFrom);
+		};
+		
+
+		/** writeToFile
+		 */
+		var writeToFile = function()
+		{
+			/** _updateContent
+			 */
+			var _updateContent = function()
+			{
+				
+				/** getHeadings
+				 */
+				var getHeadings = function()
+				{
+					return heading ? '## '+heading+'\n' : '';
+				};
+				
+				/** Update mode will update existing section
+				 *	Section will be searched from heading up to next heading
+				 *
+				 * @return	{start: int, end: int}
+				 */
+				var getUpdatePosition = function()
+				{
+					var heading_match	= new RegExp( _escapedRegexString(getHeadings()) + '[^#]+', 'gmi').exec(file_content); 
+					if( ! update || ! heading_match  )
+						return null;
+	
+					//Logger.info(heading_match, 'MarkdownLinker: '+'heading_match'); 
+					return { 'start': heading_match.index, 'end':  heading_match.index + heading_match[0].length };		
+				};
+	
+	
+				/** replaceRange
+				 */
+				var replaceRange = function(update_pos)
+				{
+					//alert('replaceRange');
+					/* HERE IS BUG MAYBE - IT INSERST FILE TREE ON START OF FILE */ 
+					var content_before 	= file_content.substring( 0,	update_pos.start );
+					var content_after	= file_content.substring( update_pos.end,	koEditor.getLength() );				
+					
+					koEditor.setValue( content_before + content_update + '\n' );
+					koEditor.goDocEnd();
+					
+					var end_of_range	= koEditor.getCursorPosition('absolute');
+					koEditor.insert(content_after);
+					koEditor.setCursor(end_of_range-1);
+				};
+				
+				/** insertContent
+				 */
+				var insertContent = function()
+				{
+					//alert('_updateContent');
+	
+					/** goToInsertPosition
+					 */
+					var goToInsertPosition = function()
+					{
+						var line_content	= koEditor.getLine( koEditor.getLineNumber() );
+						
+						if( ! line_content.match(/^\s*$/gi)  )
+							koEditor.goLineEnd();
+							//scimoz.newLine();
+						else
+							koEditor.goLineStart();
+							
+						//scimoz.newLine();
+					};
+					
+					goToInsertPosition();
+					
+					koEditor.insert( '\n'+ content_update);
+				};
+							
+				var content_update	= getHeadings() + include_lines.join('\n') + '\n';
+				
+				var update_pos	= getUpdatePosition();
+				//console.log(  'update_pos: ' + update_pos );
+				//console.log(  'heading: ' + heading );
+	
+				if( update_pos && heading!=='' )
+					replaceRange(update_pos);				
+				else
+					insertContent();
+				
+			};
+			
+			if( ! include_lines.length  )
+				return;
+
+			ko.views.manager.currentView.scimoz.beginUndoAction();
+			
+			try {
+				
+				_updateContent();
+				
+			} finally {
+				ko.views.manager.currentView.scimoz.endUndoAction();
+			} 
+		}; 
+		
+	}
+	return MarkdownLinker;
+  
+})();

@@ -11,7 +11,10 @@ type: macro
 version: 1.1.5
 ======================================*/
 /* Clear Console */
-document.getElementById('console-widget').contentWindow.document.getElementById('output').innerHTML = '';
+
+var console_pane=document.getElementById("console-widget");if(console_pane)console_pane.contentWindow.document.getElementById("output").innerHTML="";else{var e=require("ko/windows").getAll();for(let n=0;n<e.length;n++)if("console-widget"==e[n].name){var o=e[n].document.getElementById("output");o&&(o.innerHTML="")}};
+
+
 /** Inclue links to files and folders in hierarchy
  *
  * Search extension is recognized from search_extensions variable
@@ -30,5 +33,4 @@ document.getElementById('console-widget').contentWindow.document.getElementById(
 			.update()
 			.include();
 })();
- 
  
