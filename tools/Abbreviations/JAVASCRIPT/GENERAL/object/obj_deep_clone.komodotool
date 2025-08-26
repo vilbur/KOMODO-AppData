@@ -1,0 +1,25 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "obj_deep_clone", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:function ObjClone(original){", 
+    "    var ObjClone = Object.create( Object.getPrototypeOf( original ) ) ;", 
+    "    var i , keys = Object.getOwnPropertyNames( original ) ;", 
+    "    for ( i = 0 ; i < keys.length ; i ++ ){", 
+    "        Object.defineProperty( ObjClone , keys[ i ] ,", 
+    "            Object.getOwnPropertyDescriptor( original , keys[ i ] )", 
+    "        ) ;", 
+    "    }", 
+    "    return ObjClone ;", 
+    "}]]", 
+    "[[%tabstop:[[%tabstop:var ]][[%tabstop1:obj]]_[[%tabstop:copy]]\t= ]]ObjClone([[%tabstop1:obj]])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//default.png", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

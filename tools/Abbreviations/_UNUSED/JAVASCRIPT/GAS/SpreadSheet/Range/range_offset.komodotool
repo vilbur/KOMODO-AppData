@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "range_offset", 
+  "language": "", 
+  "value": [
+    "offset([[%tabstop:rowOffset]], [[%tabstop:columnOffset]][[%tabstop:, numRows]][[%tabstop:, numColumns]])!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

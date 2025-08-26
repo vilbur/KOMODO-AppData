@@ -1,0 +1,22 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "seti", 
+  "language": "", 
+  "value": [
+    "var n = 0;", 
+    "var interval = setInterval(function () {", 
+    "", 
+    "\t[[%tabstop://code]]", 
+    "", 
+    "\tif (++n === [[%tabstop:5]])", 
+    "\t\twindow.clearInterval(interval);", 
+    "", 
+    "}, [[%tabstop:1000]]);!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "auto_abbreviation": "true"
+}

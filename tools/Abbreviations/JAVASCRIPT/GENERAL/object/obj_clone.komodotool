@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "obj_clone", 
+  "language": "", 
+  "value": [
+    "var [[%tabstop1:obj]]_[[%tabstop:copy]] = Object.assign([[%tabstop:{}]], [[%tabstop1:obj]])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "auto_abbreviation": "false", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//default.png"
+}

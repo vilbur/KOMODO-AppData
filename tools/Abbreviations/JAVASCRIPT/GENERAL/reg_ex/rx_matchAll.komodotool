@@ -1,0 +1,29 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "rx_matchAll", 
+  "language": "", 
+  "value": [
+    "/** RegEx match all", 
+    "\t@return array of all matches", 
+    " */", 
+    "var matchAll = function( string, regEx )", 
+    "{", 
+    "\tvar matches_all\t= [];", 
+    "\tvar last_match_end\t= 0; // end position of last match", 
+    "", 
+    "\twhile((match = new RegExp(regEx.source, regEx.flags).exec(string)) !== null)", 
+    "\t{", 
+    "\t\tstring\t= string.substring(match.index + match[0].length);", 
+    "\t\tmatch.index\t= last_match_end = last_match_end + match.index + match[0].length;", 
+    "\t\tmatches_all.push(match);", 
+    "\t}", 
+    "\treturn matches_all;", 
+    "};!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "true"
+}

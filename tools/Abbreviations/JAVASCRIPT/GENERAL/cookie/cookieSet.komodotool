@@ -1,0 +1,23 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "cookieSet", 
+  "language": "", 
+  "value": [
+    "/** ", 
+    " */", 
+    "var setCookie = function(key, value='')", 
+    "{", 
+    "\tvar myDate = new Date();", 
+    "\tmyDate.setSeconds(myDate.getSeconds() + 5);", 
+    "\tvar expires\t= \"expires=\" + ( value!=='' ?  myDate : \"Thu, 01 Jan 1970 00:00:01 GMT\" );", 
+    "\t", 
+    "\tdocument.cookie = key +\"=\" + value + \";\" + expires + '; path=/;';", 
+    "}; !@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "auto_abbreviation": "true"
+}

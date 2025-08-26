@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "remove", 
+  "language": "", 
+  "value": [
+    "splice( [[%tabstop:index]], [[%tabstop:1]] )[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "auto_abbreviation": "false", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "icon": ""
+}

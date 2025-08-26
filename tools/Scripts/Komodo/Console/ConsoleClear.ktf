@@ -12,4 +12,24 @@ type: macro
 version: 1.1.5
 =========================*/
 /* Clear Console */
-document.getElementById('console-widget').contentWindow.document.getElementById('output').innerHTML = '';
+
+var console_pane = document.getElementById('console-widget');
+
+/* CLEAR DETACHED PANE */ 
+if ( ! console_pane )
+{
+	var windows = require("ko/windows").getAll();
+
+	for (let i = 0; i < windows.length; i++)
+	{
+		if (windows[i].name == 'console-widget' )
+		{
+			var output = windows[i].document.getElementById("output");
+
+			if (output) 
+				output.innerHTML = '';
+		}
+	}
+}
+else /* CLEAR DOCKED PANE */
+	console_pane.contentWindow.document.getElementById('output').innerHTML = '';

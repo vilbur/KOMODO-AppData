@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "arrSort_integer", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:array]].sort(function(a, b){return a - b};);[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "auto_abbreviation": "false", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "icon": ""
+}

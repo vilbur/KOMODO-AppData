@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "key", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:obj]]:[[%tabstop:{", 
+    "\t[[%tabstop:key]]:\t[[%tabstop:value]],[[%tabstop:]]", 
+    "},]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "false"
+}

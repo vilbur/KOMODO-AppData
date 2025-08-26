@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "PascalCase", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:var [[%tabstop:PascalCase]] = ]][[%tabstop1:string]].toLowerCase().replace(/(?:(^.)|(\\s+.))/g, function(match) {", 
+    "\treturn match.charAt(match.length-1).toUpperCase();", 
+    "});!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

@@ -1,0 +1,29 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "obj_flattern", 
+  "language": "", 
+  "value": [
+    "var flattenObject = function(obj)", 
+    "{", 
+    "\tvar toReturn = {};", 
+    "", 
+    "\tfor (var i in obj) {", 
+    "\t\tif (obj.hasOwnProperty(i))", 
+    "\t\t\tif ( typeof obj[i] == 'object' ) {", 
+    "\t\t\t\tvar flatObject = flattenObject(obj[i]);", 
+    "\t\t\t\tfor(var x in flatObject)", 
+    "\t\t\t\t\tif (flatObject.hasOwnProperty(x))", 
+    "\t\t\t\t\ttoReturn[i + '.' + x] = flatObject[x];", 
+    "\t\t\t} else", 
+    "\t\t\t\ttoReturn[i] = obj[i];", 
+    "\t}", 
+    "\treturn toReturn;", 
+    "};!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "io", 
+  "language": "", 
+  "value": [
+    "indexOf( [[%tabstop:'[[%tabstop:item]]']] )[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "auto_abbreviation": "true", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//default.png"
+}

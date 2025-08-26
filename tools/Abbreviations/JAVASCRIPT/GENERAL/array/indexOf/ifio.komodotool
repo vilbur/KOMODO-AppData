@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "ifio", 
+  "language": "", 
+  "value": [
+    "if( [[%tabstop:array]].indexOf( [[%tabstop:'[[%tabstop:item]]']] ) [[%tabstop:>]] [[%tabstop:-1]] ) {[[%tabstop:]][[%soft:}]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "auto_abbreviation": "true", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//default.png"
+}

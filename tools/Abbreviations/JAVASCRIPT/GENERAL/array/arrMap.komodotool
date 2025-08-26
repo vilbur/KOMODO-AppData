@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "map", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:[[%tabstop:array]].]]map(function([[%tabstop1:value]]){", 
+    "    return [[%tabstop1:value]];", 
+    "});!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "false"
+}

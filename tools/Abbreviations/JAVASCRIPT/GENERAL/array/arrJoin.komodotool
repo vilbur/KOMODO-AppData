@@ -1,0 +1,19 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "join", 
+  "language": "", 
+  "value": [
+    "<%", 
+    "/*", 
+    "[[%tabstop:[[%tabstop:array]].]]push([[%tabstop:param]])[[%soft:;]][[%tabstop:]]", 
+    "*/", 
+    "%>", 
+    "join([[%tabstop:'[[%tabstop:|]]']])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "auto_abbreviation": "false"
+}

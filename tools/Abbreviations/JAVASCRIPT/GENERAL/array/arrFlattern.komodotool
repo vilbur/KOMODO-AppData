@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "flattern", 
+  "language": "", 
+  "value": [
+    "var [[%tabstop1:array]]_[[%tabstop:merged]]\t= [].concat.apply([], [[%tabstop1:array]][[%tabstop:, array2_or_matrix]]);!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

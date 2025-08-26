@@ -23,11 +23,11 @@ var console_pane=document.getElementById("console-widget");if(console_pane)conso
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
 			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			//.linkToDir()			
-			//.searchExt('md')
+			.searchExt('md')
 			.searchExt('.*')
-			.indentation(' ')
+			//.indentation() // Allow indeta
 			//.maxLevel( 0 )
-			//.maxLevel( 2 )
+			.maxLevel( 2 )
 			.textBy('file') // display text by "file|dir"
 			.heading()
 			.update()

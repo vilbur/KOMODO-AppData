@@ -1,0 +1,19 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "push", 
+  "language": "", 
+  "value": [
+    "<%", 
+    "/*", 
+    "[[%tabstop:[[%tabstop:array]].]]push([[%tabstop:param]])[[%soft:;]][[%tabstop:]]", 
+    "*/", 
+    "%>", 
+    "push([[%tabstop:value]])[[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

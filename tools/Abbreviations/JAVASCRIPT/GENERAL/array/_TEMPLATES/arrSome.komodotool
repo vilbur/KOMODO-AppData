@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "arrSome", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:array]].some([[%tabstop:param]])[[%soft:;]][[%tabstop:]]"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "icon": "", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}.12"
+}

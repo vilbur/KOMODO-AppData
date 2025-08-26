@@ -1,0 +1,21 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "cookieGet", 
+  "language": "", 
+  "value": [
+    "/** ", 
+    " */", 
+    "var getCookie = function(key)", 
+    "{", 
+    "\tvar match_cookie\t= new RegExp( key + '=([^;]+)', 'gi').exec(document.cookie);", 
+    "", 
+    "\treturn match_cookie ? match_cookie.pop() : null;", 
+    "}; !@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "auto_abbreviation": "true"
+}

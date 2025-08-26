@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "character_repeat", 
+  "language": "", 
+  "value": [
+    "Array(11).join('[[%tabstop:a]]')!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

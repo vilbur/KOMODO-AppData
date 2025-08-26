@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "importVueComponent", 
+  "language": "", 
+  "value": [
+    "import [[%tabstop1:component]] from './components/[[%tabstop:]][[%tabstop1:component]]';", 
+    "Vue.component('[[%tabstop1:component]]', [[%tabstop1:component]]);[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

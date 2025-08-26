@@ -1,0 +1,20 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "sw", 
+  "language": "", 
+  "value": [
+    "switch ([[%tabstop:var]])", 
+    "{", 
+    "    case '[[%tabstop:]]':\t[[%tabstop:[[%tabstop1:result]] =\t]]'[[%tabstop:result1]]';break;", 
+    "    case '[[%tabstop:]]':\t[[%tabstop:[[%tabstop1:result]] =\t]]''[[%tabstop:result2]]';break;", 
+    "    case '[[%tabstop:]]':\t[[%tabstop:[[%tabstop1:result]] =\t]]''[[%tabstop:result3]]';break;", 
+    "    default:[[%tabstop2:]]\t[[%tabstop:[[%tabstop1:result]] =\t]]''[[%tabstop:resultDefalut]]';", 
+    "}!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

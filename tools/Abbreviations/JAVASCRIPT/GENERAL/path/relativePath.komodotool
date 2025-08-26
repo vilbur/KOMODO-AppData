@@ -1,0 +1,24 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "relativePath", 
+  "language": "", 
+  "value": [
+    "var relativePath = function(fromPath, toPath)", 
+    "{", 
+    "    var nsFileFrom = Components.classes[\"@mozilla.org/file/local;1\"]", 
+    "                          .createInstance(Components.interfaces.nsILocalFile);", 
+    "    nsFileFrom.initWithPath(fromPath);", 
+    "    var nsFileTo = Components.classes[\"@mozilla.org/file/local;1\"]", 
+    "                          .createInstance(Components.interfaces.nsILocalFile);", 
+    "    nsFileTo.initWithPath(toPath);", 
+    "", 
+    "\treturn nsFileTo.getRelativeDescriptor(nsFileFrom).substring(3); // remove '../'", 
+    "}!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

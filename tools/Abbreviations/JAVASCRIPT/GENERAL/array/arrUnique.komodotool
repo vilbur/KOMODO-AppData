@@ -1,0 +1,30 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "unique", 
+  "language": "", 
+  "value": [
+    "<%", 
+    "/*", 
+    "\tvar array\t= [1,1,2,2,3,4,5,'A','A','B','B','C','D'];", 
+    "\tvar array_unique\t= arrayUnique(array); // return ['1','2','3','4','5','A','B','C','D']", 
+    "", 
+    "\tconsole.log( array_unique );", 
+    "*/", 
+    "%>", 
+    "var arrayUnique = (function(ArrayUnique) {", 
+    "\tvar unique = [];", 
+    "    for (var i = 0; i < ArrayUnique.length; i++) {", 
+    "        if (unique.indexOf(ArrayUnique[i]) == -1) {", 
+    "            unique.push(ArrayUnique[i]);", 
+    "        }", 
+    "    }", 
+    "    return unique;", 
+    "});!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "ifM", 
+  "language": "", 
+  "value": [
+    "if ([[%tabstop:variable]].match([[%tabstop:/[[%tabstop:.*]]/[[%tabstop:gi]]]])[[%tabstop: [[%tabstop:!]]== [[%tabstop:null]]]]) {[[%tabstop:]][[%soft:}]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "false"
+}

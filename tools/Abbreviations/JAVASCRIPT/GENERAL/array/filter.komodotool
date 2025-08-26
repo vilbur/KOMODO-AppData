@@ -1,0 +1,16 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "filter", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:[[%tabstop:array]].]]filter(function([[%tabstop1:value]]){", 
+    "    return [[%tabstop1:value]] ? [[%tabstop1:value]] : null;", 
+    "});!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

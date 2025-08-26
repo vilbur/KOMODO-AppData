@@ -1,0 +1,20 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "routerLink", 
+  "language": "", 
+  "value": [
+    "<%", 
+    "\tvar koEditor\t= require(\"ko/editor\");", 
+    "\tvar file_content\t= koEditor.getValue();", 
+    "\tvar router_view_tab\t= file_content.match(/<router-view>/gi)?'':'\\n<router-view></router-view>';", 
+    "", 
+    "%>", 
+    "<router-link [[%tabstop:tag=\"[[%tabstop:]]\"]] :to=\"[[%tabstop1:link]]\" class=\"[[%tabstop:]]\" [[%tabstop:@click.native=\"[[%tabstop:event]]\"]] [[%tabstop:exact]]>[[%tabstop:]][[%tabstop1:link]]</router-link><%=router_view_tab%>[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "true", 
+  "auto_abbreviation": "false"
+}

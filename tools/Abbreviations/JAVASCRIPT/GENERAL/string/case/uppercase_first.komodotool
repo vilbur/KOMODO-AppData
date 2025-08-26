@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "uppercase_first", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:var [[%tabstop:lowercase_first]] = ]][[%tabstop1:string]].charAt(0).toUpperCase() + [[%tabstop1:string]].slice(1);[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

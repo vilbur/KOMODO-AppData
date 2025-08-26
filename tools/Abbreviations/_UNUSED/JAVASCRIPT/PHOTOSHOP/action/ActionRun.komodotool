@@ -1,0 +1,24 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "ActionRun", 
+  "language": "", 
+  "value": [
+    "try{", 
+    "//Code you want to execute", 
+    "app.doAction(\"[[%tabstop:ActionName]]\",\"Layer Comps Exporter.ATN\")", 
+    "", 
+    "}catch(e){", 
+    "//If Code didn't execute then goes here, and executes code within this block", 
+    "", 
+    "}finally{", 
+    "//executes this code immediately after try block, if error is thrown then is executed after catch block This block is optional and is not necessary.", 
+    "", 
+    "}!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "false", 
+  "auto_abbreviation": "false"
+}

@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "fori_reverse", 
+  "language": "", 
+  "value": [
+    "for(let [[%tabstop1:i]]=[[%tabstop:[[%tabstop2:array]].length]]-1; [[%tabstop1:i]]>-1;[[%tabstop1:i]]--)", 
+    "    [[%tabstop:[[%tabstop2:array]][[[%tabstop1:i]]] ]];[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

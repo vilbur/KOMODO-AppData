@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "Drive_get_folders_by_name", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:var [[%tabstop:folders]]_[[%tabstop1:name]]\t= ]]DriveApp.getFoldersByName('[[%tabstop1:name]]');[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

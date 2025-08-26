@@ -1,0 +1,14 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "rand", 
+  "language": "", 
+  "value": [
+    "var [[%tabstop:random]]\t= Math.floor((Math.random() * [[%tabstop:10]]) + 1);[[%tabstop:]]!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

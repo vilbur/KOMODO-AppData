@@ -1,0 +1,20 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "rx_help", 
+  "language": "", 
+  "value": [
+    "var [[%tabstop2:string]]       = '[[%tabstop:fooString]]';", 
+    "var regex_[[%tabstop2:string]] = new RegExp(\"[[%tabstop3:(.*)]]\", \"gi\");", 
+    "var regex_[[%tabstop2:string]] = /[[%tabstop3:(.*)]]/gi;", 
+    "var [[%tabstop4:prefix]]match =  regex_[[%tabstop2:string]].exec([[%tabstop2:string]]);", 
+    "if ([[%tabstop4:prefix]]match) {", 
+    "\talert( '[[%tabstop4:prefix]]match=\\n'+JSON.stringify( [[%tabstop4:prefix]]match, null, 2) )", 
+    "}!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

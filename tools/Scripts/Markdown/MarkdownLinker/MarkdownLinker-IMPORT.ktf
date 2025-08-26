@@ -72,6 +72,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var link_to_dir	= false;
 		var text_by	= 'dir';
 		var indentation	= false;
+        var prefix = '-';
 		var code_block	= false;
 		var update	= true;
 		var unique	= false;
@@ -79,12 +80,22 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			
 		/* result array
 		 */
-		var match_files	= [];			
+		var match_files	= [];
+		
+		/* DEVELOPMENT */ 
+		var developmentPrint = function(dir_tree, level = 0 )
+		{
+			for(var path in dir_tree)
+			{
+				console.log( path + ': ' + dir_tree[path] );
+				if( typeof dir_tree[path] === "object" )
+					developmentPrint(dir_tree[path], level++ );
+				
+			}
+		};
+		
+		/* ========= SEARCH OPTIONS ========= */
 
-		/*---------------------------------------
-			SEARCH OPTIONS
-		-----------------------------------------
-		*/
 		/** Search file name
 		 * @param	string	search_name	File name for search
 		 * @return	self
@@ -224,7 +235,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			 */
 			var getDirectoryTree = function(path, level = 0 )
 			{
-				/** Get direcory names in path
+				/** Get subdirs in dir
 				 */
 				var getSubDirs = function(path)
 				{
@@ -232,7 +243,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 									return ! koFile.isFile(path+'\\'+dir);
 								});
 				};
-				
+				/** Get files in dir
+				  */
 				var getFiles = function(path)
 				{
 					return koFile.list(path).filter(function(dir){
@@ -248,32 +260,24 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				if( max_level && level == max_level )
 					return; 
 				
+				/* IF ANY SUBDIR EXISTS */ 
 				if( subdirs.length )
 				{
-					//if( ! depth_added )
 					depth_added = level++;
 					
-					/* FOR EACH SUBDIR */ 
+					/*------ ADD SUBDIRS ------*/
 					for(var d=0; d<subdirs.length;d++)
-						/* GET SUBDIRS OF SUBDIR */
-						{
-							subdir_path = path+'\\'+subdirs[d];
-							
-							dirs_and_files[subdir_path] = getDirectoryTree( subdir_path, level); 
-						}
+						dirs_and_files[subdirs[d]] = getDirectoryTree( path+'\\'+subdirs[d], level); 
 				}
 
-				for( index in files)
+				/*------ ADD FILES ------*/
+				for( var index in files )
 					if (files.hasOwnProperty(index))
-							//console.log(  'index: ' +index+':' + files[index] );
 						dirs_and_files[index] = files[index];
 				
-				/* RETURN SUBDIRS if any exists */
-				//var dirs_and_files = subdirs.concat(files) ;
-				//return subdirs.length ? dirs_and_files : null;
-				//return subdirs.length ? dirs_and_files : null;
+				/* RETURN SUBDIRS and FILES if any exists */
 				return Object.keys(dirs_and_files).length ? dirs_and_files : null;
-				//return subdirs.length ? Object.assign({}, subdirs, files) : null;
+			
 			};
 			
 			/*------ SEARCH IN SUBDIRS FOR FILES matching criteria ------
@@ -334,40 +338,28 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					});
 				};
 				
-
 				/*------ SEARCH FOR FILES ------*/
-				
-				//console.log(  'DIR_TREE: ' + dir_tree );
-	
-				//filterFilesByExtension(_dir_path);
-	
-				/* LOOP SUBDIRS */ 
-				//for(var subdir_path in dir_tree)
-				//{
-				//		console.log(  'SUBDIR: ' + subdir_path );
-				//
-				//		var subdirs 	= dir_tree[subdir_path];
-				//		
-				//		if( subdirs )
-				//			filterFilesByExtension(subdir_path, subdirs);
-				//			//match_files.push(filterFilesByExtension(subdir_path, subdirs));
-				//		
-				//	//else
-				//		//console.log(  'FILE: ' + dir_path );
-				//	
-				//};
 	
 				return removeEmptyDirs(match_files); 
 			};
 				/** getIndentation
 			 */
-			var getIndentation = function(indent_count)
+			var getIndentation = function(indent_count, is_directory)
 			{
-				return indentation!==false ? Array(indent_count).join(indentation) + '* ' : '';
+				console.log(  'indentation: ' + indentation );
+				
+				//prefix   = is_directory ? '\u2514\u2500\u2500\u2500' : '\u2502   '; // prefix = '└───│' : '│   '
+				//prefix   = is_directory ? '└───│' : '│   ';
+				prefix   = is_directory ? '├───' : '│   ';
+				
+				//prefix   = '\u2605';
+				
+				return ! indentation ? Array(indent_count - 1).join('    ') + prefix : '';
 			}; 			
+				
 			/** ADD MARKDOWN SYNTAX
 			 */
-			var addMarkdownSyntax = function(sub_tree, indent_count)
+			var addMarkdownSyntax = function( sub_tree, indent_count )
 			{
 				//var indentation_added = false;
 
@@ -391,15 +383,13 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					};
 					/** findIncludeFileType
 					 */
-					var findIncludeFileType = function()
-					{
-						for(var file_type in rx_file_types)
-							if (rx_file_types.hasOwnProperty(file_type))
-								if( path.match(rx_file_types[file_type]) )
-									return file_type;
-					};
-
-				
+					//var findIncludeFileType = function()
+					//{
+					//	for(var file_type in rx_file_types)
+					//		if (rx_file_types.hasOwnProperty(file_type))
+					//			if( path.match(rx_file_types[file_type]) )
+					//				return file_type;
+					//};
 					
 					/** getCodeblockLink
 					 */
@@ -410,11 +400,12 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					/** getFileLink
 					 */
 					var getFileLink = function(include_type)
-					{
-						//var prefix	= include_type==='image' ? '!' : '';
-						var prefix	=  '';
+                    {
+						var prefix_for_image = include_type==='image' ? '!' : '';
+						
 						var path_to	= link_to_dir ? koFile.dirname(path) : path;
-						return prefix+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
+						
+						return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
 					};
 					/** setLinkToIncludes
 					 */
@@ -423,78 +414,52 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 						
 						if( _isNotInFile(link) )
-							include_lines.push( getIndentation(indent_count) + link );
+							include_lines.push( getIndentation(indent_count, false ) + link );
 					}; 
 
-					var include_type = findIncludeFileType();
+					//var include_type = findIncludeFileType();
 									//console.log(  'include_type: ' + include_type );
 									//console.log(  'indent_count: ' + indent_count );
 
 					//setLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );
 					//setLinkToIncludes( getFileLink() );
-					include_lines.push( getIndentation(indent_count) + path );
+					include_lines.push( getIndentation(indent_count, false ) + path );
 
 				};
 				
-				/* ADD INDENTATION */ 
-				indent_count++
+				/*=============================================================================================================*/
 				
-				/*------ LOOP ------*/
+				/* ADD INDENTATION */ 
+				indent_count++;
+				
+				/*------ LOOP PATHS ------*/
 				for(var dir_path in sub_tree) if (sub_tree.hasOwnProperty(dir_path)) 
 				{
-					/*------------------------------------------------------------------------------
-						ADD DIR PATH
-					--------------------------------------------------------------------------------*/
-
-					//console.log(  'dir_path: ' + dir_path +':'+ typeof sub_tree[dir_path] );
-
-					/*------------------------------------------------------------------------------
-						IF FILE
-					--------------------------------------------------------------------------------*/
-					if( typeof sub_tree[dir_path] === "string" )
-					{
-						
-						//if( indentation_added===false )
-							//indentation_added=indent_count++;
-						
-						/*------------------------------------------------------------------------------
-							ADD FILE PATH
-						--------------------------------------------------------------------------------*/
-						//include_lines.push( dir_path );
-
-						setInlcudeFile(sub_tree[dir_path]);  
-					}
+					is_directory = typeof sub_tree[dir_path] === "object";
+					
 					/*------------------------------------------------------------------------------
 						IF DIRECTORY
 					--------------------------------------------------------------------------------*/
-					else
+					if( is_directory )
 					{
-						setInlcudeFile(dir_path);  
+						include_lines.push( getIndentation(indent_count, is_directory) + dir_path );
 
 						addMarkdownSyntax(sub_tree[dir_path], indent_count);
 					}
+					/*------------------------------------------------------------------------------
+						ADD FILE PATH 
+					--------------------------------------------------------------------------------*/
+					else
+						setInlcudeFile(sub_tree[dir_path] );  
 					
 				}
 	
 			};
-			
-			var loopRecursive = function(dir_tree, level = 0 )
-			{
-				for(var path in dir_tree)
-				{
-					//console.log( childKey + ': ' + obj );
-						console.log( getIndentation(level) + '-'+path + ': ' + dir_tree[path] );
-					if( typeof dir_tree[path] === "object" )
-						loopRecursive(dir_tree[path], level++ );
-					
-				}
-			  
-			};
-			
+	
 			/*------ GET  ------*/
 			var dir_tree = getDirectoryTree(current_dir);
 			
-			loopRecursive( dir_tree ) ;
+			developmentPrint( dir_tree ) ;
 
 			/*------ FILTER ------*/
 			//var matching_files = searchForFiles( current_dir, dir_tree );
@@ -538,7 +503,6 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			return nsFileTo.getRelativeDescriptor(nsFileFrom);
 		};
 		
-
 		/** writeToFile
 		 */
 		var writeToFile = function()
@@ -547,7 +511,6 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			 */
 			var _updateContent = function()
 			{
-				
 				/** getHeadings
 				 */
 				var getHeadings = function()
@@ -570,7 +533,6 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					return { 'start': heading_match.index, 'end':  heading_match.index + heading_match[0].length };		
 				};
 	
-	
 				/** replaceRange
 				 */
 				var replaceRange = function(update_pos)
@@ -592,13 +554,11 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				 */
 				var insertContent = function()
 				{
-					//alert('_updateContent');
-	
 					/** goToInsertPosition
 					 */
 					var goToInsertPosition = function()
 					{
-						var line_content	= koEditor.getLine( koEditor.getLineNumber() );
+						var line_content = koEditor.getLine( koEditor.getLineNumber() );
 						
 						if( ! line_content.match(/^\s*$/gi)  )
 							koEditor.goLineEnd();
@@ -611,14 +571,14 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					
 					goToInsertPosition();
 					
-					koEditor.insert( '\n'+ content_update);
-				};
-							
-				var content_update	= getHeadings() + include_lines.join('\n') + '\n';
-				
-				var update_pos	= getUpdatePosition();
-				//console.log(  'update_pos: ' + update_pos );
-				//console.log(  'heading: ' + heading );
+					//koEditor.insert( '\n'+ content_update );
+					/*------ UPDATE CONTENT IN KOMODO ------*/
+					koEditor.insert( '```\n'+ content_update +'\n```' );
+                };
+
+			var content_update	= getHeadings() + include_lines.join('\n') + '\n';
+			
+			var update_pos	= getUpdatePosition();
 	
 				if( update_pos && heading!=='' )
 					replaceRange(update_pos);				
@@ -640,7 +600,6 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				ko.views.manager.currentView.scimoz.endUndoAction();
 			} 
 		}; 
-		
 	}
 	return MarkdownLinker;
   

@@ -1,0 +1,30 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "findLine", 
+  "language": "", 
+  "value": [
+    "<%", 
+    "/*", 
+    "\tvar string_tests = 'Lorem ipsum luctus habitasse'", 
+    "\t\t\t\t\t\t+'\\nac aenean donec ultrices maecenas arcu,'", 
+    "\t\t\t\t\t\t+'\\nrisus primis sodales ';", 
+    "", 
+    "\talert( findLineOf(string_tests, 'luctus') );", 
+    "", 
+    "*/", 
+    "%>", 
+    "findLineOf = function(lines, search) {", 
+    "", 
+    "\tlines = lines.split(/[\\r\\n]/);", 
+    "\tfor (var l = 0; l < lines.length; l++)", 
+    "\t\tif (lines[l].match(RegExp(search, 'gi')))", 
+    "\t\t\treturn l+1;", 
+    "};!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "false", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}

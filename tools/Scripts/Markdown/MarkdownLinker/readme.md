@@ -1,21 +1,1 @@
-
-```  
-
-¦   .folderdata  
-¦   MarkdownLinker-IMPORT.ktf  
-¦   MarkdownLinkerTest.komodotool  
-¦   New AutoHotkey Script.ahk  
-¦   readme-source.md  
-¦   readme-source.md.bak  
-¦   readme.md  
-+---Test  
-¦   .folderdata  
-¦   includeFileContentToCodeBlock.ktf  
-¦   includeFileTreeLinks-TEST.ktf  
-¦   linkImagesTest.ktf  
-¦   readme.md  
-¦   test_of_empty_komodotool_file.ktf  
-¦   undefined  
-
-```  
-  
+```  ¦   .folderdata  ¦   MarkdownLinker-IMPORT.ktf  ¦   MarkdownLinkerTest.komodotool  ¦   New AutoHotkey Script.ahk  ¦   readme-source.md  ¦   readme-source.md.bak  ¦   readme.md  +---Test  ¦   .folderdata  ¦   includeFileContentToCodeBlock.ktf  ¦   includeFileTreeLinks-TEST.ktf  ¦   linkImagesTest.ktf  ¦   readme.md  ¦   test_of_empty_komodotool_file.ktf  ¦   undefined  ```    

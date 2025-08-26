@@ -1,0 +1,18 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "foriO", 
+  "language": "", 
+  "value": [
+    "var [[%tabstop2:object]]_[[%tabstop3:key]]s = Object.keys([[%tabstop2:object]])[[%soft:;]]", 
+    "for(var [[%tabstop1:k]]=0; [[%tabstop1:k]]<[[%tabstop2:object]]_[[%tabstop3:key]]s.length;[[%tabstop1:k]]++) {", 
+    "    var [[%tabstop3:key]]\t= [[%tabstop2:object]]_[[%tabstop3:key]]s[[[%tabstop1:k]]];[[%tabstop:]]", 
+    "    var [[%tabstop:val]]\t= [[%tabstop2:object]][[[%tabstop3:key]]];[[%tabstop:]]\t", 
+    "}!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
+  "auto_abbreviation": "false"
+}

@@ -1,0 +1,15 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "objK", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:[[%tabstop:var ]][[%tabstop1:obj]]_keys\t= ]]Object.keys([[%tabstop:[[%tabstop1:obj]][[%tabstop:]]]])!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "false", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//default.png", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "false"
+}

@@ -1,0 +1,17 @@
+{
+  "keyboard_shortcut": "", 
+  "name": "sFn", 
+  "language": "", 
+  "value": [
+    "[[%tabstop:fnName]]([[%tabstop:]]){", 
+    "\t[[%tabstop:]]", 
+    "}!@#_currentPos!@#_anchor"
+  ], 
+  "set_selection": "true", 
+  "version": "1.1.5", 
+  "treat_as_ejs": "true", 
+  "icon": "file://C://GoogleDrive//Programs//code//Komodo//Icons//filetypes//Komodo//auto_ejs.png", 
+  "type": "snippet", 
+  "indent_relative": "true", 
+  "auto_abbreviation": "true"
+}
