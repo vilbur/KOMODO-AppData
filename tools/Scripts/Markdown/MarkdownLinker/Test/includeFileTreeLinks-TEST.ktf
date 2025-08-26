@@ -1,0 +1,34 @@
+/*
+komodo tool: includeFileTreeLinks-TEST
+======================================
+async: False
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+======================================*/
+/* Clear Console */
+document.getElementById('console-widget').contentWindow.document.getElementById('output').innerHTML = '';
+/** Inclue links to files and folders in hierarchy
+ *
+ * Search extension is recognized from search_extensions variable
+ */
+(function includeFileTreeLinks(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
+			//.linkToDir()			
+			//.searchExt('md')
+			.searchExt('.*')
+			.indentation(' ')
+			//.maxLevel( 0 )
+			//.maxLevel( 2 )
+			.textBy('file') // display text by "file|dir"
+			.heading()
+			.update()
+			.include();
+})();
+ 
+ 

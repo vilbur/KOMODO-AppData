@@ -1,0 +1,23 @@
+/*
+komodo tool: includeFileContentToCodeBlock
+==========================================
+async: 0
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+==========================================*/
+/* Search for 'php|ahk' files and include files contents
+ *
+ */
+(function searchCodeFilesAndIncludeAsDocblockLinks(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.searchExt('php|ahk')
+			.codeBlock()	// IMPORT CONTENT AS CODEBLOCK									
+			.matchDirName()
+			.heading('Codeblock Test')
+			.include();
+})();

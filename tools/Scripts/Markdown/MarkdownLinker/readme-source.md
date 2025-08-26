@@ -16,37 +16,98 @@
 
 ------------------------------------------------------------------------------------  
 
-## EXAMPLES OF CONFIGURATION  
-[include:\Test\MarkdownLinkerTest.komodotool]  
+# EXAMPLES OF CONFIGURATION  
 
 ------------------------------------------------------------------------------------  
 
 
-## RESULT RENDERED IN MARKDOWN  
-
-## Include content of linked file as codeblock  
-[include:\Test\TestFolders\MainA\MainA.ahk]  
+# CODE BLOCK  
 
 
-## Links to files & folders  
-
-* [LibNested](Test/TestFolders/Lib/LibNested)  
-  * [LibNestedDeep](Test/TestFolders/Lib/LibNested/Lib/LibNestedDeep)  
-* [MainA](Test/TestFolders/MainA)  
-  * [SubA](Test/TestFolders/MainA/SubA)  
-    * [SubSubA](Test/TestFolders/MainA/SubA/SubSubA)  
-
-## Readme Test  
-[Test](Test/readme-source.md)  
-[TestFolders](Test/TestFolders/readme-source.md)  
+## SETUP  
+[include:\Test\includeFileContentToCodeBlock.ktf]  
 
 
-## Links to images  
+## MARKDOWN COMPILED  
+
+``` markdown  
+;[include:\Test\includeFileContentToCodeBlock.ktf]  
+
+```  
+
+## RESULT  
+
+## Codeblock Test  
+[include:\Test\TestFolders\Lib\LibNested\LibNested.ahk]  
+
+
+
+------------------------------------------------------------------------------------  
+
+
+## SETUP  
+[include:\Test\includeFileTreeLinks.ktf]  
+
+
+* [Readme source](Test/readme-source.md)  
+* [Readme](Test/readme.md)  
+  * [Include test](Test/TestFolders/include_test.md)  
+    * [Include test](Test/TestFolders/Lib/include_test.md)  
+
+## MARKDOWN COMPILED  
+
+``` markdown  
+
+
+
+
+
+
+```  
+
+## RESULT  
+
+## Codeblock Test  
+[include:\Test\TestFolders\Lib\LibNested\LibNested.ahk]  
+
+
+
+------------------------------------------------------------------------------------  
+
+
+# IMAGES  
+
+
+## SETUP  
+[include:\Test\linkImagesTest.ktf]  
+
+
+## MARKDOWN COMPILED  
+
+``` markdown  
+
+;![MainA suffix](Test/TestFolders/MainA/MainA-suffix.jpg)  
+;![MainA](Test/TestFolders/MainA/MainA.jpg)  
+;![SubA](Test/TestFolders/MainA/SubA/SubA.jpg)  
+
+```  
+
+## RESULT  
 ![MainA suffix](Test/TestFolders/MainA/MainA-suffix.jpg)  
 ![MainA](Test/TestFolders/MainA/MainA.jpg)  
 ![SubA](Test/TestFolders/MainA/SubA/SubA.jpg)  
 
-------------------------------------------------------------------------------------  
+
+
+* [](.folderdata)  
+* [MarkdownLinker](MarkdownLinker.komodotool)  
+* [MarkdownLinkerTest](MarkdownLinkerTest.komodotool)  
+* [New AutoHotkey Script](New AutoHotkey Script.ahk)  
+* [Readme](readme.md)  
+* [Test](Test)  
+
+
+
 
 
 ## RESULT IN SOURCE MARKDOWN FILE  
@@ -70,7 +131,7 @@
 ![SubA](Test/TestFolders/MainA/SubA/SubA.jpg)  
 
 
-## EXAMPLES OF CONFIGURATION  
+## TEST OF EXCLUDED LINK  
 ;[include:\Test\MarkdownLinkerTest.komodotool]  
 
 
