@@ -24,8 +24,8 @@ if( typeof ko.extensions.vilbur.markdown === 'undefined' )
  * 
  * @method	self	maxLevel( int max_level )	Set depth of tree for searching	DEFAULT: unlimited
  *
- * @method	self	linkToDir( boolean link_to_dir )	Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"	DEFAULT: false
- * @method	self	textBy( string text_by )	Set text of link by sanitized filename or directory*	DEFAULT: 'dir'
+ * @method	self	linkToDir( boolean link )	Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"	DEFAULT: false
+ * @method	self	textBy( string display )	Set text of link by sanitized filename or directory*	DEFAULT: 'dir'
  * @method	self	indentation( boolean|string indentation )	Set indentation of links by directory tree*	DEFAULT: false
  * @method	self	codeBlock( boolean code_block)	Link is included as codeblock E.G.: [include:\dir\file.komodotool] 	DEFAULT: false
  *
@@ -42,6 +42,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 	function MarkdownLinker()
 	{
 		var Logger	= ko.extensions.Logger_v3 ? new ko.extensions.Logger_v3(this).clear(true).off(false) : require('ko/console');
+		var initialized	= false;
 		
 		var koFile	= require("ko/file");
 		var koEditor	= require("ko/editor");
@@ -69,10 +70,11 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var max_level	= null;
 		
 		/* Write options */
-		var link_to_dir	= false;
-		var text_by	= 'dir';
+		var link	= true;
+		var display	= 'name';
 		var indentation	= false;
-        var prefix = '-';
+		var tree	= false;
+        //var prefix = '-';
 		var code_block	= false;
 		var update	= true;
 		var unique	= false;
@@ -146,12 +148,12 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 		/** Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"
 		 *
-		 * @param	boolean 	link_to_dir
+		 * @param	boolean 	link
 		 * @return	this 
 		 */
-		this.linkToDir = function(_link_to_dir=true)
+		this.link = function(_link=true)
 		{
-			link_to_dir = _link_to_dir;
+			link = link;
 			return this;
 		};
 
@@ -160,21 +162,30 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		 * @param	boolean|string	
 		 * @return	this 
 		 */
-		this.indentation = function(_indentation='\t')
+		this.indentation = function( _indentation = true )
 		{
-			indentation = _indentation === true ? '\t' : (indentation==' ' ? '  ' : _indentation); // prevent only 1 whitespace, 2 spaces are minimum
+			if(initialized)
+				indentation = _indentation;
+			//indentation = _indentation === true ? '\t' : (indentation==' ' ? '  ' : _indentation); // prevent only 1 whitespace, 2 spaces are minimum
 			return this;
 		};
- 
+		/*
+		*/ 
+		this.showTree  = function( _tree = true )
+		{
+			if(initialized)
+				tree = _tree;
+			return this;
+		};
 		/** Set text of link by sanitized filename or directory
 		 * Default is by dir
 		 *
-		 * @param	string	text_by
+		 * @param	string	display
 		 * @return	this 
 		 */
-		this.textBy = function(_text_by='')
+		this.display = function(_display='')
 		{
-			text_by = _text_by;
+			display = _display;
 			return this;
 		};
  
@@ -223,43 +234,42 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			update = _update;
 			return this;
 		};
-/**
- * Convert nested object to 2D matrix
- * Each row is a path to a leaf value
- * Columns = maximum depth
- */
-function objectToMatrix(obj) {
-    let rows = [];
-    let maxDepth = 0;
-
-    function traverse(node, path) {
-        if (node !== null && typeof node === "object" && !Array.isArray(node)) {
-            for (let key in node)
-			{
-				if (node.hasOwnProperty(key)) 
-                traverse(node[key], [...path, key]);
-            }
-        } else {
-            //rows.push([...path, node]);
-            rows.push([...path, node]);
-            maxDepth = Math.max(maxDepth, path.length + 1); // +1 includes value column
-        }
-    }
-
-    traverse(obj, []);
-
-    // Normalize rows to have equal column count
-    let matrix = rows.map(row => {
-        let padded = [...row];
+		/**
+		 * Convert nested object to 2D matrix
+		 * Each row is a path to a leaf value
+		 * Columns = maximum depth
+		 */
+		function objectToMatrix(obj) {
+			let rows = [];
+			let maxDepth = 0;
 		
-        while (padded.length < maxDepth) padded.push(null);
-        
-		return padded;
-    });
-
-    return matrix;
-}
-
+			function traverse(node, path) {
+				if (node !== null && typeof node === "object" && !Array.isArray(node)) {
+					for (let key in node)
+					{
+						if (node.hasOwnProperty(key)) 
+						traverse(node[key], [...path, key]);
+					}
+				} else {
+					//rows.push([...path, node]);
+					rows.push([...path, node]);
+					maxDepth = Math.max(maxDepth, path.length + 1); // +1 includes value column
+				}
+			}
+		
+			traverse(obj, []);
+		
+			// Normalize rows to have equal column count
+			let matrix = rows.map(row => {
+				let padded = [...row];
+				
+				while (padded.length < maxDepth) padded.push(null);
+				
+				return padded;
+			});
+		
+			return matrix;
+		}
 
 		/* ================ INCLUDE ================ */
 		
@@ -382,32 +392,52 @@ function objectToMatrix(obj) {
 			};
 				/** getIndentation
 			 */
-			var getIndentation = function(indent_count, is_directory, is_last = false )
+			//var getIndentation = function(indent_count, is_directory, is_last = false )
+			//{
+			//	//console.log(  'indentation: ' + indentation );
+			//	
+			//	if( is_last )
+			//		prefix = '|___' ;
+			//	else
+			//		prefix = is_directory ? '|---' : '|   ';
+			//	 
+			//	
+			//	
+			//	
+			//	return ! indentation ? Array(indent_count - 1).join('    ') + prefix : '';
+			//	 
+			//}; 			
+				
+	
+			/*------ GET  ------*/
+			var dir_tree = getDirectoryTree(current_dir);
+			
+			developmentPrint( dir_tree ) ;
+			
+	
+			function printTree(obj, prefix = "", relPath = "")
 			{
-				//console.log(  'indentation: ' + indentation );
+				/*
+				*/ 
+				var getIndentation = function( is_branch, is_last, _prefix = '' )
+				{
+					if(tree)
+					{
+						if( is_branch )
+							return  is_last ? "|___ " : "|--- ";
+						
+						else
+							return  _prefix + (is_last ? '    ' : '|   ');
+					}
+					else
+						return indentation ? _prefix + '    ' : '';
+				};
 				
-				if( is_last )
-					prefix = '|___' ;
-				else
-					prefix = is_directory ? '|---' : '|   ';
-				 
-				
-				
-				
-				return ! indentation ? Array(indent_count - 1).join('    ') + prefix : '';
-				 
-			}; 			
-				
-			/** ADD MARKDOWN SYNTAX
-			 */
-			var addMarkdownSyntax = function( sub_tree, indent_count )
-			{
-				//var indentation_added = false;
-
 				/** setInlcudeFile
 				 */
-				var setInlcudeFile = function(path, is_last)
+				var setInlcudeFile = function( text, path, prefix )
 				{
+					
 					/** Get link text by dir name or sanitized filename file
 					 * Filename is sanitized by replacing '-_' with space
 					 *
@@ -415,7 +445,7 @@ function objectToMatrix(obj) {
 					 */
 					var getLinkText = function(path)
 					{
-						if( text_by=='dir' )
+						if( display=='dir' )
 							return koFile.basename(koFile.dirname(path));
 						
 						var filename	= koFile.basename(path).split('.').shift().replace(/[-|_]/gi, ' ');
@@ -444,7 +474,7 @@ function objectToMatrix(obj) {
                     {
 						var prefix_for_image = include_type==='image' ? '!' : '';
 						
-						var path_to	= link_to_dir ? koFile.dirname(path) : path;
+						var path_to	= link ? koFile.dirname(path) : path;
 						
 						return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
 					};
@@ -459,105 +489,61 @@ function objectToMatrix(obj) {
 					}; 
 
 					//var include_type = findIncludeFileType();
-									//console.log(  'include_type: ' + include_type );
-									//console.log(  'indent_count: ' + indent_count );
-
 					//setLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );
-					//setLinkToIncludes( getFileLink() );
-					include_lines.push( getIndentation(indent_count, false, is_last ) + path );
+
+					include_lines.push( prefix + text + path );
 
 				};
-				
-				/*=============================================================================================================*/
-				
-				/* ADD INDENTATION */ 
-				indent_count++;
-				
-				var counter = 1;
-				
-				sub_tree_length = Object.keys(sub_tree).length 
-				//console.log( 'sub_tree.length: ' + sub_tree.length );
-				
-				/*------ LOOP PATHS ------*/
-				for(var dir_path in sub_tree) if (sub_tree.hasOwnProperty(dir_path)) 
-				{
-					//console.log(  'counter: ' + counter );
-
-					is_directory = typeof sub_tree[dir_path] === "object";
+			  
+				/* ========= ITERATE TREE ========= */
+				const keys = Object.keys(obj);
+					  
+				keys.forEach((name, index) => {
+							
+					const is_last = index === keys.length - 1;
 					
-					is_last = counter == sub_tree_length;
-					
-					/*------------------------------------------------------------------------------
-						IF DIRECTORY
-					--------------------------------------------------------------------------------*/
-					if( is_directory )
+					const prefix_branch = getIndentation( true, is_last );
+							
+					/*------ DIRECTORY ------*/
+					if (isNaN(name))
 					{
-						include_lines.push( getIndentation(indent_count, is_directory) + dir_path );
+						const dir_path = relPath ? relPath + '\\' + name : name;
+						//const dir_path = '\\' + (relPath ? relPath + '\\' + name : name);
+								  
+						var file_count = Object.keys(obj[name]).length;
 
-						addMarkdownSyntax(sub_tree[dir_path], indent_count);
+						//var dir_path = '(' + dir_path + '/)'
+						var line_prefix = prefix + prefix_branch;
+						
+						//line_prefix += ' \\'+dir_path;
+						//var line_prefix = prefix + branch + name //+ '/ [' + file_count + ' files]   ;
+						
+						//include_lines.push(name);
+						setInlcudeFile( name, dir_path, line_prefix );
+		
+						//const new_prefix = prefix + (is_last ? '    ' : '|   ');
+						const new_prefix = getIndentation( false, is_last, prefix );
+						
+						printTree(obj[name], new_prefix, dir_path);
 					}
-					/*------------------------------------------------------------------------------
-						ADD FILE PATH 
-					--------------------------------------------------------------------------------*/
+					
+					/*------ FILE ------*/ 
 					else
-						setInlcudeFile( sub_tree[dir_path], is_last );  
+					{
+						var line_prefix = prefix + prefix_branch;
+								  
+						var file_path = relPath ? relPath + '\\' + obj[name] : obj[name];
+						//var file_path = '\\' + (relPath ? relPath + '\\' + obj[name] : obj[name]);
 					
-					counter++;
-				}
-	
-			};
-	
-			/*------ GET  ------*/
-			var dir_tree = getDirectoryTree(current_dir);
+						var file_name = obj[name];
+						//include_lines.push(obj[name]);
+						setInlcudeFile( file_name, file_path, line_prefix );
+					}
+				});
+			}
 			
-			developmentPrint( dir_tree ) ;
-			
-	
-		function printTree(obj, prefix = "", relPath = "")
-		{
-		  
-			const keys = Object.keys(obj);
-				  
-			keys.forEach((key, index) => {
-						
-				const isLast = index === keys.length - 1;
-						
-				const branch = isLast ? "|___ " : "|--- ";
-				
-						
-				if (isNaN(key)) {
-						  
-					// Directory
-							  
-					const dirPath = relPath ? relPath + "/" + key : key;
-							  
-					const fileCount = Object.keys(obj[key]).length ;
-							  
-					var line = prefix + branch + key + "/ [" + fileCount + " files]   (" + dirPath + "/)";
-					
-					include_lines.push(line);
-	
-					const newPrefix = prefix + (isLast ? "    " : "|   ");
-							  
-					printTree(obj[key], newPrefix, dirPath);
-					
-						
-				} else {
-						  
-					// File
-							  
-					const filePath = relPath ? relPath + "/" + obj[key] : obj[key];
-							  
-					var line = prefix + branch + obj[key] + "   (" + filePath + ")";
-				
-					include_lines.push(line);
-	
-				}
-				  
-			});
-	
-		}
-			
+			console.log(  'tree: ' + tree );
+			console.log(  'indentation: ' + indentation );
 
 
 			//addMarkdownSyntax(dir_tree, 0);
@@ -699,7 +685,10 @@ function objectToMatrix(obj) {
 				ko.views.manager.currentView.scimoz.endUndoAction();
 			} 
 		}; 
+		
+		initialized = true;
 	}
+	
 	return MarkdownLinker;
   
 })();
