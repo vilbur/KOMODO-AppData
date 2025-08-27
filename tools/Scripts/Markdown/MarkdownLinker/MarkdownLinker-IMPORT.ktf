@@ -87,7 +87,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		{
 			for(var path in dir_tree)
 			{
-				console.log( path + ': ' + dir_tree[path] );
+				//console.log( path + ': ' + dir_tree[path] );
 				if( typeof dir_tree[path] === "object" )
 					developmentPrint(dir_tree[path], level++ );
 				
@@ -223,6 +223,43 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			update = _update;
 			return this;
 		};
+/**
+ * Convert nested object to 2D matrix
+ * Each row is a path to a leaf value
+ * Columns = maximum depth
+ */
+function objectToMatrix(obj) {
+    let rows = [];
+    let maxDepth = 0;
+
+    function traverse(node, path) {
+        if (node !== null && typeof node === "object" && !Array.isArray(node)) {
+            for (let key in node)
+			{
+				if (node.hasOwnProperty(key)) 
+                traverse(node[key], [...path, key]);
+            }
+        } else {
+            //rows.push([...path, node]);
+            rows.push([...path, node]);
+            maxDepth = Math.max(maxDepth, path.length + 1); // +1 includes value column
+        }
+    }
+
+    traverse(obj, []);
+
+    // Normalize rows to have equal column count
+    let matrix = rows.map(row => {
+        let padded = [...row];
+		
+        while (padded.length < maxDepth) padded.push(null);
+        
+		return padded;
+    });
+
+    return matrix;
+}
+
 
 		/* ================ INCLUDE ================ */
 		
@@ -273,6 +310,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				/*------ ADD FILES ------*/
 				for( var index in files )
 					if (files.hasOwnProperty(index))
+						//dirs_and_files[index] = 'WTF';
 						dirs_and_files[index] = files[index];
 				
 				/* RETURN SUBDIRS and FILES if any exists */
@@ -344,17 +382,20 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			};
 				/** getIndentation
 			 */
-			var getIndentation = function(indent_count, is_directory)
+			var getIndentation = function(indent_count, is_directory, is_last = false )
 			{
-				console.log(  'indentation: ' + indentation );
+				//console.log(  'indentation: ' + indentation );
 				
-				//prefix   = is_directory ? '\u2514\u2500\u2500\u2500' : '\u2502   '; // prefix = '└───│' : '│   '
-				//prefix   = is_directory ? '└───│' : '│   ';
-				prefix   = is_directory ? '├───' : '│   ';
+				if( is_last )
+					prefix = '|___' ;
+				else
+					prefix = is_directory ? '|---' : '|   ';
+				 
 				
-				//prefix   = '\u2605';
+				
 				
 				return ! indentation ? Array(indent_count - 1).join('    ') + prefix : '';
+				 
 			}; 			
 				
 			/** ADD MARKDOWN SYNTAX
@@ -365,7 +406,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 				/** setInlcudeFile
 				 */
-				var setInlcudeFile = function(path)
+				var setInlcudeFile = function(path, is_last)
 				{
 					/** Get link text by dir name or sanitized filename file
 					 * Filename is sanitized by replacing '-_' with space
@@ -414,7 +455,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 						
 						if( _isNotInFile(link) )
-							include_lines.push( getIndentation(indent_count, false ) + link );
+							include_lines.push( getIndentation(indent_count, false, is_last ) + link );
 					}; 
 
 					//var include_type = findIncludeFileType();
@@ -423,7 +464,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 					//setLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );
 					//setLinkToIncludes( getFileLink() );
-					include_lines.push( getIndentation(indent_count, false ) + path );
+					include_lines.push( getIndentation(indent_count, false, is_last ) + path );
 
 				};
 				
@@ -432,10 +473,19 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				/* ADD INDENTATION */ 
 				indent_count++;
 				
+				var counter = 1;
+				
+				sub_tree_length = Object.keys(sub_tree).length 
+				//console.log( 'sub_tree.length: ' + sub_tree.length );
+				
 				/*------ LOOP PATHS ------*/
 				for(var dir_path in sub_tree) if (sub_tree.hasOwnProperty(dir_path)) 
 				{
+					//console.log(  'counter: ' + counter );
+
 					is_directory = typeof sub_tree[dir_path] === "object";
+					
+					is_last = counter == sub_tree_length;
 					
 					/*------------------------------------------------------------------------------
 						IF DIRECTORY
@@ -450,8 +500,9 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						ADD FILE PATH 
 					--------------------------------------------------------------------------------*/
 					else
-						setInlcudeFile(sub_tree[dir_path] );  
+						setInlcudeFile( sub_tree[dir_path], is_last );  
 					
+					counter++;
 				}
 	
 			};
@@ -460,15 +511,63 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			var dir_tree = getDirectoryTree(current_dir);
 			
 			developmentPrint( dir_tree ) ;
+			
+	
+		function printTree(obj, prefix = "", relPath = "")
+		{
+		  
+			const keys = Object.keys(obj);
+				  
+			keys.forEach((key, index) => {
+						
+				const isLast = index === keys.length - 1;
+						
+				const branch = isLast ? "|___ " : "|--- ";
+				
+						
+				if (isNaN(key)) {
+						  
+					// Directory
+							  
+					const dirPath = relPath ? relPath + "/" + key : key;
+							  
+					const fileCount = Object.keys(obj[key]).length ;
+							  
+					var line = prefix + branch + key + "/ [" + fileCount + " files]   (" + dirPath + "/)";
+					
+					include_lines.push(line);
+	
+					const newPrefix = prefix + (isLast ? "    " : "|   ");
+							  
+					printTree(obj[key], newPrefix, dirPath);
+					
+						
+				} else {
+						  
+					// File
+							  
+					const filePath = relPath ? relPath + "/" + obj[key] : obj[key];
+							  
+					var line = prefix + branch + obj[key] + "   (" + filePath + ")";
+				
+					include_lines.push(line);
+	
+				}
+				  
+			});
+	
+		}
+			
 
-			/*------ FILTER ------*/
-			//var matching_files = searchForFiles( current_dir, dir_tree );
 
-			/*------ MARKDOWN SYNTAX ------*/
-			addMarkdownSyntax(dir_tree, 0);
+			//addMarkdownSyntax(dir_tree, 0);
+			printTree(dir_tree);
 			
 			/*------ WRITE TO FILE ------*/
 			writeToFile();
+			
+			
+			
 			//Logger.info(include_lines, 'MarkdownLinker: '+'include_lines'); 
 		};
 

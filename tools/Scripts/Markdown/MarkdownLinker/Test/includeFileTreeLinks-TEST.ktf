@@ -27,7 +27,7 @@ var console_pane=document.getElementById("console-widget");if(console_pane)conso
 			.searchExt('.*')
 			//.indentation() // Allow indeta
 			//.maxLevel( 0 )
-			.maxLevel( 2 )
+			//.maxLevel( 2 )
 			.textBy('file') // display text by "file|dir"
 			.heading()
 			.update()
