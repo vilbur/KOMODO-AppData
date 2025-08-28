@@ -252,8 +252,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				//if( mask != '' )
 					mask_rx = new RegExp( mask, 'gi');
 				
-				if( extension != '' )
-					extension_rx = new RegExp( '.*\.' + extension + '$', 'gi');
+				var	extension_rx = extension != '' ? new RegExp( '.*\.' + extension + '$', 'gi') : null;
 
 				/* LOOP IF ANY SUBDIR EXISTS */ 
 				if( subdirs.length )
@@ -281,17 +280,19 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				for( var index in files )
 					if (files.hasOwnProperty(index))
 					{
-											console.log(  'extension_rx: ' + extension_rx );
+					console.log(  'extension: ' + extension );
 
 						//console.log( 'FILE: ' + files[index] );
 						//console.log( 'TEST: ' + extension_rx.exec(files[index]) );
 
 						//if( mask == '' || mask_rx.exec(files[index]) )
 						if( extension === '' || extension_rx.exec(files[index]) )
-							//dirs_and_files[index] = 'level: '+level+ ' ' + files[index];
 							dirs_and_files[index] = files[index];
+							//dirs_and_files[index] = 'level: '+level+ ' ' + files[index];
+
+						if( extension_rx )
+							extension_rx.lastIndex = 0; // reset regEx for next use
 						
-						extension_rx.lastIndex = 0; // reset regEx for next use
 
 					}
 				
@@ -526,7 +527,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				
 					var is_dir = isNaN(key)
 				
-					//const branch = is_last ? "Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ " : "Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ ";
+					//const branch = is_last ? "ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ " : "ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ ";
 					const branch = tree ? '|--- ' : '';
 				
 					/* ========= DIRECTORY ========= */

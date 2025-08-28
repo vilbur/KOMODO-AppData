@@ -1,7 +1,0 @@
-/** SubSubA
- *
- */
-Class SubSubA
-{
-	
-}

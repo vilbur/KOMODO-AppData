@@ -21,17 +21,17 @@ var console_pane=document.getElementById("console-widget");if(console_pane)conso
  */
 function includeFileTreeLinks(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.heading('Import file tree')
 			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			.link()			
 			//.html()			
 			//.mask('md')
-			.mask('.*\.ahk$')
+			//.mask('.*\.ahk$')
 			//.indentation() // Allow indentation
 			//.maxLevel( 0 )
-			.maxLevel(  ) // Max depth to search in hierarchy null|integer INIT:null DEFAULT:1
+			//.maxLevel(  ) // Max depth to search in hierarchy null|integer INIT:null DEFAULT:1
 			//.show('dir') // display text by "name|dir|path" INIT:name
 			//.show('path')
-			//.heading()
 			//.update()
 			.tree()
 			.include();
@@ -39,7 +39,32 @@ function includeFileTreeLinks(){
  //();
  includeFileTreeLinks();
  
+ require("ko/editor").insert('\n\n');
+
  
+/** Inclue links to files and folders in hierarchy
+ *
+ * Search extension is recognized from search_extensions variable
+ */
+function linksToAhkFilesWithoutTree(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.heading('Links to ahk files without tree', '##')
+			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
+			.link()			
+			//.html()			
+			.extension('md')
+			//.mask('.*\.ahk$')
+			//.maxLevel( 0 )
+			.indentation() // Allow indentation
+			.maxLevel( 4 )
+			.filter('dir')  // "null|file|dir" > Show files, dirs or both if null 
+			.show('dir') // display text by "name|dir|path" DEFAULT:name
+			//.update()
+			//.tree()
+			.include();
+}
+linksToAhkFilesWithoutTree();
+
  
 require("ko/editor").insert('\n\n');
 
@@ -48,21 +73,21 @@ require("ko/editor").insert('\n\n');
  *
  * Search extension is recognized from search_extensions variable
  */
-function includeLinks(){
+function dirsWithReadmeFile(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.heading('Dirs with readme file')
 			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			.link()			
 			//.html()			
-			.mask('md')
+			.extension('md')
 			//.mask('.*\.ahk$')
 			//.indentation() // Allow indentation
 			//.maxLevel( 0 )
 			.maxLevel( 4 )
-			//.show('dir') // display text by "name|dir|path" DEFAULT:name
-			//.show('path')
-			//.heading()
+			.filter('dir')  // "null|file|dir" > Show files, dirs or both if null 
+			.show('dir') // display text by "name|dir|path" DEFAULT:name
 			//.update()
 			//.tree()
 			.include();
 }
-includeLinks();
+dirsWithReadmeFile();

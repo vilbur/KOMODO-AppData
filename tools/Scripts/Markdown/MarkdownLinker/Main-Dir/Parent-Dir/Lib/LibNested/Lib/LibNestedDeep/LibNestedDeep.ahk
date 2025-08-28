@@ -1,7 +1,0 @@
-/** LibNestedDeep
- *
- */
-Class LibNestedDeep
-{
-	
-}

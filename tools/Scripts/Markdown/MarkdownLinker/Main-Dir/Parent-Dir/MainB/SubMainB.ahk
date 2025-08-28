@@ -1,7 +1,0 @@
-/** SubMainB
- *
- */
-Class SubMainB
-{
-	
-}

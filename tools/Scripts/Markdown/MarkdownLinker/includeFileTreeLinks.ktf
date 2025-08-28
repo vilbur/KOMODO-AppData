@@ -1,0 +1,30 @@
+/*
+komodo tool: includeFileTreeLinks
+=================================
+async: False
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+=================================*/
+/** Loop all subdirs
+ *  Find all files which name is same as folder name E.G.: "FooBar\FooBar.php"
+ *  Links indented
+ *  Links to directories
+ *
+ * Search extension is recognized from search_extensions variable
+ */
+function includeFileTreeLinks()
+{
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
+			//.linkToDir()			
+			.searchExt('ms')
+			.indentation(' ')
+			.textBy('file') // display text by "file|dir"
+			.heading()
+			.update()
+			.include();
+}
