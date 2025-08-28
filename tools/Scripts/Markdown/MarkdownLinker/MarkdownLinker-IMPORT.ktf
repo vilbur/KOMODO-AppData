@@ -56,7 +56,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var search_extensions	= /\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension
 		var mask	= '';
 		var mask_rx	= null;
-		//var search_ext	= '';
+		var extension	= '';
 		//var search_ext	= '';
 		//var search_name	= '.*';				
 		var match_dir_name	= false;
@@ -73,7 +73,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		
 		/* Write options */
 		var link	= true;
-		var html	= true;
+		var html	= false;
 		var show	= 'name';
 		var indentation	= false;
 		var tree	= false;
@@ -112,6 +112,10 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		 */
 		this.mask = function(_mask=''){ mask = _mask; return this; };
 
+		/** Set search extension
+		 */
+		this.extension = function(_extension=''){ extension = _extension; return this; };
+
 		/** Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"
 		 */
 		this.matchDirName = function(match=true){ match_dir_name = match; return this; };
@@ -129,7 +133,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 		/** Show HTML elements - ALLOWS COLORS
 		 */
-		this.html = function(_html=true){ html = _html; return this; };
+		this.html = function(_html=true){ if(initialized) html = _html; return this; };
 
 		/** Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"
 		 */
@@ -139,6 +143,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		 */
 		this.indentation = function(_indentation = true){ if(initialized) indentation = _indentation; return this; };
 
+		/** Show tree indentation
+		  */
 		this.tree = function(_tree = true){ if(initialized) tree = _tree; return this; };
 
 		/** Set text of link by sanitized filename or directory
@@ -240,6 +246,9 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				/* DEFINE REG EX */ 
 				//if( mask != '' )
 					mask_rx = new RegExp( mask, 'gi');
+				
+				if( extension != '' )
+					extension_rx = new RegExp( '.*\.' + extension + '$', 'gi');
 
 				/* LOOP IF ANY SUBDIR EXISTS */ 
 				if( subdirs.length )
@@ -250,8 +259,11 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					for(var d=0; d<subdirs.length;d++)
 					{
 						var sudirs_and_files = getDirectoryTree( path+'\\'+subdirs[d], level);
-						console.log(  'sudirs_and_files: ' + sudirs_and_files );
+						//console.log(  'sudirs_and_files: ' + sudirs_and_files );
 
+						//if( mask == '' || mask_rx.exec(files[index]) )
+							//dirs_and_files[index] = 'level: '+level+ ' ' + files[index];						
+						
 						//if( sudirs_and_files != null )
 						if( sudirs_and_files  )
 							dirs_and_files[subdirs[d]] = sudirs_and_files;
@@ -264,12 +276,17 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				for( var index in files )
 					if (files.hasOwnProperty(index))
 					{
-						
+											console.log(  'extension_rx: ' + extension_rx );
+
+						//console.log( 'FILE: ' + files[index] );
+						//console.log( 'TEST: ' + extension_rx.exec(files[index]) );
+
 						//if( mask == '' || mask_rx.exec(files[index]) )
+						if( extension === '' || extension_rx.exec(files[index]) )
 							//dirs_and_files[index] = 'level: '+level+ ' ' + files[index];
 							dirs_and_files[index] = files[index];
 						
-						mask_rx.lastIndex = 0; // reset regEx for next use
+						extension_rx.lastIndex = 0; // reset regEx for next use
 
 					}
 				
@@ -505,7 +522,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					var is_dir = isNaN(key)
 				
 					//const branch = is_last ? "Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ " : "Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ ";
-					const branch = '|--- '
+					const branch = tree ? '|--- ' : '';
 				
 					/* ========= DIRECTORY ========= */
 
