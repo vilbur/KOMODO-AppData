@@ -309,7 +309,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				if( max_level && level == max_level )
 					return; 
 
-				console.log( 'mask: ' + mask );
+				//console.log( 'mask: ' + mask );
 
 				/* DEFINE REG EX */ 
 				//if( mask != '' )
@@ -421,32 +421,36 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			
 			/* ========= PRINT TREE ========= */
 
-			function printTree(obj, prefix = "", relPath = "")
+			function printTree(obj, prefix = "", relPath = "",is_first_level = true )
 			{
+									console.log(  'prefix: ' + prefix );
+
 				/*------ GET INDENTATION ------*/
-				var getIndentation = function( is_branch, is_last, _prefix = '', si_file )
+				var getIndentation = function( is_branch, is_last, _prefix = '', is_file )
 				{
 					
 					//var whitespace_character = is_source ? ' ' : '&nbsp;';
 					
 					//var whitespace = Array( 3 ).join(whitespace_character);
-					var whitespace = is_source ? '   ' : '&nbsp;&nbsp;&nbsp;';
+					var whitespace = is_source ? ( is_last ? '' : '    ') : '&nbsp;&nbsp;&nbsp;&nbsp;';
 					
 					if(tree)
 					{
 						if( is_branch )
 							return  "|--- ";
+							//return  is_last ? "- " : "|--- ";
 							//return  is_last ? "|___ " : "|--- ";
 						
 						else
-							return  _prefix + (is_last ? ' ' : '|') + whitespace;
+							//return  _prefix + '|' + whitespace;
+							return  _prefix + (is_last ? '' : '|') + whitespace;
 					}
 					else
-						return indentation ? _prefix + whitespace + ' ' : '';
+						return indentation ? _prefix + whitespace : '' ;
 				};
 				
 				/*------ SET INLCUDE FILE ------*/
-				var setInlcudeFile = function( text, path, prefix, si_file )
+				var setInlcudeFile = function( text, path, prefix, is_file )
 				{
 					
 					/** Get link text by dir name or sanitized filename file
@@ -456,7 +460,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					 */
 					var getLinkText = function(path)
 					{
-						console.log(  'getLinkText: ' + koFile.basename(path) );
+						//console.log(  'getLinkText: ' + koFile.basename(path) );
 
 						return koFile.basename(path);
 						
@@ -499,13 +503,13 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						//return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
 						//return prefix_for_image+"["+getLinkText(path)+"]('"+path_to+"')";
 						
-						//return prefix_for_image+'['+ text +']('+path+')';
-						var link_color = si_file ? '#0091ff' : '#788894';
-
-						if(si_file)
-							text = '\\' +text+'\\\\'
-						
-						return prefix_for_image+'<a href="'+path+'" style="color:'+link_color+';" >'+ text +'</a>';
+						return prefix_for_image+'['+ text +']('+path+')';
+						//var link_color = is_file ? '#0091ff' : '#788894';
+						//
+						//if(is_file)
+						//	text = '\\' +text+'\\\\'
+						//
+						//return prefix_for_image+'<a href="'+path+'" style="color:'+link_color+';" >'+ text +'</a>';
 					};
 					/** setLinkToIncludes
 					 */
@@ -523,22 +527,25 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					include_lines.push( prefix + getFileLink( path ) );
 
 				};
-			  
+				//var is_first_level = true
+				
 				/* ========= ITERATE TREE ========= */
 				const keys = Object.keys(obj);
 					  
 				keys.forEach((name, index) => {
 					
-					const si_file = isNaN(name)
+					const is_file = isNaN(name)
+					//console.log(  'index: ' + index + ' name: ' + obj[name] );
 
-					const is_last = index === keys.length - 1;
+					const is_last  = index === keys.length - 1;
+					const is_first_level = prefix === '';
 					
 					const prefix_branch = getIndentation( true, is_last );
 						
-					/*------ DIRECTORY ------*/
-					if (obj[name] !=null)
+					if (obj[name] != null)
 					{
-						if (isNaN(name))
+						/*------ DIRECTORY ------*/
+						if ( isNaN(name) )
 						{
 							const dir_path = relPath ? relPath + '/' + name : name;
 							//const dir_path = '/' + (relPath ? relPath + '/' + name : name);
@@ -552,10 +559,10 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 							//var line_prefix = prefix + branch + name //+ '/ [' + file_count + ' files]   ;
 							
 							//include_lines.push(name);
-							setInlcudeFile( name, dir_path, line_prefix, si_file );
+							setInlcudeFile( name, dir_path, line_prefix, is_file );
 			
-							//const new_prefix = prefix + (is_last ? '    ' : '|   ');
 							const new_prefix = getIndentation( false, is_last, prefix );
+							//const new_prefix = prefix + (is_last ? '    ' : '|   ');
 							
 							printTree(obj[name], new_prefix, dir_path);
 						}
@@ -570,11 +577,13 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						
 							var file_name = obj[name];
 							//include_lines.push(obj[name]);
-							setInlcudeFile( file_name, file_path, line_prefix, si_file );
+							//setInlcudeFile( file_name, file_path, line_prefix, is_file );
+							setInlcudeFile( index +':'+is_first_level +'-'+ file_name, file_path, line_prefix, is_file );
 						}
 						
 					}
 				});
+				//is_first_level = false
 			}
 			
 			if(dir_tree)
