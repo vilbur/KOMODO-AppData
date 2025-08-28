@@ -98,145 +98,64 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			}
 		};
 		
-		/* ========= SEARCH OPTIONS ========= */
+		/* ========= OPTIONS ========= */
 
 		/** Search file name
-		 * @param	string	search_name	File name for search
-		 * @return	self
+		 * @para
 		 */
-		this.searchName = function(_search_name)
-		{
-			search_name = _search_name;
-			return this; 
-		}; 
+		this.searchName = function(_search_name){ search_name = _search_name; return this; }; 
 		
 		/** Set search_ext for search match
-		 *
-		 * @param	string	search_ext	extension searched in dirs E.G.: 'php|md'
-		 * @return	self
 		 */
-		this.mask = function(_mask='')
-		{
-			mask = _mask;
-			return this; 
-		};
+		this.mask = function(_mask=''){ mask = _mask; return this; };
+
 		/** Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"
-		 * @param	string|boolean	match	If TRUE, then full match is searched, If anything else, folder name with any suffix E.G.: 'FolderName-any-suffix.jpg'
-		 * @return	self
 		 */
-		this.matchDirName = function(match=true)
-		{
-			match_dir_name = match;
-			return this;
-		};
+		this.matchDirName = function(match=true){ match_dir_name = match; return this; };
+
 		/*---------------------------------------
 			TREE OPTIONS
 		-----------------------------------------
 		*/
 		/** Set depth of tree for searching
 		 * Default is unlimited levels
-		 * 
-		 * @param	int	max_level	Max level of tree E.g.: max_level=0 // search only current dir, max_level=1 search only 1 subdir
-		 * @return	self
 		 */
-		this.maxLevel = function(_max_level)
-		{
-			//max_level = _max_level +1;
-			max_level = _max_level;
-			return this;
-		};
+		this.maxLevel = function(_max_level){ max_level = _max_level; return this; };
 		
 		/* ================ WRITE OPTIONS ================ */
 
 		/** Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"
-		 *
-		 * @param	boolean 	link
-		 * @return	this 
 		 */
-		this.link = function(_link=true)
-		{
-			link = link;
-			
-			return this;
-		};
+		this.link = function(_link=true){ link = link; return this; };
 
 		/** Set indentation of links by directory tree
-		 *
-		 * @param	boolean|string	
-		 * @return	this 
 		 */
-		this.indentation = function( _indentation = true )
-		{
-			if(initialized)
-				indentation = _indentation;
-			//indentation = _indentation === true ? '\t' : (indentation==' ' ? '  ' : _indentation); // prevent only 1 whitespace, 2 spaces are minimum
-			return this;
-		};
-		/*
-		*/ 
-		this.tree = function( _tree = true )
-		{
-			if(initialized)
-				tree = _tree;
-			return this;
-		};
+		this.indentation = function(_indentation = true){ if(initialized) indentation = _indentation; return this; };
+
+		this.tree = function(_tree = true){ if(initialized) tree = _tree; return this; };
+
 		/** Set text of link by sanitized filename or directory
-		 * Default is by dir
-		 *
-		 * @param	string	show
-		 * @return	this 
 		 */
-		this.show = function( _show = 'name' )
-		{
-			show = _show;
-			return this;
-		};
+		this.show = function(_show = 'name'){ show = _show; return this; };
  
 		/** Set heading above included block
-		 * @param	string	heading
-		 * @return	self
 		 */
-		this.heading = function(_heading='')
-		{
-			heading = _heading;
-			return this;
-		};
+		this.heading = function(_heading=''){ heading = _heading; return this; };
 
 		/** Include only if not in file content already
-		 *
-		 * @param	boolean	unique
-		 * @return	this 
 		 */
-		this.unique = function(_unique=true)
-		{
-			unique = _unique;
-			return this;
-		};
+		this.unique = function(_unique=true){ unique = _unique; return this; };
 
 		/** Link is included as codeblock E.G.: [include:\dir\file.komodotool]  
 		 *  Include is treated with markdownFormatter.komodotool
-		 *
-		 * @param	boolean	code_block
-		 * @return	this 
 		 */
-		this.codeBlock = function(_code_block=true)
-		{
-			code_block = _code_block;
-			return this;
-		};
+		this.codeBlock = function(_code_block=true){ code_block = _code_block; return this; };
 
 		/** Update mode will update existing section
-		 *	Section start with heading and end on next heading
-		 *	Heading must be set
-		 * 
-		 * @param	string	pdate
-		 * @return	this 
 		 */
-		this.update = function(_update=true)
-		{
-			update = _update;
-			return this;
-		};
+		this.update = function(_update=true){ update = _update; return this; };
+
+		
 		/**
 		 * Convert nested object to 2D matrix
 		 * Each row is a path to a leaf value
@@ -586,13 +505,15 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						//return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
 						//return prefix_for_image+"["+getLinkText(path)+"]('"+path_to+"')";
 						
-						return prefix_for_image+'['+ text +']('+path+')';
-						//var link_color = is_file ? '#0091ff' : '#788894';
-						//
-						//if(is_file)
-						//	text = '\\' +text+'\\\\'
-						//
-						//return prefix_for_image+'<a href="'+path+'" style="color:'+link_color+';" >'+ text +'</a>';
+						//return prefix_for_image+'['+ text +']('+path+')';
+				
+				
+						var link_color = is_dir ?  '#0091ff' : '#788894' ;
+						
+						if(is_dir)
+							text = '\\' +text+'\\\\'
+						
+						return prefix_for_image+'<a href="'+path+'" style="color:'+link_color+';" >'+ text +'</a>';
 					};
 					/** setLinkToIncludes
 					 */
