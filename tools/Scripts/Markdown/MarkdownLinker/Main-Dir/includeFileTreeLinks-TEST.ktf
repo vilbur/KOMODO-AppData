@@ -1,0 +1,68 @@
+/*
+komodo tool: includeFileTreeLinks-TEST
+======================================
+async: False
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+======================================*/
+/* Clear Console */
+
+var console_pane=document.getElementById("console-widget");if(console_pane)console_pane.contentWindow.document.getElementById("output").innerHTML="";else{var e=require("ko/windows").getAll();for(let n=0;n<e.length;n++)if("console-widget"==e[n].name){var o=e[n].document.getElementById("output");o&&(o.innerHTML="")}};
+
+
+/** Inclue links to files and folders in hierarchy
+ *
+ * Search extension is recognized from search_extensions variable
+ */
+function includeFileTreeLinks(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
+			.link()			
+			//.html()			
+			//.mask('md')
+			.mask('.*\.ahk$')
+			//.indentation() // Allow indentation
+			//.maxLevel( 0 )
+			.maxLevel(  ) // Max depth to search in hierarchy null|integer INIT:null DEFAULT:1
+			//.show('dir') // display text by "name|dir|path" INIT:name
+			//.show('path')
+			//.heading()
+			//.update()
+			.tree()
+			.include();
+}
+ //();
+ includeFileTreeLinks();
+ 
+ 
+ 
+require("ko/editor").insert('\n\n');
+
+ 
+/** Inclue links to files and folders in hierarchy
+ *
+ * Search extension is recognized from search_extensions variable
+ */
+function includeLinks(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
+			.link()			
+			//.html()			
+			.mask('md')
+			//.mask('.*\.ahk$')
+			//.indentation() // Allow indentation
+			//.maxLevel( 0 )
+			.maxLevel( 4 )
+			//.show('dir') // display text by "name|dir|path" DEFAULT:name
+			//.show('path')
+			//.heading()
+			//.update()
+			//.tree()
+			.include();
+}
+includeLinks();
