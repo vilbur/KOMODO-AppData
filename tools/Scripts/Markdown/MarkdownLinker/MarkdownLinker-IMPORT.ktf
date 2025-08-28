@@ -326,7 +326,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						var sudirs_and_files = getDirectoryTree( path+'\\'+subdirs[d], level);
 						//console.log(  'sudirs_and_files: ' + sudirs_and_files );
 
-						if( sudirs_and_files != null )
+						//if( sudirs_and_files != null )
 							dirs_and_files[subdirs[d]] = sudirs_and_files;
 						
 					}
@@ -338,8 +338,9 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					if (files.hasOwnProperty(index))
 					{
 						
-						if( mask == '' || mask_rx.exec(files[index]) )
-							dirs_and_files[index] = files[index];
+						//if( mask == '' || mask_rx.exec(files[index]) )
+							dirs_and_files[index] = 'level: '+level+ ' ' + files[index];
+							//dirs_and_files[index] = files[index];
 						
 						mask_rx.lastIndex = 0; // reset regEx for next use
 
@@ -417,11 +418,11 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 			var dir_tree = getDirectoryTree(current_dir);
 			
-			//developmentPrint( dir_tree ) ;
+			developmentPrint( dir_tree ) ;
 			
 			/* ========= PRINT TREE ========= */
 
-			function printTree(obj, prefix = "", relPath = "",is_first_level = true )
+			function printTreeX(obj, prefix = "", relPath = "",is_first_level = true )
 			{
 									console.log(  'prefix: ' + prefix );
 
@@ -450,7 +451,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				};
 				
 				/*------ SET INLCUDE FILE ------*/
-				var setInlcudeFile = function( text, path, prefix, is_file )
+				var setInlcudeFile = function( prefix, text, path, is_file )
 				{
 					
 					/** Get link text by dir name or sanitized filename file
@@ -540,7 +541,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					const is_last  = index === keys.length - 1;
 					const is_first_level = prefix === '';
 					
-					const prefix_branch = getIndentation( true, is_last );
+					//const prefix_branch = getIndentation( true, is_last );
+					const prefix_branch = '|--- ';
 						
 					if (obj[name] != null)
 					{
@@ -561,8 +563,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 							//include_lines.push(name);
 							setInlcudeFile( name, dir_path, line_prefix, is_file );
 			
-							const new_prefix = getIndentation( false, is_last, prefix );
-							//const new_prefix = prefix + (is_last ? '    ' : '|   ');
+							//const new_prefix = getIndentation( false, is_last, prefix );
+							const new_prefix = prefix + (is_last ? '    ' : '|   ');
 							
 							printTree(obj[name], new_prefix, dir_path);
 						}
@@ -574,17 +576,53 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 									  
 							var file_path = relPath ? relPath + '/' + obj[name] : obj[name];
 							//var file_path = '\\' + (relPath ? relPath + '\\' + obj[name] : obj[name]);
-						
 							var file_name = obj[name];
 							//include_lines.push(obj[name]);
-							//setInlcudeFile( file_name, file_path, line_prefix, is_file );
-							setInlcudeFile( index +':'+is_first_level +'-'+ file_name, file_path, line_prefix, is_file );
+							setInlcudeFile( line_prefix, file_name, file_path, is_file );
+							//setInlcudeFile( index +':'+is_first_level +'-'+ file_name, file_path, line_prefix, is_file );
 						}
 						
 					}
 				});
 				//is_first_level = false
 			}
+			
+
+function printTree(obj, prefix = "", relPath = "")
+{
+	const keys = Object.keys(obj);
+
+	keys.forEach((key, index) => {
+		const isLast = index === keys.length - 1;
+	
+		//const branch = isLast ? "â””â”€â”€ " : "â”œâ”€â”€ ";
+		const branch = ' |--- '
+	
+		/*------ DIRECTORY ------*/
+		if (isNaN(key))
+		{
+			const dirPath = relPath ? relPath + "/" + key : key;
+		
+			const fileCount = Object.keys(obj[key]).length;
+			
+			include_lines.push(prefix + branch + key ) //+ "/ [" + fileCount + " files]   (" + dirPath + "/)");
+			
+			const newPrefix = prefix + (isLast ? "    " : " |    ");
+			
+			printTree(obj[key], newPrefix, dirPath);
+		}
+		/*------ FILE ------*/ 
+		else
+		{
+			const filePath = relPath ? relPath + "/" + obj[key] : obj[key];
+		
+			include_lines.push(prefix + branch + obj[key] ) //+ "   (" + filePath + ")");
+		}
+	});
+}
+
+			
+			
 			
 			if(dir_tree)
 			{
