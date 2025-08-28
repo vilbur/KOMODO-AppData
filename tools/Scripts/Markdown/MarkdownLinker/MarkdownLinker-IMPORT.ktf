@@ -74,7 +74,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		/* Write options */
 		var link	= true;
 		var html	= false;
-		var show	= 'name';
+		var show	= 'name'; // display text by "name|dir|path" DEFAULT:name
+		var filter	= null;   // "null|file|dir" > Show files, dirs or both if null 
 		var indentation	= false;
 		var tree	= false;
         //var prefix = '-';
@@ -146,14 +147,18 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		/** Show tree indentation
 		  */
 		this.tree = function(_tree = true){ if(initialized) tree = _tree; return this; };
-
+		
+		/** Show file, directory or both
+		 */
+		this.filter = function(_filter = 'file'){ filter = _filter; return this; };
+ 
 		/** Set text of link by sanitized filename or directory
 		 */
 		this.show = function(_show = 'name'){ show = _show; return this; };
  
 		/** Set heading above included block
 		 */
-		this.heading = function(_heading=''){ heading = _heading; return this; };
+		this.heading = function(_heading, heading_prefix = '#'){ heading = heading_prefix +' '+_heading; return this; };
 
 		/** Include only if not in file content already
 		 */
@@ -403,8 +408,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						return koFile.basename(path);
 						
 						
-						if( show=='dir' )
-							return koFile.basename(koFile.dirname(path));
+						//if( show=='dir' )
+							//return koFile.basename(koFile.dirname(path));
 						
 						var filename	= koFile.basename(path).split('.').shift().replace(/[-|_]/gi, ' ');
 						
@@ -470,9 +475,9 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						default: text =  text;
 					}
 
-					
-					if(is_dir)
-						text = '\\' +text //+'\\'
+					/* ADD SLASHES TO DIR */ 
+					if(is_dir && ! show.match(/dir/gi))
+						text = '\\ ' +text +' \\\\'
 					
 					/*------ LINK ------*/
 					if( link )
@@ -533,7 +538,9 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						const fileCount = Object.keys(obj[key]).length;
 						
 						//include_lines.push( prefix + branch + key ) //+ "/ [" + fileCount + " files]   (" + dirPath + "/)");
-						setInlcudeFile( prefix + branch, key, dir_path, is_dir );
+						
+						if( filter == null || filter == 'dir' )
+							setInlcudeFile( prefix + branch, key, dir_path, is_dir );
 						
 						//const newPrefix = prefix + (is_last ? "    " : " |    ");
 						const newPrefix = getIndentation(prefix, is_last);
@@ -548,7 +555,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					
 						//include_lines.push(prefix + branch + obj[key] ) //+ "   (" + filePath + ")");
 						
-						setInlcudeFile( prefix + branch, obj[key], file_path, is_dir );
+						if( filter == null || filter == 'file' )
+							setInlcudeFile( prefix + branch, obj[key], file_path, is_dir );
 					}
 				});
 			}
@@ -609,22 +617,24 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				 */
 				var getHeadings = function()
 				{
-					return heading ? '## '+heading+'\n' : '';
+					//return heading ? '## '+heading+'\n' : '';
+					return heading ? heading+'\n' : '';
 				};
 				
 				/** Update mode will update existing section
 				 *	Section will be searched from heading up to next heading
 				 *
 				 * @return	{start: int, end: int}
-				 */
-				var getUpdatePosition = function()
+		 */
+		var getUpdatePosition = function()
 				{
 					var heading_match	= new RegExp( _escapedRegexString(getHeadings()) + '[^#]+', 'gmi').exec(file_content); 
 					if( ! update || ! heading_match  )
 						return null;
 	
-					//Logger.info(heading_match, 'MarkdownLinker: '+'heading_match'); 
-					return { 'start': heading_match.index, 'end':  heading_match.index + heading_match[0].length };		
+					//Logger.info(heading_match, 'MarkdownLinker: '+'heading_match');
+					
+					return { 'start': heading_match.index, 'end': heading_match.index + heading_match[0].length };
 				};
 	
 				/** replaceRange
