@@ -21,22 +21,21 @@ var console_pane=document.getElementById("console-widget");if(console_pane)conso
  */
 function includeFileTreeLinks(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
-			.heading('Import file tree')
+			.heading('Import file tree', '#')
 			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			.link()			
-			//.html()			
+			.html()					//.html()
 			//.mask('md')
 			//.mask('.*\.ahk$')
 			//.indentation() // Allow indentation
 			//.maxLevel( 0 )
 			//.maxLevel(  ) // Max depth to search in hierarchy null|integer INIT:null DEFAULT:1
-			//.show('dir') // display text by "name|dir|path" INIT:name
+			.show('name') // display text by "name|dir|path" INIT:name
 			//.show('path')
 			//.update()
 			.tree()
 			.include();
 }
- //();
  includeFileTreeLinks();
  
  require("ko/editor").insert('\n\n');
@@ -48,10 +47,10 @@ function includeFileTreeLinks(){
  */
 function linksToAhkFilesWithoutTree(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
-			.heading('Links to ahk files without tree', '##')
+			.heading('Links to ahk files without tree')
 			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			.link()			
-			//.html()			
+
 			.extension('md')
 			//.mask('.*\.ahk$')
 			//.maxLevel( 0 )
@@ -76,18 +75,44 @@ require("ko/editor").insert('\n\n');
 function dirsWithReadmeFile(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
 			.heading('Dirs with readme file')
-			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			.link()			
-			//.html()			
 			.extension('md')
-			//.mask('.*\.ahk$')
-			//.indentation() // Allow indentation
-			//.maxLevel( 0 )
 			.maxLevel( 4 )
 			.filter('dir')  // "null|file|dir" > Show files, dirs or both if null 
-			.show('dir') // display text by "name|dir|path" DEFAULT:name
-			//.update()
-			//.tree()
+			.show('dir') // display only directories
 			.include();
 }
 dirsWithReadmeFile();
+
+
+require("ko/editor").insert('\n\n');
+
+ 
+/** 
+ */
+function showImage(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.heading('Show Image')
+			.image() // Interprets link to image as image
+			.extension('ico')
+			.filter('file') // display only files
+			.link(false)			
+			.include();
+}
+showImage();
+
+ require("ko/editor").insert('\n\n');
+
+/** 
+ */
+function showImageWithLink(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			.heading('Link And Show Images')
+			.image() // Interprets link to image as image
+			.extension('png')
+			.filter('file') // display only files
+			.include();
+}
+showImageWithLink();
+
+

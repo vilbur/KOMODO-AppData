@@ -54,6 +54,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var include_lines	= [];
 		/* Search options */
 		var search_extensions	= /\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension
+		var extension_image	= /\.(jpg|png|ico)$/gi; // 
 		var mask	= '';
 		var mask_rx	= null;
 		var extension	= '';
@@ -72,17 +73,18 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var max_level	= null;
 		
 		/* Write options */
-		var link	= true;
-		var html	= false;
+		var heading	= '';
 		var show	= 'name'; // display text by "name|dir|path" DEFAULT:name
 		var filter	= null;   // "null|file|dir" > Show files, dirs or both if null 
+		var link	= true;
+		var html	= false; // Display texk as HTML -- allows coloring of text
 		var indentation	= false;
 		var tree	= false;
-        //var prefix = '-';
+		var image_show	= false; // Interprets link to image as image
+
 		var code_block	= false;
 		var update	= true;
 		var unique	= false;
-		var heading	= '';
 			
 		/* result array
 		 */
@@ -104,11 +106,6 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		
 		/* ========= OPTIONS ========= */
 
-		/** Search file name
-		 * @para
-		 */
-		this.searchName = function(_search_name){ search_name = _search_name; return this; }; 
-		
 		/** Set search_ext for search match
 		 */
 		this.mask = function(_mask=''){ mask = _mask; return this; };
@@ -139,6 +136,10 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		/** Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"
 		 */
 		this.link = function(_link=true){ link = _link; return this; };
+		
+		/** Set link to dir E.G.: "\dir\subdir\file.*" >>> "\dir\subdir"
+		 */
+		this.image = function(image=true){ if(initialized) image_show = image; return this; };
 
 		/** Set indentation of links by directory tree
 		 */
@@ -158,7 +159,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
  
 		/** Set heading above included block
 		 */
-		this.heading = function(_heading, heading_prefix = '#'){ heading = heading_prefix +' '+_heading; return this; };
+		this.heading = function(_heading, heading_prefix = '###'){ heading = heading_prefix +' '+_heading; return this; };
 
 		/** Include only if not in file content already
 		 */
@@ -280,7 +281,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				for( var index in files )
 					if (files.hasOwnProperty(index))
 					{
-					console.log(  'extension: ' + extension );
+						//console.log(  'extension: ' + extension );
 
 						//console.log( 'FILE: ' + files[index] );
 						//console.log( 'TEST: ' + extension_rx.exec(files[index]) );
@@ -408,7 +409,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 						return koFile.basename(path);
 						
-						
+						 
 						//if( show=='dir' )
 							//return koFile.basename(koFile.dirname(path));
 						
@@ -425,6 +426,15 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					//			if( path.match(rx_file_types[file_type]) )
 					//				return file_type;
 					//};
+					/** getMarkdownLink
+					 */
+					var getMarkdownLink = function( text, path, is_mage = false )
+					{
+					console.log(  'IS_MAGE: ' + is_mage  );
+						var prefix_for_image = is_mage ? '!' : '';
+						
+						return prefix_for_image + '['+ text +']('+path+')';
+					}
 					
 					/** getCodeblockLink
 					 */
@@ -434,25 +444,19 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					}; 
 					/** getFileLink
 					 */
-					var getFileLink = function()
+					var getFileLink = function(is_mage)
                     {
-						//var prefix_for_image = include_type==='image' ? '!' : '';
-						
-						//var basename = koFile.basename(path);
-						//var basename = getLinkText(path);
+						if( html == true || is_mage  )
+						{
+							var link_text = is_mage && image_show ? '<img src="'+path+'" alt="'+text+'" >' : text;
 
-						//var path_to	= link ? koFile.dirname(path) : path;
-						//return path;
-						//
-						//return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
-						//return prefix_for_image+"["+getLinkText(path)+"]('"+path_to+"')";
-						
-						//return prefix_for_image+'['+ text +']('+path+')';
-				
-				
-						var link_color = is_dir ?  '#0091ff' : '#788894' ;
-						
-						return '<a href="'+path+'" style="color:'+link_color+';" >'+ text +'</a>';
+							var link_color = is_dir ?  '#0091ff' : '#788894' ;
+							
+							return '<a href="'+path+'" style="color:'+link_color+';" >'+ link_text +'</a>';
+						}
+						else
+							return getMarkdownLink( text, path );
+							//return prefix_for_image+'['+ text +']('+path+')';
 					};
 					
 					/** setLinkToIncludes
@@ -465,6 +469,12 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 					/* ========= SHOWN TEXT ========= */
 
+					is_mage = extension_image.exec(path) != null;
+					
+					//extension_image.lastIndex = 0; // reset regEx for next use
+					
+					console.log(  'image_show: ' + image_show  );
+					
 					switch (show) {
 						/* SHOW PATH */ 
 						case "path": text =  path.replace( /\//gi, '\\' );
@@ -481,14 +491,19 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						text = '\\ ' +text +' \\\\'
 					
 					/*------ LINK ------*/
+						/*------ IMAGE ------*/
+					if( image_show && is_mage && ! link )
+						var line = getMarkdownLink( text, path, is_mage );
+					else
 					if( link )
 					{
-						var line = getFileLink()
+						var line = getFileLink(is_mage);
 						 //var line = text_to_show
 					}
-					else
+
 					{
-						/*------ IMAGE ------*/
+						
+						
 						/*------ CODEBLOCK ------*/
 						/*------ INCLUDE ------*/
 						
