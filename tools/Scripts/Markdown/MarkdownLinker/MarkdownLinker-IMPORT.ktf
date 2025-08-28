@@ -50,13 +50,15 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var current_file	= ko.views.manager.currentView.koDoc.file.path;
 		var current_dir	= koFile.dirname(current_file);
 		var file_content	= koEditor.getValue();
-		
+		var is_source	= current_file.match(/-source.md$/gi);
 		var include_lines	= [];
-
 		/* Search options */
 		var search_extensions	= /\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension
-		var search_ext	= '';
-		var search_name	= '.*';				
+		var mask	= '';
+		var mask_rx	= null;
+		//var search_ext	= '';
+		//var search_ext	= '';
+		//var search_name	= '.*';				
 		var match_dir_name	= false;
 		
 		/* TYPES OF INCLUDED CONTETN */ 
@@ -89,7 +91,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		{
 			for(var path in dir_tree)
 			{
-				//console.log( path + ': ' + dir_tree[path] );
+				console.log( path + ': ' + dir_tree[path] );
 				if( typeof dir_tree[path] === "object" )
 					developmentPrint(dir_tree[path], level++ );
 				
@@ -113,9 +115,9 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		 * @param	string	search_ext	extension searched in dirs E.G.: 'php|md'
 		 * @return	self
 		 */
-		this.searchExt = function(_file_ext)
+		this.mask = function(_mask='')
 		{
-			search_ext = _file_ext;
+			mask = _mask;
 			return this; 
 		};
 		/** Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"
@@ -154,6 +156,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		this.link = function(_link=true)
 		{
 			link = link;
+			
 			return this;
 		};
 
@@ -171,7 +174,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		};
 		/*
 		*/ 
-		this.showTree  = function( _tree = true )
+		this.tree = function( _tree = true )
 		{
 			if(initialized)
 				tree = _tree;
@@ -183,7 +186,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		 * @param	string	display
 		 * @return	this 
 		 */
-		this.display = function(_display='')
+		this.display = function( _display = 'name' )
 		{
 			display = _display;
 			return this;
@@ -277,7 +280,6 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		 */
 		this.include = function()
 		{
-
 			/*------ GET DIRECTORY TREE ------
 			 */
 			var getDirectoryTree = function(path, level = 0 )
@@ -298,7 +300,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 									return koFile.isFile(path+'\\'+dir);
 								});
 				};
-				
+					
 				var subdirs	= getSubDirs(path);
 				var files	= getFiles(path);
 				var dirs_and_files	= {};
@@ -306,30 +308,49 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				//Logger.info(level >= max_level, 'MarkdownLinker: '+'level >= max_level'); 
 				if( max_level && level == max_level )
 					return; 
-				
-				/* IF ANY SUBDIR EXISTS */ 
+
+				console.log( 'mask: ' + mask );
+
+				/* DEFINE REG EX */ 
+				//if( mask != '' )
+					mask_rx = new RegExp( mask, 'gi');
+
+				/* LOOP IF ANY SUBDIR EXISTS */ 
 				if( subdirs.length )
 				{
 					depth_added = level++;
 					
 					/*------ ADD SUBDIRS ------*/
 					for(var d=0; d<subdirs.length;d++)
-						dirs_and_files[subdirs[d]] = getDirectoryTree( path+'\\'+subdirs[d], level); 
+					{
+						var sudirs_and_files = getDirectoryTree( path+'\\'+subdirs[d], level);
+						//console.log(  'sudirs_and_files: ' + sudirs_and_files );
+
+						if( sudirs_and_files != null )
+							dirs_and_files[subdirs[d]] = sudirs_and_files;
+						
+					}
+						//if( mask == '' || mask_rx.exec(path) )
 				}
 
 				/*------ ADD FILES ------*/
 				for( var index in files )
 					if (files.hasOwnProperty(index))
-						//dirs_and_files[index] = 'WTF';
-						dirs_and_files[index] = files[index];
+					{
+						
+						if( mask == '' || mask_rx.exec(files[index]) )
+							dirs_and_files[index] = files[index];
+						
+						mask_rx.lastIndex = 0; // reset regEx for next use
+
+					}
 				
 				/* RETURN SUBDIRS and FILES if any exists */
 				return Object.keys(dirs_and_files).length ? dirs_and_files : null;
-			
 			};
 			
-			/*------ SEARCH IN SUBDIRS FOR FILES matching criteria ------
-			 */
+			/* ========= SEARCH IN SUBDIRS FOR FILES matching criteria ========= */
+
 			var searchForFiles = function(_dir_path, dir_tree)
 			{
 
@@ -390,52 +411,42 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 	
 				return removeEmptyDirs(match_files); 
 			};
-				/** getIndentation
-			 */
-			//var getIndentation = function(indent_count, is_directory, is_last = false )
-			//{
-			//	//console.log(  'indentation: ' + indentation );
-			//	
-			//	if( is_last )
-			//		prefix = '|___' ;
-			//	else
-			//		prefix = is_directory ? '|---' : '|   ';
-			//	 
-			//	
-			//	
-			//	
-			//	return ! indentation ? Array(indent_count - 1).join('    ') + prefix : '';
-			//	 
-			//}; 			
-				
-	
-			/*------ GET  ------*/
+			
+			
+			/* ========= GET TREE ========= */
+
 			var dir_tree = getDirectoryTree(current_dir);
 			
-			developmentPrint( dir_tree ) ;
+			//developmentPrint( dir_tree ) ;
 			
-	
+			/* ========= PRINT TREE ========= */
+
 			function printTree(obj, prefix = "", relPath = "")
 			{
-				/*
-				*/ 
-				var getIndentation = function( is_branch, is_last, _prefix = '' )
+				/*------ GET INDENTATION ------*/
+				var getIndentation = function( is_branch, is_last, _prefix = '', si_file )
 				{
+					
+					//var whitespace_character = is_source ? ' ' : '&nbsp;';
+					
+					//var whitespace = Array( 3 ).join(whitespace_character);
+					var whitespace = is_source ? '   ' : '&nbsp;&nbsp;&nbsp;';
+					
 					if(tree)
 					{
 						if( is_branch )
-							return  is_last ? "|___ " : "|--- ";
+							return  "|--- ";
+							//return  is_last ? "|___ " : "|--- ";
 						
 						else
-							return  _prefix + (is_last ? '    ' : '|   ');
+							return  _prefix + (is_last ? ' ' : '|') + whitespace;
 					}
 					else
-						return indentation ? _prefix + '    ' : '';
+						return indentation ? _prefix + whitespace + ' ' : '';
 				};
 				
-				/** setInlcudeFile
-				 */
-				var setInlcudeFile = function( text, path, prefix )
+				/*------ SET INLCUDE FILE ------*/
+				var setInlcudeFile = function( text, path, prefix, si_file )
 				{
 					
 					/** Get link text by dir name or sanitized filename file
@@ -445,6 +456,11 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					 */
 					var getLinkText = function(path)
 					{
+						console.log(  'getLinkText: ' + koFile.basename(path) );
+
+						return koFile.basename(path);
+						
+						
 						if( display=='dir' )
 							return koFile.basename(koFile.dirname(path));
 						
@@ -470,28 +486,41 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					}; 
 					/** getFileLink
 					 */
-					var getFileLink = function(include_type)
+					var getFileLink = function(path, include_type = '')
                     {
 						var prefix_for_image = include_type==='image' ? '!' : '';
 						
-						var path_to	= link ? koFile.dirname(path) : path;
+						var basename = koFile.basename(path);
+						//var basename = getLinkText(path);
+
+						//var path_to	= link ? koFile.dirname(path) : path;
+						//return path;
+						//
+						//return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
+						//return prefix_for_image+"["+getLinkText(path)+"]('"+path_to+"')";
 						
-						return prefix_for_image+'['+getLinkText(path)+']('+_getRelativePath(current_dir, path_to)+')';
+						//return prefix_for_image+'['+ text +']('+path+')';
+						var link_color = si_file ? '#0091ff' : '#788894';
+
+						if(si_file)
+							text = '\\' +text+'\\\\'
+						
+						return prefix_for_image+'<a href="'+path+'" style="color:'+link_color+';" >'+ text +'</a>';
 					};
 					/** setLinkToIncludes
 					 */
 					var setLinkToIncludes = function(link)
 					{
-
-						
 						if( _isNotInFile(link) )
 							include_lines.push( getIndentation(indent_count, false, is_last ) + link );
 					}; 
 
 					//var include_type = findIncludeFileType();
 					//setLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );
-
-					include_lines.push( prefix + text + path );
+					
+					//include_lines.push( prefix + text + path );
+					//include_lines.push( prefix + getFileLink() );
+					include_lines.push( prefix + getFileLink( path ) );
 
 				};
 			  
@@ -499,62 +528,63 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				const keys = Object.keys(obj);
 					  
 				keys.forEach((name, index) => {
-							
+					
+					const si_file = isNaN(name)
+
 					const is_last = index === keys.length - 1;
 					
 					const prefix_branch = getIndentation( true, is_last );
-							
+						
 					/*------ DIRECTORY ------*/
-					if (isNaN(name))
+					if (obj[name] !=null)
 					{
-						const dir_path = relPath ? relPath + '\\' + name : name;
-						//const dir_path = '\\' + (relPath ? relPath + '\\' + name : name);
-								  
-						var file_count = Object.keys(obj[name]).length;
-
-						//var dir_path = '(' + dir_path + '/)'
-						var line_prefix = prefix + prefix_branch;
+						if (isNaN(name))
+						{
+							const dir_path = relPath ? relPath + '/' + name : name;
+							//const dir_path = '/' + (relPath ? relPath + '/' + name : name);
+									  
+							var file_count = Object.keys(obj[name]).length;
+	
+							//var dir_path = '(' + dir_path + '/)'
+							var line_prefix = prefix + prefix_branch;
+							
+							//line_prefix += ' /'+dir_path;
+							//var line_prefix = prefix + branch + name //+ '/ [' + file_count + ' files]   ;
+							
+							//include_lines.push(name);
+							setInlcudeFile( name, dir_path, line_prefix, si_file );
+			
+							//const new_prefix = prefix + (is_last ? '    ' : '|   ');
+							const new_prefix = getIndentation( false, is_last, prefix );
+							
+							printTree(obj[name], new_prefix, dir_path);
+						}
 						
-						//line_prefix += ' \\'+dir_path;
-						//var line_prefix = prefix + branch + name //+ '/ [' + file_count + ' files]   ;
+						/*------ FILE ------*/ 
+						else
+						{
+							var line_prefix = prefix + prefix_branch;
+									  
+							var file_path = relPath ? relPath + '/' + obj[name] : obj[name];
+							//var file_path = '\\' + (relPath ? relPath + '\\' + obj[name] : obj[name]);
 						
-						//include_lines.push(name);
-						setInlcudeFile( name, dir_path, line_prefix );
-		
-						//const new_prefix = prefix + (is_last ? '    ' : '|   ');
-						const new_prefix = getIndentation( false, is_last, prefix );
+							var file_name = obj[name];
+							//include_lines.push(obj[name]);
+							setInlcudeFile( file_name, file_path, line_prefix, si_file );
+						}
 						
-						printTree(obj[name], new_prefix, dir_path);
-					}
-					
-					/*------ FILE ------*/ 
-					else
-					{
-						var line_prefix = prefix + prefix_branch;
-								  
-						var file_path = relPath ? relPath + '\\' + obj[name] : obj[name];
-						//var file_path = '\\' + (relPath ? relPath + '\\' + obj[name] : obj[name]);
-					
-						var file_name = obj[name];
-						//include_lines.push(obj[name]);
-						setInlcudeFile( file_name, file_path, line_prefix );
 					}
 				});
 			}
 			
-			console.log(  'tree: ' + tree );
-			console.log(  'indentation: ' + indentation );
-
-
-			//addMarkdownSyntax(dir_tree, 0);
-			printTree(dir_tree);
-			
-			/*------ WRITE TO FILE ------*/
-			writeToFile();
-			
-			
-			
-			//Logger.info(include_lines, 'MarkdownLinker: '+'include_lines'); 
+			if(dir_tree)
+			{
+				printTree(dir_tree);
+				
+				/*------ WRITE TO FILE ------*/
+				writeToFile();
+				
+			}
 		};
 
 		/* ================ PRIVATE ================ */
@@ -658,7 +688,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					
 					//koEditor.insert( '\n'+ content_update );
 					/*------ UPDATE CONTENT IN KOMODO ------*/
-					koEditor.insert( '```\n'+ content_update +'\n```' );
+					koEditor.insert( content_update );
+					//koEditor.insert( '```\n'+ content_update +'\n```' );
                 };
 
 			var content_update	= getHeadings() + include_lines.join('\n') + '\n';
