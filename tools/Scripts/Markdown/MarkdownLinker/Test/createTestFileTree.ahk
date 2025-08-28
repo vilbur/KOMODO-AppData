@@ -34,8 +34,9 @@ createDirWithFiles(path, name)
 }
 
 ; Base folder in script directory
-baseDir := A_ScriptDir "\Test-Directory"
-createDirWithFiles(baseDir, "Test-Directory")
+baseDir := A_ScriptDir
+;baseDir := A_ScriptDir "\Test-Directory"
+;createDirWithFiles(baseDir, "Test-Directory")
 
 ; Parent
 parentDir := baseDir "\Parent"

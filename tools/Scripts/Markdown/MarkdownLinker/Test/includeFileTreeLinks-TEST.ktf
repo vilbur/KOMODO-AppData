@@ -36,10 +36,6 @@ function includeFileTreeLinks(){
 			.tree()
 			.include();
 }
- includeFileTreeLinks();
- 
- require("ko/editor").insert('\n\n');
-
  
 /** Inclue links to files and folders in hierarchy
  *
@@ -48,24 +44,15 @@ function includeFileTreeLinks(){
 function linksToAhkFilesWithoutTree(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
 			.heading('Links to ahk files without tree')
-			//.matchDirName() // include only files which pranet folder is same as filename E.G.: '\Foo\foo.ms'
 			.link()			
-
-			.extension('md')
-			//.mask('.*\.ahk$')
-			//.maxLevel( 0 )
+			.extension('ahk')
 			.indentation() // Allow indentation
 			.maxLevel( 4 )
-			.filter('dir')  // "null|file|dir" > Show files, dirs or both if null 
-			.show('dir') // display text by "name|dir|path" DEFAULT:name
-			//.update()
+			//.filter('dir')  // "null|file|dir" > Show files, dirs or both if null 
+			//.show('dir') // display text by "name|dir|path" DEFAULT:name
 			//.tree()
 			.include();
 }
-linksToAhkFilesWithoutTree();
-
- 
-require("ko/editor").insert('\n\n');
 
  
 /** Inclue links to files and folders in hierarchy
@@ -82,12 +69,7 @@ function dirsWithReadmeFile(){
 			.show('dir') // display only directories
 			.include();
 }
-dirsWithReadmeFile();
 
-
-require("ko/editor").insert('\n\n');
-
- 
 /** 
  */
 function showImage(){
@@ -99,9 +81,6 @@ function showImage(){
 			.link(false)			
 			.include();
 }
-showImage();
-
- require("ko/editor").insert('\n\n');
 
 /** 
  */
@@ -113,6 +92,41 @@ function showImageWithLink(){
 			.filter('file') // display only files
 			.include();
 }
+
+/** 
+ */
+function importCodeBlock(){
+	new ko.extensions.vilbur.markdown.MarkdownLinker()
+			//.heading('LinkTo Code Blocks ( compiled with MarkdownFormatter )')
+			.heading('LinkTo Code Blocks [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/markdownFormatter )\n')
+			.codeBlock() // Interprets link to image as image
+			.extension('js')
+			.filter('file') // display only files
+			.include();
+}
+
+
+
+includeFileTreeLinks();
+
+require("ko/editor").insert('\n\n');
+
+linksToAhkFilesWithoutTree();
+
+require("ko/editor").insert('\n\n');
+
+dirsWithReadmeFile();
+
+require("ko/editor").insert('\n\n');
+
+showImage();
+
+require("ko/editor").insert('\n\n');
+
 showImageWithLink();
+
+require("ko/editor").insert('\n\n');
+
+importCodeBlock();
 
 

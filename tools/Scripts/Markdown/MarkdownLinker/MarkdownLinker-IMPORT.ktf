@@ -53,7 +53,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var is_source	= current_file.match(/-source.md$/gi);
 		var include_lines	= [];
 		/* Search options */
-		var search_extensions	= /\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension
+		var extension_code	= /\.(php|ahk|js|md)$/gi; // these extensions is used for auto find extension
 		var extension_image	= /\.(jpg|png|ico)$/gi; // 
 		var mask	= '';
 		var mask_rx	= null;
@@ -66,7 +66,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		var rx_file_types = {
 			image:	/\.(jpg|png|jpg)$/gi,
 			markdown:	/\.(md)$/gi,
-			codeblock:	search_extensions,
+			codeblock:	extension_code,
 		};
 						
 		/* Tree options */
@@ -168,7 +168,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		/** Link is included as codeblock E.G.: [include:\dir\file.komodotool]  
 		 *  Include is treated with markdownFormatter.komodotool
 		 */
-		this.codeBlock = function(_code_block=true){ code_block = _code_block; return this; };
+		this.codeBlock = function(_code_block=true){ if(initialized) code_block = _code_block; return this; };
 
 		/** Update mode will update existing section
 		 */
@@ -310,13 +310,13 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				*/
 				var filterFilesByExtension = function(_dir_path)
 				{
-				   /** Find matching file type in files by search_extensions
+				   /** Find matching file type in files by extension_code
 					*/
 				   var findFileExt = function(_dir_path)
 				   {
 					   koFile.list(_dir_path).map(function(file){
 						   
-						   var file_match = search_extensions.exec(_dir_path+'\\'+file);
+						   var file_match = extension_code.exec(_dir_path+'\\'+file);
 						   
 						   if (file_match)
 							   search_ext = file_match.pop();
@@ -331,18 +331,12 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				   /* LOOP EACH FILE IN DIRECOTRY */ 
 				   koFile.list(_dir_path).map(function(name)
 				   {
-					   
 					   var file_path	= _dir_path +'\\'+ name;
-				
-						//console.log(  'file: ' + file_path );
 
 					   if (file_path != current_file)
 					   {
 						   if( match_dir_name )
 							   search_name = koFile.basename(_dir_path) + (match_dir_name===true ? '' : '.*');
-						   //Logger.info(search_ext, 'MarkdownLinker: '+'search_ext');
-						   //Logger.info(search_name, 'MarkdownLinker: '+'search_name');						
-						   //Logger.info( new RegExp(search_name+'\.('+search_ext+')$', 'gi').exec(name) , 'match: '+name); 
 						   
 						   if( new RegExp( '^'+search_name+'\.('+search_ext+')$', 'gi').exec(name) )
 							   match_files.push(file_path);
@@ -417,20 +411,13 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 						
 						return  filename.charAt(0).toUpperCase() + filename.slice(1);
 					};
-					/** findIncludeFileType
-					 */
-					//var findIncludeFileType = function()
-					//{
-					//	for(var file_type in rx_file_types)
-					//		if (rx_file_types.hasOwnProperty(file_type))
-					//			if( path.match(rx_file_types[file_type]) )
-					//				return file_type;
-					//};
+
+
 					/** getMarkdownLink
 					 */
 					var getMarkdownLink = function( text, path, is_mage = false )
 					{
-					console.log(  'IS_MAGE: ' + is_mage  );
+						//console.log(  'IS_MAGE: ' + is_mage  );
 						var prefix_for_image = is_mage ? '!' : '';
 						
 						return prefix_for_image + '['+ text +']('+path+')';
@@ -438,9 +425,15 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					
 					/** getCodeblockLink
 					 */
-					var getCodeblockLink = function()
+					var getCodeblockLink = function( path )
 					{
-						return '[include:\\'+_getRelativePath(current_dir, path).replace(/\//g, '\\') +']';
+						//return path
+						//return current_dir
+						//return '[include:\\'+ _getRelativePath(current_dir, path).replace(/\//g, '\\') +']';
+						//return prefix_for_image + '['+ text +']('+path+')';
+
+						
+						return '[include:\\'+ text +']('+(current_dir +'/'+ path).replace(/\//g, '\\')+')';
 					}; 
 					/** getFileLink
 					 */
@@ -467,60 +460,69 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 							include_lines.push( getIndentation(indent_count, false, is_last ) + link );
 					}; 
 
-					/* ========= SHOWN TEXT ========= */
+					/* ========= SHOW TEXT ========= */
+					var is_code = extension_code.exec(path) != null;
+					extension_code.lastIndex = 0; // reset regEx for next use
 
-					is_mage = extension_image.exec(path) != null;
+					var line = text;
 					
-					//extension_image.lastIndex = 0; // reset regEx for next use
 					
-					console.log(  'image_show: ' + image_show  );
+					if ( is_code && code_block )
+						line = getCodeblockLink(path);					
+						else
 					
-					switch (show) {
-						/* SHOW PATH */ 
-						case "path": text =  path.replace( /\//gi, '\\' );
-						
-						/* SHOW DIR */ 
-						//case "dir": text =  "SHOW DIR";
-						
-						/* SHOW NAME */
-						default: text =  text;
-					}
-
-					/* ADD SLASHES TO DIR */ 
-					if(is_dir && ! show.match(/dir/gi))
-						text = '\\ ' +text +' \\\\'
 					
-					/*------ LINK ------*/
-						/*------ IMAGE ------*/
-					if( image_show && is_mage && ! link )
-						var line = getMarkdownLink( text, path, is_mage );
-					else
-					if( link )
 					{
-						var line = getFileLink(is_mage);
-						 //var line = text_to_show
+						is_mage = extension_image.exec(path) != null;
+						//extension_image.lastIndex = 0; // reset regEx for next use
+						
+						console.log(  'image_show: ' + image_show  );
+						
+						switch (show) {
+							/* SHOW PATH */ 
+							case "path": text =  path.replace( /\//gi, '\\' );
+							
+							/* SHOW DIR */ 
+							//case "dir": text =  "SHOW DIR";
+							
+							/* SHOW NAME */
+							default: text =  text;
+						}
+	
+						/* ADD SLASHES TO DIR */ 
+						if(is_dir && ! show.match(/dir/gi))
+							text = '\\ ' +text +' \\\\'
+						
+						/*------ LINK ------*/
+							/*------ IMAGE ------*/
+						if( image_show && is_mage && ! link )
+							var line = getMarkdownLink( text, path, is_mage );
+						else
+						if( link )
+						{
+							line = getFileLink(is_mage);					
+						}
+	
+						{
+							
+							
+							/*------ CODEBLOCK ------*/
+							/*------ INCLUDE ------*/
+							
+							//var line = switch(expression) {
+							//	case x:
+							//	  // code block
+							//	  break;
+							//	case y:
+							//	  // code block
+							//	  break;
+							//	/*------ TEXT ------*/
+							//	default:
+							//	  // code block
+							//}					
+						}
 					}
-
-					{
-						
-						
-						/*------ CODEBLOCK ------*/
-						/*------ INCLUDE ------*/
-						
-						//var line = switch(expression) {
-						//	case x:
-						//	  // code block
-						//	  break;
-						//	case y:
-						//	  // code block
-						//	  break;
-						//	/*------ TEXT ------*/
-						//	default:
-						//	  // code block
-						//}					
-					}
-					
-					
+		
 					//var include_type = findIncludeFileType();
 					//setLinkToIncludes( code_block && include_type=='codeblock'? getCodeblockLink() :getFileLink() );
 					
@@ -614,10 +616,14 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		{
 			var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
 								  .createInstance(Components.interfaces.nsILocalFile);
+								  
 			nsFileFrom.initWithPath(fromPath);
+			
 			var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
 								  .createInstance(Components.interfaces.nsILocalFile);
+			
 			nsFileTo.initWithPath(toPath);
+			
 			return nsFileTo.getRelativeDescriptor(nsFileFrom);
 		};
 		
