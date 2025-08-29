@@ -40,7 +40,7 @@
 
 ------------------------------------------------------------------------------------  
 
-### Link To Code Blocks - [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/markdownFormatter )  
+### Link To Code Blocks - [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/MarkdownCompiler )  
 
 [include:\Parent.js]( \Test\Parent\Parent.js)  
 [include:\Child.js]( \Test\Parent\Child\Child.js)  

@@ -166,7 +166,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 		this.unique = function(_unique=true){ unique = _unique; return this; };
 
 		/** Link is included as codeblock E.G.: [include:\dir\file.komodotool]  
-		 *  Include is treated with markdownFormatter.komodotool
+		 *  Include is treated with MarkdownCompiler.komodotool
 		 */
 		this.codeBlock = function(_code_block=true){ if(initialized) code_block = _code_block; return this; };
 

@@ -26,7 +26,7 @@
 <a href="image-in-child-directory.png" style="color:#788894;" ><img src="image-in-child-directory.png" alt="image-in-child-directory.png" ></a>  
 
 
-### LinkTo Code Blocks [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/markdownFormatter )  
+### LinkTo Code Blocks [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/MarkdownCompiler )  
 
 [include:\Child.js](C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Scripts\Markdown\MarkdownLinker\Test\Parent\Child\Child.js)  
 [include:\GrandChild.js](C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Scripts\Markdown\MarkdownLinker\Test\Parent\Child\GrandChild\GrandChild.js)  

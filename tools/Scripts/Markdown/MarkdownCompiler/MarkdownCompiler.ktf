@@ -1,0 +1,358 @@
+/*
+komodo tool: MarkdownCompiler
+=============================
+async: False
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: False
+type: macro
+version: 1.1.5
+=============================*/
+/** Merge includes in markdown file
+ *
+ * Edited file must has name '-source.md'	E.G: 'readme-source.md'
+ * Compiled file has suffix removed	E.G: 'readme.md'
+ *
+ * INCLUDE SYNTAX:
+ * 		{include:relative\path} 
+ * 	E.G:	{include:\Documentation\controls\controls-items\controls-items.ahk} 
+ * 
+ */
+
+if( typeof ko.extensions.vilbur === 'undefined'  )
+	ko.extensions.vilbur = {};
+	
+
+ko.extensions.vilbur.MarkdownCompiler = function()
+{
+	
+	//var Logger	= ko.extensions.Logger_v3 ? new ko.extensions.Logger_v3(this).clear(false).off(false) : require('ko/console');
+	var koEditor	= require("ko/editor");
+	var koFile	= require("ko/file");
+	var koFileEx	= Components.classes["@activestate.com/koFileEx;1"].createInstance(Components.interfaces.koIFileEx);
+
+	
+	var current_file	= ko.views.manager.currentView.koDoc.file.path;
+	var current_dir	= koFile.dirname(current_file);
+	//var file_content	= koEditor.getValue();
+	var file_content	= removeEmptyEverySecondLine(koEditor.getValue());
+	
+	/* ECTENSIONS ALLOWED TO BE INCLUDED */ 
+	var allowed_extensions	= /(komodotool|ktf|md|ahk|php|js|html|xul|ms)/gi; // allowed extension for including IMPORTANT: Add new extension to getLang() method
+
+	/* DO NOT INCLUDE - links preceded by exclude_character */ 
+	var exclude_characters = ';//';
+
+	/* ========= FIND ALL OCCURENCES OF "inlcudes" ========= */
+
+	
+			//file_content.match( new RegExp( '/[^'+exclude_characters+']/', 'gi') ) 
+	//var includes	= file_content.match( new RegExp( '/'+exclude_characters+'*\\[include:.*\\]/', 'gi') ) 
+
+	//var includes	= file_content.match(/;*\[include:.*\]/gi);
+	var includes	= file_content.match(/\[include:[^\]]*\]\([^)]+\)/gi);
+
+	/* EXIT IF included file has not allowed extension */ 
+	if ( current_file.match(/-source.md$/gi) == null  )
+		return;
+
+	/** file read add empty line below every line
+	 */
+	function removeEmptyEverySecondLine(string)
+	{
+		//return string.replace(/^/gm, '~~~').replace(/~~~\n~~~/gm, '~~~').replace(/~~~/gm, '');
+		return string
+			.replace(/^/gm, '~~~')
+			.replace(/~~~\n~~~/gm, '~~~')
+			.replace(/~~~/gm, '');		
+	}
+		
+	/** get icluded file content and wraop to codeblock
+	 */
+	function getIncludeContent(path)
+	{
+		
+		/** Include *.ahk file
+		 */
+		this.include_ahk = function(file_content)
+		{
+			/** remove line starts with #
+			 */
+			function removeDirectives()
+			{
+				//return string.replace(/#.*([\r\n]|$)/gmi, '');
+				file_content = file_content.replace(/#.*([\r\n]+|$)/gmi, '');				
+			}
+			/** remove lines with commented autohotkey dump E.G.: ";;;Dump(...)"
+			 */
+			function removeDumps()
+			{
+				file_content = file_content.replace(/[\r\n]\s*;+\s*Dump.*([\r\n]|$)/gmi, '');		
+			}
+			
+			removeDirectives();
+			removeDumps();
+			
+			return removeEmptyEverySecondLine(file_content).replace(/^\s+/gi, '');
+		};
+		
+		/** Include *.komodotool file
+		 */
+		this.include_komodotool = function(file_content)
+		{
+			/* PARSE JSON TO TEXT - komodotool  */ 
+			var file_content_obj	= JSON.parse(file_content);
+
+			var value	= file_content_obj.value;
+		
+			return value.join('\n').trim();
+
+		};
+		
+		/** Include komodotool *.ktf file
+		 */
+		this.include_ktf = function(file_content)
+		{
+			/* Remove block comment from start of string, */ 
+			file_content = file_content.replace(/^\s*\/\*[\s\S]*?\*\/\s*/, '');
+
+			return removeEmptyEverySecondLine(file_content);
+		};
+		
+		/** Include *.ms file
+		 */
+		this.include_ms = function(file_content)
+		{
+			file_content = file_content.replace(/^(filein|clearListener).*$[\r\n]*/gmi, '');				
+
+			//var file_content_obj	= JSON.parse(file_content); 
+			//var value	= file_content_obj.value;
+			
+			return removeEmptyEverySecondLine(file_content);
+		};
+
+		/** Include *.ms file
+		 */
+		this.include_md = function(file_content)
+		{
+			//file_content = file_content.replace(/^(filein|clearListener).*$[\r\n]*/gmi, '');				
+
+			//var file_content_obj	= JSON.parse(file_content); 
+			//var value	= file_content_obj.value;
+			
+			return file_content;
+		};
+		
+		/** get language by file extension
+		 */
+		var getLang = function(_extension)
+		{
+			switch (_extension) {
+				case 'md':
+					return "markdown";
+				
+				case 'ahk':
+					return "php";
+				
+				case 'ms':
+					return "maxscript";
+			
+				case 'js':
+					
+				case 'komodotool':
+					return "javascript";
+					
+				case 'ktf':
+					return "javascript";
+				
+				case 'html':
+					
+				case 'xul':
+					return "xml";					
+				
+				default:	return _extension;
+			}
+		};
+		
+		/** Extensin is allowed
+		 */
+		var extension = (function()
+		{
+				
+			var extension_match = allowed_extensions.exec(path);
+			
+			allowed_extensions.lastIndex = 0; // reset regEx for next use
+			//console.log(  'extension_match: ' + extension_match );
+
+			if( ! extension_match ){
+				var file_current_extension	= koFile.basename(path).split(/\./g).pop();
+				
+				
+				alert( 'MarkdownCompiler:\n\tUnsupported extension: *.'+file_current_extension + "\n\nADD EXTESNTION TO:\n\tMarkdownCompiler.allowed_extensions");  
+				return false;
+			
+			}
+			//console.log(  'extension_match: ' + extension_match );
+			
+			var extension = extension_match.pop();
+		
+			return extension.toLowerCase();;
+		})(); 
+		
+
+		
+		if( ! extension )
+			return;
+		
+		/* INCLUDE BY FILEYPE
+		 *
+		 */
+		var path_include = current_dir + path;
+		
+		if( ! koFile.exists(path_include))
+			return "["+path+"]("+path+")"; // return relative link if file does not exists
+		
+		var file_content	 = koFile.read(path_include);
+		
+		var method = 'include_'+ extension;	
+		
+		var include_content	= this[method] ? this[method](file_content) : removeEmptyEverySecondLine(file_content);
+
+		
+		if ( extension.match(/\.md$/gi) )
+			return include_content;
+
+		else
+			return '\n``` '+getLang(extension)+'\n'+include_content+'\n```';
+	}
+	
+	/*
+	*/ 
+	function writeToFile(path, content)
+	{
+		
+		//koFile.create( path, content, true );
+		//koFile.create( path, '# content', true );
+		
+		if(koFile.exists(path))
+			koFile.remove(path);
+			
+		koFile.create( path ); 
+		koFileEx.path = path;  
+		koFileEx.open("w");
+		koFileEx.puts(content);
+		koFileEx.close();
+	}
+	
+	/** Escape for Markdown synatax
+	 */
+	var escapeContent = function(string)
+	{
+		return string
+				.replace(/(\w)\|(\w)\|*/gi, '$1\\|$2') // sanitize "|" pipe E.G.: "A|B"
+				.replace(/\t/gi, '    ');
+				//.replace(/\|/gi, '$1!\\|$2') // sanitize "|" pipe E.G.: "A|B"				
+	}; 
+	
+	/*
+	*/ 
+	function replaceSpacesInFileTree(text)
+	{
+		var regex_start_line = /\n {4}(?: {4})*/g;
+		
+		text = text.replace(regex_start_line, match => {
+			// Count spaces (ignore the \n)
+			const spaces = match.length - 1;
+			return "\n" + " &nbsp;".repeat(spaces);
+		});
+		
+		const regex_brach_pipe = /\| {3}(?: {3})*/g;
+		
+		text = text.replace(regex_brach_pipe, match => {
+			// Count spaces (ignore the \n)
+			const spaces = match.length - 1;
+
+			//return "|" + "&nbsp;".repeat(spaces);
+			return "|" + " &nbsp;".repeat(spaces);
+		});
+		
+		return text;
+	}
+	
+	///*
+	//*	from_path = "C:/data/project_a/images"
+	//*	to_path   = "C:\data\project_a\docs\readme.md"
+	//*
+	//*	@return string relative path E.G.: '../docs/readme.png'
+	//*
+	//*/
+	//var _getRelativePath = function(from_path, to_path)
+	//{
+	//	
+	//	from_path = from_path.replace( /[\/\\]+/g, '\\' );
+	//	to_path   = to_path.replace( /[\/\\]+/g, '\\' );
+	//
+	//	var nsFileFrom = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+	//	 
+	//	 console.log(  ''  );
+	//	 console.log(  'from_path: ' + from_path  );
+	//	 console.log(  'to_path: ' + to_path  );
+	//	
+	//	nsFileFrom.initWithPath(from_path);
+	//	
+	//	var nsFileTo = Components.classes["@mozilla.org/file/local;1"].createInstance(Components.interfaces.nsILocalFile);
+	//	
+	//	nsFileTo.initWithPath(to_path);
+	//	
+	//	return nsFileTo.getRelativeDescriptor(nsFileFrom);
+	//};
+	
+	/* Escape readme content wihtout included scripts
+	 **/
+	//file_content =  escapeContent(file_content);
+    //console.log(  'file_content: ' + file_content );
+	//file_content =  escapeUnicode(file_content);
+	file_content =  replaceSpacesInFileTree(file_content);
+
+	/**
+	 */
+	if( includes )
+	
+		/* LOOP EACH LINK TO INCLUDE */ 
+		for(var i=0; i<includes.length;i++)
+			//console.log(  'INCLUDE: ' + includes[i] );
+		
+			/* IF LINK IS NOT ESCAPED - E.G.: ;[] */ 
+			if ( ! includes[i].match( new RegExp( '^['+exclude_characters+']+', 'gi') ) )
+			{
+				
+				/* GET ONLY PATH FROM LINK */ 
+				var path_relative = new RegExp(/\[include:.*\]\(\s*(.*)\s*\)/gi).exec(includes[i]).pop();
+				
+				var path_absolute =  current_dir + path_relative
+				
+				console.log(  'path_absolute: ' + path_absolute );
+				console.log(  'path_absolute: ' + koFile.exists(path_absolute) );
+			
+				/* ========= REPLACE IN FILE  ========= */
+				
+				if( koFile.exists(path_absolute) )
+					file_content = file_content.replace( includes[i], getIncludeContent(path_relative) );
+			}
+			else
+				console.log(  'Include escaped: ' + includes[i] );
+	
+	
+	/* REMOVE SUFFIX FOR FINAL FILENAME */ 
+	file_path = current_file.replace(/-source.md$/gi, '.md');
+
+	/* WRITE COMPILED CONTENT TO NEW FILE */ 
+	writeToFile( file_path, file_content );
+	
+};
+
+
+/* TEST */
+ko.extensions.vilbur.MarkdownCompiler();
