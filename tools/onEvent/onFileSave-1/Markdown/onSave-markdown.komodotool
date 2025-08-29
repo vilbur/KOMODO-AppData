@@ -25,7 +25,7 @@
     "\t\t", 
     "\t\t/* FORMAT 'readme-source.md' */ ", 
     "\t\tif ( current_file.match(/-source.md$/gi) != null  )", 
-    "\t\t\tko.extensions.vilbur.markdownFormatter();", 
+    "\t\t\tko.extensions.vilbur.MarkdownCompiler();", 
     "\t\t", 
     "\t}", 
     "}"

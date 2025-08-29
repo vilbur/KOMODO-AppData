@@ -1,14 +1,17 @@
-# Import file tree  
+# This Page Is Generated With MarkdownLinker  
+
+- Search in tree of current file, and write links to files matching criteria  
+## Import file tree  
+
+
 |--- <a href=".folderdata" style="color:#788894;" >.folderdata</a>  
-|--- <a href="includeFileTreeLinks.ktf" style="color:#788894;" >includeFileTreeLinks.ktf</a>  
-|--- <a href="MarkdownLinker-IMPORT.ktf" style="color:#788894;" >MarkdownLinker-IMPORT.ktf</a>  
-|--- <a href="MarkdownLinkerTest.komodotool" style="color:#788894;" >MarkdownLinkerTest.komodotool</a>  
+|--- <a href="MarkdownLinker.ktf" style="color:#788894;" >MarkdownLinker.ktf</a>  
 |--- <a href="readme-source.md" style="color:#788894;" >readme-source.md</a>  
 |--- <a href="readme-source.md.bak" style="color:#788894;" >readme-source.md.bak</a>  
 |--- <a href="readme.md" style="color:#788894;" >readme.md</a>  
 |--- <a href="Test" style="color:#0091ff;" >\ Test \\</a>  
     |--- <a href="Test/createTestFileTree.ahk" style="color:#788894;" >createTestFileTree.ahk</a>  
-    |--- <a href="Test/includeFileTreeLinks-TEST.ktf" style="color:#788894;" >includeFileTreeLinks-TEST.ktf</a>  
+    |--- <a href="Test/includeFileTreeLinksTest.ktf" style="color:#788894;" >includeFileTreeLinksTest.ktf</a>  
     |--- <a href="Test/Parent" style="color:#0091ff;" >\ Parent \\</a>  
         |--- <a href="Test/Parent/image-in-parent-directory.png" style="color:#788894;" >image-in-parent-directory.png</a>  
         |--- <a href="Test/Parent/Parent.js" style="color:#788894;" >Parent.js</a>  
@@ -25,7 +28,7 @@
 
 ------------------------------------------------------------------------------------  
 
-### Links to ahk files without tree  
+### Links to ahk files with indentation  
 [\ Test \\](Test)  
     [createTestFileTree.ahk](Test/createTestFileTree.ahk)  
 

@@ -1,6 +1,6 @@
 /*
-komodo tool: includeFileTreeLinks
-=================================
+komodo tool: includeFileTreeLinksTest
+=====================================
 async: False
 is_clean: true
 language: JavaScript
@@ -9,7 +9,7 @@ trigger: trigger_postopen
 trigger_enabled: False
 type: macro
 version: 1.1.5
-=================================*/
+=====================================*/
 /* Clear Console */
 
 var console_pane=document.getElementById("console-widget");if(console_pane)console_pane.contentWindow.document.getElementById("output").innerHTML="";else{var e=require("ko/windows").getAll();for(let n=0;n<e.length;n++)if("console-widget"==e[n].name){var o=e[n].document.getElementById("output");o&&(o.innerHTML="")}};
@@ -20,7 +20,7 @@ var console_pane=document.getElementById("console-widget");if(console_pane)conso
  */
 function includeFileTreeLinks(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
-			.heading('## Import file tree', '# All Content On This Page Is Generated With MarkdownLinker')
+			.heading('\n\n- Search in tree of current file, and write links to files matching criteria\n\n## Import file tree\n\n', '# This Page Is Generated With MarkdownLinker')
 			.link()			
 			.html() // Display links as HTML -- allows coloring of text
 			.show('name') // display text by "name|dir|path" INIT:name
@@ -36,7 +36,7 @@ function includeFileTreeLinks(){
  */
 function linksToAhkFilesWithoutTree(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
-			.heading('Links to ahk files without tree')
+			.heading('Links to ahk files with indentation')
 			.link()			
 			.extension('ahk')
 			.indentation() // Allow indentation

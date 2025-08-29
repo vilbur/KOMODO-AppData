@@ -10,6 +10,9 @@ trigger_enabled: False
 type: macro
 version: 1.1.5
 =============================*/
+if( typeof ko.extensions.vilbur === 'undefined' )
+	ko.extensions.vilbur = {};
+
 /** Merge includes in markdown file
  *
  * Edited file must has name '-source.md'	E.G: 'readme-source.md'
@@ -21,9 +24,6 @@ version: 1.1.5
  * 
  */
 
-if( typeof ko.extensions.vilbur === 'undefined'  )
-	ko.extensions.vilbur = {};
-	
 
 ko.extensions.vilbur.MarkdownCompiler = function()
 {
