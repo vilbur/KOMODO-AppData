@@ -19,7 +19,7 @@ createDirWithFiles(path, name)
     fileList := [".ahk", ".md", ".js"]
     for i, ext in fileList
     {
-        filePath := path "\" name ext
+        filePath := path "\" name ext ;"
         if !FileExist(filePath)
         {
             if (ext = ".ahk")

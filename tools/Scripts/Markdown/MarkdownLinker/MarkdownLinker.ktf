@@ -1,6 +1,6 @@
 /*
-komodo tool: MarkdownLinker-IMPORT
-==================================
+komodo tool: MarkdownLinker
+===========================
 async: 0
 is_clean: true
 language: JavaScript
@@ -9,7 +9,7 @@ trigger: trigger_postopen
 trigger_enabled: 0
 type: macro
 version: 1.1.5
-==================================*/
+===========================*/
 if( typeof ko.extensions.vilbur === 'undefined' )
 	ko.extensions.vilbur = {};
 	
@@ -429,11 +429,14 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 					{
 						//return path
 						//return current_dir
-						//return '[include:\\'+ _getRelativePath(current_dir, path).replace(/\//g, '\\') +']';
 						//return prefix_for_image + '['+ text +']('+path+')';
+						//return '[include:\\'+ _getRelativePath(current_dir, path).replace(/\//g, '\\') +']';
+						//return '[include:\\'+ ( path).replace(/\//g, '\\') +']';
+						//return '[include:\\'+ (current_dir +'/'+ path).replace(/\//g, '\\') +']';
 
+						//return '[include:\\'+ text +']('+(current_dir +'/'+ path).replace(/\//g, '\\')+')';
+						return '[include:\\'+ text +']( \\'+path.replace(/\//g, '\\')+')';
 						
-						return '[include:\\'+ text +']('+(current_dir +'/'+ path).replace(/\//g, '\\')+')';
 					}; 
 					/** getFileLink
 					 */
@@ -544,7 +547,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				
 					var is_dir = isNaN(key)
 				
-					//const branch = is_last ? "ÃƒÂ¢Ã¢â‚¬ÂÃ¢â‚¬ÂÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ " : "ÃƒÂ¢Ã¢â‚¬ÂÃ…â€œÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ ";
+					//const branch = is_last ? "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ " : "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ ";
 					const branch = tree ? '|--- ' : '';
 				
 					/* ========= DIRECTORY ========= */
@@ -609,22 +612,35 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 			return file_content.match( new RegExp(_escapedRegexString(string), 'gi') )===null || ! unique || update;
 		};
 		
-		/**
-		 *
-		 */
-		var _getRelativePath = function(fromPath, toPath)
+		/** Get Relative path between 2 paths
+		*
+		*
+		*	from_path = "C:/data/project_a/images"
+		*	to_path   = "C:\data\project_a\docs\readme.md"
+		*
+		*	@return string relative path E.G.: '../docs/readme.png'
+		*
+		*/
+		var _getRelativePath = function(from_path, to_path)
 		{
-			var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
-								  .createInstance(Components.interfaces.nsILocalFile);
-								  
-			nsFileFrom.initWithPath(fromPath);
 			
-			var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
-								  .createInstance(Components.interfaces.nsILocalFile);
+			from_path = from_path.replace( /[\/\\]+/g, '\\' );
+			to_path   = to_path.replace( /[\/\\]+/g, '\\' );
+		
+		   var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
+								 .createInstance(Components.interfaces.nsILocalFile);
 			
-			nsFileTo.initWithPath(toPath);
-			
-			return nsFileTo.getRelativeDescriptor(nsFileFrom);
+			console.log(  'from_path: ' + from_path  );
+			console.log(  'nsFileFrom: ' + nsFileFrom  );
+		
+		   nsFileFrom.initWithPath(from_path);
+		   
+		   var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
+								 .createInstance(Components.interfaces.nsILocalFile);
+		   
+		   nsFileTo.initWithPath(to_path);
+		   
+		   return nsFileTo.getRelativeDescriptor(nsFileFrom);
 		};
 		
 		/** writeToFile
@@ -647,8 +663,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				 *	Section will be searched from heading up to next heading
 				 *
 				 * @return	{start: int, end: int}
-		 */
-		var getUpdatePosition = function()
+				 */
+				var getUpdatePosition = function()
 				{
 					var heading_match	= new RegExp( _escapedRegexString(getHeadings()) + '[^#]+', 'gmi').exec(file_content); 
 					if( ! update || ! heading_match  )

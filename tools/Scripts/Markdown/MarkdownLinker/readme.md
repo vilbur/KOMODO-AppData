@@ -22,24 +22,34 @@
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|--- <a href="Test/Parent/Child/GrandChild/GrandChild.js" style="color:#788894;" >GrandChild.js</a>  
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|--- <a href="Test/Parent/Child/GrandChild/GrandChild.md" style="color:#788894;" >GrandChild.md</a>  
 
+------------------------------------------------------------------------------------  
 ### Links to ahk files without tree  
 [\ Test \\](Test)  
  &nbsp; &nbsp; &nbsp; &nbsp;[createTestFileTree.ahk](Test/createTestFileTree.ahk)  
 
+------------------------------------------------------------------------------------  
 ### Dirs with readme file  
 [Test](Test)  
 [Parent](Test/Parent)  
 [Child](Test/Parent/Child)  
 
+------------------------------------------------------------------------------------  
+### Link To Code Blocks - [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/markdownFormatter )  
+
+``` javascript
+console.log('This is Parent.js');
+```  
+
+``` javascript
+console.log('This is Child.js');
+```  
+
+------------------------------------------------------------------------------------  
 ### Show Image  
 ![image-in-child-directory.ico](Test/Parent/Child/image-in-child-directory.ico)  
 
+------------------------------------------------------------------------------------  
 ### Link And Show Images  
 <a href="Test/Parent/image-in-parent-directory.png" style="color:#788894;" ><img src="Test/Parent/image-in-parent-directory.png" alt="image-in-parent-directory.png" ></a>  
 <a href="Test/Parent/Child/image-in-child-directory.png" style="color:#788894;" ><img src="Test/Parent/Child/image-in-child-directory.png" alt="image-in-child-directory.png" ></a>  
-
-### LinkTo Code Blocks [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/markdownFormatter )  
-[include:\Parent.js](C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Scripts\Markdown\MarkdownLinker\Test\Parent\Parent.js)  
-[include:\Child.js](C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Scripts\Markdown\MarkdownLinker\Test\Parent\Child\Child.js)  
-[include:\GrandChild.js](C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Scripts\Markdown\MarkdownLinker\Test\Parent\Child\GrandChild\GrandChild.js)  
   
