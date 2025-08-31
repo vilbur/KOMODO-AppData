@@ -1,6 +1,6 @@
 /*
-komodo tool: Close Tabs RIGHT
-=============================
+komodo tool: Close Tabs ?
+=========================
 async: False
 icon: chrome://fugue/skin/icons/document-hf-delete-footer.png
 is_clean: true
@@ -10,7 +10,7 @@ trigger: trigger_postopen
 trigger_enabled: False
 type: macro
 version: 1.1.5
-=============================*/
+=========================*/
 /**
 * !!!!!!!! DOS NOT WORK ON aLL KOMODO MaCRO
 **/

@@ -1,14 +1,14 @@
 {
   "keyboard_shortcut": "", 
   "name": "rx", 
-  "language": "", 
+  "language": "JavaScript-common", 
   "value": [
     "[[%tabstop:new RegExp([[%tabstop:'[[%tabstop2:(.*)]]']], 'gi')]][[%tabstop:.exec([[%tabstop1:string]])]][[%soft:;]][[%tabstop:]]!@#_currentPos!@#_anchor"
   ], 
-  "set_selection": "false", 
+  "set_selection": "true", 
   "version": "1.1.5", 
-  "treat_as_ejs": "false", 
-  "type": "snippet", 
   "indent_relative": "true", 
+  "type": "snippet", 
+  "treat_as_ejs": "false", 
   "auto_abbreviation": "false"
 }

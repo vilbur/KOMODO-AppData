@@ -1,0 +1,58 @@
+/*
+komodo tool: TEST-SCRIPT
+========================
+async: 0
+is_clean: true
+language: JavaScript
+rank: 100
+trigger: trigger_postopen
+trigger_enabled: 0
+type: macro
+version: 1.1.5
+========================*/
+
+/** Get Relative path between 2 paths
+*
+*
+*	from_path = "C:/data/project_a/images"
+*	to_path   = "C:\data\project_a\docs\readme.md"
+*
+*	@return string relative path E.G.: '../docs/readme.png'
+*
+*/
+var _getRelativePath = function(from_path, to_path)
+{
+	
+	from_path = from_path.replace( /[\/\\]+/g, '\\' );
+	to_path   = to_path.replace( /[\/\\]+/g, '\\' );
+
+   var nsFileFrom = Components.classes["@mozilla.org/file/local;1"]
+						 .createInstance(Components.interfaces.nsILocalFile);
+	
+	console.log(  'from_path: ' + from_path  );
+	console.log(  'to_path: '   + to_path  );
+	console.log(  'nsFileFrom: ' + nsFileFrom  );
+
+   nsFileFrom.initWithPath(from_path);
+   
+   var nsFileTo = Components.classes["@mozilla.org/file/local;1"]
+						 .createInstance(Components.interfaces.nsILocalFile);
+   
+   nsFileTo.initWithPath(to_path);
+   
+   return nsFileTo.getRelativeDescriptor(nsFileFrom);
+};
+
+//from_path = "C:\\data\\project_a\\images"
+from_path = "C:\Users\vilbur\AppData\Local\ActiveState\KomodoEdit\12.0\tools\Scripts\Markdown\MarkdownLinker"
+//from_path = "C:/data/project_a/images/picture.png"
+
+
+//to_path   = "C:\\data\\project_a\\docs\\readme.md"
+to_path   = "\Test\Parent\Child\Child.js"
+//../images/picture.png
+//
+
+relative_path = _getRelativePath(from_path, to_path)
+
+					console.log(  'relative_path: ' + relative_path  );

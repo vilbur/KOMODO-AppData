@@ -1,0 +1,13 @@
+/*
+komodo tool: length_obj
+=======================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: JavaScript-common
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=======================*/
+Object.keys([[%tabstop:obj]]).length!@#_currentPos!@#_anchor

@@ -1,0 +1,15 @@
+/*
+komodo tool: fore
+=================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: JavaScript-common
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=================*/
+[[%tabstop1:array]].forEach(( [[%tabstop2:key]], index ) => {
+	var value = [[%tabstop1:array]][[%tabstop2:key]]
+});!@#_currentPos!@#_anchor
