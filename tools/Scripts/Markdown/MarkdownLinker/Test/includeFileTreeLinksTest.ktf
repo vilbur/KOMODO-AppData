@@ -82,7 +82,7 @@ function showImageWithLink(){
  */
 function importCodeBlock(){
 	new ko.extensions.vilbur.markdown.MarkdownLinker()
-			.heading('Link To Code Blocks - [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/MarkdownCompiler )\n')
+			.heading('Link To Code Blocks - [Compiled with MarkdownCompiler]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/MarkdownCompiler )\n')
 			.codeBlock() // Interprets link to image as image
 			.ext('js')
 			.maxLevel( 4 )

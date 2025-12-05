@@ -1738,21 +1738,21 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
   <long id="windowNum">1</long>
 </preference-set>
 <preference-set id="2">
-  <string id="current_project">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/Komodo-Tools.komodoproject</string>
+  <string id="current_project">file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Extensions/_3rdParty/Todo/Extension_Todo.komodoproject</string>
   <boolean id="hasFocus">1</boolean>
 <preference-set id="history_rctabs">
   <string id="rctabs_list">[{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/cicleSetVolume.ahk","tabIndex":16},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/set-volume-40.ahk","tabIndex":16},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/set-volume-20.ahk","tabIndex":16},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/volume-up.ahk","tabIndex":15},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/mute.ahk","tabIndex":14},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/set-volume-60.ahk","tabIndex":13},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/set-volume-100.ahk","tabIndex":11},{"tabGroup":"view-1","viewType":"editor","uri":"file:///M:/MediaMonkey/Ahk/Mute-Temporary/set-volume-80.ahk","tabIndex":11},{"tabGroup":"view-1","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/Lib/Dialog/readme-source.md","tabIndex":16},{"tabGroup":"view-2","viewType":"editor","uri":"file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-UI-framework/GitHub-MAXSCRIPT-UI-framework.url","tabIndex":18}]</string>
 </preference-set>
 <preference-set id="opened_projects_v7">
   <string id="mpv_projects">[]</string>
-  <string id="spv_projects">["file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/Komodo-Tools.komodoproject"]</string>
+  <string id="spv_projects">["file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Extensions/_3rdParty/Todo/Extension_Todo.komodoproject"]</string>
 </preference-set>
   <boolean id="restoreOnRestart">1</boolean>
-  <long id="timestamp">1764938952</long>
+  <long id="timestamp">1764939121</long>
 <preference-set id="topview">
 <ordered-preference id="childState">
 <preference-set>
-  <long id="current_view_index">18</long>
+  <long id="current_view_index">19</long>
 <ordered-preference id="view_prefs">
 <preference-set>
   <string id="URI">file:///C:/Users/vilbur/AppData/Local/Autodesk/3dsMax/2023%2520-%252064bit/ENU/scripts/MAXSCRIPT-AnimKeyTools/TrackbarTools/trackbarToolsDialog.ms</string>
@@ -1828,6 +1828,10 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </preference-set>
 <preference-set>
   <string id="URI">file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/README.md</string>
+  <string id="viewtype">editor</string>
+</preference-set>
+<preference-set>
+  <string id="URI">file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Extensions/_3rdParty/Todo/GitHub-Komodo-Tools.url</string>
   <string id="viewtype">editor</string>
 </preference-set>
 </ordered-preference>
@@ -1912,6 +1916,7 @@ projects={"package-portfolio":{"file":"file:///C:/wamp64/www/portfolio/packages/
 </ordered-preference>
   <string id="orientation">horizontal</string>
 <ordered-preference id="viewHistoryState">
+  <string>file:///C:/GoogleDrive/ProgramsData/Core/Komodo/Extensions/_3rdParty/Todo/GitHub-Komodo-Tools.url?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/README.md?parentId=view-1</string>
   <string>file:///C:/Users/vilbur/AppData/Local/ActiveState/KomodoEdit/12.0/tools/Scripts/Markdown/MarkdownLinker/Test/test-markdown-file.md?parentId=view-1</string>
   <string>macro2://5453/includeFileTreeLinksTest.js?parentId=view-2</string>

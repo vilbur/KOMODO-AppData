@@ -35,7 +35,7 @@
 [Child](Test/Parent/Child)  
 
 ------------------------------------------------------------------------------------  
-### Link To Code Blocks - [Compiled with MarkdownFormatter]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/MarkdownCompiler )  
+### Link To Code Blocks - [Compiled with MarkdownCompiler]( https://github.com/vilbur/KOMODO-AppData/tree/master/tools/Scripts/Markdown/MarkdownCompiler )  
 
 ``` javascript
 console.log('This is Parent.js');
