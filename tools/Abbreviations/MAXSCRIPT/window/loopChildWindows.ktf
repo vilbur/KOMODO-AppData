@@ -1,0 +1,13 @@
+/*
+komodo tool: loopChildWindows
+=============================
+auto_abbreviation: false
+indent_relative: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+=============================*/
+for child in ( windows.getChildrenHWND 0 parent:#max ) do
+	format "child: %\n" child!@#_currentPos!@#_anchor

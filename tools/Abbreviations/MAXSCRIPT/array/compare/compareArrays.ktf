@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ==========================*/
-[[%tabstop:fn compareArrays [[%tabstop1:arr1]] [[%tabstop2:arr2]] = ]]with PrintAllElements on [[%tabstop1:arr1]] as string == [[%tabstop2:arr2]] as string!@#_currentPos!@#_anchor
+[[%tabstop:fn compareArrays [[%tabstop1:arr1]] [[%tabstop2:arr2]] = ]]with PrintAllElements on [[%tabstop:( sort([[%tabstop1:arr1]]) )]] as string == [[%tabstop:( sort([[%tabstop2:arr2]]) )]] as string!@#_currentPos!@#_anchor

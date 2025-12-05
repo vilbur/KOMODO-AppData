@@ -1,12 +1,12 @@
 /*
 komodo tool: MarkdownLinker
 ===========================
-async: 0
+async: 1
 is_clean: true
 language: JavaScript
 rank: 100
-trigger: trigger_postopen
-trigger_enabled: 0
+trigger: trigger_startup
+trigger_enabled: 1
 type: macro
 version: 1.1.5
 ===========================*/
@@ -18,8 +18,8 @@ if( typeof ko.extensions.vilbur.markdown === 'undefined' )
 
 /** Search in tree of current file, and write links to files matching criteria
  *
- * @method	self	searchName( string search_name )	Search file name	DEFAULT: '.*'
- * @method	self	searchExt( string file_ext )	Search file extension	DEFAULT: 'php|ahk|js'
+ * @method	self	mask( string search_name )	Search file name	DEFAULT: '.*'
+ * @method	self	ext( string file_ext )	Search file extension	DEFAULT: 'php|ahk|js'
  * @method	self	matchDirName( boolean|string match )	Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"	DEFAULT: false
  * 
  * @method	self	maxLevel( int max_level )	Set depth of tree for searching	DEFAULT: unlimited
@@ -112,7 +112,8 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 
 		/** Set search extension
 		 */
-		this.extension = function(_extension=''){ extension = _extension; return this; };
+		//this.extension = function(_extension=''){ extension = _extension; return this; };
+		this.ext = function(_extension=''){ extension = _extension; return this; };
 
 		/** Search only files which name is same as folder name E.G.: "FooBar\FooBar.php"
 		 */
@@ -547,7 +548,7 @@ ko.extensions.vilbur.markdown.MarkdownLinker = (function()
 				
 					var is_dir = isNaN(key)
 				
-					//const branch = is_last ? "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ " : "ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚ÂÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ ";
+					//const branch = is_last ? "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ " : "ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Â¦ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ ";
 					const branch = tree ? '|--- ' : '';
 				
 					/* ========= DIRECTORY ========= */

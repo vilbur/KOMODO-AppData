@@ -14,4 +14,9 @@ Menu = RcMenu_v name:"[[%tabstop:MenuName]]"
 
 Menu.item	"[[%tabstop:Tittle]]"	"[[%tabstop:callback]]"
 
+/* DEFINE SUBMENU */
+submenu = Menu.menu "Submenu"
+
+Menu.separator()
+	
 popUpMenu (Menu.create())!@#_currentPos!@#_anchor

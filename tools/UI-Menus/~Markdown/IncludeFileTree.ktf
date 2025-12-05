@@ -10,10 +10,6 @@ trigger_enabled: 0
 type: macro
 version: 1.1.5
 ============================*/
-
-
-
-
 /** Loop all subdirs
  *  Find all files which name is same as folder name E.G.: "FooBar\FooBar.php"
  *  Links indented
@@ -92,6 +88,7 @@ var current_dir	= koFile.dirname(current_file);
 var current_dir_name	= current_dir.split(/[\\\/]/g).pop();
 
 includeFileTreeLinks(current_dir_name);
+
 //searchByNameWithMaxLevelTest();
 //searchImagesWithAnySuffix();
 //searchCodeFilesAndIncludeAsDocblockLinks();

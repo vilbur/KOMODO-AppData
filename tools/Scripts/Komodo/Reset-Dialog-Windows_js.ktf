@@ -14,10 +14,10 @@ version: 1.1.5
 /* Open maxscript error file in komodo  
 
 */ 
-//var user_data_dir = ko.interpolate.interpolateString('%(path:userDataDir)');
+var user_data_dir = ko.interpolate.interpolateString('%(path:userDataDir)');
 
-var path = 'c:\\GoogleDrive\\ProgramsData\\Core\\Komodo\\Ahk\\Reset-Dialog-Windows.ahk';
-
+var path = user_data_dir + '\\Ahk\\Reset-Dialog-Windows.ahk';
+//alert(path);
 var koShell	= require("ko/shell");
 
 var command = 'start "" "' + path + '"';

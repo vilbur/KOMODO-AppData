@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ======================*/
-[[%tabstop:[[%tabstop:scene_path]]	= ]]substituteString maxFilePath "\\" "\\\\"!@#_currentPos!@#_anchor
+[[%tabstop:[[%tabstop:scene_path]]	= ]]substituteString (maxFilePath+maxFileName) "\\" "\\\\"!@#_currentPos!@#_anchor

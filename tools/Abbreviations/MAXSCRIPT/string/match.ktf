@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 ==================*/
-[[%tabstop:[[%tabstop1:string]]_match[[%tabstop:]]	= ]]matchPattern [[%tabstop1:string]] pattern:("[[%tabstop:*]]")[[%tabstop:ignoreCase:[[%tabstop:false]]]][[%tabstop:]]!@#_currentPos!@#_anchor
+[[%tabstop:[[%tabstop1:string]]_match[[%tabstop:]]	= ]]matchPattern [[%tabstop1:string]] pattern:[[%tabstop:("[[%tabstop:*]]")]][[%tabstop: ignoreCase:[[%tabstop:false]]]]!@#_currentPos!@#_anchor

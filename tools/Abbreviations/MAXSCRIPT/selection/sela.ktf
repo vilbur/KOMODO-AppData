@@ -1,5 +1,5 @@
 /*
-komodo tool: dict
+komodo tool: sela
 =================
 auto_abbreviation: true
 indent_relative: true
@@ -10,4 +10,4 @@ treat_as_ejs: false
 type: snippet
 version: 1.1.5
 =================*/
-[[%tabstop:[[%tabstop:Dictionary]]	= ]]Dictionary #[[%tabstop:NAME|STRING|INTEGER]][[%tabstop: -- KEY:[[%tabstop:]] VALUE:[[%tabstop:]]]]!@#_currentPos!@#_anchor
+[[%tabstop:_selection = ]]selection as Array!@#_currentPos!@#_anchor

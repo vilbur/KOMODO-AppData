@@ -1,0 +1,57 @@
+/*
+komodo tool: selectSubObjectOnEditableOrEditPoly
+================================================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+================================================*/
+/* 
+   Function to set sub-object selection on first Edit_Poly modifier if found, 
+   otherwise fallback to Editable_Poly base object.
+   Works for different sub-object types: #Vertex, #Edge, #Border, #Face, #Element
+   
+   
+   E.G.:
+	selectSubObjectOnEditableOrEditPoly selection[1]	#VERTEX #{1..4}
+   
+*/
+function selectSubObjectOnEditableOrEditPoly obj subobj_type bitset =
+(
+	epoly_mod = undefined
+	
+	/* Search modifiers for first Edit_Poly */
+	for m in obj.modifiers while epoly_mod == undefined where classof m == Edit_Poly do
+		epoly_mod = m
+
+	/* Edit_Poly  */ 	
+	if epoly_mod != undefined then
+	(
+		epoly_mod.SetSelection subobj_type #{}
+		
+		epoly_mod.Select subobj_type bitset
+	)
+	/* Editable_Poly  */ 	
+	else
+	(
+		if ( superclassof obj.baseObject == GeometryClass and classof obj.baseObject == Editable_Poly) then
+		(
+			setSelectionLevel obj subobj_type
+
+			case subobj_type of
+			(
+				#Vertex:	polyop.setVertSelection obj bitset
+				#Edge:	polyop.setEdgeSelection obj bitset
+				#Border:	polyop.setEdgeSelection obj bitset
+				#Face:	polyop.setFaceSelection obj bitset
+				#Element:	polyop.setFaceSelection obj bitset
+			)
+		)
+	)
+	
+	modPanel.setCurrentObject (if epoly_mod != undefined then epoly_mod else obj.baseObject)
+)!@#_currentPos!@#_anchor

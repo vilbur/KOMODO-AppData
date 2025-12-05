@@ -11,4 +11,4 @@ type: snippet
 version: 1.1.5
 ===============*/
 for [[%tabstop2:key]] in [[%tabstop1:Dictionary]].keys do
-	format "[[%tabstop2:key]]: % \nVALUE: %\n\n" key [[%tabstop1:Dictionary]][[[%tabstop2:key]]]!@#_currentPos!@#_anchor
+	format "[[%tabstop2:key]]: % \nVALUE: %\n\n" [[%tabstop2:key]] [[%tabstop1:Dictionary]][[[%tabstop2:key]]]!@#_currentPos!@#_anchor

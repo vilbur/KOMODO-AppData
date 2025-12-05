@@ -1,0 +1,97 @@
+/*
+komodo tool: loadActions
+========================
+auto_abbreviation: false
+indent_relative: true
+is_clean: true
+language: Maxscript
+set_selection: false
+treat_as_ejs: false
+type: snippet
+version: 1.1.5
+========================*/
+
+/** Action item
+ */
+struct ActionItem_v
+(
+	item,
+	table,
+	
+	/* properties */
+	id,
+	category = "",
+	button_text = "",
+	menu_text = "",
+	description = "",
+	is_visible,
+	is_enabled,
+	is_checked,
+	
+	private
+
+	/**
+	 */
+	on create do
+	(
+		id = item.id
+		this.is_checked = item.isChecked 
+		this.is_enabled = item.isEnabled
+		this.is_visible = item.isVisible 
+	
+		item.getCategory	&this.category
+		item.getButtonText	&this.button_text
+		item.getMenuText	&this.menu_text
+		item.getDescription	&this.description
+	)
+)
+
+
+
+/* 
+Get full list of ActionMan commands.
+Prints: tableIndex, actionIndex, actionName
+*/
+
+fn listAllActionManActions button_text:"*" =
+(
+	result =#()
+	
+    for t = 1 to actionMan.numActionTables  do
+    (
+        tbl = actionMan.getActionTable t
+        --format "\n"
+        --format "%:  %\n" t tbl.name
+	    
+		num_items = tbl.numActionItems
+		--format "num_items: %\n" num_items
+
+		for i = 1 to num_items do
+		(
+			item = tbl.getActionItem i
+
+			button_text_item = ""
+								
+			item.getButtonText &button_text_item
+			
+			if matchPattern button_text_item pattern:button_text then
+				append result (ActionItem_v(item)(tbl.id))
+		)
+
+    )
+	
+	result --return
+)
+
+
+--listAllActionManActions()
+items = listAllActionManActions button_text:"*Time Slider*"
+--items = listAllActionManActions button_text:"*Customize*"
+
+for item in items do 
+(
+	format "\n"
+	for prop in getPropNames item do
+		format "%: %\n" prop (getProperty item prop)
+)
+!@#_currentPos!@#_anchor

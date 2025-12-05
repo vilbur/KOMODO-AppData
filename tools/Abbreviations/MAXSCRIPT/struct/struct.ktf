@@ -45,22 +45,18 @@ struct [[%tabstop1:<%=struct_name%>]]_[[%tabstop:v]]
 (
 	/* construct */
 	[[%tabstop:]]
-
 	/* required */
 	[[%tabstop:]]
-
 	/* properties */
     [[%tabstop:]]
-
+	
 	/* private */
 	/* dependency */
 	/* reference */
 	/* inhered */
 
-	[[%tabstop:]]
-
 	private
-
+	[[%tabstop:]]
 
 	/**
 	 */
